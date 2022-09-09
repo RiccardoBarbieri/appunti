@@ -1,0 +1,23 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{salvataggio\PYGZus{}stato}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{process\PYGZus{}in\PYGZus{}esecuzione}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{j}\PYG{p}{].}\PYG{n}{contesto}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{valori}\PYG{+w}{ }\PYG{n}{dei}\PYG{+w}{ }\PYG{n}{registri}\PYG{+w}{ }\PYG{n}{CPU}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{ripristino\PYGZus{}stato}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{registro}\PYG{o}{\PYGZhy{}}\PYG{n}{temp}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{j}\PYG{p}{].}\PYG{n}{servizio}\PYG{p}{.}\PYG{n}{delta\PYGZus{}t}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{registri}\PYG{o}{\PYGZhy{}}\PYG{n}{CPU}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{j}\PYG{p}{].}\PYG{n}{contesto}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{assegnazione\PYGZus{}CPU}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{//scheduling: hp algoritmo con priorità}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{k}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{((}\PYG{n}{coda\PYGZus{}processi\PYGZus{}pronti}\PYG{p}{[}\PYG{n}{k}\PYG{p}{].}\PYG{n}{primo}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{k}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{prelievo}\PYG{p}{(}\PYG{n}{coda\PYGZus{}processi\PYGZus{}pronti}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]);}
+\PYG{+w}{    }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

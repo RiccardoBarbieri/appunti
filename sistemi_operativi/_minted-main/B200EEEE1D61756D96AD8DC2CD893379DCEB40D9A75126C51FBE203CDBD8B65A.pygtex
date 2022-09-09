@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{T} \PYG{n+nf}{ricezione}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{T} \PYG{n}{dato}\PYG{p}{;}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{pn}\PYG{p}{);}
+    \PYG{n}{dato} \PYG{o}{=} \PYG{n}{estrai}\PYG{p}{();}
+    \PYG{n}{V}\PYG{p}{(}\PYG{n}{vu}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{dato}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{//P2}
+\PYG{k}{while} \PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{M} \PYG{o}{=} \PYG{n}{ricezione}\PYG{p}{();}
+    \PYG{c+c1}{//consuma}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

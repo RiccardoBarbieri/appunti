@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{OperatorSet} \PYG{n}{myOpSet} \PYG{o}{=} \PYG{n}{OperatorSet}\PYG{p}{.}\PYG{n+na}{STANDARD}\PYG{p}{.}\PYG{n+na}{plus}\PYG{p}{(}\PYG{k}{new} \PYG{n}{Operator}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}:\PYGZdq{}}\PYG{p}{,} \PYG{n}{Specifier}\PYG{p}{.}\PYG{n+na}{YFX}\PYG{p}{,} \PYG{l+m+mi}{400}\PYG{p}{));}
+\PYG{n}{TermParser} \PYG{n}{termParser} \PYG{o}{=} \PYG{n}{TermParser}\PYG{p}{.}\PYG{n+na}{withOperators}\PYG{p}{(}\PYG{n}{myOpSet}\PYG{p}{);}
+\end{Verbatim}

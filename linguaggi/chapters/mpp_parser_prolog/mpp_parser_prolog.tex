@@ -1,0 +1,182 @@
+\chapter{Multi-Paradigm Programming: parser espressioni in Prolog}
+
+Il motore Prolog contiene un suo scanner e un suo parser usato per interpretare la sua sintassi di regole.
+
+L'obiettivo è quello di mappare la nostra sintassi "sopra" alla sua per riutilizzare le strutture già definite.
+
+Cosa abbiamo già:
+\begin{itemize}
+    \item tre dei quattro operatori sono già \textit{operatori infissi} leciti in Prolog
+\end{itemize}
+
+Cosa manca:
+\begin{itemize}
+    \item l'operatore \texttt{:} è diverso in quanto Prolog usa la barra \texttt{/}
+    \item le parentesi tonde sono già intercettate dal parser di Prolog
+\end{itemize}
+
+\subsection{Definizione nuovi operatori}
+Per definire un nuovo operatore infisso in Prolog basta porre all'inizio della teoria logica la dichiarazione
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{Prolog}
+:- op(livellopriorità, associatività, operatore)
+\end{minted}
+
+\begin{itemize}
+    \item livellopriorità: numero che esprime la priorità dell'operatore
+    \item associatività: atomo che esprime se l'operatore è infisso o pre/postfisso e la sua associatività
+    \item operatore: è il nuovo operatore da dichiarare
+\end{itemize}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{Prolog}
+:- op(400, yfx, ':')
+\end{minted}
+
+\subsection{Problema delle parentesi tonde}
+Non si possono utilizzare parentesi tonde dato che sono utilizzate da Prolog, sostituiamo quindi le tonde con le parentesi quadre, anch'esse già utilizzate da prolog per le liste (già riconosciute e bilanciate).
+
+Il prezzo sarà minimo, in quanto consiste solo nella differenza della forma delle parentesi, esistono inoltre tecniche per mascherarle.
+
+\subsection{Espressioni in Prolog}
+La semantica denotazionale definita esprime già tutte le regole "pattern oriented", sono direttamente trasferirle in Prolog.
+
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{Prolog}
+fExpr(Term) :- fTerm(Term).
+fExpr(Exp+Term) :- fExpr(Exp), fTerm(Term).
+fExpr(Exp-Term) :- fExpr(Exp), fTerm(Term).
+fTerm(Factor) :- fFactor(Factor).
+fTerm(Term*Factor) :- fTerm(Term), fFactor(Factor).
+fTerm(Term:Factor) :- fTerm(Term), fFactor(Factor).
+fFactor([Exp]) :- fExpr(Exp).
+fFactor(num) :- number(Num).
+\end{minted}
+
+Le funzioni sono solo sintassi, per ora non hanno nessun significato.
+
+\subsection{Dal riconoscitore al valutatore}
+Per sintetizzare il valutatore è necessario:
+\begin{itemize}
+    \item estendere la testa delle regole aggiungendo un \textit{argomento per restituire il risultato}
+    \item estendere il corpo delle regole, ricavando i \textit{valori} e \textit{combinandoli} in modo appropriato alla semantica
+\end{itemize}
+
+Per il trattamento dei numeri, Prolog utilizza soltanto il concetto di numeri reali, e attraverso il predicato \texttt{is} si può applicare la semantica dei numeri naturali.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{prolog}
+evalExpr(Term, Value) :- evalTerm(Term, Value).
+evalExpr(Exp+Term, Value) :- evalExpr(Exp, Value1),
+                             evalTerm(Term, Value2),
+                             Value is Value1 + Value2.
+evalExpr(Exp-Term, Value) :- evalExpr(Exp, Value1),
+                             evalTerm(Term, Value2),
+                             Value is Value1 - Value2.
+evalTerm(Factor, Value) :- evalFactor(Factor, Value).
+evalTerm(Term*Factor, Value) :- evalTerm(Term, Value1),
+                                evalFactor(Factor, Value2),
+                                Value is Value1 * Value2.
+evalTerm(Term:Factor, Value) :- evalTerm(Term, Value1),
+                                evalFactor(Factor, Value2),
+                                Value is Value1 / Value2.
+evalFactor([Exp], Value) :- evalExpr(Exp, Value).
+evalFactor(Num, Num) :- number(Num).
+\end{minted}
+
+\section{Parser ibrido con 2p-kt}
+Java si occupa di:
+\begin{itemize}
+    \item visualizzare finestre di dialogo per richiedere stringa di input
+    \item sostituire parentesi tonde con quadre
+    \item \textit{creare} un \textbf{motore Prolog}, configurandolo con l'opportuna \textbf{teoria} e \textbf{interrogarlo} con l'espressione
+    \item recuperare e visualizzare il risultato della valutazione
+\end{itemize}
+tuProlog si occupa di
+\begin{itemize}
+    \item interpretare e valutare l'espressione data
+\end{itemize}
+
+\subsection{Primi passi per utilizzare il Prolog engine}
+
+Leggere la teoria logica (input o file)
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+ClausesReader theoryReader = ClausesReader.getWithDefaultOperators();
+Theory theory = theoryReader.readTheory(input);
+\end{minted}
+
+Ottenere una istanza di \texttt{SolverFactory}, per ottenere il un solver adeguato
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+SolverFactory solverFactory = ClassicSolverFactory.INSTANCE;
+\end{minted}
+
+Costruire tramite la factory il solver, passando la teoria
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+Solver solver = solverFactory.solverWithDefaultBuiltins(theory);
+\end{minted}
+
+\subsection{TermParser}
+Il \texttt{TermParser} è il componente che effettua il parsing dei termini, deve quindi riconoscere tutti gli operatori, anche quelli definiti custom.
+
+É possibile costruire un \texttt{TermParser} con i giusti operatori "a mano" oppure è possibile ottenere dal solver le definizioni trovate.
+
+\subsubsection{Metodo 1}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+OperatorSet myOpSet = OperatorSet.STANDARD.plus(new Operator(":", Specifier.YFX, 400));
+TermParser termParser = TermParser.withOperators(myOpSet);
+\end{minted}
+
+\subsubsection{Metodo 2}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+TermParer termParser = TermParser.withOperators(solver.getOperators())
+\end{minted}
+
+Per creare la query a partire dalla rappresentazione testuale
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+Struct query = termParser.parseStruct("evalExpr(" + queryText + ", Result)");
+\end{minted}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

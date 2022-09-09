@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{ricezione}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{T} \PYG{n}{dato}\PYG{p}{;}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{pn}\PYG{p}{);}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+    \PYG{n}{dato} \PYG{o}{=} \PYG{n}{buffer}\PYG{p}{.}\PYG{n+na}{estrai}\PYG{p}{();}
+    \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+    \PYG{n}{V}\PYG{p}{(}\PYG{n}{vu}\PYG{p}{);}
+    \PYG{k}{return} \PYG{n}{dato}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

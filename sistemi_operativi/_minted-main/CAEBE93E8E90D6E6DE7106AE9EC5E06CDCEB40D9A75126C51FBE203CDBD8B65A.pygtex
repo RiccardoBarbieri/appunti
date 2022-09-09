@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{coda\PYGZus{}di\PYGZus{}n\PYGZus{}T} \PYG{n}{buffer}\PYG{p}{;}
+\PYG{n}{semaphore} \PYG{n}{pn} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{n}{semaphore} \PYG{n}{vu} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{n}{semaphore} \PYG{n}{mutex} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+\end{Verbatim}

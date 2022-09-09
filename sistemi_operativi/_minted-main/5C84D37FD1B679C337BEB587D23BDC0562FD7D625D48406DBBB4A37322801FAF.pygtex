@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{Prelievo}\PYG{p}{(}\PYG{n}{descrittore\PYGZus{}coda}\PYG{+w}{ }\PYG{n}{C}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{//estrae il primo processo da coda}
+\PYG{+w}{    }\PYG{c+c1}{//C e restituisce l\PYGZsq{}indice}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

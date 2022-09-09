@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{indice\PYGZus{}priorità}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{delta\PYGZus{}t}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n}{modalita\PYGZus{}di\PYGZus{}servizio}\PYG{p}{;}
+
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{nome}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{...}
+\PYG{+w}{    }\PYG{n}{modalita\PYGZus{}di\PYGZus{}servizio}\PYG{+w}{ }\PYG{n}{servizio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{tipo\PYGZus{}contesto}\PYG{+w}{ }\PYG{n}{contesto}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{tipo\PYGZus{}stato}\PYG{+w}{ }\PYG{n}{stato}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{successivo}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n}{descrittore\PYGZus{}processo}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{op2}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+    \PYG{n}{S2}\PYG{p}{;}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{C} \PYG{o}{\PYGZam{}\PYGZam{}} \PYG{n}{csem} \PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{0}\PYG{p}{)}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{sem}\PYG{p}{);}
+    \PYG{k}{else}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

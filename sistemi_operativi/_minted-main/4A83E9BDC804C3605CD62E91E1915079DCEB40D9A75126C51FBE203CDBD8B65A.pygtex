@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{process} \PYG{n}{P} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{ris}\PYG{p}{;}
+    \PYG{p}{...}
+    \PYG{n}{ris} \PYG{o}{=} \PYG{n}{G}\PYG{p}{.}\PYG{n+na}{richiesta}\PYG{p}{();}
+    \PYG{c+c1}{//\PYGZlt{}utilizzo risorsa\PYGZgt{}}
+    \PYG{n}{G}\PYG{p}{.}\PYG{n+na}{rilascio}\PYG{p}{();}
+    \PYG{p}{...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

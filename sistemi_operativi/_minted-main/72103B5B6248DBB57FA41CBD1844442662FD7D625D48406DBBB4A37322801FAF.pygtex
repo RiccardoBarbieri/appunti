@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{primo}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{ultimo}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n}{descrittore\PYGZus{}coda}\PYG{p}{;}
+
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{n}{descrittore\PYGZus{}coda}\PYG{+w}{ }\PYG{n}{coda\PYGZus{}a\PYGZus{}livelli}\PYG{p}{[}\PYG{n}{Npriorità}\PYG{p}{];}
+\end{Verbatim}

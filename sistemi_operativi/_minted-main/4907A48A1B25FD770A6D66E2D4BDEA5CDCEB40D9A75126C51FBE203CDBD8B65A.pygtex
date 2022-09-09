@@ -1,0 +1,28 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{class} \PYG{n+nc}{Gestore} \PYG{p}{\PYGZob{}}
+    \PYG{n}{semaphore} \PYG{n}{mutex} \PYG{o}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+    \PYG{n}{semaphore} \PYG{n}{n\PYGZus{}ris} \PYG{o}{=} \PYG{n}{N}\PYG{p}{;}
+    \PYG{k+kt}{boolean} \PYG{n}{libero}\PYG{o}{[}\PYG{n}{N}\PYG{o}{]}\PYG{p}{;}
+
+    \PYG{p}{\PYGZob{}}\PYG{k}{for} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;} \PYG{n}{i} \PYG{o}{\PYGZlt{}} \PYG{n}{N}\PYG{p}{;} \PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{n}{libera}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{true}\PYG{p}{;\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{int} \PYG{n+nf}{richiesta}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{i} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+        \PYG{n}{P}\PYG{p}{(}\PYG{n}{n\PYGZus{}ris}\PYG{p}{);}
+        \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+        \PYG{k}{while} \PYG{p}{(}\PYG{o}{!}\PYG{n}{libero}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{)} \PYG{n}{i}\PYG{o}{++}\PYG{p}{;}
+        \PYG{n}{libero}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{false}\PYG{p}{;}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+        \PYG{k}{return} \PYG{n}{i}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{rilascio} \PYG{p}{(}\PYG{k+kt}{int} \PYG{n}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+        \PYG{n}{libero}\PYG{o}{[}\PYG{n}{r}\PYG{o}{]} \PYG{o}{=} \PYG{k+kc}{true}\PYG{p}{;}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{n\PYGZus{}ris}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Solver} \PYG{n}{solver} \PYG{o}{=} \PYG{n}{solverFactory}\PYG{p}{.}\PYG{n+na}{solverWithDefaultBuiltins}\PYG{p}{(}\PYG{n}{theory}\PYG{p}{);}
+\end{Verbatim}

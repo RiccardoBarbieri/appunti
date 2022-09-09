@@ -81,9 +81,9 @@ Se R è allocata come \textit{risorsa dedicata} essendo P l'unico processo che a
 
 \paragraph{Regione critica condizionale [Hoare, Brinch-hansen]} Formalismo che consente di esprimere la specifica di qualunque \textbf{vincolo di sincronizzazione}.
 
-\begin{lstlisting}
-    region R << Sa; when(C) Sb;>>
-\end{lstlisting}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{c}
+region R << Sa; when(C) Sb;>>
+\end{minted}
 
 Il corpo della region rappresenta una operazione da eseguire sulla risorsa condivisa R, è la \textbf{sezione critica} che deve essere eseguita in mutua esclusione con le altre operazioni.
 
@@ -110,11 +110,11 @@ Una sequenza di istruzioni che accede e modifica un insieme di variabili comuni 
 La regola di mutua esclusione stabilisce che sezioni critiche della stessa classe non pososno essere in esecuzione contemporaneamente.
 
 Il protocollo di esecuzione di una sezione critica è il seguente:
-\begin{lstlisting}
-    <prologo>
-    S;
-    <epilogo>
-\end{lstlisting}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{c}
+<prologo>
+S;
+<epilogo>
+\end{minted}
 
 Nel prologo si richiede e ottiene l'autorizzazione a eseguire la sezione, nell'epilogo si rilascia la risorsa.
 
@@ -128,14 +128,14 @@ L'eventuale attesa nell'esecuzione può essere realizzata utilizzando i meccanis
 Un semaforo è una variabile \textit{interna non negativa} alla quale è possibile accedere solo tramite le due operazioni \texttt{P} e \texttt{V}.
 
 Specifica delle operazioni di un semaforo:
-\begin{lstlisting}
-    void P(semaphore s):
-        region s << when(val>0) val--; >>
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{c}
+void P(semaphore s):
+    region s << when(val>0) val--; >>
 
 
-    void V(semaphore s):
-        region s << val++; >>
-\end{lstlisting}
+void V(semaphore s):
+    region s << val++; >>
+\end{minted}
 
 Dato un semaforo S, siano:
 \begin{itemize}
@@ -164,16 +164,16 @@ Il semaforo è uno strumento generale che consente la risoluzione di qualunque p
 \subsubsection{Semaforo mutua esclusione}
 
 Viene inizializzato a 1 ed è usato per realizzare le sezioni critiche di una stessa classe.
-\begin{lstlisting}
-    class risorsa {
-        semaphore mutex = 1;
-        public void op1() {
-            P(mutex);
-            <sez. critica>
-            V(mutex);
-        }
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+class risorsa {
+    semaphore mutex = 1;
+    public void op1() {
+        P(mutex);
+        <sez. critica>
+        V(mutex);
     }
-\end{lstlisting}
+}
+\end{minted}
 
 Le seguenti condizioni sono soddisfatte:
 \begin{itemize}
@@ -195,21 +195,21 @@ Lo schema è il solito prologo, operazione, epilogo:
 
 Si definisce una \textit{semaforo mutex} per la mutua esclusione tra operazioni e un'altro per le sezioni critiche prologo e epilogo.
 
-\begin{lstlisting}
-    semaphore mutex=1, m_i=1;
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+semaphore mutex=1, m_i=1;
 
-    public void op_i() {
-        P(m_i);
-        cont_i++;
-        if (cont_i==1) P(mutex);
-        V(m_i);
-        <corpo operazione>
-        P(m_i);
-        cont_i--;
-        if (cont_i==0) V(mutex);
-        V(m_i);
-    }
-\end{lstlisting}
+public void op_i() {
+    P(m_i);
+    cont_i++;
+    if (cont_i==1) P(mutex);
+    V(m_i);
+    <corpo operazione>
+    P(m_i);
+    cont_i--;
+    if (cont_i==0) V(mutex);
+    V(m_i);
+}
+\end{minted}
 
 Questo schema è applicabile alla casistica di lettura scrittura su file: più processi possono leggere un file contemporaneamente mentre una sola può modificare.
 
@@ -255,20 +255,20 @@ L'esecuzione di ogni operazione \texttt{P}$_{ib}$ è subordinata al completament
     \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/23.png}
 \end{figure}
 
-\begin{lstlisting}[language=C]
-    // condivise
-    semaphore mutex = 1;
-    semaphore barriera = 0;
-    int completati = 0;
-    //struttura thread i-esimo P_i
-    p(mutex);
-    completati++;
-    if (completati==N)
-        v(barriera);
-    v(mutex);
-    p(barriera);
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+// condivise
+semaphore mutex = 1;
+semaphore barriera = 0;
+int completati = 0;
+//struttura thread i-esimo P_i
+p(mutex);
+completati++;
+if (completati==N)
     v(barriera);
-\end{lstlisting}
+v(mutex);
+p(barriera);
+v(barriera);
+\end{minted}
 
 \subsection{Semafori binari composti - scambio di dati}
 Due processi \texttt{P}$_1$ e \texttt{P}$_2$ si scambiano dati di tipo \texttt{T} utilizzando una memoria condivisa.
@@ -287,35 +287,35 @@ Per implementare questa funzionalità si utilizzano due semafori:
 \end{itemize}
 
 \begin{multicols}{2}
-    \begin{lstlisting}[language=c]
-        void invio(T dato) {
-            P(vu);
-            inserisci(dato);
-            V(pn);
-        }
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+void invio(T dato) {
+    P(vu);
+    inserisci(dato);
+    V(pn);
+}
 
 
-        //P1
-        while (true) {
-            //prepara messaggio
-            invio(msg);
-        }
-    \end{lstlisting}
+//P1
+while (true) {
+    //prepara messaggio
+    invio(msg);
+}
+    \end{minted}
     \columnbreak
-    \begin{lstlisting}
-        T ricezione() {
-            T dato;
-            P(pn);
-            dato = estrai();
-            V(vu);
-            return dato;
-        }
-        //P2
-        while (true) {
-            M = ricezione();
-            //consuma
-        }
-    \end{lstlisting}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+T ricezione() {
+    T dato;
+    P(pn);
+    dato = estrai();
+    V(vu);
+    return dato;
+}
+//P2
+while (true) {
+    M = ricezione();
+    //consuma
+}
+    \end{minted}
 \end{multicols}
 
 \begin{mdframed}[topline=false,bottomline=false,rightline=false]
@@ -327,9 +327,9 @@ Per implementare questa funzionalità si utilizzano due semafori:
 \end{mdframed}
 \subsection{Semafori condizione}
 In alcuni casi, l'esecuzione di una istruzione \texttt{S}$_1$ su una risorsa \texttt{R} è subordinata a una condizione \texttt{C} 
-\begin{lstlisting}[language=C]
-    void op1(): region R << when(C) S1; >>
-\end{lstlisting}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{C}
+void op1(): region R << when(C) S1; >>
+\end{minted}
 \begin{itemize}
     \item \texttt{op1()} è una regione critica
     \item \texttt{S1} ha come precondizione la validità della condizione logica \texttt{C}
@@ -350,59 +350,59 @@ Nello schema \texttt{(b)} si realizza la region \textbf{sospendendo} il processo
 \subsubsection{Schema attesa circolare}
 \vspace{-0.5cm}
 \begin{multicols}{2}
-    \begin{lstlisting}[language=C]
-        public void op1() {
-            P(mutex);
-            while (!C) {
-                csem++;
-                V(mutex);
-                P(sem);
-                P(mutex);
-            }
-            S1;
-            V(mutex);
-        }
-    \end{lstlisting}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+public void op1() {
+    P(mutex);
+    while (!C) {
+        csem++;
+        V(mutex);
+        P(sem);
+        P(mutex);
+    }
+    S1;
+    V(mutex);
+}
+    \end{minted}
     \columnbreak
-    \begin{lstlisting}[language=C]
-        public void op2() {
-            P(mutex);
-            if (csem > 0) {
-                csem--;
-                V(sem);
-            }
-            V(mutex);
-        }
-    \end{lstlisting}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{c}
+public void op2() {
+    P(mutex);
+    if (csem > 0) {
+        csem--;
+        V(sem);
+    }
+    V(mutex);
+}
+    \end{minted}
 \end{multicols}
 
 \subsubsection{Schema passaggio testimone}
 
 \begin{multicols}{2}
-    \begin{lstlisting}[language=C]
-        public void op1() {
-            P(mutex);
-            if (!C) {
-                csem++;
-                V(mutex);
-                P(sem);
-                csem--;
-            }
-            S1;
-            V(mutex);
-        }
-    \end{lstlisting}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+public void op1() {
+    P(mutex);
+    if (!C) {
+        csem++;
+        V(mutex);
+        P(sem);
+        csem--;
+    }
+    S1;
+    V(mutex);
+}
+    \end{minted}
     \columnbreak
-    \begin{lstlisting}[language=C]
-        public void op2() {
-            P(mutex);
-            S2;
-            if (C && csem > 0)
-                V(sem);
-            else
-                V(mutex);
-        }
-    \end{lstlisting}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+public void op2() {
+    P(mutex);
+    S2;
+    if (C && csem > 0)
+        V(sem);
+    else
+        V(mutex);
+}
+    \end{minted}
 \end{multicols}
 
 Il metodo del testimone è il più efficiente, tuttavia è possibile risvegliare \textit{un solo} processo alla volta e la condizione \texttt{C} non può dipendere da parametri locali a \texttt{op1()}.
@@ -419,39 +419,202 @@ Si consideri un \textbf{pool} di \texttt{N} risorse tutte uguali, ciascun proces
     \item al termine il processo \textbf{rilascia} la risorsa a gestore
 \end{itemize}
 
-\begin{lstlisting}[language=C]
-    class Gestore {
-        semaphore mutex = 1;
-        semaphore sem = 0;
-        int csem = 0;
-        boolean libera[N];
-        int disponibili = N;
-        {for (int i = 0; i < N; i++) libera[i]=true;}
-        
-        public int richiesta() {
-            int i = 0;
-            P(mutex);
-            if (disponibili == 0) {
-                csem++;
-                V(mutex);
-                P(sem);
-                csem--;
-            }
-            while (!libero[i]) i++;
-            libero[i] = false;
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+class Gestore {
+    semaphore mutex = 1;
+    semaphore sem = 0;
+    int csem = 0;
+    boolean libera[N];
+    int disponibili = N;
+    {for (int i = 0; i < N; i++) libera[i]=true;}
+    
+    public int richiesta() {
+        int i = 0;
+        P(mutex);
+        if (disponibili == 0) {
+            csem++;
             V(mutex);
-            return i;
+            P(sem);
+            csem--;
         }
-
-        public void rilascio(int r) {
-            P(mutex);
-            libero[r] = true;
-            disponibili++;
-            if (csem > 0) V(sem);
-            else V(mutex);
-        }
+        while (!libero[i]) i++;
+        libero[i] = false;
+        V(mutex);
+        return i;
     }
-\end{lstlisting}
+
+    public void rilascio(int r) {
+        P(mutex);
+        libero[r] = true;
+        disponibili++;
+        if (csem > 0) 
+            V(sem);
+        else 
+            V(mutex);
+    }
+}
+\end{minted}
+
+Schema di esempio di un generico processo che vuole accedere a una risorsa \texttt{ris}.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+process P {
+    int ris;
+    ...
+    ris = G.richiesta();
+    //<utilizzo risorsa>
+    G.rilascio();
+    ...
+}
+\end{minted}
+
+\subsection{Semaforo risorsa}
+I semafori risorsa sono semafori generali, ovvero possono assumere qualunque valore maggiore di zero.
+
+Sono utilizzato per realizzare allocazione per risorse equivalenti, il valore del semaforo rappresenta il \textbf{numero di risorse libere}.
+
+\subsubsection{Gestione di un pool di risorse equivalenti}
+Si può utilizzare un semaforo risorsa per gestire un pool di risorse, si crea un unico semaforo \texttt{n\_ris} inizializzato con un valore uguale al numero di risorse, si eseguono P(n\_ris) in allocazione e V(n\_ris) in rilascio.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+class Gestore {
+    semaphore mutex = 1;
+    semaphore n_ris = N;
+    boolean libero[N];
+
+    {for (int i = 0; i < N; i++)
+        libera[i] = true;}
+
+    public int richiesta() {
+        int i = 0;
+        P(n_ris);
+        P(mutex);
+        while (!libero[i]) i++;
+        libero[i] = false;
+        V(mutex);
+        return i;
+    }
+    
+    public void rilascio (int r) {
+        P(mutex);
+        libero[r] = true;
+        V(mutex);
+        V(n_ris);
+    }
+
+}
+\end{minted}
+
+\subsubsection{Problema dei produttori/consumatori}
+Si crea un buffer di \texttt{n} elementi, strutturato come una coda
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+coda_di_n_T buffer;
+semaphore pn = 0;
+semaphore vu = 0;
+semaphore mutex = 1;
+\end{minted}
+
+\begin{multicols}{2}
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+void invio(T dato) {
+    P(vu);
+    P(mutex);
+    buffer.inserisci(dato);
+    V(mutex);
+    V(pn);
+}
+    \end{minted}
+    \columnbreak
+    \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+void ricezione() {
+    T dato;
+    P(pn);
+    P(mutex);
+    dato = buffer.estrai();
+    V(mutex);
+    V(vu);
+    return dato;
+}
+    \end{minted}
+\end{multicols}
+
+\subsection{Specifiche strategie di allocazione}
+Qualora si voglia realizzare una politica di gestione delle risorse particolare, la decisione se permettere o no l'esecuzione a un dato processo dipende dal verificarsi duna specifica \textbf{condizione di sincronizzazione}.
+
+Queste condizioni vengono espresse in termini di variabili che rappresentano lo \textbf{stato della risorsa} e variabili \textit{locali} ai singoli processi.
+
+Sorge il problema di quale processo mettere in esecuzione, risolvibile definendo una \textbf{politica di risveglio} dei processi bloccati.
+
+Nei casi precedenti la politica di risveglio era dipendente dalla specifica implementazione dell'algoritmo all'interno della V, solitamente realizzato con risveglio FIFO.
+
+\subsubsection{Esempio}
+Su un buffer di N celle di memoria, più produttori possono depositare messaggio di dimensione diversa.
+
+\paragraph{Politica di gestione} tra più produttori ha priorità di accesso quello che fornisce il messaggio di dimensione maggiore.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

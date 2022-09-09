@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{Struct} \PYG{n}{query} \PYG{o}{=} \PYG{n}{termParser}\PYG{p}{.}\PYG{n+na}{parseStruct}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}evalExpr(\PYGZdq{}} \PYG{o}{+} \PYG{n}{queryText} \PYG{o}{+} \PYG{l+s}{\PYGZdq{}, Result)\PYGZdq{}}\PYG{p}{);}
+\end{Verbatim}

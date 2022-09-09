@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{).}
+\PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{o}{+}\PYG{n+nv}{Term}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{),} \PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{).}
+\PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{o}{\PYGZhy{}}\PYG{n+nv}{Term}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{),} \PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{).}
+\PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{).}
+\PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{o}{*}\PYG{n+nv}{Factor}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{),} \PYG{n+nf}{fFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{).}
+\PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{l+s+sAtom}{:}\PYG{n+nv}{Factor}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{),} \PYG{n+nf}{fFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{).}
+\PYG{n+nf}{fFactor}\PYG{p}{([}\PYG{n+nv}{Exp}\PYG{p}{])} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{fExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{).}
+\PYG{n+nf}{fFactor}\PYG{p}{(}\PYG{l+s+sAtom}{num}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{number}\PYG{p}{(}\PYG{n+nv}{Num}\PYG{p}{).}
+\end{Verbatim}

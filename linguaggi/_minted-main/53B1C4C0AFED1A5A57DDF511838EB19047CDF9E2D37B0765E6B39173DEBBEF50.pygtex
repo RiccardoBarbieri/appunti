@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{).}
+\PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{o}{+}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{,} \PYG{n+nv}{Value1}\PYG{p}{),}
+                             \PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value2}\PYG{p}{),}
+                             \PYG{n+nv}{Value} \PYG{o}{is} \PYG{n+nv}{Value1} \PYG{o}{+} \PYG{n+nv}{Value2}\PYG{p}{.}
+\PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{o}{\PYGZhy{}}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{,} \PYG{n+nv}{Value1}\PYG{p}{),}
+                             \PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value2}\PYG{p}{),}
+                             \PYG{n+nv}{Value} \PYG{o}{is} \PYG{n+nv}{Value1} \PYG{o}{\PYGZhy{}} \PYG{n+nv}{Value2}\PYG{p}{.}
+\PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{).}
+\PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{o}{*}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value1}\PYG{p}{),}
+                                \PYG{n+nf}{evalFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value2}\PYG{p}{),}
+                                \PYG{n+nv}{Value} \PYG{o}{is} \PYG{n+nv}{Value1} \PYG{o}{*} \PYG{n+nv}{Value2}\PYG{p}{.}
+\PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{l+s+sAtom}{:}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalTerm}\PYG{p}{(}\PYG{n+nv}{Term}\PYG{p}{,} \PYG{n+nv}{Value1}\PYG{p}{),}
+                                \PYG{n+nf}{evalFactor}\PYG{p}{(}\PYG{n+nv}{Factor}\PYG{p}{,} \PYG{n+nv}{Value2}\PYG{p}{),}
+                                \PYG{n+nv}{Value} \PYG{o}{is} \PYG{n+nv}{Value1} \PYG{o}{/} \PYG{n+nv}{Value2}\PYG{p}{.}
+\PYG{n+nf}{evalFactor}\PYG{p}{([}\PYG{n+nv}{Exp}\PYG{p}{],} \PYG{n+nv}{Value}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{evalExpr}\PYG{p}{(}\PYG{n+nv}{Exp}\PYG{p}{,} \PYG{n+nv}{Value}\PYG{p}{).}
+\PYG{n+nf}{evalFactor}\PYG{p}{(}\PYG{n+nv}{Num}\PYG{p}{,} \PYG{n+nv}{Num}\PYG{p}{)} \PYG{p}{:\PYGZhy{}} \PYG{n+nf}{number}\PYG{p}{(}\PYG{n+nv}{Num}\PYG{p}{).}
+\end{Verbatim}

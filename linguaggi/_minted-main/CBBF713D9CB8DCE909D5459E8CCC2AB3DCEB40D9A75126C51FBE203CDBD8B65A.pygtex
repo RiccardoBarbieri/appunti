@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{SolverFactory} \PYG{n}{solverFactory} \PYG{o}{=} \PYG{n}{ClassicSolverFactory}\PYG{p}{.}\PYG{n+na}{INSTANCE}\PYG{p}{;}
+\end{Verbatim}

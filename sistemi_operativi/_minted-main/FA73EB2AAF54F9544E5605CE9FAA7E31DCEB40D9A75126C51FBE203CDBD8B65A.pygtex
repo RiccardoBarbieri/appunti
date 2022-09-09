@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kt}{void} \PYG{n+nf}{op1}\PYG{p}{()} \PYG{p}{\PYGZob{}}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+    \PYG{k}{while} \PYG{p}{(}\PYG{o}{!}\PYG{n}{C}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{n}{csem}\PYG{o}{++}\PYG{p}{;}
+        \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+        \PYG{n}{P}\PYG{p}{(}\PYG{n}{sem}\PYG{p}{);}
+        \PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+    \PYG{p}{\PYGZcb{}}
+    \PYG{n}{S1}\PYG{p}{;}
+    \PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

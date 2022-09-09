@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void} \PYG{n+nf}{invio}\PYG{p}{(}\PYG{n}{T} \PYG{n}{dato}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n}{P}\PYG{p}{(}\PYG{n}{vu}\PYG{p}{);}
+    \PYG{n}{inserisci}\PYG{p}{(}\PYG{n}{dato}\PYG{p}{);}
+    \PYG{n}{V}\PYG{p}{(}\PYG{n}{pn}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+
+
+\PYG{c+c1}{//P1}
+\PYG{k}{while} \PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{c+c1}{//prepara messaggio}
+    \PYG{n}{invio}\PYG{p}{(}\PYG{n}{msg}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{ClausesReader} \PYG{n}{theoryReader} \PYG{o}{=} \PYG{n}{ClausesReader}\PYG{p}{.}\PYG{n+na}{getWithDefaultOperators}\PYG{p}{();}
+\PYG{n}{Theory} \PYG{n}{theory} \PYG{o}{=} \PYG{n}{theoryReader}\PYG{p}{.}\PYG{n+na}{readTheory}\PYG{p}{(}\PYG{n}{input}\PYG{p}{);}
+\end{Verbatim}

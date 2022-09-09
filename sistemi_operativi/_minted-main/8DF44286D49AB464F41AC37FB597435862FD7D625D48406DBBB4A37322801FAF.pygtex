@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{Inserimento}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{P}\PYG{p}{,}
+\PYG{+w}{                 }\PYG{n}{descrittore\PYGZus{}coda}\PYG{+w}{ }\PYG{n}{C}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{//inserimento processo di indice P}
+\PYG{+w}{    }\PYG{c+c1}{//nella coda C}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
