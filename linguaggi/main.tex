@@ -1,0 +1,34 @@
+\documentclass[12pt]{book}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}         
+\usepackage{amsmath}        
+\usepackage{graphicx}        
+\usepackage{xcolor}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{subcaption}
+\usepackage{multicol}
+\usepackage{enumitem}
+\usepackage[italian]{babel}
+%\setlist{nosep}
+    
+\definecolor{lightgray}{gray}{0.95}    
+    
+% Stile dei titoli dei capitoli    
+\definecolor{gray75}{gray}{0.75}    
+\newcommand{\hsp}{\hspace{20pt}}    
+\titleformat{\chapter}[hang]    
+{\Huge\bfseries}    
+{\thechapter\hsp\textcolor{gray75}{|}\hsp}    
+{0pt}    
+{\Huge\bfseries}    
+
+\newenvironment{multicolfigure}
+  {\par\medskip\noindent\minipage{\linewidth}}
+  {\endminipage\par\medskip}
+
+\begin{document}
+
+\input{chapters/automi_riconoscitori/automi_riconoscitori.tex}
+\input{chapters/riconoscitori_pda/riconoscitori_pda.tex}
+
+\end{document}

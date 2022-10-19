@@ -1,0 +1,228 @@
+\chapter{Modello a memoria comune}
+
+Esistono due modelli principale di interazione tra i processi:
+\begin{itemize}
+    \item memoria comune, ambiente globale con memoria condivisa
+    \item scambio di messaggi, ambiente locale con memoria distribuita
+\end{itemize}
+
+In questo capitolo si analizza il modello a memoria comune.
+
+Il sistema è visto come un insieme di \textbf{processi} e \textbf{oggetti}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/18.png}
+\end{figure}
+
+In questo grafo, O1 e O4 sono risorse private, mentre O2 e O3 sono comuni.
+
+Esistono due tipi di interazione tra processi:
+\begin{itemize}
+    \item \textbf{competizione}
+    \item \textbf{cooperazione}
+\end{itemize}
+
+In questo modello, ogni applicazione viene strutturata come uninsieme di componenti, suddiviso in due sottoinsiemi disgiunti, i processi come componenti attivi e le risorse come componenti passivi.
+
+\paragraph{Risorsa} Qualunque oggetto fisico di cui un processo necessita per portare a termine il suo compito.
+
+Le risorse sono raggruppate in \underline{classi}, categorie che identificano l'insieme delle operazioni che un processo può eseguire.
+
+\section{Gestore di una risorsa}
+
+Per ogni risorsa R, il suo \textbf{gestore} definisce, in ogni istante $t$, l'insieme $SR(t)$ dei processi che hanno il diritto di operare su R.
+
+Classificazione delle risorse in base alla condivisione:
+\begin{itemize}
+    \item \textbf{dedicata} se $SR(t)$ ha una cardinalità sempre $\le 1$
+    \item \textbf{condivisa} in caso contrario
+\end{itemize}
+
+Classificazione delle risorse in base al tipo di allocazione:
+\begin{itemize}
+    \item \textbf{allocata staticamente} se $SR(t)$ è una costante $SR(t) = SR(t_0), \forall t$ 
+    \item \textbf{allocata dinamicamente} se $SR(t)$ è una funzione del tempo
+\end{itemize}
+\begin{figure}[H]
+    \caption{Tipologia di allocazione delle risorse}
+    \centering
+    \includegraphics[width=0.65\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/19.png}
+\end{figure}
+
+Per ogni risorsa allocata \textit{staticamente}, l'insieme $SR(t)$ è definito prima che il programma inizi la propria esecuzione, il gestore della risorsa è il programmatore che stabilisce quale processo può operare su R.
+
+Per ogni risorsa allocata \textit{dinamicamente}, il gestore $G_R$ definisce l'insieme $SR(t)$ in fase di esecuzione e quindi deve essere un componenete della stessa applicazione, nel quale l'allocazione viene decisa a run-time in base alle politiche date.
+
+\subsection{Compiti del gestore di una risorsa}
+Il gestore di una risorsa deve essere in grado di:
+\begin{itemize}
+    \item mantenere \textbf{aggiornato} l'insieme $SR(t)$ e lo stato di allocazione della risorsa
+    \item fornire i \textbf{meccanismi} che un processo può utilizzare per ottenere i permessi per accedere alla risorsa e quindi entrare a far parte dell'insieme $SR(t)$ e per rilasciare questi permessi
+    \item implementare la \textbf{strategia} di allocazione della risorsa e cioè definire quando, a chi e per quanto tempo allocare la risorsa
+\end{itemize}
+
+\subsection{Accesso a risorse}
+Considerando un processo P che deve operare su una risorsa R di tipo T.
+
+\subsubsection{Allocata staticamente}
+Se R è allocata staticamente a P il processo, se appartiene a $SR(t)$ possiede il diritto di operae su R in qualunque istante.
+
+\subsubsection{Allocata dinamicamente}
+Se R è allocata dinamicamente a P, è necessario prevedere un gestore GR che implementa le funzioni di \underline{richiesta} e \underline{rilascio}, il processo deve richiedere accesso, eseguire operazione e rilasciare accesso.
+
+\subsubsection{Allocata condivisa}
+Se R è allocata come \textit{risorsa condivisa} è necessario assicurare che gli accessi avvengano in modo non divisibile: le funzioni di acecsso alla risorsa devono essere programmate come una classe di sezioni critiche utilizzando meccanismi di sincronizzazione).
+
+\subsubsection{Allocata dedicata}
+Se R è allocata come \textit{risorsa dedicata} essendo P l'unico processo che accede alla risorsa, non è necessario prevedere sincronizzazione.
+
+\subsection{Specifica della sincronizzazione}
+
+\paragraph{Regione critica condizionale [Hoare, Brinch-hansen]} Formalismo che consente di esprimere la specifica di qualunque \textbf{vincolo di sincronizzazione}.
+
+\begin{lstlisting}
+    region R << Sa; when(C) Sb;>>
+\end{lstlisting}
+
+Il corpo della region rappresenta una operazione da eseguire sulla risorsa condivisa R, è la \textbf{sezione critica} che deve essere eseguita in mutua esclusione con le altre operazioni.
+
+Vengono eseguite le istruzioni \texttt{Sa} e, non appena C è vera, \texttt{Sb}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.5\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/20.png}
+\end{figure}
+
+\subsection{Casi particolari}
+\begin{itemize}
+    \item \texttt{region R << S; >>} mutua esclusione senza ulteriori vincoli
+    \item \texttt{region R << when(C) >>} specifica di un vincolo di sincronizzazione: P deve attendere che C si verifichi
+    \item \texttt{region R << when(C) S; >>} in questo caso C è una precondizione necessaria per eseguire S
+\end{itemize}
+
+\section{Il problema della mutua esclusione}
+Il problema della mutua esclusione nasce quando più processi possono avere accesso a variabili comuni, la regola impone che le operazioni non si sovrappongano nel tempo, nessun vincolo è imposto sull'ordine delle operazioni.
+
+\paragraph{Sezione critica}
+Una sequenza di istruzioni che accede e modifica un insieme di variabili comuni prende il nome di sezione critica.
+
+La regola di mutua esclusione stabilisce che sezioni critiche della stessa classe non pososno essere in esecuzione contemporaneamente.
+
+Il protocollo di esecuzione di una sezione critica è il seguente:
+\begin{lstlisting}
+    <prologo>
+    S;
+    <epilogo>
+\end{lstlisting}
+
+Nel prologo si richiede e ottiene l'autorizzazione a eseguire la sezione, nell'epilogo si rilascia la risorsa.
+
+\section{Strumenti linguistici per la programmazione di interazioni}
+
+\subsection{Semaforo}
+É uno strumento di basso livello, realizzato dal kernel della macchina, utile a risolvere qualsiasi problema di sincronizzazione.
+
+L'eventuale attesa nell'esecuzione può essere realizzata utilizzando i meccanismi di gestione dei thread (sospensione, riattivazione) offerti dal kernel.
+
+Un semaforo è una variabile \textit{interna non negativa} alla quale è possibile accedere solo tramite le due operazioni \texttt{P} e \texttt{V}.
+
+Specifica delle operazioni di un semaforo:
+\begin{lstlisting}
+    void P(semaphore s):
+        region s << when(val>0) val--; >>
+
+
+    void V(semaphore s):
+        region s << val++; >>
+\end{lstlisting}
+
+Dato un semaforo S, siano:
+\begin{itemize}
+    \item $\texttt{val}_\texttt{s}$: valore dell'intero non negativo associato al semaforo
+    \item $\texttt{I}_\texttt{s}$: valore interno maggiore di zero di inizializzazione
+    \item $\texttt{nv}_\texttt{s}$: numero di volte che l'operazione \texttt{V(s)} è stata eseguita
+    \item $\texttt{np}_\texttt{s}$: numero di volte che l'operazione \texttt{P(s)} è stata eseguita
+\end{itemize}
+
+\subsubsection{Relazione di invarianza}
+Ad ogni istante possiamo esprimere il valore del semaforo come $\texttt{val}_\texttt{s} = \texttt{I}_\texttt{s} + \texttt{nv}_\texttt{s} - \texttt{np}_\texttt{s}$ da cui si ottiene $\texttt{np}_\texttt{s}\le \texttt{I}_\texttt{s}+\texttt{nv}_\texttt{s}$
+
+La relazione di invarianza è sempre soddisfatta (safety property), si può usare questa proprietà per dimostrare formalmente le proprietà dei programmi concorrenti.
+
+\subsubsection{Utilizzo}
+Il semaforo è uno strumento generale che consente la risoluzione di qualunque problema di sincronizzazione, ne esistono però specializzazioni utili in particolari casi:
+\begin{itemize}
+    \item semafori mutua esclusione
+    \item semafori evento
+    \item semafori binari composti
+    \item semafori condizione
+    \item semafori risorsa
+    \item semafori privati
+\end{itemize}
+
+\subsubsection{Semaforo mutua esclusione}
+
+Viene inizializzato a 1 ed è usato per realizzare le sezioni critiche di una stessa classe.
+\begin{lstlisting}
+    class risorsa {
+        semaphore mutex = 1;
+        public void op1() {
+            P(mutex);
+            <sez. critica>
+            V(mutex);
+        }
+    }
+\end{lstlisting}
+
+Le seguenti condizioni sono soddisfatte:
+\begin{itemize}
+    \item sezione critiche della stessa classe devono essere eseguite in modo mutualmente esclusivo
+    \item non deve essere possibile il verificarsi di deadlock
+    \item un processo fuori dalla sezione critica non deve bloccare l'entrata ad altri processi
+\end{itemize}
+
+\subsection{Mutua esclusione tra gruppi e processi}
+In alcuni casi può essere utili consentire a più processi di eseguire contemporaneamente la stessa operazione su una risorsa, ma non operazioni diverse.
+
+Data la risorsa condivisa \texttt{ris} e indicate con $\texttt{op}_\texttt{1}\cdots \texttt{op}_\texttt{n}$ le n operazioni eseguibili su \texttt{ris}, si vuole garantire che i processi possano eseguire contemporaneamente $\texttt{op}_\texttt{i}$.
+
+Lo schema è il solito prologo, operazione, epilogo:
+\begin{itemize}
+    \item il \underline{prologo} deve sospendere il processo che ha chiamato l'operazione se sulla risorsa sono in esecuzione operazioni diverse, altrimenti deve procedere
+    \item l'\underline{epilogo} deve liberare la mutua esclusione solo se il processo che lo esegue è l'unico processo in esecuzione sulla risorsa
+\end{itemize}
+
+Si definisce una \textit{semaforo mutex} per la mutua esclusione tra operazioni e un'altro per le sezioni critiche prologo e epilogo.
+
+\begin{lstlisting}
+    semaphore mutex=1, m_i=1;
+
+    public void op_i() {
+        P(m_i);
+        cont_i++;
+        if (cont_i==1) P(mutex);
+        V(m_i);
+        <corpo operazione>
+        P(m_i);
+        cont_i--;
+        if (cont_i==0) V(mutex);
+        V(m_i);
+    }
+\end{lstlisting}
+
+Questo schema è applicabile alla casistica di lettura scrittura su file: più processi possono leggere un file contemporaneamente mentre una sola può modificare.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
