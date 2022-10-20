@@ -6,7 +6,7 @@
 
 #define DEBUG 1
 
-#define VECTOR_LENGHT 500000
+#define VECTOR_LENGHT 100000
 
 int main()
 {
