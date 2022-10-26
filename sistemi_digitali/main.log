@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  14 OCT 2022 14:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  22 OCT 2022 17:28
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -147,171 +147,272 @@ Package: titlesec 2021/07/05 v2.14 Sectioning titles
 \titlewidth=\dimen160
 \titlewidthlast=\dimen161
 \titlewidthfirst=\dimen162
-) (/usr/share/texlive/texmf-dist/tex/latex/minted/minted.sty
-Package: minted 2021/12/24 v2.6 Yet another Pygments shim for LaTeX
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen163
+\captionmargin@=\dimen164
+\captionwidth=\dimen165
+\caption@tempdima=\dimen166
+\caption@indent=\dimen167
+\caption@parindent=\dimen168
+\caption@hangindent=\dimen169
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count276
+\c@continuedfloat=\count277
+Package caption Info: float package is loaded.
+)
+\c@subfigure=\count278
+\c@subtable=\count279
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+\c@tracingmulticols=\count280
+\mult@box=\box55
+\multicol@leftmargin=\dimen170
+\c@unbalance=\count281
+\c@collectmore=\count282
+\doublecol@number=\count283
+\multicoltolerance=\count284
+\multicolpretolerance=\count285
+\full@width=\dimen171
+\page@free=\dimen172
+\premulticols=\dimen173
+\postmulticols=\dimen174
+\multicolsep=\skip54
+\multicolbaselineskip=\skip55
+\partial@page=\box56
+\last@line=\box57
+\maxbalancingoverflow=\dimen175
+\mult@rightbox=\box58
+\mult@grightbox=\box59
+\mult@firstbox=\box60
+\mult@gfirstbox=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\@tempa=\box95
+\@tempa=\box96
+\@tempa=\box97
+\c@minrows=\count286
+\c@columnbadness=\count287
+\c@finalcolumnbadness=\count288
+\last@try=\dimen176
+\multicolovershoot=\dimen177
+\multicolundershoot=\dimen178
+\mult@nat@firstbox=\box98
+\colbreak@box=\box99
+\mc@col@check@num=\count289
+) (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip56
+\enit@outerparindent=\dimen179
+\enit@toks=\toks26
+\enit@inbox=\box100
+\enit@count@id=\count290
+\enitdp@description=\count291
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
  (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 ) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
-)) (/usr/share/texlive/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2019/02/04 v1.4 fvextra - extensions and patches for fancyvrb
- (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count292
+\l__pdf_internal_box=\box101
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
 ) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count276
-) (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
-\FV@CodeLineNo=\count277
-\FV@InFile=\read2
-\FV@TabBox=\box55
-\c@FancyVerbLine=\count278
-\FV@StepNumber=\count279
-\FV@OutFile=\write3
-) (/usr/share/texlive/texmf-dist/tex/latex/upquote/upquote.sty
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbatim
-) (/usr/share/texlive/texmf-dist/tex/latex/lineno/lineno.sty
-Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count280
-\output=\toks26
-\linenoprevgraf=\count281
-\linenumbersep=\dimen163
-\linenumberwidth=\dimen164
-\c@linenumber=\count282
-\c@pagewiselinenumber=\count283
-\c@LN@truepage=\count284
-\c@internallinenumber=\count285
-\c@internallinenumbers=\count286
-\quotelinenumbersep=\dimen165
-\bframerule=\dimen166
-\bframesep=\dimen167
-\bframebox=\box56
-LaTeX Info: Redefining \\ on input line 3056.
-)
-\c@FV@TrueTabGroupLevel=\count287
-\c@FV@TrueTabCounter=\count288
-\FV@TabBox@Group=\box57
-\FV@TmpLength=\skip54
-\c@FV@HighlightLinesStart=\count289
-\c@FV@HighlightLinesStop=\count290
-\FV@LoopCount=\count291
-\FV@NCharsBox=\box58
-\FV@BreakIndent=\dimen168
-\FV@BreakIndentNChars=\count292
-\FV@BreakSymbolSepLeft=\dimen169
-\FV@BreakSymbolSepLeftNChars=\count293
-\FV@BreakSymbolSepRight=\dimen170
-\FV@BreakSymbolSepRightNChars=\count294
-\FV@BreakSymbolIndentLeft=\dimen171
-\FV@BreakSymbolIndentLeftNChars=\count295
-\FV@BreakSymbolIndentRight=\dimen172
-\FV@BreakSymbolIndentRightNChars=\count296
-\c@FancyVerbLineBreakLast=\count297
-\FV@LineBox=\box59
-\FV@LineIndentBox=\box60
-\FV@LineWidth=\dimen173
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count298
-\calc@Bcount=\count299
-\calc@Adimen=\dimen174
-\calc@Bdimen=\dimen175
-\calc@Askip=\skip55
-\calc@Bskip=\skip56
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count300
-\calc@Cskip=\skip57
-) (/usr/share/texlive/texmf-dist/tex/latex/tools/shellesc.sty
-Package: shellesc 2019/11/08 v1.0c unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
-) (/usr/share/texlive/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
- (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+\etb@tempcnta=\count293
+) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
  (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
 Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-) (/usr/share/texlive/texmf-dist/tex/generic/catchfile/catchfile.sty
-Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
-)) (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifluatex.sty
-Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-runsystem(uname -s > "main.w18")...executed.
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\c@abspage=\count294
+Package zref Info: New property: abspage on input line 66.
+) (/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip57
+\c@mdf@globalstyle@cnt=\count295
+\mdf@skipabove@length=\skip58
+\mdf@skipbelow@length=\skip59
+\mdf@leftmargin@length=\skip60
+\mdf@rightmargin@length=\skip61
+\mdf@innerleftmargin@length=\skip62
+\mdf@innerrightmargin@length=\skip63
+\mdf@innertopmargin@length=\skip64
+\mdf@innerbottommargin@length=\skip65
+\mdf@splittopskip@length=\skip66
+\mdf@splitbottomskip@length=\skip67
+\mdf@outermargin@length=\skip68
+\mdf@innermargin@length=\skip69
+\mdf@linewidth@length=\skip70
+\mdf@innerlinewidth@length=\skip71
+\mdf@middlelinewidth@length=\skip72
+\mdf@outerlinewidth@length=\skip73
+\mdf@roundcorner@length=\skip74
+\mdf@footenotedistance@length=\skip75
+\mdf@userdefinedwidth@length=\skip76
+\mdf@needspace@length=\skip77
+\mdf@frametitleaboveskip@length=\skip78
+\mdf@frametitlebelowskip@length=\skip79
+\mdf@frametitlerulewidth@length=\skip80
+\mdf@frametitleleftmargin@length=\skip81
+\mdf@frametitlerightmargin@length=\skip82
+\mdf@shadowsize@length=\skip83
+\mdf@extratopheight@length=\skip84
+\mdf@subtitleabovelinewidth@length=\skip85
+\mdf@subtitlebelowlinewidth@length=\skip86
+\mdf@subtitleaboveskip@length=\skip87
+\mdf@subtitlebelowskip@length=\skip88
+\mdf@subtitleinneraboveskip@length=\skip89
+\mdf@subtitleinnerbelowskip@length=\skip90
+\mdf@subsubtitleabovelinewidth@length=\skip91
+\mdf@subsubtitlebelowlinewidth@length=\skip92
+\mdf@subsubtitleaboveskip@length=\skip93
+\mdf@subsubtitlebelowskip@length=\skip94
+\mdf@subsubtitleinneraboveskip@length=\skip95
+\mdf@subsubtitleinnerbelowskip@length=\skip96
+ (/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box102
+\mdf@footnotebox=\box103
+\mdf@splitbox@one=\box104
+\mdf@splitbox@two=\box105
+\mdf@splitbox@save=\box106
+\mdfsplitboxwidth=\skip97
+\mdfsplitboxtotalwidth=\skip98
+\mdfsplitboxheight=\skip99
+\mdfsplitboxdepth=\skip100
+\mdfsplitboxtotalheight=\skip101
+\mdfframetitleboxwidth=\skip102
+\mdfframetitleboxtotalwidth=\skip103
+\mdfframetitleboxheight=\skip104
+\mdfframetitleboxdepth=\skip105
+\mdfframetitleboxtotalheight=\skip106
+\mdffootnoteboxwidth=\skip107
+\mdffootnoteboxtotalwidth=\skip108
+\mdffootnoteboxheight=\skip109
+\mdffootnoteboxdepth=\skip110
+\mdffootnoteboxtotalheight=\skip111
+\mdftotallinewidth=\skip112
+\mdfboundingboxwidth=\skip113
+\mdfboundingboxtotalwidth=\skip114
+\mdfboundingboxheight=\skip115
+\mdfboundingboxdepth=\skip116
+\mdfboundingboxtotalheight=\skip117
+\mdf@freevspace@length=\skip118
+\mdf@horizontalwidthofbox@length=\skip119
+\mdf@verticalmarginwhole@length=\skip120
+\mdf@horizontalspaceofbox=\skip121
+\mdfsubtitleheight=\skip122
+\mdfsubsubtitleheight=\skip123
+\c@mdfcountframes=\count296
 
- (./main.w18)
-runsystem(rm -- "main.w18")...executed.
+****** mdframed patching \endmdf@trivlist
 
-)
-(/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texlive/texmf-dist/tex/generic/xstring/xstring.tex
-\integerpart=\count301
-\decimalpart=\count302
-)
-Package: xstring 2021/07/21 v1.84 String manipulations (CT)
-) (/usr/share/texlive/texmf-dist/tex/latex/framed/framed.sty
-Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip58
-\fb@frw=\dimen176
-\fb@frh=\dimen177
-\FrameRule=\dimen178
-\FrameSep=\dimen179
-)
-\minted@appexistsfile=\read3
-\minted@bgbox=\box61
-\minted@code=\write4
-\c@minted@FancyVerbLineTemp=\count303
-\c@minted@pygmentizecounter=\count304
-\@float@every@listing=\toks27
-\c@listing=\count305
-)
-runsystem(mkdir -p _minted-main)...executed.
+****** -- success******
 
- (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+\mdf@envdepth=\count297
+\c@mdf@env@i=\count298
+\c@mdf@env@ii=\count299
+\c@mdf@zref@counter=\count300
+Package zref Info: New property: mdf@pagevalue on input line 895.
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count306
+\babel@savecnt=\count301
 \U@D=\dimen180
 \l@unhyphenated=\language87
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
-\bbl@readstream=\read4
-\bbl@dirlevel=\count307
+\bbl@readstream=\read2
+\bbl@dirlevel=\count302
  (/usr/share/texlive/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count308
-\it@doublequoteactive=\count309
-\it@ISOcompliance=\count310
-))
-runsystem(which pygmentize && touch main.aex)...executed.
-
-runsystem(rm main.aex)...executed.
-
- (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count311
-\l__pdf_internal_box=\box62
-) (./main.aux)
+\it@lettering=\count303
+\it@doublequoteactive=\count304
+\it@ISOcompliance=\count305
+)) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
-LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -349,24 +450,22 @@ LaTeX Font Info:    ... okay on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count312
+\scratchcounter=\count306
 \scratchdimen=\dimen181
-\scratchbox=\box63
-\nofMPsegments=\count313
-\nofMParguments=\count314
-\everyMPshowfont=\toks28
-\MPscratchCnt=\count315
+\scratchbox=\box107
+\nofMPsegments=\count307
+\nofMParguments=\count308
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count309
 \MPscratchDim=\dimen182
-\MPnumerator=\count316
-\makeMPintoPDFobject=\count317
-\everyMPtoPDFconversion=\toks29
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
+\everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
  (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
- (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
-Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
-))
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
 Package grfext Info: Graphics extension search list:
 (grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
@@ -374,8 +473,10 @@ Package grfext Info: Graphics extension search list:
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-LaTeX Info: Redefining \it@ocap on input line 26.
-LaTeX Info: Redefining \it@ccap on input line 26.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Info: Redefining \it@ocap on input line 32.
+LaTeX Info: Redefining \it@ccap on input line 32.
 
 
 File italian.ldf warning: 
@@ -383,71 +484,114 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 26.
+italian.ldf    on input line 32.
 
-(./chapters/parallel_computing/parallel_computing.tex
+(./main.toc)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ (./chapters/parallel_computing/parallel_computing.tex [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
+
+]
 Capitolo 1.
 
 Overfull \hbox (4.47835pt too wide) in paragraph at lines 1--1
 |[]\OT1/cmr/bx/n/24.88 Introduzione al cal-co-lo pa-ral-
  []
 
-</home/riccardoob/appunti/sistemi_digitali/images/0.png, id=1, 689.57625pt x 254.9525pt>
+</home/riccardoob/appunti/sistemi_digitali/images/0.png, id=12, 689.57625pt x 254.9525pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/0.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/0.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/0.png  used on input line 13.
 (pdftex.def)             Requested size: 341.43436pt x 126.23492pt.
-
-Underfull \vbox (badness 1102) has occurred while \output is active []
-
- [1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/riccardoob/appunti/sistemi_digitali/images/0.png>]
-</home/riccardoob/appunti/sistemi_digitali/images/1.png, id=9, 629.35126pt x 210.7875pt>
+[3 </home/riccardoob/appunti/sistemi_digitali/images/0.png>] [4]
+</home/riccardoob/appunti/sistemi_digitali/images/1.png, id=20, 629.35126pt x 210.7875pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/1.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/1.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/1.png  used on input line 66.
 (pdftex.def)             Requested size: 256.0774pt x 85.76729pt.
- [2]
-</home/riccardoob/appunti/sistemi_digitali/images/2.png, id=15, 901.3675pt x 325.215pt>
+</home/riccardoob/appunti/sistemi_digitali/images/2.png, id=21, 901.3675pt x 325.215pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/2.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/2.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/2.png  used on input line 74.
 (pdftex.def)             Requested size: 341.43436pt x 123.19095pt.
- [3 </home/riccardoob/appunti/sistemi_digitali/images/1.png> </home/riccardoob/appunti/sistemi_digitali/images/2.png>]
-</home/riccardoob/appunti/sistemi_digitali/images/3.png, id=19, 688.5725pt x 254.9525pt>
+
+Underfull \vbox (badness 3780) has occurred while \output is active []
+
+ [5 </home/riccardoob/appunti/sistemi_digitali/images/1.png> </home/riccardoob/appunti/sistemi_digitali/images/2.png>]
+</home/riccardoob/appunti/sistemi_digitali/images/3.png, id=25, 688.5725pt x 254.9525pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/3.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/3.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/3.png  used on input line 103.
 (pdftex.def)             Requested size: 341.43436pt x 126.42166pt.
-</home/riccardoob/appunti/sistemi_digitali/images/4.png, id=20, 710.655pt x 207.77625pt>
+</home/riccardoob/appunti/sistemi_digitali/images/4.png, id=26, 710.655pt x 207.77625pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/4.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/4.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/4.png  used on input line 110.
 (pdftex.def)             Requested size: 341.43436pt x 99.82974pt.
-</home/riccardoob/appunti/sistemi_digitali/images/5.png, id=21, 746.79pt x 471.7625pt>
+ [6 </home/riccardoob/appunti/sistemi_digitali/images/3.png> </home/riccardoob/appunti/sistemi_digitali/images/4.png>]
+</home/riccardoob/appunti/sistemi_digitali/images/5.png, id=30, 746.79pt x 471.7625pt>
 File: /home/riccardoob/appunti/sistemi_digitali/images/5.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_digitali/images/5.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/5.png  used on input line 124.
 (pdftex.def)             Requested size: 298.75262pt x 188.72324pt.
+) (./chapters/fpga/fpga.tex [7 </home/riccardoob/appunti/sistemi_digitali/images/5.png>] [8
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+]
+Capitolo 2.
 
- [4 </home/riccardoob/appunti/sistemi_digitali/images/3.png> </home/riccardoob/appunti/sistemi_digitali/images/4.png>]) [5 </home/riccardoob/appunti/sistemi_digitali/images/5.png>] (./main.aux) ) 
+Overfull \hbox (16.41447pt too wide) in paragraph at lines 1--1
+|[]\OT1/cmr/bx/n/24.88 Field Pro-gram-ma-ble Ga-te Ar-
+ []
+
+</home/riccardoob/appunti/sistemi_digitali/images/6.png, id=38, 1156.32pt x 458.71375pt>
+File: /home/riccardoob/appunti/sistemi_digitali/images/6.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_digitali/images/6.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/6.png  used on input line 6.
+(pdftex.def)             Requested size: 256.0774pt x 101.58228pt.
+[9 </home/riccardoob/appunti/sistemi_digitali/images/6.png>] [10]
+</home/riccardoob/appunti/sistemi_digitali/images/7.png, id=45, 454.69875pt x 247.92625pt>
+File: /home/riccardoob/appunti/sistemi_digitali/images/7.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_digitali/images/7.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/7.png  used on input line 42.
+(pdftex.def)             Requested size: 298.75262pt x 162.89792pt.
+</home/riccardoob/appunti/sistemi_digitali/images/8.png, id=46, 809.0225pt x 468.75125pt>
+File: /home/riccardoob/appunti/sistemi_digitali/images/8.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_digitali/images/8.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/8.png  used on input line 51.
+(pdftex.def)             Requested size: 298.75262pt x 173.09906pt.
+</home/riccardoob/appunti/sistemi_digitali/images/9.png, id=47, 469.755pt x 346.29375pt>
+File: /home/riccardoob/appunti/sistemi_digitali/images/9.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_digitali/images/9.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/9.png  used on input line 57.
+(pdftex.def)             Requested size: 213.39566pt x 157.31026pt.
+ [11 </home/riccardoob/appunti/sistemi_digitali/images/7.png> </home/riccardoob/appunti/sistemi_digitali/images/8.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 63--67
+
+ []
+
+</home/riccardoob/appunti/sistemi_digitali/images/10.png, id=51, 576.1525pt x 276.03125pt>
+File: /home/riccardoob/appunti/sistemi_digitali/images/10.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_digitali/images/10.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_digitali/images/10.png  used on input line 71.
+(pdftex.def)             Requested size: 256.0774pt x 122.6882pt.
+[12 </home/riccardoob/appunti/sistemi_digitali/images/9.png> </home/riccardoob/appunti/sistemi_digitali/images/10.png>]) [13] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 8121 strings out of 478287
- 147680 string characters out of 5849288
- 511740 words of memory out of 5000000
- 26201 multiletter control sequences out of 15000+600000
- 472370 words of font info for 38 fonts, out of 8000000 for 9000
+ 8203 strings out of 478287
+ 143449 string characters out of 5849288
+ 475357 words of memory out of 5000000
+ 26265 multiletter control sequences out of 15000+600000
+ 475829 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 74i,6n,77p,453b,236s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (5 pages, 379421 bytes).
+ 73i,7n,77p,473b,281s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (13 pages, 948115 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 84 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,106 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}xen}{3}{}%
+\contentsline {section}{\numberline {1.1}Caratteristiche}{4}{}%
+\contentsline {section}{\numberline {1.2}Gestione memoria e paginazione}{4}{}%
+\contentsline {subsubsection}{Gestione della memoria}{4}{}%
+\contentsline {subsubsection}{Creazione di un processo}{5}{}%
+\contentsline {subsubsection}{Balloon process}{6}{}%
+\contentsline {section}{\numberline {1.3}Virtualizzazione della CPU}{6}{}%
+\contentsline {section}{\numberline {1.4}Gestione interruzioni e eccezioni}{8}{}%
+\contentsline {section}{\numberline {1.5}Live migration in xen}{8}{}%
+\contentsline {chapter}{\numberline {2}Protezione}{9}{}%
+\contentsline {subsubsection}{Sicurezza}{9}{}%
+\contentsline {subsubsection}{Protezione}{9}{}%
+\contentsline {section}{\numberline {2.1}Protezione}{9}{}%
+\contentsline {subsection}{\numberline {2.1.1}Modelli}{9}{}%
+\contentsline {subsubsection}{Dominio di protezione}{10}{}%
+\contentsline {subsection}{\numberline {2.1.2}Politiche}{10}{}%
+\contentsline {subsubsection}{Principio del privilegio minimo}{10}{}%
+\contentsline {subsection}{\numberline {2.1.3}Meccanismi}{10}{}%
+\contentsline {subsubsection}{Principi di realizzazione}{11}{}%
+\contentsline {subsection}{\numberline {2.1.4}Dominio di protezione}{11}{}%
+\contentsline {subsubsection}{Domini disgiunti o con diritti di accesso comune}{11}{}%
+\contentsline {subsubsection}{Associazione tra processo e dominio}{11}{}%
+\contentsline {paragraph}{Modalità statica}{11}{}%
+\contentsline {paragraph}{Modalità dinamica}{11}{}%
+\contentsline {subsubsection}{Matrice degli accessi}{11}{}%
+\contentsline {subsection}{\numberline {2.1.5}Modello di Graham-Denning}{13}{}%
+\contentsline {subsubsection}{Propagazione dei diritti di accesso}{13}{}%
+\contentsline {subsubsection}{Diritto owner}{13}{}%
+\contentsline {subsubsection}{Diritto control}{13}{}%
+\contentsline {subsubsection}{Switch}{14}{}%
+\contentsline {subsection}{\numberline {2.1.6}Realizzazione della matrice degli accessi}{14}{}%
+\contentsline {subsubsection}{Access control list}{14}{}%
+\contentsline {paragraph}{Utenti e gruppi}{14}{}%
+\contentsline {subsubsection}{Capability list}{15}{}%
+\contentsline {subsubsection}{Revoca dai diritti di accesso}{15}{}%
+\contentsline {subsubsection}{Cancellazione/aggiunta di un utente}{15}{}%
+\contentsline {section}{\numberline {2.2}Sicurezza}{16}{}%
+\contentsline {subsection}{\numberline {2.2.1}Sicurezza multilivello}{16}{}%
+\contentsline {subsection}{\numberline {2.2.2}Modelli di sicurezza multilivello}{16}{}%
+\contentsline {subsection}{\numberline {2.2.3}Modello Bell-La Padula}{17}{}%
+\contentsline {subsubsection}{Regole di sicurezza}{17}{}%
+\contentsline {subsubsection}{Esempio - difesa cavalli di troia}{18}{}%
+\contentsline {subsection}{\numberline {2.2.4}Modello Biba}{18}{}%
+\contentsline {subsection}{\numberline {2.2.5}Architettura dei sistemi ad elevata sicurezza}{19}{}%
+\contentsline {paragraph}{Sistemi operativi sicuri o fidati}{19}{}%
+\contentsline {paragraph}{Reference monitor}{19}{}%
+\contentsline {paragraph}{Trusted computing base}{19}{}%
+\contentsline {subsection}{\numberline {2.2.6}Sistemi fidati}{19}{}%
+\contentsline {paragraph}{Mediazione completa}{19}{}%
+\contentsline {paragraph}{Isolamento}{20}{}%
+\contentsline {paragraph}{Verificabilità}{20}{}%
+\contentsline {chapter}{\numberline {3}Programmazione concorrente}{21}{}%
+\contentsline {section}{\numberline {3.1}Tipi di architettura}{21}{}%
+\contentsline {subsection}{\numberline {3.1.1}Sistemi multiprocessore}{22}{}%
+\contentsline {subsection}{\numberline {3.1.2}Distributed memory}{22}{}%
+\contentsline {subsection}{\numberline {3.1.3}Classificazione di Flynn}{23}{}%
+\contentsline {section}{\numberline {3.2}Applicazioni}{24}{}%
+\contentsline {section}{\numberline {3.3}Processi non sequenziali e tipi di interazione}{24}{}%
+\contentsline {paragraph}{Algoritmo}{24}{}%
+\contentsline {paragraph}{Programma}{24}{}%
+\contentsline {paragraph}{Processo}{24}{}%
+\contentsline {paragraph}{Elaboratore}{24}{}%
+\contentsline {paragraph}{Evento}{24}{}%
+\contentsline {subsection}{\numberline {3.3.1}Processo sequenziale}{25}{}%
+\contentsline {subsection}{\numberline {3.3.2}Processo non sequenziale}{25}{}%
+\contentsline {paragraph}{Elaboratore non sequenziale}{25}{}%
+\contentsline {paragraph}{Linguaggio non sequenziale}{25}{}%
+\contentsline {section}{\numberline {3.4}Proprietà dei programmi}{25}{}%
+\contentsline {paragraph}{Traccia dell'esecuzione}{25}{}%
+\contentsline {paragraph}{Stato}{26}{}%
+\contentsline {paragraph}{Programmi sequenziali}{26}{}%
+\contentsline {paragraph}{Pogrammi concorrenti}{26}{}%
+\contentsline {subsection}{\numberline {3.4.1}Proprietà dei programmi}{26}{}%
+\contentsline {subsubsection}{Safety}{26}{}%
+\contentsline {subsubsection}{Liveness}{26}{}%
+\contentsline {chapter}{\numberline {4}Modello a memoria comune}{27}{}%
+\contentsline {paragraph}{Risorsa}{27}{}%
+\contentsline {section}{\numberline {4.1}Gestore di una risorsa}{28}{}%
+\contentsline {subsection}{\numberline {4.1.1}Compiti del gestore di una risorsa}{28}{}%
+\contentsline {subsection}{\numberline {4.1.2}Accesso a risorse}{29}{}%
+\contentsline {subsubsection}{Allocata staticamente}{29}{}%
+\contentsline {subsubsection}{Allocata dinamicamente}{29}{}%
+\contentsline {subsubsection}{Allocata condivisa}{29}{}%
+\contentsline {subsubsection}{Allocata dedicata}{29}{}%
+\contentsline {subsection}{\numberline {4.1.3}Specifica della sincronizzazione}{29}{}%
+\contentsline {paragraph}{Regione critica condizionale [Hoare, Brinch-hansen]}{29}{}%
+\contentsline {subsection}{\numberline {4.1.4}Casi particolari}{30}{}%
+\contentsline {section}{\numberline {4.2}Il problema della mutua esclusione}{30}{}%
+\contentsline {paragraph}{Sezione critica}{30}{}%
+\contentsline {section}{\numberline {4.3}Strumenti linguistici per la programmazione di interazioni}{31}{}%
+\contentsline {subsection}{\numberline {4.3.1}Semaforo}{31}{}%
+\contentsline {subsubsection}{Relazione di invarianza}{31}{}%
+\contentsline {subsubsection}{Utilizzo}{31}{}%
+\contentsline {subsubsection}{Semaforo mutua esclusione}{32}{}%
+\contentsline {subsection}{\numberline {4.3.2}Mutua esclusione tra gruppi e processi}{32}{}%
+\contentsline {subsection}{\numberline {4.3.3}Semafori evento - scambio di messaggi temporali}{33}{}%
+\contentsline {subsubsection}{Esempio}{33}{}%
+\contentsline {subsubsection}{Problema del rendez-vous}{34}{}%
+\contentsline {subsubsection}{Barriera di sincronizzazione}{34}{}%
+\contentsline {subsection}{\numberline {4.3.4}Semafori binari composti - scambio di dati}{35}{}%
+\contentsline {subsection}{\numberline {4.3.5}Semafori condizione}{36}{}%
+\contentsline {subsubsection}{Schema attesa circolare}{36}{}%
+\contentsline {subsubsection}{Schema passaggio testimone}{37}{}%
+\contentsline {subsubsection}{Gestione di un pool di risorse equivalenti}{37}{}%

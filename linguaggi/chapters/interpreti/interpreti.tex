@@ -108,12 +108,13 @@ Nel dominio aritmetico usuale:
 
 \subsection{Grammatica per le espressioni}
 Consideriamo il linguaggio $E(G)$ relativo alla seguente grammatica per espressioni aritmetiche;
-\begin{itemize}
+\setlist{nosep}
+\begin{itemize}[label={}]
     \item $\texttt{VN} = \{ \texttt{EXP}\}$
     \item $\texttt{VT} = \{+, *, -, :, \texttt{num}\}$
     \item $S = \texttt{EXP}$
     \item $P = \{$
-    \begin{itemize}
+    \begin{itemize}[label={}]
         \item $\texttt{EXP} := \texttt{EXP} + \texttt{EXP}$
         \item $\texttt{EXP} := \texttt{EXP} - \texttt{EXP}$
         \item $\texttt{EXP} := \texttt{EXP} * \texttt{EXP}$
@@ -122,18 +123,18 @@ Consideriamo il linguaggio $E(G)$ relativo alla seguente grammatica per espressi
     \end{itemize}
     \item $\}$
 \end{itemize}
-
+\setlist{}
 É una grammatica ambigua, la semantica è informale: se \texttt{EXP} è un numero, l'espressione denota un intero e il valore dell'espression coincide con quello del numero.
 
 \subsection{Una grammatica a "strati"}
 É possibile dare una struttura \textit{gerarchica} alle espressioni, esprimendo così intrinsicamente priorità e associatività degli operatori.
-
-\begin{itemize}
+\setlist{nosep}
+\begin{itemize}[label={}]
     \item $\texttt{VN} = \{ \texttt{EXP}, \texttt{TERM}, \texttt{FACTOR}\}$
     \item $\texttt{VT} = \{+, *, -, :, (, ), \texttt{num}\}$
     \item $S = \texttt{EXP}$
     \item $P = \{$
-    \begin{itemize}
+    \begin{itemize}[label={}]
         \item $\texttt{EXP} := \texttt{TERM}$
         \item $\texttt{EXP} := \texttt{EXP} + \texttt{TERM}$
         \item $\texttt{EXP} := \texttt{EXP} - \texttt{TERM}$
@@ -145,7 +146,7 @@ Consideriamo il linguaggio $E(G)$ relativo alla seguente grammatica per espressi
     \end{itemize}
     \item $\}$
 \end{itemize}
-
+\setlist{}
 Ogni strato considera \textit{terminali} gli elementi linguistici definiti in altri strati:
 \begin{itemize}
     \item \texttt{EXP} considera terminali $+$, $-$ e \texttt{TERM}
@@ -190,8 +191,47 @@ Se si riscrivono le regole in forma ricorsiva a destra, ovvero invertendo \textt
 
 Ad esempio l'espressione $7 - 3 - 2$ verrebbe derivata come $7 - ( 3 - 2 )$ anziché come $( 7 - 3 ) - 2$.
 
-\subsection{Variante 2 - Non associativa}
+\setlist{nosep}
+\begin{itemize}[label={}]
+    \item $\texttt{VN} = \{ \texttt{EXP}, \texttt{TERM}, \texttt{FACTOR}\}$
+    \item $\texttt{VT} = \{+, *, -, :, (, ), \texttt{num}\}$
+    \item $P = \{$
+    \begin{itemize}[label={}]
+        \item $\texttt{EXP} := \texttt{TERM}$
+        \item $\texttt{EXP} := \texttt{TERM} + \texttt{EXP}$
+        \item $\texttt{EXP} := \texttt{TERM} - \texttt{EXP}$
+        \item $\texttt{TERM} := \texttt{FACTOR}$
+        \item $\texttt{TERM} := \texttt{FACTOR} * \texttt{TERM}$
+        \item $\texttt{TERM} := \texttt{FACTOR} : \texttt{TERM}$
+        \item $\texttt{FACTOR} := \texttt{num}$
+        \item $\texttt{FACTOR} := ( \texttt{EXP})$
+    \end{itemize}
+    \item $\}$
+\end{itemize}
+\setlist{}
 
+
+\subsection{Variante 2 - Non associativa}
+Si potrebbe anche fare a meno dell'associatività, mantenendo però lo stesso ordine di priorità. Queste regole non usano ricorsione, ne destra ne sinistra, risolvendo il problema \textit{obbligando a usare le parentesi}.
+
+\setlist{nosep}
+\begin{itemize}[label={}]
+    \item $\texttt{VN} = \{ \texttt{EXP}, \texttt{TERM}, \texttt{FACTOR}\}$
+    \item $\texttt{VT} = \{+, *, -, :, (, ), \texttt{num}\}$
+    \item $P = \{$
+    \begin{itemize}[label={}]
+        \item $\texttt{EXP} := \texttt{TERM}$
+        \item $\texttt{EXP} := \texttt{TERM} + \texttt{TERM}$
+        \item $\texttt{EXP} := \texttt{TERM} - \texttt{TERM}$
+        \item $\texttt{TERM} := \texttt{FACTOR}$
+        \item $\texttt{TERM} := \texttt{FACTOR} * \texttt{FACTOR}$
+        \item $\texttt{TERM} := \texttt{FACTOR} : \texttt{FACTOR}$
+        \item $\texttt{FACTOR} := \texttt{num}$
+        \item $\texttt{FACTOR} := ( \texttt{EXP})$
+    \end{itemize}
+    \item $\}$
+\end{itemize}
+\setlist{}
 
 
 

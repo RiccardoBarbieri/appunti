@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  20 OCT 2022 11:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  23 OCT 2022 17:22
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -244,43 +244,175 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@inbox=\box100
 \enit@count@id=\count290
 \enitdp@description=\count291
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/mdframed/mdframed.sty
+Package: mdframed 2013/07/01 1.9b: mdframed
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2022-01-21 L3 programming layer (loader) 
+ (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count292
+\l__pdf_internal_box=\box101
+))
+Package: xparse 2022-01-12 L3 Experimental document command parser
+) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count293
+) (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-abspage.sty
+Package: zref-abspage 2020-07-03 v2.32 Module abspage for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/zref/zref-base.sty
+Package: zref-base 2020-07-03 v2.32 Module base for zref (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+Package zref Info: New property list: main on input line 764.
+Package zref Info: New property: default on input line 765.
+Package zref Info: New property: page on input line 766.
+) (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\c@abspage=\count294
+Package zref Info: New property: abspage on input line 66.
+) (/usr/share/texlive/texmf-dist/tex/latex/needspace/needspace.sty
+Package: needspace 2010/09/12 v1.3d reserve vertical space
+)
+\mdf@templength=\skip57
+\c@mdf@globalstyle@cnt=\count295
+\mdf@skipabove@length=\skip58
+\mdf@skipbelow@length=\skip59
+\mdf@leftmargin@length=\skip60
+\mdf@rightmargin@length=\skip61
+\mdf@innerleftmargin@length=\skip62
+\mdf@innerrightmargin@length=\skip63
+\mdf@innertopmargin@length=\skip64
+\mdf@innerbottommargin@length=\skip65
+\mdf@splittopskip@length=\skip66
+\mdf@splitbottomskip@length=\skip67
+\mdf@outermargin@length=\skip68
+\mdf@innermargin@length=\skip69
+\mdf@linewidth@length=\skip70
+\mdf@innerlinewidth@length=\skip71
+\mdf@middlelinewidth@length=\skip72
+\mdf@outerlinewidth@length=\skip73
+\mdf@roundcorner@length=\skip74
+\mdf@footenotedistance@length=\skip75
+\mdf@userdefinedwidth@length=\skip76
+\mdf@needspace@length=\skip77
+\mdf@frametitleaboveskip@length=\skip78
+\mdf@frametitlebelowskip@length=\skip79
+\mdf@frametitlerulewidth@length=\skip80
+\mdf@frametitleleftmargin@length=\skip81
+\mdf@frametitlerightmargin@length=\skip82
+\mdf@shadowsize@length=\skip83
+\mdf@extratopheight@length=\skip84
+\mdf@subtitleabovelinewidth@length=\skip85
+\mdf@subtitlebelowlinewidth@length=\skip86
+\mdf@subtitleaboveskip@length=\skip87
+\mdf@subtitlebelowskip@length=\skip88
+\mdf@subtitleinneraboveskip@length=\skip89
+\mdf@subtitleinnerbelowskip@length=\skip90
+\mdf@subsubtitleabovelinewidth@length=\skip91
+\mdf@subsubtitlebelowlinewidth@length=\skip92
+\mdf@subsubtitleaboveskip@length=\skip93
+\mdf@subsubtitlebelowskip@length=\skip94
+\mdf@subsubtitleinneraboveskip@length=\skip95
+\mdf@subsubtitleinnerbelowskip@length=\skip96
+ (/usr/share/texlive/texmf-dist/tex/latex/mdframed/md-frame-0.mdf
+File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
+)
+\mdf@frametitlebox=\box102
+\mdf@footnotebox=\box103
+\mdf@splitbox@one=\box104
+\mdf@splitbox@two=\box105
+\mdf@splitbox@save=\box106
+\mdfsplitboxwidth=\skip97
+\mdfsplitboxtotalwidth=\skip98
+\mdfsplitboxheight=\skip99
+\mdfsplitboxdepth=\skip100
+\mdfsplitboxtotalheight=\skip101
+\mdfframetitleboxwidth=\skip102
+\mdfframetitleboxtotalwidth=\skip103
+\mdfframetitleboxheight=\skip104
+\mdfframetitleboxdepth=\skip105
+\mdfframetitleboxtotalheight=\skip106
+\mdffootnoteboxwidth=\skip107
+\mdffootnoteboxtotalwidth=\skip108
+\mdffootnoteboxheight=\skip109
+\mdffootnoteboxdepth=\skip110
+\mdffootnoteboxtotalheight=\skip111
+\mdftotallinewidth=\skip112
+\mdfboundingboxwidth=\skip113
+\mdfboundingboxtotalwidth=\skip114
+\mdfboundingboxheight=\skip115
+\mdfboundingboxdepth=\skip116
+\mdfboundingboxtotalheight=\skip117
+\mdf@freevspace@length=\skip118
+\mdf@horizontalwidthofbox@length=\skip119
+\mdf@verticalmarginwhole@length=\skip120
+\mdf@horizontalspaceofbox=\skip121
+\mdfsubtitleheight=\skip122
+\mdfsubsubtitleheight=\skip123
+\c@mdfcountframes=\count296
+
+****** mdframed patching \endmdf@trivlist
+
+****** -- success******
+
+\mdf@envdepth=\count297
+\c@mdf@env@i=\count298
+\c@mdf@env@ii=\count299
+\c@mdf@zref@counter=\count300
+Package zref Info: New property: mdf@pagevalue on input line 895.
 ) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
 Package: babel 2022/01/26 3.70 The Babel package
-\babel@savecnt=\count292
+\babel@savecnt=\count301
 \U@D=\dimen180
 \l@unhyphenated=\language87
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
-\bbl@dirlevel=\count293
+\bbl@dirlevel=\count302
  (/usr/share/texlive/texmf-dist/tex/generic/babel-italian/italian.ldf
 Language: italian 2020/05/21 v.1.4.04 Italian support for the babel system
-\it@lettering=\count294
-\it@doublequoteactive=\count295
-\it@ISOcompliance=\count296
-)) (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count297
-) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count298
-\l__pdf_internal_box=\box101
-) (./main.aux)
+\it@lettering=\count303
+\it@doublequoteactive=\count304
+\it@ISOcompliance=\count305
+)) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
-LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -318,27 +450,33 @@ LaTeX Font Info:    ... okay on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count299
+\scratchcounter=\count306
 \scratchdimen=\dimen181
-\scratchbox=\box102
-\nofMPsegments=\count300
-\nofMParguments=\count301
+\scratchbox=\box107
+\nofMPsegments=\count307
+\nofMParguments=\count308
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count302
+\MPscratchCnt=\count309
 \MPscratchDim=\dimen182
-\MPnumerator=\count303
-\makeMPintoPDFobject=\count304
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
 \everyMPtoPDFconversion=\toks28
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
  (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \it@ocap on input line 29.
-LaTeX Info: Redefining \it@ccap on input line 29.
+LaTeX Info: Redefining \it@ocap on input line 32.
+LaTeX Info: Redefining \it@ccap on input line 32.
 
 
 File italian.ldf warning: 
@@ -346,120 +484,229 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 29.
+italian.ldf    on input line 32.
 
-(./chapters/automi_riconoscitori/automi_riconoscitori.tex
+(./main.toc [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ (./chapters/ling_macchine_teoria_comp/ling_macchine_teoria_comp.tex [2]
 Capitolo 1.
-</home/riccardoob/appunti/linguaggi/images/0.png, id=1, 519.9425pt x 318.18875pt>
+
+Overfull \hbox (2.56624pt too wide) in paragraph at lines 1--1
+\OT1/cmr/bx/n/24.88 te, teo-ria del-la com-pu-ta-bi-lit^^Ra| 
+ []
+
+</home/riccardoob/appunti/linguaggi/images/26.png, id=14, 519.9425pt x 337.26pt>
+File: /home/riccardoob/appunti/linguaggi/images/26.png Graphic file (type png)
+<use /home/riccardoob/appunti/linguaggi/images/26.png>
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/26.png  used on input line 17.
+(pdftex.def)             Requested size: 256.0774pt x 166.10281pt.
+[3
+
+ </home/riccardoob/appunti/linguaggi/images/26.png>]
+Overfull \hbox (73.07013pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 4 \OT1/cmr/m/sl/12 CAPITOLO 1.  LINGUAGGI, MACCHINE ASTRATTE, TEORIA DELLA COMPUTABILIT[]A
+ []
+
+[4] [5]
+</home/riccardoob/appunti/linguaggi/images/27.png, id=26, 586.19pt x 162.6075pt>
+File: /home/riccardoob/appunti/linguaggi/images/27.png Graphic file (type png)
+<use /home/riccardoob/appunti/linguaggi/images/27.png>
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/27.png  used on input line 97.
+(pdftex.def)             Requested size: 341.43436pt x 94.71188pt.
+Package mdframed Info: mdframed works in twoside mode on input line 117.
+
+Overfull \hbox (73.07013pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 6 \OT1/cmr/m/sl/12 CAPITOLO 1.  LINGUAGGI, MACCHINE ASTRATTE, TEORIA DELLA COMPUTABILIT[]A
+ []
+
+[6 </home/riccardoob/appunti/linguaggi/images/27.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 146.
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+[]\OT1/cmr/m/n/12 lettura/scrittura da/su
+ []
+
+Package mdframed Info: Not enough space on this page on input line 153.
+Package mdframed Info: mdframed works in twoside mode on input line 168.
+</home/riccardoob/appunti/linguaggi/images/28.png, id=30, 254.28334pt x 146.146pt>
+File: /home/riccardoob/appunti/linguaggi/images/28.png Graphic file (type png)
+<use /home/riccardoob/appunti/linguaggi/images/28.png>
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/28.png  used on input line 171.
+(pdftex.def)             Requested size: 112.79854pt x 64.82848pt.
+[7 </home/riccardoob/appunti/linguaggi/images/28.png>]
+Package mdframed Info: mdframed works in twoside mode on input line 192.
+Package mdframed Info: mdframed works in twoside mode on input line 209.
+
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 211.
+
+
+Overfull \hbox (73.07013pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 8 \OT1/cmr/m/sl/12 CAPITOLO 1.  LINGUAGGI, MACCHINE ASTRATTE, TEORIA DELLA COMPUTABILIT[]A
+ []
+
+[8]
+Package mdframed Info: mdframed works in twoside mode on input line 226.
+ [9]
+Package mdframed Info: mdframed works in twoside mode on input line 246.
+
+Overfull \hbox (8.08086pt too wide) in paragraph at lines 264--265
+[]\OT1/cmr/m/n/12 Si pas-sa al-la de-fi-ni-zio-ne di in-sie-me \OT1/cmr/bx/n/12 ri-cor-si-va-men-te nu-me-ra-bi-le \OT1/cmr/m/n/12 (\OT1/cmr/m/it/12 semi-decidibile\OT1/cmr/m/n/12 ).
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+Package mdframed Info: mdframed works in twoside mode on input line 265.
+</home/riccardoob/appunti/linguaggi/images/29.png, id=47, 615.29875pt x 172.645pt>
+File: /home/riccardoob/appunti/linguaggi/images/29.png Graphic file (type png)
+<use /home/riccardoob/appunti/linguaggi/images/29.png>
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/29.png  used on input line 270.
+(pdftex.def)             Requested size: 256.0774pt x 71.8518pt.
+Package mdframed Info: mdframed works in twoside mode on input line 276.
+Package mdframed Info: Not enough space on this page on input line 278.
+
+Overfull \hbox (78.94507pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 10 \OT1/cmr/m/sl/12 CAPITOLO 1.  LINGUAGGI, MACCHINE ASTRATTE, TEORIA DELLA COMPUTABILIT[]A
+ []
+
+[10 </home/riccardoob/appunti/linguaggi/images/29.png>]
+Package mdframed Info: Not enough space on this page on input line 278.
+Package mdframed Info: mdframed works in twoside mode on input line 282.
+Package mdframed Info: mdframed works in twoside mode on input line 295.
+Package mdframed Info: mdframed works in twoside mode on input line 300.
+) (./chapters/linguaggi_grammatiche/linguaggi_grammatiche.tex [11]
+Overfull \hbox (78.94507pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 12 \OT1/cmr/m/sl/12 CAPITOLO 1.  LINGUAGGI, MACCHINE ASTRATTE, TEORIA DELLA COMPUTABILIT[]A
+ []
+
+[12
+
+]
+Capitolo 2.
+) (./chapters/automi_riconoscitori/automi_riconoscitori.tex [13] [14
+
+]
+Capitolo 3.
+</home/riccardoob/appunti/linguaggi/images/0.png, id=65, 519.9425pt x 318.18875pt>
 File: /home/riccardoob/appunti/linguaggi/images/0.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/0.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/0.png  used on input line 7.
 (pdftex.def)             Requested size: 341.43436pt x 208.94678pt.
-[1
-
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} </home/riccardoob/appunti/linguaggi/images/0.png>]
-</home/riccardoob/appunti/linguaggi/images/1.png, id=10, 316.18124pt x 393.47pt>
+[15 </home/riccardoob/appunti/linguaggi/images/0.png>]
+</home/riccardoob/appunti/linguaggi/images/1.png, id=69, 316.18124pt x 393.47pt>
 File: /home/riccardoob/appunti/linguaggi/images/1.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/1.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/1.png  used on input line 101.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/1.png  used on input line 102.
 (pdftex.def)             Requested size: 85.35695pt x 106.22029pt.
-</home/riccardoob/appunti/linguaggi/images/2.png, id=11, 447.6725pt x 100.375pt>
+</home/riccardoob/appunti/linguaggi/images/2.png, id=70, 447.6725pt x 100.375pt>
 File: /home/riccardoob/appunti/linguaggi/images/2.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/2.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/2.png  used on input line 106.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/2.png  used on input line 107.
 (pdftex.def)             Requested size: 85.35695pt x 19.1373pt.
- [2]
-Underfull \hbox (badness 10000) in paragraph at lines 110--113
+ [16]
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 131--134
+Underfull \hbox (badness 10000) in paragraph at lines 132--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
+Underfull \hbox (badness 10000) in paragraph at lines 138--139
 []\OT1/cmr/m/n/12 ha tan-ti \OT1/cmr/bx/n/12 sta-ti \OT1/cmr/m/n/12 quan-ti i
  []
 
-</home/riccardoob/appunti/linguaggi/images/3.png, id=18, 513.92pt x 443.6575pt>
+</home/riccardoob/appunti/linguaggi/images/3.png, id=74, 513.92pt x 443.6575pt>
 File: /home/riccardoob/appunti/linguaggi/images/3.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/3.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/3.png  used on input line 150.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/3.png  used on input line 152.
 (pdftex.def)             Requested size: 83.35698pt x 71.9547pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+[17 </home/riccardoob/appunti/linguaggi/images/1.png> </home/riccardoob/appunti/linguaggi/images/2.png> </home/riccardoob/appunti/linguaggi/images/3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 []\OT1/cmr/m/n/12 ha tan-ti \OT1/cmr/bx/n/12 sta-ti \OT1/cmr/m/n/12 quan-ti i
  []
 
-[3 </home/riccardoob/appunti/linguaggi/images/1.png> </home/riccardoob/appunti/linguaggi/images/2.png> </home/riccardoob/appunti/linguaggi/images/3.png>]
 File: /home/riccardoob/appunti/linguaggi/images/3.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/3.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/3.png  used on input line 172.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/3.png  used on input line 174.
 (pdftex.def)             Requested size: 83.35698pt x 71.9547pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--180
+Underfull \hbox (badness 10000) in paragraph at lines 179--182
 
  []
 
-</home/riccardoob/appunti/linguaggi/images/6.png, id=23, 274.02374pt x 113.42375pt>
+</home/riccardoob/appunti/linguaggi/images/6.png, id=79, 274.02374pt x 113.42375pt>
 File: /home/riccardoob/appunti/linguaggi/images/6.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/6.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/6.png  used on input line 188.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/6.png  used on input line 190.
 (pdftex.def)             Requested size: 104.19783pt x 43.12915pt.
-</home/riccardoob/appunti/linguaggi/images/4.png, id=24, 179.67125pt x 74.2775pt>
+</home/riccardoob/appunti/linguaggi/images/4.png, id=80, 179.67125pt x 74.2775pt>
 File: /home/riccardoob/appunti/linguaggi/images/4.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/4.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/4.png  used on input line 200.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/4.png  used on input line 202.
 (pdftex.def)             Requested size: 104.19783pt x 43.07758pt.
-</home/riccardoob/appunti/linguaggi/images/5.png, id=25, 181.67876pt x 71.26625pt>
+</home/riccardoob/appunti/linguaggi/images/5.png, id=81, 181.67876pt x 71.26625pt>
 File: /home/riccardoob/appunti/linguaggi/images/5.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/5.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/5.png  used on input line 211.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/5.png  used on input line 213.
 (pdftex.def)             Requested size: 104.19783pt x 40.87445pt.
-</home/riccardoob/appunti/linguaggi/images/7.png, id=26, 476.78125pt x 318.18875pt>
+</home/riccardoob/appunti/linguaggi/images/7.png, id=82, 476.78125pt x 318.18875pt>
 File: /home/riccardoob/appunti/linguaggi/images/7.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/7.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/7.png  used on input line 219.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/7.png  used on input line 221.
 (pdftex.def)             Requested size: 170.71393pt x 113.93124pt.
-[4 </home/riccardoob/appunti/linguaggi/images/6.png> </home/riccardoob/appunti/linguaggi/images/4.png> </home/riccardoob/appunti/linguaggi/images/5.png> </home/riccardoob/appunti/linguaggi/images/7.png>]
-</home/riccardoob/appunti/linguaggi/images/8.png, id=30, 454.69875pt x 159.59625pt>
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 </home/riccardoob/appunti/linguaggi/images/6.png> </home/riccardoob/appunti/linguaggi/images/4.png> </home/riccardoob/appunti/linguaggi/images/5.png>]
+</home/riccardoob/appunti/linguaggi/images/8.png, id=86, 454.69875pt x 159.59625pt>
 File: /home/riccardoob/appunti/linguaggi/images/8.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/8.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/8.png  used on input line 259.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/8.png  used on input line 261.
 (pdftex.def)             Requested size: 145.87631pt x 51.2009pt.
-</home/riccardoob/appunti/linguaggi/images/9.png, id=31, 454.69875pt x 160.6pt>
+</home/riccardoob/appunti/linguaggi/images/9.png, id=87, 454.69875pt x 160.6pt>
 File: /home/riccardoob/appunti/linguaggi/images/9.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/9.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/9.png  used on input line 271.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/9.png  used on input line 273.
 (pdftex.def)             Requested size: 145.87631pt x 51.52292pt.
-</home/riccardoob/appunti/linguaggi/images/10.png, id=32, 539.01375pt x 359.3425pt>
+</home/riccardoob/appunti/linguaggi/images/10.png, id=88, 539.01375pt x 359.3425pt>
 File: /home/riccardoob/appunti/linguaggi/images/10.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/10.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/10.png  used on input line 278.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/10.png  used on input line 280.
 (pdftex.def)             Requested size: 170.71393pt x 113.80759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--279
+Underfull \hbox (badness 10000) in paragraph at lines 277--281
 
  []
 
-</home/riccardoob/appunti/linguaggi/images/11.png, id=33, 422.57875pt x 173.64874pt>
+[19 </home/riccardoob/appunti/linguaggi/images/7.png> </home/riccardoob/appunti/linguaggi/images/8.png> </home/riccardoob/appunti/linguaggi/images/9.png> </home/riccardoob/appunti/linguaggi/images/10.png>]
+</home/riccardoob/appunti/linguaggi/images/11.png, id=93, 422.57875pt x 173.64874pt>
 File: /home/riccardoob/appunti/linguaggi/images/11.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/11.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/11.png  used on input line 313.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/11.png  used on input line 315.
 (pdftex.def)             Requested size: 149.3763pt x 61.38474pt.
-</home/riccardoob/appunti/linguaggi/images/12.png, id=34, 422.57875pt x 173.64874pt>
+</home/riccardoob/appunti/linguaggi/images/12.png, id=94, 422.57875pt x 173.64874pt>
 File: /home/riccardoob/appunti/linguaggi/images/12.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/12.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/12.png  used on input line 317.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/12.png  used on input line 319.
 (pdftex.def)             Requested size: 149.3763pt x 61.38474pt.
-) (./chapters/riconoscitori_pda/riconoscitori_pda.tex [5 </home/riccardoob/appunti/linguaggi/images/8.png> </home/riccardoob/appunti/linguaggi/images/9.png> </home/riccardoob/appunti/linguaggi/images/10.png> </home/riccardoob/appunti/linguaggi/images/11.png> </home/riccardoob/appunti/linguaggi/images/12.png>] [6
-
-]
-Capitolo 2.
-</home/riccardoob/appunti/linguaggi/images/13.png, id=43, 378.41376pt x 449.68pt>
+) (./chapters/riconoscitori_pda/riconoscitori_pda.tex [20 </home/riccardoob/appunti/linguaggi/images/11.png> </home/riccardoob/appunti/linguaggi/images/12.png>]
+Capitolo 4.
+</home/riccardoob/appunti/linguaggi/images/13.png, id=98, 378.41376pt x 449.68pt>
 File: /home/riccardoob/appunti/linguaggi/images/13.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/13.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/13.png  used on input line 35.
@@ -467,122 +714,125 @@ Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/13.png  used 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7]
-</home/riccardoob/appunti/linguaggi/images/14.png, id=48, 349.305pt x 308.15125pt>
+ [21
+
+] [22 </home/riccardoob/appunti/linguaggi/images/13.png>]
+</home/riccardoob/appunti/linguaggi/images/14.png, id=107, 349.305pt x 308.15125pt>
 File: /home/riccardoob/appunti/linguaggi/images/14.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/14.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/14.png  used on input line 74.
 (pdftex.def)             Requested size: 213.39566pt x 188.25409pt.
- [8 </home/riccardoob/appunti/linguaggi/images/13.png>] [9 </home/riccardoob/appunti/linguaggi/images/14.png>]
-Overfull \hbox (8.67252pt too wide) in paragraph at lines 132--133
+Package mdframed Info: mdframed works in twoside mode on input line 83.
+Package mdframed Info: mdframed works in twoside mode on input line 91.
+Package mdframed Info: Not enough space on this page on input line 96.
+ [23 </home/riccardoob/appunti/linguaggi/images/14.png>]
+Package mdframed Info: Not enough space on this page on input line 96.
+
+Overfull \hbox (8.67252pt too wide) in paragraph at lines 134--135
 \OT1/cmr/m/n/12 Con l'\OT1/cmr/bx/n/12 analisi ri-cor-si-va di-scen-den-te \OT1/cmr/m/n/12 si in-tro-du-ce $[]$
  []
 
-[10]
-Overfull \hbox (55.48236pt too wide) in paragraph at lines 161--162
-[]$[]$ 
- []
-
-
-Overfull \hbox (54.16115pt too wide) in paragraph at lines 166--167
+[24]
+Overfull \hbox (54.16115pt too wide) in paragraph at lines 167--168
 [][]\OT1/cmr/m/n/12 E pos-si-bi-le se-pa-ra-re il \OT1/cmr/bx/n/12 mo-to-re\OT1/cmr/m/n/12 , in-va-rian-te ri-spet-to al-le re-go-le, dal-le $[]$;
  []
 
-</home/riccardoob/appunti/linguaggi/images/15.png, id=62, 651.43375pt x 91.34125pt>
+</home/riccardoob/appunti/linguaggi/images/15.png, id=115, 651.43375pt x 91.34125pt>
 File: /home/riccardoob/appunti/linguaggi/images/15.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/15.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/15.png  used on input line 176.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/15.png  used on input line 177.
 (pdftex.def)             Requested size: 341.43436pt x 47.87541pt.
-</home/riccardoob/appunti/linguaggi/images/16.png, id=63, 834.11626pt x 143.53625pt>
+[25]
+</home/riccardoob/appunti/linguaggi/images/16.png, id=120, 834.11626pt x 143.53625pt>
 File: /home/riccardoob/appunti/linguaggi/images/16.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/16.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/16.png  used on input line 185.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/16.png  used on input line 186.
 (pdftex.def)             Requested size: 341.43436pt x 58.75606pt.
-[11 </home/riccardoob/appunti/linguaggi/images/15.png> </home/riccardoob/appunti/linguaggi/images/16.png>]
-</home/riccardoob/appunti/linguaggi/images/17.png, id=67, 811.03pt x 177.66376pt>
+ [26 </home/riccardoob/appunti/linguaggi/images/15.png> </home/riccardoob/appunti/linguaggi/images/16.png>]
+</home/riccardoob/appunti/linguaggi/images/17.png, id=125, 811.03pt x 177.66376pt>
 File: /home/riccardoob/appunti/linguaggi/images/17.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/17.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/17.png  used on input line 237.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/17.png  used on input line 238.
 (pdftex.def)             Requested size: 341.43436pt x 74.79446pt.
-LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 240.
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 241.
  (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
 File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-) [12 </home/riccardoob/appunti/linguaggi/images/17.png>]
-Overfull \hbox (249.80432pt too wide) in paragraph at lines 264--265
-[]$[]$ 
- []
-
-
-Overfull \hbox (11.92773pt too wide) in paragraph at lines 271--272
+) [27 </home/riccardoob/appunti/linguaggi/images/17.png>]
+Overfull \hbox (11.92773pt too wide) in paragraph at lines 270--271
 []\OT1/cmr/m/n/12 ampliare la no-zio-ne di star-te sym-bols set con i $[]$ set (o $[]$
  []
 
-
-Overfull \hbox (102.19772pt too wide) in paragraph at lines 274--275
-[]$[]$ 
- []
-
-) (./chapters/interpreti/interpreti.tex [13] [14
-
-]
-Capitolo 3.
-</home/riccardoob/appunti/linguaggi/images/18.png, id=80, 485.815pt x 113.42375pt>
+</home/riccardoob/appunti/linguaggi/images/31.png, id=130, 717.68124pt x 286.06876pt>
+File: /home/riccardoob/appunti/linguaggi/images/31.png Graphic file (type png)
+<use /home/riccardoob/appunti/linguaggi/images/31.png>
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/31.png  used on input line 297.
+(pdftex.def)             Requested size: 298.75262pt x 119.08298pt.
+[28]
+Package mdframed Info: mdframed works in twoside mode on input line 305.
+Package mdframed Info: mdframed works in twoside mode on input line 339.
+ [29 </home/riccardoob/appunti/linguaggi/images/31.png>]
+Package mdframed Info: Not enough space on this page on input line 341.
+) (./chapters/interpreti/interpreti.tex [30]
+Capitolo 5.
+</home/riccardoob/appunti/linguaggi/images/18.png, id=140, 485.815pt x 113.42375pt>
 File: /home/riccardoob/appunti/linguaggi/images/18.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/18.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/18.png  used on input line 12.
 (pdftex.def)             Requested size: 341.43436pt x 79.71452pt.
-</home/riccardoob/appunti/linguaggi/images/19.png, id=81, 608.2725pt x 97.36375pt>
+</home/riccardoob/appunti/linguaggi/images/19.png, id=141, 608.2725pt x 97.36375pt>
 File: /home/riccardoob/appunti/linguaggi/images/19.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/19.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/19.png  used on input line 33.
 (pdftex.def)             Requested size: 341.43436pt x 54.65256pt.
-[15 </home/riccardoob/appunti/linguaggi/images/18.png> </home/riccardoob/appunti/linguaggi/images/19.png>]
-</home/riccardoob/appunti/linguaggi/images/20.png, id=85, 775.89874pt x 179.67125pt>
+[31
+
+ </home/riccardoob/appunti/linguaggi/images/18.png>]
+</home/riccardoob/appunti/linguaggi/images/20.png, id=146, 775.89874pt x 179.67125pt>
 File: /home/riccardoob/appunti/linguaggi/images/20.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/20.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/20.png  used on input line 47.
 (pdftex.def)             Requested size: 341.43436pt x 79.06654pt.
-</home/riccardoob/appunti/linguaggi/images/21.png, id=86, 656.4525pt x 236.885pt>
+</home/riccardoob/appunti/linguaggi/images/21.png, id=147, 656.4525pt x 236.885pt>
 File: /home/riccardoob/appunti/linguaggi/images/21.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/21.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/21.png  used on input line 56.
 (pdftex.def)             Requested size: 298.75262pt x 107.80814pt.
- [16 </home/riccardoob/appunti/linguaggi/images/20.png> </home/riccardoob/appunti/linguaggi/images/21.png>]
-</home/riccardoob/appunti/linguaggi/images/22.png, id=90, 673.51625pt x 57.21375pt>
+ [32 </home/riccardoob/appunti/linguaggi/images/19.png> </home/riccardoob/appunti/linguaggi/images/20.png> </home/riccardoob/appunti/linguaggi/images/21.png>]
+</home/riccardoob/appunti/linguaggi/images/22.png, id=151, 673.51625pt x 57.21375pt>
 File: /home/riccardoob/appunti/linguaggi/images/22.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/22.png>
 Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/22.png  used on input line 80.
 (pdftex.def)             Requested size: 341.43436pt x 29.00401pt.
- [17 </home/riccardoob/appunti/linguaggi/images/22.png>] [18]
-</home/riccardoob/appunti/linguaggi/images/23.png, id=97, 808.01875pt x 250.9375pt>
+ [33 </home/riccardoob/appunti/linguaggi/images/22.png>] [34]
+</home/riccardoob/appunti/linguaggi/images/23.png, id=158, 808.01875pt x 250.9375pt>
 File: /home/riccardoob/appunti/linguaggi/images/23.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/23.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/23.png  used on input line 161.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/23.png  used on input line 162.
 (pdftex.def)             Requested size: 341.43436pt x 106.03629pt.
-</home/riccardoob/appunti/linguaggi/images/24.png, id=98, 319.1925pt x 382.42876pt>
+</home/riccardoob/appunti/linguaggi/images/24.png, id=159, 319.1925pt x 382.42876pt>
 File: /home/riccardoob/appunti/linguaggi/images/24.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/24.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/24.png  used on input line 173.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/24.png  used on input line 174.
 (pdftex.def)             Requested size: 145.87631pt x 174.77562pt.
-</home/riccardoob/appunti/linguaggi/images/25.png, id=99, 347.2975pt x 371.3875pt>
+</home/riccardoob/appunti/linguaggi/images/25.png, id=160, 347.2975pt x 371.3875pt>
 File: /home/riccardoob/appunti/linguaggi/images/25.png Graphic file (type png)
 <use /home/riccardoob/appunti/linguaggi/images/25.png>
-Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/25.png  used on input line 182.
+Package pdftex.def Info: /home/riccardoob/appunti/linguaggi/images/25.png  used on input line 183.
 (pdftex.def)             Requested size: 145.87631pt x 155.99867pt.
-) [19 </home/riccardoob/appunti/linguaggi/images/23.png> </home/riccardoob/appunti/linguaggi/images/24.png> </home/riccardoob/appunti/linguaggi/images/25.png>] [20] (./main.aux) ) 
+ [35 </home/riccardoob/appunti/linguaggi/images/23.png> </home/riccardoob/appunti/linguaggi/images/24.png> </home/riccardoob/appunti/linguaggi/images/25.png>]) [36] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 6787 strings out of 478287
- 115508 string characters out of 5849288
- 444623 words of memory out of 5000000
- 24896 multiletter control sequences out of 15000+600000
+ 8422 strings out of 478287
+ 151726 string characters out of 5849288
+ 482761 words of memory out of 5000000
+ 26447 multiletter control sequences out of 15000+600000
  478836 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 67i,11n,77p,536b,457s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on main.pdf (20 pages, 545754 bytes).
+ 73i,14n,77p,536b,455s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sftt1200.pfb>
+Output written on main.pdf (36 pages, 684700 bytes).
 PDF statistics:
- 171 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 244 PDF objects out of 1000 (max. 8388607)
+ 136 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 131 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 156 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -183,9 +183,9 @@ Le seguenti condizioni sono soddisfatte:
 \end{itemize}
 
 \subsection{Mutua esclusione tra gruppi e processi}
-In alcuni casi può essere utili consentire a più processi di eseguire contemporaneamente la stessa operazione su una risorsa, ma non operazioni diverse.
+In alcuni casi può essere utile consentire a più processi di eseguire contemporaneamente la stessa operazione su una risorsa, ma non operazioni diverse.
 
-Data la risorsa condivisa \texttt{ris} e indicate con $\texttt{op}_\texttt{1}\cdots \texttt{op}_\texttt{n}$ le n operazioni eseguibili su \texttt{ris}, si vuole garantire che i processi possano eseguire contemporaneamente $\texttt{op}_\texttt{i}$.
+Data la risorsa condivisa \texttt{ris} e indicate con $\texttt{op}_\texttt{1} \dots \texttt{op}_\texttt{n}$ le n operazioni eseguibili su \texttt{ris}, si vuole garantire che i processi possano eseguire contemporaneamente $\texttt{op}_\texttt{i}$.
 
 Lo schema è il solito prologo, operazione, epilogo:
 \begin{itemize}
@@ -213,14 +213,245 @@ Si definisce una \textit{semaforo mutex} per la mutua esclusione tra operazioni 
 
 Questo schema è applicabile alla casistica di lettura scrittura su file: più processi possono leggere un file contemporaneamente mentre una sola può modificare.
 
+\subsection{Semafori evento - scambio di messaggi temporali}
+Un semaforo \textbf{evento} è un semaforo binario utilizzato per imporre un vincolo di precedenza tra operazioni e processi.
+
+\subsubsection{Esempio}
+$\texttt{op}_a$ deve essere eseguita da $\texttt{P}_1$ solo dopo che $\texttt{P}_2$ ha eseguito $\texttt{op}_b$.
+
+Si introduce un semaforo \texttt{sem} inizializzato a zero:
+\begin{itemize}
+    \item prima di eseguire $\texttt{op}_a$, $\texttt{P}_1$ esegue \texttt{P(sem)}
+    \item dopo aver eseguite $\texttt{op}_b$, $\texttt{P}_2$ esegue \texttt{V(sem)}
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/21.png}
+\end{figure}
+
+\subsubsection{Problema del rendez-vous}
+Due processi \texttt{P}$_1$ e \texttt{P}$_2$ eseguono ciascuno due operazioni, \texttt{p}$_a$ e \texttt{p}$_b$ il primo e \texttt{q}$_a$ e \texttt{q}$_b$ il secondo.
+
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+    \textbf{Vincolo di rendez-vous}\\
+    L'esecuzione di \texttt{p}$_b$ da parte di \texttt{P}$_1$ e \texttt{q}$_b$ da parte di \texttt{P}$_2$ possno inziare solo dopo che entrambi i processi hanno completato la loro prima operazione( \texttt{p}$_a$ e \texttt{q}$_a$).
+\end{mdframed}
+
+Ogni processo segnala quando arriva al punto di incontro e attende, si utilizzano due semafori \texttt{sem1} e \texttt{sem2}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/22.png}
+\end{figure}
+
+Si può generalizzare il concetto del rendez-vous a \texttt{N} processi, introducendo il concetto di barriera di sincronizzazione.
+
+\subsubsection{Barriera di sincronizzazione}
+L'esecuzione di ogni operazione \texttt{P}$_{ib}$ è subordinata al completamento di tutte le istruzioni \texttt{P}$_{ia} (i=1,\dots,N)$
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/23.png}
+\end{figure}
+
+\begin{lstlisting}[language=C]
+    // condivise
+    semaphore mutex = 1;
+    semaphore barriera = 0;
+    int completati = 0;
+    //struttura thread i-esimo P_i
+    p(mutex);
+    completati++;
+    if (completati==N)
+        v(barriera);
+    v(mutex);
+    p(barriera);
+    v(barriera);
+\end{lstlisting}
+
+\subsection{Semafori binari composti - scambio di dati}
+Due processi \texttt{P}$_1$ e \texttt{P}$_2$ si scambiano dati di tipo \texttt{T} utilizzando una memoria condivisa.
+
+Gli accessi al buffer devono essere mutuamente esclusivi, \texttt{P}$_2$ può \textit{prelevare} un dato solo dopo che \texttt{P}$_1$ lo ha \textit{inserito}, \texttt{P}$_1$, \textit{prima} di inserire un dato, deve attendere che \texttt{P}$_2$ abbia \textit{estratto} il precedente.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/24.png}
+\end{figure}
+
+Per implementare questa funzionalità si utilizzano due semafori:
+\begin{itemize}
+    \item \texttt{vu}, per realizzare l'attesa di \texttt{P}$_1$ in caso di buffer pieno
+    \item \texttt{pn}, per realizzare l'attesa di \texttt{P}$_2$ in caso di buffer vuoto
+\end{itemize}
+
+\begin{multicols}{2}
+    \begin{lstlisting}[language=c]
+        void invio(T dato) {
+            P(vu);
+            inserisci(dato);
+            V(pn);
+        }
 
 
+        //P1
+        while (true) {
+            //prepara messaggio
+            invio(msg);
+        }
+    \end{lstlisting}
+    \columnbreak
+    \begin{lstlisting}
+        T ricezione() {
+            T dato;
+            P(pn);
+            dato = estrai();
+            V(vu);
+            return dato;
+        }
+        //P2
+        while (true) {
+            M = ricezione();
+            //consuma
+        }
+    \end{lstlisting}
+\end{multicols}
 
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+    Un semaforo binario composto è un insieme di semafori usato in modo tale che:
+    \begin{itemize}
+        \item uno solo di essi sia inizializzato a 1 e tutti gli altri a 0
+        \item ogni processo che usa questi semafori esegue sempre sequenze che iniziano con la P su uno di questi e termina con la V su un altro
+    \end{itemize}
+\end{mdframed}
+\subsection{Semafori condizione}
+In alcuni casi, l'esecuzione di una istruzione \texttt{S}$_1$ su una risorsa \texttt{R} è subordinata a una condizione \texttt{C} 
+\begin{lstlisting}[language=C]
+    void op1(): region R << when(C) S1; >>
+\end{lstlisting}
+\begin{itemize}
+    \item \texttt{op1()} è una regione critica
+    \item \texttt{S1} ha come precondizione la validità della condizione logica \texttt{C}
+\end{itemize}
 
+Il processo deve sospendersi se la condizione non si verifica, e deve uscire dalla regione per permettere ad altri processi di eseguire operazioni su \texttt{R} per rendere vera la condizione \texttt{C}.
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/25.png}
+\end{figure}
 
+Lo schema \texttt{(a)} presuppone una forma di attesa attiva da parte del processo che non trova soddisfatta la condizione.
 
+Nello schema \texttt{(b)} si realizza la region \textbf{sospendendo} il processo sul semaforo \texttt{sem} da associare alla condizione, si rende necessaria un'altra operazione \texttt{op2} che abbia \texttt{C} come postcondizione e che chiami nel suo contesto \texttt{V(sem)}.
 
+\vspace{-0.5cm}
+\subsubsection{Schema attesa circolare}
+\vspace{-0.5cm}
+\begin{multicols}{2}
+    \begin{lstlisting}[language=C]
+        public void op1() {
+            P(mutex);
+            while (!C) {
+                csem++;
+                V(mutex);
+                P(sem);
+                P(mutex);
+            }
+            S1;
+            V(mutex);
+        }
+    \end{lstlisting}
+    \columnbreak
+    \begin{lstlisting}[language=C]
+        public void op2() {
+            P(mutex);
+            if (csem > 0) {
+                csem--;
+                V(sem);
+            }
+            V(mutex);
+        }
+    \end{lstlisting}
+\end{multicols}
+
+\subsubsection{Schema passaggio testimone}
+
+\begin{multicols}{2}
+    \begin{lstlisting}[language=C]
+        public void op1() {
+            P(mutex);
+            if (!C) {
+                csem++;
+                V(mutex);
+                P(sem);
+                csem--;
+            }
+            S1;
+            V(mutex);
+        }
+    \end{lstlisting}
+    \columnbreak
+    \begin{lstlisting}[language=C]
+        public void op2() {
+            P(mutex);
+            S2;
+            if (C && csem > 0)
+                V(sem);
+            else
+                V(mutex);
+        }
+    \end{lstlisting}
+\end{multicols}
+
+Il metodo del testimone è il più efficiente, tuttavia è possibile risvegliare \textit{un solo} processo alla volta e la condizione \texttt{C} non può dipendere da parametri locali a \texttt{op1()}.
+
+\subsubsection{Gestione di un pool di risorse equivalenti}
+
+Si consideri un \textbf{pool} di \texttt{N} risorse tutte uguali, ciascun processo può operare su una qualsiasi risorsa del pool, purché \textit{libera}.
+
+É necessario un \textbf{gestore} che mantenga aggiornato lo stato delle risorse:
+\begin{itemize}
+    \item ogni processo, prima di operare su una risorsa \textit{chiede al gestore} l'allocazione di una di esse
+    \item il gestore \textbf{assegna} al processo una risorsa libera, passandogli l'\textbf{indice} relativo
+    \item il processo opera sulla risorsa
+    \item al termine il processo \textbf{rilascia} la risorsa a gestore
+\end{itemize}
+
+\begin{lstlisting}[language=C]
+    class Gestore {
+        semaphore mutex = 1;
+        semaphore sem = 0;
+        int csem = 0;
+        boolean libera[N];
+        int disponibili = N;
+        {for (int i = 0; i < N; i++) libera[i]=true;}
+        
+        public int richiesta() {
+            int i = 0;
+            P(mutex);
+            if (disponibili == 0) {
+                csem++;
+                V(mutex);
+                P(sem);
+                csem--;
+            }
+            while (!libero[i]) i++;
+            libero[i] = false;
+            V(mutex);
+            return i;
+        }
+
+        public void rilascio(int r) {
+            P(mutex);
+            libero[r] = true;
+            disponibili++;
+            if (csem > 0) V(sem);
+            else V(mutex);
+        }
+    }
+\end{lstlisting}
 
 
 

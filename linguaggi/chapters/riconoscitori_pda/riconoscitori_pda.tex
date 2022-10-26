@@ -80,18 +80,20 @@ Anche un PDA può essere non deterministico: in tal caso, la funzione $sfn$ prod
 Ad esempio, il PDA tale che $sfn(Q_0, a, Z) = \{(Q_1, Z_1)(\cdots)(Q_k, Z_k)\}$ è \textbf{non deterministico} in quanto l'automa, nello stato $Q_0$, con simbolo interno in cima allo stack $Z$ e ingresso $a$ ha \underline{più di uno stato futuro possibile} in base alla evoluzione cambia anche il se di simboli da porre nello stack.
 
 \noindent
-\textbf{TEOREMA}\\
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+\textbf{Teorema}\\
 La classe dei linguaggi riconosciuti da un PDA non-determistico coincide con la classe dei linguaggi context-free: perciò qualunque linguaggio context-free può sempre essere riconosciuto da un opportuno PDA.
-
+\end{mdframed}
 É possibile rinunciare al determinismo?\\
 In generale no:
 
 \noindent
-\textbf{TEOREMA}\\
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+\textbf{Teorema}\\
 Esistono linguaggi context-free riconoscibili soltanto da PDA non-deterministici.
 
 ma in molti casi di interesse pratico esistono linguaggi context-free riconoscibili da PDA deterministici: \underline{linguaggi context-free deterministici}. 
-
+\end{mdframed}
 
 \subsection{PDA deterministici}
 Cosa serve per ottenerlo?
@@ -112,7 +114,7 @@ Con $L$ linguaggio deterministico e $R$ linguaggio regolare, il \underline{lingu
 Con $L$ linguaggio deterministico e $R$ linguaggio regolare, il \underline{concatenamento} $L.R$ (insieme di stringhe di $L$ cun suffisso regolare) è deterministico.
 
 \subsubsection{Sottoclassi particolari}
-Per un PDS \textbf{deterministico}:
+Per un PDA \textbf{deterministico}:
 \begin{itemize}
     \item il criterio dello \underline{stack vuoto} risulta meno potente del criterio \underline{stati finali}
     \item una limitazione sul numero di stati intenro o sul numero di configurazioni finali riduce l'insieme dei linguaggi riconoscibili
@@ -158,7 +160,6 @@ Se la verifica ha esito positivo, significa che la funzone ha incontrato simboli
 
 Se la verifica ha esito negativo, significa che la funzione ha incontrato simboli che non corrispondono alle sue regole.
 
-\underline{\textbf{finisci slide esempio 24-28!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!}}
 
 \subsection{Separare motore e grammatica}
 Applicare l'analisi ricorsiva discendente è un processo meccanico, che tuttavia introduce informazioni cablate nel codice, difficili da aggiornare.
@@ -261,8 +262,6 @@ dove $\texttt{trunc}_1$ denota il troncamento della stringa al primo elemento.
 
 Generalizzando la regola precendete, condizione necessaria perché una grammatica sia $LL(1)$ è che gli \textit{start symbols} relativi alle parti destre di uno stesso metasimbolo siano disgiunti.
 
-\textbf{\underline{Esempi 44-52???????????????????????????????????????????????????????????????????????????????????????????}} 
-
 É possibile capire in modo più rapido se una grammatica è $LL(1)$?
 
 Due opzioni:
@@ -271,14 +270,77 @@ Due opzioni:
     \item ampliare la nozione di starte symbols set con i \underline{Director Symbols} set (o \underline{Look-Ahed} set)
 \end{itemize}
 
-\underline{\textbf{inserisci slide 55-67!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1}}  
+\subsection{Parsing table con blocchi annullabili}
+Un \textbf{blocco annullabile} è una stringa che può \textit{degenerare} in $\varepsilon$.
 
+In presenza di blocchi annullabili, un metasimbolo che non appare iniziale, può trovarsi a inizio frase, per tenere conto delle $\varepsilon \text{-rules}$ è necessario considerare anche i simboli che possono \textit{seguire} quellli annullabili, l'insieme \textbf{FOLLOW}.
 
+Un blocco annullabile deve essere previsto dove la sua presenza non appare evidente, ovvero in corrispondenza dei terminali che possono \textit{seguire} il blocco annullabile.
 
+\subsubsection{Esempio}
+\begin{equation*}
+    \begin{aligned}        
+        &\texttt{S} \rightarrow \texttt{A}\ \texttt{B} \\
+        &\texttt{A} \rightarrow \texttt{P}\ \texttt{Q} &&|\ \texttt{B}\ \texttt{C}\\
+        &\texttt{P} \rightarrow \texttt{p}\ \texttt{P} &&|\ \varepsilon\\
+        &\texttt{Q} \rightarrow \texttt{q}\ \texttt{Q} &&|\ \varepsilon\\
+        &\texttt{B} \rightarrow \texttt{b}\ \texttt{B} &&|\ \texttt{d}\\
+        &\texttt{C} \rightarrow \texttt{c}\ \texttt{C} &&|\ \texttt{f}\\
+    \end{aligned}
+\end{equation*}
 
+Il blocco \texttt{PQ} è annullabile, perché sia \texttt{P} che \texttt{Q} possono degenerare in $\varepsilon$.
 
+La regola $\texttt{A} \rightarrow \texttt{P}\ \texttt{Q}$ va inclusa in tutte le colonne della riga \texttt{A} che possono seguire \texttt{A} perché potrebbero avere un \texttt{PQ} invisibile davanti.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/riccardoob/appunti/linguaggi/images/31.png}
+\end{figure}
 
+\subsection{Director Symbols Set}
+L'idea è quella di ampliare la nozione di Starte Symbols, definendo un nuovo insieme che integri a priori l'effetto delle $\varepsilon$-rules.
 
+Si crea un nuovo insieme caratterizzante, integrato dal nuovo insiem \textbf{Follow} quando qualche produzione genera la stringa vuota (o uguale allo SSS senza stringhe vuote).
+
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+    Il \textit{Director Symbols set} della produzione della $\texttt{A} \rightarrow \alpha$ è l'unione di due insiemi:
+    \begin{itemize}
+        \item lo Start Symbols set
+        \item il \textbf{Following Symbols set}
+        \begin{equation*}
+            \texttt{DS}(\texttt{A} \rightarrow \alpha) = \texttt{SS}(\alpha) \cup \texttt{FOLLOW}(\texttt{A}) \text{ se } \xrightarrow{}\mathrel{\vphantom{\to}^*} \varepsilon
+        \end{equation*}
+    \end{itemize}
+    dove \texttt{FOLLOW}$($\texttt{A}$)$ denota l'insieme dei simboli che possono seguire la frase generate da \texttt{A}:
+    \begin{equation*}
+        \texttt{FOLLOW}(\texttt{A}) = \{\texttt{a} \in \texttt{VT}\ |\ \texttt{S} \xrightarrow{}\mathrel{\vphantom{\to}^*} \gamma\texttt{Aa}\beta\} \text{ con } \gamma, \beta \in \texttt{V}^*
+    \end{equation*}
+\end{mdframed}
+
+In pratica
+
+\begin{equation*}
+    \texttt{DS}(\texttt{A} \rightarrow \texttt{a}) = 
+    \begin{cases}
+        \texttt{SS}(\alpha) \text{ se } \alpha \text{ non genera mai } \varepsilon\\
+        \texttt{SS}(\alpha) \cup \texttt{FOLLOW}(\alpha) \text{ se } \alpha \text{ può generare } \varepsilon
+    \end{cases}
+\end{equation*}
+
+o anche:
+
+\begin{equation*}
+    \texttt{DS}(\texttt{A} \rightarrow \alpha) = \texttt{trunc}_1(\texttt{FIRST}(\alpha) \cdot \texttt{FOLLOW}(\texttt{A}))
+\end{equation*}
+
+ossia quello che si ottiene prendendo l'iniziale delle frasi ottenute concatenando \texttt{FIRST}$(\alpha)$ con ciò che segue \texttt{A}.
+
+Questo insieme permette di formulare la condizione $\texttt{LL}(1)$:
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+    Condizione necessaria e sufficiente perché una grammatica sia $\texttt{LL}(1)$ è che i Director Symbols set relativi a produzione \textit{alternativa} siano \textbf{disgiunti}.
+\end{mdframed}
+
+Questi set sono spesso chiamati \textbf{Look-Ahead set} perché servono per "guardare avanti" per guidare deterministicamente il parser.
 
 
 

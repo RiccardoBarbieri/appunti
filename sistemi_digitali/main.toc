@@ -1,0 +1,24 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}Introduzione al calcolo parallelo}{3}{}%
+\contentsline {subsubsection}{How to speed up computations}{3}{}%
+\contentsline {section}{\numberline {1.1}Dipendenza dei dati e corsa sui dati}{3}{}%
+\contentsline {subsubsection}{Dipendenza dei dati}{3}{}%
+\contentsline {subsubsection}{Corsa sui dati}{4}{}%
+\contentsline {subsection}{\numberline {1.1.1}Soluzioni}{4}{}%
+\contentsline {subsubsection}{Hardware}{4}{}%
+\contentsline {subsubsection}{Software}{4}{}%
+\contentsline {section}{\numberline {1.2}Strategie di design hardware}{4}{}%
+\contentsline {subsection}{\numberline {1.2.1}Aumenare la frequenza}{4}{}%
+\contentsline {subsection}{\numberline {1.2.2}Pipelining}{4}{}%
+\contentsline {subsection}{\numberline {1.2.3}Operazioni multiple in una singola istruzione}{5}{}%
+\contentsline {subsection}{\numberline {1.2.4}Aumentare il numero di core}{5}{}%
+\contentsline {section}{\numberline {1.3}Strategie di design software}{6}{}%
+\contentsline {subsection}{\numberline {1.3.1}Istruzioni SIMD}{6}{}%
+\contentsline {subsection}{\numberline {1.3.2}Sfruttare core multipli}{7}{}%
+\contentsline {chapter}{\numberline {2}Field Programmable Gate Array}{9}{}%
+\contentsline {section}{\numberline {2.1}Introduzione}{9}{}%
+\contentsline {section}{\numberline {2.2}Architettura FPGA}{9}{}%
+\contentsline {subsection}{\numberline {2.2.1}Clock}{12}{}%
+\contentsline {subsection}{\numberline {2.2.2}IP-core}{13}{}%
+\contentsline {subsection}{\numberline {2.2.3}Frequenza e performance}{13}{}%

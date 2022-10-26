@@ -6,7 +6,7 @@
     \centering
     \includegraphics[width=0.8\textwidth]{/home/riccardoob/appunti/linguaggi/images/0.png}
 \end{figure}
-
+\setlist{nosep}
 Descrivendo a parole le transizioni utili dell'automa:
 \begin{itemize}
     \item nello stato I l'automa può accettare:
@@ -23,6 +23,7 @@ Descrivendo a parole le transizioni utili dell'automa:
         \item nessun simbolo
     \end{itemize}
 \end{itemize}
+\setlist{}
 
 Se si sostituisce la parola accettare alla parola generare, si nota che l'automa può essere considerato come generatore.
 
@@ -129,9 +130,10 @@ Per passare dall'automa alla grammatica si analizzano i collagamenti degli stati
 
 \subsection{Riconoscitori top down}
 \textbf{Derivazione top-down}\\
-si parte dallo scopo della grammatica e si tenta di coprire la frase data tramite produzioni successive.\\
+Si parte dallo scopo della grammatica e si tenta di coprire la frase data tramite produzioni successive.\\
 \begin{multicols}{2}
 Data una grammatica regolare lineare a \underline{destra}, il riconoscitore:
+
 \begin{itemize}
     \item ha tanti \textbf{stati} quanti i \underline{simboli non terminali}
     \item ha come \textbf{stato iniziale} lo \underline{scopo S}
@@ -277,7 +279,7 @@ Grammatica G2 regolare a sinistra:
     \centering
     \includegraphics[width=0.4\textwidth]{/home/riccardoob/appunti/linguaggi/images/10.png}
 \end{figure}
-
+\newpage
 \setlist{nosep}
 \begin{multicols}{2}
 \noindent

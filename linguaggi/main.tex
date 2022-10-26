@@ -8,6 +8,8 @@
 \usepackage{subcaption}
 \usepackage{multicol}
 \usepackage{enumitem}
+\usepackage{setspace}
+\usepackage{mdframed}
 \usepackage[italian]{babel}
 %\setlist{nosep}
     
@@ -26,8 +28,13 @@
   {\par\medskip\noindent\minipage{\linewidth}}
   {\endminipage\par\medskip}
 
+\onehalfspacing
 \begin{document}
 
+\tableofcontents
+
+\input{chapters/ling_macchine_teoria_comp/ling_macchine_teoria_comp.tex}
+\input{chapters/linguaggi_grammatiche/linguaggi_grammatiche.tex}
 \input{chapters/automi_riconoscitori/automi_riconoscitori.tex}
 \input{chapters/riconoscitori_pda/riconoscitori_pda.tex}
 \input{chapters/interpreti/interpreti.tex}
