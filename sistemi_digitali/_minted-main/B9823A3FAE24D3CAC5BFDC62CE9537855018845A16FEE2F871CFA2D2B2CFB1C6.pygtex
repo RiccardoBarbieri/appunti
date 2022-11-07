@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{from} \PYG{n+nn}{pynq.overlays.base} \PYG{k+kn}{import} \PYG{n}{BaseOverlay}
+\PYG{k+kn}{from} \PYG{n+nn}{pynq.lib.video} \PYG{k+kn}{import} \PYG{o}{*}
+
+\PYG{n}{base} \PYG{o}{=} \PYG{n}{BaseOverlay}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}base.bit\PYGZsq{}}\PYG{p}{)}
+\PYG{n}{hdmi\PYGZus{}in} \PYG{o}{=} \PYG{n}{base}\PYG{o}{.}\PYG{n}{video}\PYG{o}{.}\PYG{n}{hdmi\PYGZus{}in}
+\PYG{n}{hdmi\PYGZus{}out} \PYG{o}{=} \PYG{n}{base}\PYG{o}{.}\PYG{n}{video}\PYG{o}{.}\PYG{n}{hdmi\PYGZus{}out}
+
+\PYG{c+c1}{\PYGZsh{} HDMI handlers configuration}
+\PYG{n}{hdmi\PYGZus{}in}\PYG{o}{.}\PYG{n}{configure}\PYG{p}{()}
+\PYG{n}{hdmi\PYGZus{}out}\PYG{o}{.}\PYG{n}{configure}\PYG{p}{(}\PYG{n}{hdmi\PYGZus{}in}\PYG{o}{.}\PYG{n}{mode}\PYG{p}{)}
+
+\PYG{n}{hdmi\PYGZus{}in}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\PYG{n}{hdmi\PYGZus{}out}\PYG{o}{.}\PYG{n}{start}\PYG{p}{()}
+\end{Verbatim}

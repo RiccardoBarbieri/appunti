@@ -1,24 +1,38 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {chapter}{\numberline {1}Introduzione al calcolo parallelo}{3}{}%
-\contentsline {subsubsection}{How to speed up computations}{3}{}%
-\contentsline {section}{\numberline {1.1}Dipendenza dei dati e corsa sui dati}{3}{}%
-\contentsline {subsubsection}{Dipendenza dei dati}{3}{}%
-\contentsline {subsubsection}{Corsa sui dati}{4}{}%
-\contentsline {subsection}{\numberline {1.1.1}Soluzioni}{4}{}%
-\contentsline {subsubsection}{Hardware}{4}{}%
-\contentsline {subsubsection}{Software}{4}{}%
-\contentsline {section}{\numberline {1.2}Strategie di design hardware}{4}{}%
-\contentsline {subsection}{\numberline {1.2.1}Aumenare la frequenza}{4}{}%
-\contentsline {subsection}{\numberline {1.2.2}Pipelining}{4}{}%
-\contentsline {subsection}{\numberline {1.2.3}Operazioni multiple in una singola istruzione}{5}{}%
-\contentsline {subsection}{\numberline {1.2.4}Aumentare il numero di core}{5}{}%
-\contentsline {section}{\numberline {1.3}Strategie di design software}{6}{}%
-\contentsline {subsection}{\numberline {1.3.1}Istruzioni SIMD}{6}{}%
-\contentsline {subsection}{\numberline {1.3.2}Sfruttare core multipli}{7}{}%
-\contentsline {chapter}{\numberline {2}Field Programmable Gate Array}{9}{}%
-\contentsline {section}{\numberline {2.1}Introduzione}{9}{}%
-\contentsline {section}{\numberline {2.2}Architettura FPGA}{9}{}%
-\contentsline {subsection}{\numberline {2.2.1}Clock}{12}{}%
-\contentsline {subsection}{\numberline {2.2.2}IP-core}{13}{}%
-\contentsline {subsection}{\numberline {2.2.3}Frequenza e performance}{13}{}%
+\contentsline {chapter}{\numberline {1}Introduzione al calcolo parallelo}{3}{chapter.1}%
+\contentsline {subsubsection}{How to speed up computations}{3}{subsubsection*.2}%
+\contentsline {section}{\numberline {1.1}Dipendenza dei dati e corsa sui dati}{3}{section.1.1}%
+\contentsline {subsubsection}{Dipendenza dei dati}{3}{subsubsection*.4}%
+\contentsline {subsubsection}{Corsa sui dati}{4}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.1.1}Soluzioni}{4}{subsection.1.1.1}%
+\contentsline {subsubsection}{Hardware}{4}{subsubsection*.6}%
+\contentsline {subsubsection}{Software}{4}{subsubsection*.7}%
+\contentsline {section}{\numberline {1.2}Strategie di design hardware}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Aumenare la frequenza}{4}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Pipelining}{4}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Operazioni multiple in una singola istruzione}{5}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Aumentare il numero di core}{5}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Strategie di design software}{6}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Istruzioni SIMD}{6}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Sfruttare core multipli}{7}{subsection.1.3.2}%
+\contentsline {chapter}{\numberline {2}Field Programmable Gate Array}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduzione}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Architettura FPGA}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Clock}{12}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}IP-core}{13}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Frequenza e performance}{13}{subsection.2.2.3}%
+\contentsline {chapter}{\numberline {3}Protocolli bus}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Protocolli di comunicazione}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Protocollo I2C ($\text {I}^2\text {C}$)}{15}{subsection.3.1.1}%
+\contentsline {subsubsection}{Funzionamento}{15}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {3.1.2}Protocolli on-chip su Zynq}{16}{subsection.3.1.2}%
+\contentsline {subsubsection}{Comunicazioni con dispositivi memory-mapped}{17}{subsubsection*.21}%
+\contentsline {subsubsection}{Lettura e scrittura \textbf {burst}}{17}{subsubsection*.23}%
+\contentsline {chapter}{\numberline {4}Introduzione a PYNQ board}{19}{chapter.4}%
+\contentsline {subsubsection}{Primi passi}{20}{subsubsection*.26}%
+\contentsline {section}{\numberline {4.1}Overlay}{20}{section.4.1}%
+\contentsline {subsubsection}{Esempio}{20}{subsubsection*.27}%
+\contentsline {subsubsection}{Driver inclusi}{21}{subsubsection*.28}%
+\contentsline {section}{\numberline {4.2}PYNQ Hello LED}{22}{section.4.2}%
+\contentsline {section}{\numberline {4.3}HDMI Stream}{23}{section.4.3}%

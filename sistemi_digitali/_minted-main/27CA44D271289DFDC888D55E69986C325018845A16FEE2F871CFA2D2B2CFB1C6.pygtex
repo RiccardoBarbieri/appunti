@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kn}{import} \PYG{n+nn}{time}
+
+\PYG{n}{numframes} \PYG{o}{=} \PYG{l+m+mi}{600}
+\PYG{n}{start} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+
+\PYG{k}{for} \PYGZbs{}\PYG{n}{\PYGZus{}} \PYG{o+ow}{in} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{numframes}\PYG{p}{):}
+    \PYG{n}{f} \PYG{o}{=} \PYG{n}{hdmi\PYGZus{}in}\PYG{o}{.}\PYG{n}{readframe}\PYG{p}{()}
+    \PYG{n}{hdmi\PYGZus{}out}\PYG{o}{.}\PYG{n}{writeframe}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+
+\PYG{n}{end} \PYG{o}{=} \PYG{n}{time}\PYG{o}{.}\PYG{n}{time}\PYG{p}{()}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}Frames per second: \PYGZdq{}} \PYG{o}{+} \PYG{n+nb}{str}\PYG{p}{(}\PYG{n}{numframes} \PYG{o}{/} \PYG{p}{(}\PYG{n}{end} \PYG{o}{\PYGZhy{}} \PYG{n}{start}\PYG{p}{)))}
+\end{Verbatim}

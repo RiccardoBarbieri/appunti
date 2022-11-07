@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{add}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{a}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{c}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}pragma HLS INTERFACE ap\PYGZus{}ctrl\PYGZus{}none port=return}
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}pragma HLS INTERFACE s\PYGZus{}axilite port=a}
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}pragma HLS INTERFACE s\PYGZus{}axilite port=b}
+\PYG{+w}{    }\PYG{c+cp}{\PYGZsh{}pragma HLS INTERFACE s\PYGZus{}axilite port=c}
+
+\PYG{+w}{    }\PYG{n}{c}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{a}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{b}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
