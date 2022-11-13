@@ -108,21 +108,21 @@
 \contentsline {subsubsection}{Gestione di un pool di risorse equivalenti}{38}{subsubsection*.87}%
 \contentsline {subsubsection}{Problema dei produttori/consumatori}{39}{subsubsection*.88}%
 \contentsline {subsection}{\numberline {4.3.7}Semafori privati - specifiche strategie di allocazione}{40}{subsection.4.3.7}%
-\contentsline {subsubsection}{Esempio 1}{40}{subsubsection*.89}%
-\contentsline {subsubsection}{Esempio 2}{41}{subsubsection*.90}%
-\contentsline {chapter}{\numberline {5}Il nucleo di un sistema multiprogrammato (modello a memoria comune)}{43}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Nucleo di un sistema a processi}{43}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Stati di un processo}{43}{subsection.5.0.2}%
-\contentsline {subsection}{\numberline {5.0.3}Funzioni del nucleo}{44}{subsection.5.0.3}%
-\contentsline {subsection}{\numberline {5.0.4}Caratteristiche del nucleo}{44}{subsection.5.0.4}%
-\contentsline {section}{\numberline {5.1}Realizzazione del nucleo}{45}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Strutture dati del nucleo}{45}{subsection.5.1.1}%
-\contentsline {subsubsection}{Descrittore del processo}{45}{subsubsection*.91}%
-\contentsline {subsubsection}{Coda dei processi pronti}{46}{subsubsection*.92}%
-\contentsline {subsubsection}{Coda dei descrittori liberi}{46}{subsubsection*.93}%
-\contentsline {subsubsection}{Processo in esecuzione}{46}{subsubsection*.94}%
-\contentsline {subsection}{\numberline {5.1.2}Funzioni del nucleo}{47}{subsection.5.1.2}%
-\contentsline {subsubsection}{Struttura del nucleo}{47}{subsubsection*.95}%
-\contentsline {subsubsection}{Esecuzione del kernel}{47}{subsubsection*.96}%
-\contentsline {subsubsection}{Funzioni del livello inferiore}{48}{subsubsection*.97}%
-\contentsline {subsubsection}{Gestione del temporizzatore}{48}{subsubsection*.98}%
+\contentsline {subsubsection}{Esempio 1}{42}{subsubsection*.89}%
+\contentsline {subsubsection}{Esempio 2}{43}{subsubsection*.90}%
+\contentsline {chapter}{\numberline {5}Il nucleo di un sistema multiprogrammato (modello a memoria comune)}{45}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Nucleo di un sistema a processi}{45}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Stati di un processo}{45}{subsection.5.0.2}%
+\contentsline {subsection}{\numberline {5.0.3}Funzioni del nucleo}{46}{subsection.5.0.3}%
+\contentsline {subsection}{\numberline {5.0.4}Caratteristiche del nucleo}{46}{subsection.5.0.4}%
+\contentsline {section}{\numberline {5.1}Realizzazione del nucleo}{47}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Strutture dati del nucleo}{47}{subsection.5.1.1}%
+\contentsline {subsubsection}{Descrittore del processo}{47}{subsubsection*.91}%
+\contentsline {subsubsection}{Coda dei processi pronti}{48}{subsubsection*.92}%
+\contentsline {subsubsection}{Coda dei descrittori liberi}{48}{subsubsection*.93}%
+\contentsline {subsubsection}{Processo in esecuzione}{48}{subsubsection*.94}%
+\contentsline {subsection}{\numberline {5.1.2}Funzioni del nucleo}{49}{subsection.5.1.2}%
+\contentsline {subsubsection}{Struttura del nucleo}{49}{subsubsection*.95}%
+\contentsline {subsubsection}{Esecuzione del kernel}{49}{subsubsection*.96}%
+\contentsline {subsubsection}{Funzioni del livello inferiore}{50}{subsubsection*.97}%
+\contentsline {subsubsection}{Gestione del temporizzatore}{50}{subsubsection*.98}%

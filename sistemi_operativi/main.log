@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  13 NOV 2022 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  13 NOV 2022 16:09
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1010,12 +1010,23 @@ Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 Package mdframed Info: mdframed works in twoside mode on input line 550.
 \openout3 = `main.pyg'.
 
- (./_minted-main/EBAA810BA47300202CD1798B5E6C38AFF2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [40]) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex
+ (./_minted-main/EBAA810BA47300202CD1798B5E6C38AFF2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [40]
+\openout3 = `main.pyg'.
+
+ (./_minted-main/508D48ACB12B2A68DED4C544868EE7F2DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 41
  []
 
-[41] [42
+[41]
+\openout3 = `main.pyg'.
+
+ (./_minted-main/976707BD6F4EE2CED662E0B9D41713F0F2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [42]) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex
+Overfull \hbox (27.77919pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 43
+ []
+
+[43] [44
 
 ]
 Capitolo 5.
@@ -1029,12 +1040,12 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 3.
 
 Package mdframed Info: mdframed works in twoside mode on input line 8.
-</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=589, 494.84875pt x 393.47pt>
+</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=598, 494.84875pt x 393.47pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/26.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/26.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/26.png  used on input line 22.
 (pdftex.def)             Requested size: 208.39566pt x 165.70055pt.
-</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=590, 452.69125pt x 187.70125pt>
+</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=599, 452.69125pt x 187.70125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/27.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/27.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.png  used on input line 27.
@@ -1042,7 +1053,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.pn
 
 Overfull \vbox (44.43141pt too high) has occurred while \output is active []
 
- [43 </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
+ [45 </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 31.
 Package mdframed Info: Not enough space on this page on input line 34.
 Package mdframed Info: mdframed works in twoside mode on input line 36.
@@ -1063,10 +1074,10 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 69.
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[44]
+[46]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -1074,11 +1085,11 @@ Package mdframed Warning: You got a bad break
 
 \openout3 = `main.pyg'.
 
-(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [45]
+(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [47]
 \openout3 = `main.pyg'.
 
  (./_minted-main/72103B5B6248DBB57FA41CBD1844442662FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=605, 507.8975pt x 310.15875pt>
+</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=613, 507.8975pt x 310.15875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/28.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/28.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.png  used on input line 124.
@@ -1086,7 +1097,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.pn
 \openout3 = `main.pyg'.
 
  (./_minted-main/8DF44286D49AB464F41AC37FB597435862FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=606, 507.8975pt x 306.14375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=614, 507.8975pt x 306.14375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/29.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/29.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.png  used on input line 139.
@@ -1101,36 +1112,36 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.pn
 
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[46 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [47]
+[48 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [49]
 \openout3 = `main.pyg'.
 
  (./_minted-main/F425013F6569F8FE3DED974570421D2662FD7D625D48406DBBB4A37322801FAF.pygtex))
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 50 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[48] (./main.aux)
+[50] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: B98394AFE10430887F1CB8F8C33BA0F5;10469.
 runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19102 strings out of 478287
- 344795 string characters out of 5849288
- 700266 words of memory out of 5000000
- 36708 multiletter control sequences out of 15000+600000
+ 19116 strings out of 478287
+ 345807 string characters out of 5849288
+ 700412 words of memory out of 5000000
+ 36714 multiletter control sequences out of 15000+600000
  477124 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,7n,77p,467b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,8n,77p,495b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (48 pages, 1532124 bytes).
+Output written on main.pdf (50 pages, 1536728 bytes).
 PDF statistics:
- 733 PDF objects out of 1000 (max. 8388607)
- 618 compressed objects within 7 object streams
- 202 named destinations out of 1000 (max. 500000)
+ 742 PDF objects out of 1000 (max. 8388607)
+ 625 compressed objects within 7 object streams
+ 204 named destinations out of 1000 (max. 500000)
  591 words of extra memory for PDF output out of 10000 (max. 10000000)
 

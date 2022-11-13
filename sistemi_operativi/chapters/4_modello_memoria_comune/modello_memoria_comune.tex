@@ -555,14 +555,7 @@ Un semaforo privato viene inizializzato con valore \textbf{zero}.
 
 Il processo che acquisisce la risorsa può sospendersi sul suo semaforo privato se la condizione di sincronizzazione non è soddisfatta, chi rilascia tale risorsa, può risvegliare uno dei processi sospesi (in base alla politica definita) mediante una \texttt{V} sul semaforo privato del processo scelto.
 
-\subsubsection{Esempio 1}
-Su un buffer di N celle di memoria, più produttori possono depositare messaggio di dimensione diversa.
-
-\textbf{Politica di gestione}: tra più produttori ha priorità di accesso quello che fornisce il messaggio di dimensione maggiore.
-
-\textbf{Condizione di sincronizzazione}: il deposito può avvenire se c'è abbastanza spazio per memorizzare il messaggio e non ci sono produttori in attesa.
-
-Il \textbf{prelievo} di messaggi da parte di un consumatore riattiva il produttore con messaggio con \textbf{dimensione maggiore} (se spazio sufficiente nel buffer), se lo \textit{spazio non è sufficiente}, nessun produttore viene riattivato.
+Schema generale:
 
 \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
 class Gestore {
@@ -592,6 +585,107 @@ class Gestore {
             <allocazione risorsa a Pi>;
             <registrare Pi come non sospeso>;
             V(priv[i]);
+        }
+        V(mutex);
+    }
+}
+\end{minted}
+
+La sospensione del processo in acqusizione, se la condizione di sincronizzazione non è soddisfatta, deve avvenire \textit{al di fuori dell sezione critica}, altrimenti si impedirebbe a un processo che rilascia la risorsa di accedere a sua volta alla sezione critica.
+
+La soluzione mostrata può presentare inconvenienti:
+\begin{itemize}
+    \item la \texttt{P} sul privato viene \textbf{sempre eseguita}, anche se non necessario
+    \item il codice dell'assegnazione della risorsa è \textit{duplicato} nelle due procedure
+\end{itemize}
+
+Correggendo questi problemi:
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
+class Gestore() {
+    <struttura dati gestore>;
+    semaphore mutex = 1;
+    semaphore priv[n] = {0, 0, |$\dots$|, 0}; //semafori privati
+
+    public void acqusizione(int i) {
+        P(mutex);
+        if (! <condizione di sincronizzazione) {
+            <registrare sospensione processo>;
+            V(mutex);
+            P(priv[i]);
+            <registrare processo come non sospeso>;
+        }
+        <allocazione risorsa>;
+        V(mutex);
+    }
+
+    public void rilascio() {
+        int i;
+        P(mutex);
+        <rilascio risorsa>;
+        if (<min 1 processo soddisfa sync condition>) {
+            <scelta tra sospesi del Pi da riattivare>;
+            V(priv[i]);
+        }
+        else
+            V(mutex);
+    }
+}
+\end{minted}
+
+Il risveglio segue lo schema del \textbf{passaggio del testimone}.
+
+A differenza della soluzione precedente è più complesso realizzare la riattivazione di più processi che hanno condizione di sincronizzazione verificata: il processo che rilascia la risorsa attiva al massimo un processo, il quale dovrà a sua volta provvedere a riattivare eventuali processi.
+
+\subsubsection{Esempio 1}
+Su un buffer di N celle di memoria, più produttori possono depositare messaggio di dimensione diversa.
+
+\textbf{Politica di gestione}: tra più produttori ha priorità di accesso quello che fornisce il messaggio di dimensione maggiore.
+
+\textbf{Condizione di sincronizzazione}: il deposito può avvenire se c'è abbastanza spazio per memorizzare il messaggio e non ci sono produttori in attesa.
+
+Il \textbf{prelievo} di messaggi da parte di un consumatore riattiva il produttore con messaggio con \textbf{dimensione maggiore} (se spazio sufficiente nel buffer), se lo \textit{spazio non è sufficiente}, nessun produttore viene riattivato.
+
+Soluzione:
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
+class Buffer {
+    int richiesta[num_proc] = 0; //numero di celle richieste da Pi
+    int sospesi = 0;
+    int vuote = n; //numero celle vuote del buffer
+
+    semaphore mutex = 1;
+    semaphore priv[num_proc] = {0, 0, |$\dots$|, 0};
+
+    public void acqusizione(int m, int i) {
+        // m dim mess, i id processo
+        P(mutex);
+        if (sospesi == 0 && vuote >= m) {//assegna m celle a Pi
+            vuote = vuote - m;
+            V(priv[i]);
+        }
+        else {
+            sospesi++;
+            richiesta[i] = m;
+        }
+        V(mutex);
+        P(priv[i]);
+    }
+    
+    public void rilascio(int m) {
+        int k;
+        P(mutex);
+        vuote += m;
+        while (sospesi != 0) {
+            <individuazione del Pk con max richiesta>;
+            if (richiesta[k] <= vuote) { //assegno a Pk
+                vuote = vuote - richiesta[k];
+                richiesta[k] = 0;
+                sospesi--;
+                V(priva[k]);
+            }
+            else {
+                break;
+            }
         }
         V(mutex);
     }
