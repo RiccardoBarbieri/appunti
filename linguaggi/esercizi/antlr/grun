@@ -1,0 +1,3 @@
+#!/bin/bash
+export CLASSPATH="/home/riccardoob/appunt/linguaggi/esercizi/antlr":$CLASSPATH
+

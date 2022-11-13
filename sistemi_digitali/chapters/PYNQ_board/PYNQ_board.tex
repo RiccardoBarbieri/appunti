@@ -173,35 +173,43 @@ print("Frames per second: " + str(numframes / (end - start)))
 Questo approccio permette di elaborare singoli frame prima di inviarli all'output.
 \vspace{-0.8cm}
 \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{python}
-    import cv2
-    import numpy as np
+import cv2
+import numpy as np
 
-    numframes = 10
-    grayscale = np.ndarray(shape=(hdmi_in.mode.height, hdmi_in.mode.width),
-                           dtype=np.uint8)
-    result = np.ndarray(shape=(hdmi_in.mode.height, hdmi_in.mode.width),
-                        dtype=np.uint8)
+numframes = 10
+grayscale = np.ndarray(shape=(hdmi_in.mode.height, hdmi_in.mode.width),
+                       dtype=np.uint8)
+result = np.ndarray(shape=(hdmi_in.mode.height, hdmi_in.mode.width),
+                    dtype=np.uint8)
 
-    start = time.time()
+start = time.time()
 
-    for _ in range(numframes):
-        inframe = hdmi_in.readframe()
-        cv2.cvtcolor(inframe, cv2.COLOR_BGR2GRAY, dst=grayscale)
-        inframe.freebuffer()
-        cv2.Laplacian(grayscale, cv2.CV_8U, dst=result)
+for _ in range(numframes):
+    inframe = hdmi_in.readframe()
+    cv2.cvtcolor(inframe, cv2.COLOR_BGR2GRAY, dst=grayscale)
+    inframe.freebuffer()
+    cv2.Laplacian(grayscale, cv2.CV_8U, dst=result)
 
-        outframe = hdmi_out.newframe()
-        cv2.cvtcolor(result, cv2.COLOR_GRAY2BGR, dst = outframe)
-        hdmi_out.writeframe(outframe)
+    outframe = hdmi_out.newframe()
+    cv2.cvtcolor(result, cv2.COLOR_GRAY2BGR, dst = outframe)
+    hdmi_out.writeframe(outframe)
 
-    end = time.time()
-    print("Frames per second: " + str(numframes / (end - start)))
+end = time.time()
+print("Frames per second: " + str(numframes / (end - start)))
 \end{minted}
 
+Ricordare di chiudere gli stream
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{python}
+hdmi_out.close()
+hdmi_in.close()
+\end{minted}
 
+\section{Filtraggio accellerato HW}
+Si estende l'esempio precedente con elaborazione di immagini hardware accelerated.
 
+Si utilizza il modulo \texttt{overlay} per caricare un bitstream custom contenente il modulo di filtraggio 2D.
 
-
+Si importa anche il modulo \texttt{xlnk}, un \textbf{memory manager}
 
 
 

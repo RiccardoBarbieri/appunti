@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{hdmi\PYGZus{}out}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\PYG{n}{hdmi\PYGZus{}in}\PYG{o}{.}\PYG{n}{close}\PYG{p}{()}
+\end{Verbatim}
