@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.10.10)  8 NOV 2022 16:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  13 NOV 2022 13:46
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -612,24 +612,24 @@ runsystem(rm main.aex)...executed.
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -688,7 +688,7 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 34.
+Package hyperref Info: Link coloring OFF on input line 35.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -698,9 +698,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count360
 )
-LaTeX Info: Redefining \ref on input line 34.
-LaTeX Info: Redefining \pageref on input line 34.
-LaTeX Info: Redefining \nameref on input line 34.
+LaTeX Info: Redefining \ref on input line 35.
+LaTeX Info: Redefining \pageref on input line 35.
+LaTeX Info: Redefining \nameref on input line 35.
  (./main.out) (./main.out)
 \@outlinefile=\write5
 \openout5 = `main.out'.
@@ -709,8 +709,8 @@ LaTeX Info: Redefining \nameref on input line 34.
 Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
 )
 \c@lstlisting=\count361
-LaTeX Info: Redefining \it@ocap on input line 34.
-LaTeX Info: Redefining \it@ccap on input line 34.
+LaTeX Info: Redefining \it@ocap on input line 35.
+LaTeX Info: Redefining \it@ccap on input line 35.
 
 
 File italian.ldf warning: 
@@ -718,7 +718,7 @@ italian.ldf    With OT1 encoding guillemets are poorly faked
 italian.ldf    Use T1 encoding
 italian.ldf    or specify a font with command \CaporaliFrom
 italian.ldf    See the documentation concerning the babel-italian typesetting 
-italian.ldf    on input line 34.
+italian.ldf    on input line 35.
 
 (./main.toc [1
 
@@ -727,7 +727,7 @@ italian.ldf    on input line 34.
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- (./chapters/virtualizzazione/virtualizzazione.tex [2]
+ (./chapters/1_virtualizzazione/virtualizzazione.tex [2]
 Capitolo 1.
 </home/riccardoob/appunti/sistemi_operativi/images/0.png, id=294, 813.0375pt x 673.51625pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/0.png Graphic file (type png)
@@ -790,7 +790,7 @@ File: /home/riccardoob/appunti/sistemi_operativi/images/7.png Graphic file (type
 <use /home/riccardoob/appunti/sistemi_operativi/images/7.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/7.png  used on input line 117.
 (pdftex.def)             Requested size: 341.43436pt x 157.46028pt.
-) (./chapters/protezione/protezione.tex [8 </home/riccardoob/appunti/sistemi_operativi/images/7.png>]
+) (./chapters/2_protezione/protezione.tex [8 </home/riccardoob/appunti/sistemi_operativi/images/7.png>]
 Capitolo 2.
 [9
 
@@ -824,7 +824,7 @@ File: /home/riccardoob/appunti/sistemi_operativi/images/16.png Graphic file (typ
 <use /home/riccardoob/appunti/sistemi_operativi/images/16.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/16.png  used on input line 331.
 (pdftex.def)             Requested size: 341.43436pt x 194.96619pt.
- [19 </home/riccardoob/appunti/sistemi_operativi/images/16.png>]) (./chapters/programmazione_concorrente/programmazione_concorrente.tex [20]
+ [19 </home/riccardoob/appunti/sistemi_operativi/images/16.png>]) (./chapters/3_intro_programmazione_concorrente/intro_programmazione_concorrente.tex [20]
 Capitolo 3.
 </home/riccardoob/appunti/sistemi_operativi/images/10.png, id=433, 285.065pt x 286.06876pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/10.png Graphic file (type png)
@@ -868,7 +868,7 @@ Overfull \hbox (14.27121pt too wide) in paragraph at lines 141--142
 []$[]$ 
  []
 
-[25 </home/riccardoob/appunti/sistemi_operativi/images/17.png>]) (./chapters/modello_memoria_comune/modello_memoria_comune.tex [26]
+[25 </home/riccardoob/appunti/sistemi_operativi/images/17.png>]) (./chapters/4_modello_memoria_comune/modello_memoria_comune.tex [26]
 Capitolo 4.
 </home/riccardoob/appunti/sistemi_operativi/images/18.png, id=482, 247.92625pt x 216.81pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/18.png Graphic file (type png)
@@ -1006,7 +1006,31 @@ Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 39
  []
 
-[39]) (./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex [40]
+[39]
+Package mdframed Info: mdframed works in twoside mode on input line 550.
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 568.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 568.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 569.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 569.
+ [40]) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex
+Overfull \hbox (27.77919pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 41
+ []
+
+[41] [42
+
+]
 Capitolo 5.
 
 Overfull \hbox (23.54146pt too wide) in paragraph at lines 1--1
@@ -1018,12 +1042,12 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 3.
 
 Package mdframed Info: mdframed works in twoside mode on input line 8.
-</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=580, 494.84875pt x 393.47pt>
+</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=620, 494.84875pt x 393.47pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/26.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/26.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/26.png  used on input line 22.
 (pdftex.def)             Requested size: 208.39566pt x 165.70055pt.
-</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=581, 452.69125pt x 187.70125pt>
+</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=621, 452.69125pt x 187.70125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/27.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/27.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.png  used on input line 27.
@@ -1031,9 +1055,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.pn
 
 Overfull \vbox (44.43141pt too high) has occurred while \output is active []
 
- [41
-
- </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
+ [43 </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 31.
 Package mdframed Info: Not enough space on this page on input line 34.
 Package mdframed Info: mdframed works in twoside mode on input line 36.
@@ -1054,10 +1076,10 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 69.
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 42 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[42]
+[44]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -1065,11 +1087,11 @@ Package mdframed Warning: You got a bad break
 
 \openout3 = `main.pyg'.
 
-(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [43]
+(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [45]
 \openout3 = `main.pyg'.
 
  (./_minted-main/72103B5B6248DBB57FA41CBD1844442662FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=596, 507.8975pt x 310.15875pt>
+</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=636, 507.8975pt x 310.15875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/28.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/28.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.png  used on input line 124.
@@ -1077,7 +1099,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.pn
 \openout3 = `main.pyg'.
 
  (./_minted-main/8DF44286D49AB464F41AC37FB597435862FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=597, 507.8975pt x 306.14375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=637, 507.8975pt x 306.14375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/29.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/29.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.png  used on input line 139.
@@ -1092,591 +1114,36 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.pn
 
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 44 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
- []
-
-[44 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [45]
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:195: Missing $ inserted.
-<inserted text> 
-                $
-l.195     \item \texttt{salvataggio_stato}
-                                          : salvataggio del contesto del pro...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:195: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.195     \item \texttt{salvataggio_stato}
-                                          : salvataggio del contesto del pro...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: LaTeX Error: Command \item invalid in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.196     \item
-                \texttt{assegnazione_cpu}: rimozione del processo a maggior ...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.196     \item \texttt
-                       {assegnazione_cpu}: rimozione del processo a maggior ...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: LaTeX Error: Something's wrong--perhaps a missing \item.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.196     \item \texttt
-                       {assegnazione_cpu}: rimozione del processo a maggior ...
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Missing $ inserted.
-<inserted text> 
-                $
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\text@ ...e {\textdef@ \displaystyle \f@size {#1}}
-                                                  {\textdef@ \textstyle \f@s...
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Missing $ inserted.
-<inserted text> 
-                $
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\text@ ...xtstyle \f@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \sf@...
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Missing $ inserted.
-<inserted text> 
-                $
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\text@ ...tstyle \sf@size {\firstchoice@false #1}}
-                                                  {\textdef@ \textstyle \ssf...
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Missing $ inserted.
-<inserted text> 
-                $
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...th {#1}\let \f@size #2\selectfont #3}
-                                                  }
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\textdef@ ...h {#1}\let \f@size #2\selectfont #3}}
-                                                  
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\text@ ...style \ssf@size {\firstchoice@false #1}}
-                                                  \check@mathfonts }
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Extra }, or forgotten $.
-\text@ ...firstchoice@false #1}}\check@mathfonts }
-                                                  
-l.196     \item \texttt{assegnazione_cpu}
-                                         : rimozione del processo a maggior ...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:196: Please use \mathaccent for accents in math mode.
-\add@accent ... \let \ignorespaces \relax \accent 
-                                                  #1 #2\egroup \ifmmode \els...
-l.196 ...imozione del processo a maggior priorità
-                                                   dalla coda e caricamento ...
-I'm changing \accent to \mathaccent here; wish me luck.
-(Accents are not the same in formulas as they are in text.)
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:197: Missing $ inserted.
-<inserted text> 
-                $
-l.197     \item \texttt
-                       {ripristino_stato}: caricamento del contesto del nuov...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:197: Missing } inserted.
-<inserted text> 
-                }
-l.197     \item \texttt
-                       {ripristino_stato}: caricamento del contesto del nuov...
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:197: Missing $ inserted.
-<inserted text> 
-                $
-l.197     \item \texttt{ripristino_stato}
-                                         : caricamento del contesto del nuov...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:197: Extra }, or forgotten $.
-<recently read> \egroup 
-                        
-l.197     \item \texttt{ripristino_stato}
-                                         : caricamento del contesto del nuov...
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing $ inserted.
-<inserted text> 
-                $
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing $ inserted.
-<inserted text> 
-                $
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing $ inserted.
-<inserted text> 
-                $
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing $ inserted.
-<inserted text> 
-                $
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.198 \end{itemize}
-                   
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.198 \end{itemize}
-                   
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing { inserted.
-<to be read again> 
-                   \endgroup 
-l.198 \end{itemize}
-                   
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing $ inserted.
-<inserted text> 
-                $
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-./chapters/nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex:198: Missing } inserted.
-<inserted text> 
-                }
-l.198 \end{itemize}
-                   
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-Overfull \hbox (247.33965pt too wide) in paragraph at lines 195--199
-[]\OT1/cmtt/m/n/12 salvataggio$[]\OML/cmm/m/it/12 tato \OT1/cmr/m/n/12 : \OML/cmm/m/it/12 salvataggiodelcontestodelprocessoinesecuzioneeinserimentodeldescrittorenellacodadeiprocessibloccatiopronti[]$ 
- []
-
-\openout3 = `main.pyg'.
-
-runsystem(pygmentize -l c -f latex -P commandprefix=PYG -F tokenmerge -P stripnl=False -o _minted-main/F425013F6569F8FE3DED974570421D2662FD7D625D48406DBBB4A37322801FAF.pygtex main.pyg)...executed.
-
-(./_minted-main/F425013F6569F8FE3DED974570421D2662FD7D625D48406DBBB4A37322801FAF.pygtex))
-Overfull \hbox (168.34608pt too wide) has occurred while \output is active
 \OT1/cmr/m/n/12 46 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[46] (./main.aux)
+[46 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [47]
+\openout3 = `main.pyg'.
+
+ (./_minted-main/F425013F6569F8FE3DED974570421D2662FD7D625D48406DBBB4A37322801FAF.pygtex))
+Overfull \hbox (168.34608pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+ []
+
+[48] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 2648A70EE60145AAC2D22A7932E315C8;10365.
+(rerunfilecheck)             Checksum: B98394AFE10430887F1CB8F8C33BA0F5;10469.
 runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19092 strings out of 478287
- 344095 string characters out of 5849288
- 700093 words of memory out of 5000000
- 36703 multiletter control sequences out of 15000+600000
- 477402 words of font info for 58 fonts, out of 8000000 for 9000
+ 19541 strings out of 478287
+ 348745 string characters out of 5849288
+ 890593 words of memory out of 5000000
+ 37108 multiletter control sequences out of 15000+600000
+ 476670 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,16n,77p,467b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,7n,77p,467b,1919s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (46 pages, 1522770 bytes).
+Output written on main.pdf (48 pages, 1526220 bytes).
 PDF statistics:
- 719 PDF objects out of 1000 (max. 8388607)
- 608 compressed objects within 7 object streams
- 199 named destinations out of 1000 (max. 500000)
+ 768 PDF objects out of 1000 (max. 8388607)
+ 655 compressed objects within 7 object streams
+ 234 named destinations out of 1000 (max. 500000)
  591 words of extra memory for PDF output out of 10000 (max. 10000000)
 

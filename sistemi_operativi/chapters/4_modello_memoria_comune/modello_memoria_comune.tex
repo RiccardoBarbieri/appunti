@@ -538,7 +538,7 @@ void ricezione() {
     \end{minted}
 \end{multicols}
 
-\subsection{Specifiche strategie di allocazione}
+\subsection{Semafori privati - specifiche strategie di allocazione}
 Qualora si voglia realizzare una politica di gestione delle risorse particolare, la decisione se permettere o no l'esecuzione a un dato processo dipende dal verificarsi duna specifica \textbf{condizione di sincronizzazione}.
 
 Queste condizioni vengono espresse in termini di variabili che rappresentano lo \textbf{stato della risorsa} e variabili \textit{locali} ai singoli processi.
@@ -547,10 +547,68 @@ Sorge il problema di quale processo mettere in esecuzione, risolvibile definendo
 
 Nei casi precedenti la politica di risveglio era dipendente dalla specifica implementazione dell'algoritmo all'interno della V, solitamente realizzato con risveglio FIFO.
 
-\subsubsection{Esempio}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+    Un semaforo \texttt{s} si dice \textbf{privato} per un processo quando solo tale processo può eseguire la primitiva \texttt{P} su semaforo \texttt{s}. La primitiva \texttt{V} può essere eseguita da qualunque processo.
+\end{mdframed}
+
+Un semaforo privato viene inizializzato con valore \textbf{zero}.
+
+Il processo che acquisisce la risorsa può sospendersi sul suo semaforo privato se la condizione di sincronizzazione non è soddisfatta, chi rilascia tale risorsa, può risvegliare uno dei processi sospesi (in base alla politica definita) mediante una \texttt{V} sul semaforo privato del processo scelto.
+
+\subsubsection{Esempio 1}
 Su un buffer di N celle di memoria, più produttori possono depositare messaggio di dimensione diversa.
 
-\paragraph{Politica di gestione} tra più produttori ha priorità di accesso quello che fornisce il messaggio di dimensione maggiore.
+\textbf{Politica di gestione}: tra più produttori ha priorità di accesso quello che fornisce il messaggio di dimensione maggiore.
+
+\textbf{Condizione di sincronizzazione}: il deposito può avvenire se c'è abbastanza spazio per memorizzare il messaggio e non ci sono produttori in attesa.
+
+Il \textbf{prelievo} di messaggi da parte di un consumatore riattiva il produttore con messaggio con \textbf{dimensione maggiore} (se spazio sufficiente nel buffer), se lo \textit{spazio non è sufficiente}, nessun produttore viene riattivato.
+
+\begin{lstlisting}[language=java]
+class Gestore {
+    <struttura dati gestore>;
+    semaphore mutex = 1;
+    semaphore priv[n] = {0, 0, \dots, 0} //semafori privati
+
+    public void acquisizione (int i) {
+        P(mutex);
+        if (<condizione di sincronizzazione>) {
+            <allocazione della risorsa>;
+            V(priv[i]);
+        }
+        else {
+            <registrare la sospensione del processo>;
+        }
+        V(mutex);
+        P(priv[i]);
+    }
+
+    public void rilascio() {
+        int i;
+        P(mutex);
+        <rilascio risorsa>;
+        if (<min 1 processo soddisfa sync condition>) {
+            <scelta tra sospesi del Pi da riattivare>;
+            <allocazione risorsa a Pi>;
+            <registrare Pi come non sospeso>;
+            V(priv[i]);
+        }
+        V(mutex);
+    }
+}
+\end{lstlisting}
+
+\subsubsection{Esempio 2}
+Un insieme di processi utilizza un insieme di risorse comuni R1, R2, \dots, Rn. Ogni processo può utilizzare una qualunque delle risorse.
+
+\textbf{Politica di gestione}: a ogni processo è assegnata una \textbf{priorità}, in fase di riattivazione dei processi sospesi, viene scelto quello con la \textit{massima priorità}.
+
+\textbf{Condizione sincronizzazione}: accesso consentito solo se esiste una \textit{risorsa libera}.
+
+
+
+
+
 
 
 

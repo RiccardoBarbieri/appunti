@@ -192,9 +192,9 @@ In entrambi i casi al completamento della funzione, il trasferimento avviene tra
 \subsubsection{Funzioni del livello inferiore}
 Le funzioni principali di \textbf{cambio di contesto} sono
 \begin{itemize}
-    \item \texttt{salvataggio_stato}: salvataggio del contesto del processo in esecuzione e inserimento del descrittore nella coda dei processi bloccati o pronti
-    \item \texttt{assegnazione_cpu}: rimozione del processo a maggior priorità dalla coda e caricamento dell'identificatore nel registro del processo in esecuzione
-    \item \texttt{ripristino_stato}: caricamento del contesto del nuovo processo nei registri di macchina
+    \item \texttt{salvataggio\_stato}: salvataggio del contesto del processo in esecuzione e inserimento del descrittore nella coda dei processi bloccati o pronti
+    \item \texttt{assegnazione\_cpu}: rimozione del processo a maggior priorità dalla coda e caricamento dell'identificatore nel registro del processo in esecuzione
+    \item \texttt{ripristino\_stato}: caricamento del contesto del nuovo processo nei registri di macchina
 \end{itemize}
 
 \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{c}
