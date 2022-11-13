@@ -564,11 +564,11 @@ Su un buffer di N celle di memoria, più produttori possono depositare messaggio
 
 Il \textbf{prelievo} di messaggi da parte di un consumatore riattiva il produttore con messaggio con \textbf{dimensione maggiore} (se spazio sufficiente nel buffer), se lo \textit{spazio non è sufficiente}, nessun produttore viene riattivato.
 
-\begin{lstlisting}[language=java]
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
 class Gestore {
     <struttura dati gestore>;
     semaphore mutex = 1;
-    semaphore priv[n] = {0, 0, \dots, 0} //semafori privati
+    semaphore priv[n] = {0, 0, |$\dots$|, 0} //semafori privati
 
     public void acquisizione (int i) {
         P(mutex);
@@ -596,7 +596,7 @@ class Gestore {
         V(mutex);
     }
 }
-\end{lstlisting}
+\end{minted}
 
 \subsubsection{Esempio 2}
 Un insieme di processi utilizza un insieme di risorse comuni R1, R2, \dots, Rn. Ogni processo può utilizzare una qualunque delle risorse.
@@ -604,7 +604,6 @@ Un insieme di processi utilizza un insieme di risorse comuni R1, R2, \dots, Rn. 
 \textbf{Politica di gestione}: a ogni processo è assegnata una \textbf{priorità}, in fase di riattivazione dei processi sospesi, viene scelto quello con la \textit{massima priorità}.
 
 \textbf{Condizione sincronizzazione}: accesso consentito solo se esiste una \textit{risorsa libera}.
-
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  13 NOV 2022 13:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  13 NOV 2022 15:41
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1008,22 +1008,9 @@ Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 
 [39]
 Package mdframed Info: mdframed works in twoside mode on input line 550.
- (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2020/03/24 1.8d listings language file
-)
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 568.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 568.
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 569.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 569.
- [40]) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex
+\openout3 = `main.pyg'.
+
+ (./_minted-main/EBAA810BA47300202CD1798B5E6C38AFF2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [40]) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 41
  []
@@ -1042,12 +1029,12 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 3.
 
 Package mdframed Info: mdframed works in twoside mode on input line 8.
-</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=620, 494.84875pt x 393.47pt>
+</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=589, 494.84875pt x 393.47pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/26.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/26.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/26.png  used on input line 22.
 (pdftex.def)             Requested size: 208.39566pt x 165.70055pt.
-</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=621, 452.69125pt x 187.70125pt>
+</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=590, 452.69125pt x 187.70125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/27.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/27.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.png  used on input line 27.
@@ -1091,7 +1078,7 @@ Package mdframed Warning: You got a bad break
 \openout3 = `main.pyg'.
 
  (./_minted-main/72103B5B6248DBB57FA41CBD1844442662FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=636, 507.8975pt x 310.15875pt>
+</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=605, 507.8975pt x 310.15875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/28.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/28.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.png  used on input line 124.
@@ -1099,7 +1086,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.pn
 \openout3 = `main.pyg'.
 
  (./_minted-main/8DF44286D49AB464F41AC37FB597435862FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=637, 507.8975pt x 306.14375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=606, 507.8975pt x 306.14375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/29.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/29.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.png  used on input line 139.
@@ -1132,18 +1119,18 @@ runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19541 strings out of 478287
- 348745 string characters out of 5849288
- 890593 words of memory out of 5000000
- 37108 multiletter control sequences out of 15000+600000
- 476670 words of font info for 55 fonts, out of 8000000 for 9000
+ 19102 strings out of 478287
+ 344795 string characters out of 5849288
+ 700266 words of memory out of 5000000
+ 36708 multiletter control sequences out of 15000+600000
+ 477124 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 73i,7n,77p,467b,1919s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (48 pages, 1526220 bytes).
+ 73i,7n,77p,467b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on main.pdf (48 pages, 1532124 bytes).
 PDF statistics:
- 768 PDF objects out of 1000 (max. 8388607)
- 655 compressed objects within 7 object streams
- 234 named destinations out of 1000 (max. 500000)
+ 733 PDF objects out of 1000 (max. 8388607)
+ 618 compressed objects within 7 object streams
+ 202 named destinations out of 1000 (max. 500000)
  591 words of extra memory for PDF output out of 10000 (max. 10000000)
 
