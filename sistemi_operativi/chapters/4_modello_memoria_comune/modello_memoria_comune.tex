@@ -169,7 +169,7 @@ class risorsa {
     semaphore mutex = 1;
     public void op1() {
         P(mutex);
-        <sez. critica>
+        //<sez. critica>
         V(mutex);
     }
 }
@@ -203,7 +203,7 @@ public void op_i() {
     cont_i++;
     if (cont_i==1) P(mutex);
     V(m_i);
-    <corpo operazione>
+    //<corpo operazione>
     P(m_i);
     cont_i--;
     if (cont_i==0) V(mutex);
@@ -559,18 +559,18 @@ Schema generale:
 
 \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
 class Gestore {
-    <struttura dati gestore>;
+    //<struttura dati gestore>;
     semaphore mutex = 1;
     semaphore priv[n] = {0, 0, |$\dots$|, 0} //semafori privati
 
     public void acquisizione (int i) {
         P(mutex);
-        if (<condizione di sincronizzazione>) {
-            <allocazione della risorsa>;
+        if (/*<condizione di sincronizzazione>)*/ {
+            //<allocazione della risorsa>;
             V(priv[i]);
         }
         else {
-            <registrare la sospensione del processo>;
+            //<registrare la sospensione del processo>;
         }
         V(mutex);
         P(priv[i]);
@@ -579,11 +579,11 @@ class Gestore {
     public void rilascio() {
         int i;
         P(mutex);
-        <rilascio risorsa>;
-        if (<min 1 processo soddisfa sync condition>) {
-            <scelta tra sospesi del Pi da riattivare>;
-            <allocazione risorsa a Pi>;
-            <registrare Pi come non sospeso>;
+        //<rilascio risorsa>;
+        if (/*<min 1 processo soddisfa sync condition>*/) {
+            //<scelta tra sospesi del Pi da riattivare>;
+            //<allocazione risorsa a Pi>;
+            //<registrare Pi come non sospeso>;
             V(priv[i]);
         }
         V(mutex);
@@ -603,28 +603,28 @@ Correggendo questi problemi:
 
 \begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize]{java}
 class Gestore() {
-    <struttura dati gestore>;
+    //<struttura dati gestore>;
     semaphore mutex = 1;
     semaphore priv[n] = {0, 0, |$\dots$|, 0}; //semafori privati
 
     public void acqusizione(int i) {
         P(mutex);
-        if (! <condizione di sincronizzazione) {
-            <registrare sospensione processo>;
+        if (! //<condizione di sincronizzazione) {
+            //<registrare sospensione processo>;
             V(mutex);
             P(priv[i]);
-            <registrare processo come non sospeso>;
+            //<registrare processo come non sospeso>;
         }
-        <allocazione risorsa>;
+        //<allocazione risorsa>;
         V(mutex);
     }
 
     public void rilascio() {
         int i;
         P(mutex);
-        <rilascio risorsa>;
-        if (<min 1 processo soddisfa sync condition>) {
-            <scelta tra sospesi del Pi da riattivare>;
+        //<rilascio risorsa>;
+        if (/*<min 1 processo soddisfa sync condition>*/) {
+            //<scelta tra sospesi del Pi da riattivare>;
             V(priv[i]);
         }
         else
@@ -676,7 +676,7 @@ class Buffer {
         P(mutex);
         vuote += m;
         while (sospesi != 0) {
-            <individuazione del Pk con max richiesta>;
+            //<individuazione del Pk con max richiesta>;
             if (richiesta[k] <= vuote) { //assegno a Pk
                 vuote = vuote - richiesta[k];
                 richiesta[k] = 0;
@@ -698,6 +698,110 @@ Un insieme di processi utilizza un insieme di risorse comuni R1, R2, \dots, Rn. 
 \textbf{Politica di gestione}: a ogni processo è assegnata una \textbf{priorità}, in fase di riattivazione dei processi sospesi, viene scelto quello con la \textit{massima priorità}.
 
 \textbf{Condizione sincronizzazione}: accesso consentito solo se esiste una \textit{risorsa libera}.
+
+Soluzione:
+
+Variabili introdotte
+\begin{itemize}
+    \item \texttt{PS[i]}: vero se il processo \texttt{Pi} è sospeso, falso altrimenti
+    \item \texttt{libera[j]}: falso se la risorsa j-esima è occupata, vero altrimenti
+    \item \texttt{disponibili}: numero delle risorse non occupate
+    \item \texttt{sospesi}: numero di processi sospesi
+    \item \texttt{mutex}: semaforo di mutua esclusione
+    \item \texttt{priv[i]}:semafori privati del processo \texttt{Pi}
+\end{itemize}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
+class Gestore {
+    semaphore mutex = 1;
+    semaphore priv[num_proc] = {0, 0, |$\dots$|, 0};
+    int sospesi = 0;
+    boolean PS[num_proc] = {false, false, |$\dots$|, false};
+    int disponibili = num_ris;
+    boolean libera[num_ris] = {true, true, |$\dots$|, false};
+
+    public int richiesta(int proc) {
+        int i = 0;
+        P(mutex);
+        if (disponibili == 0) {
+            sospesi++;
+            PS[proc] = true;
+            V(mutex);
+            P(priv[proc]);
+            PS[proc] = false;
+            sospesi--;
+        }
+        while (! libera[i]) i++;
+        libera[i] = false;
+        disponibili--;
+        V(mutex);
+        return i;
+    }
+
+    public void rilascio(int r) {
+        P(mutex);
+        libera[r] = true;
+        disponibili++;
+        if (sospesi > 0) {
+            //<seleziona il processo Pj a massima priorità tra i sospesi>
+            V(priv[j]);
+        }
+        else V(mutex);
+    }
+}
+\end{minted}
+
+\section{Realizzazione dei semafori}
+
+Nei sistemi multiprogrammati, il semaforo è realizzato dal kernel, che usa i meccanismi di gestione dei processi per evitare attesa attiva.
+
+Si può definire le funzioni \texttt{P} e \texttt{V} in questo modo, garantendo le proprietà del semaforo.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/30.png}
+\end{figure}
+
+Un semaforo è identificato dal suo descrittore, definito come segue:
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+typedef struct {
+    int contatore;
+    coda queue;
+} semaforo;
+\end{minted}
+
+Una \texttt{P} su un semaforo con \textit{contatore a 0}, \textit{sospende} il processo nella coda \texttt{queue}, altrimenti il \textit{contatore viene decrementato}.
+
+Una \texttt{V} su un semaforo con \textit{coda non vuota}, \textit{estrae} un processo dalla coda, altrimenti \textit{incrementa il contatore}.
+
+\subsection{Architettura monoprocessore}
+Considerando interruzioni disabilitate (per garantire l'atomicità), l'implementazione di \texttt{P} e \texttt{V} sono:
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+void P(semaphore s) {
+    if (s.contatore == 0)
+        //<sospensione del processo nella coda associata a s>;
+    else
+        s.contatore++;
+}
+
+void V(semaphore s) {
+    if (s.queue != NULL)
+        //<estrazione del primo processo dalla coda a s.queue e impostazione a stato di ready>
+    else
+        s.contatore--;
+}
+\end{minted}
+
+
+
+
+
+
+
+
+
+
 
 
 

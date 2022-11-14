@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{P}\PYG{p}{(}\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{contatore}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}sospensione del processo nella coda associata a s\PYGZgt{};}
+\PYG{+w}{    }\PYG{k}{else}
+\PYG{+w}{        }\PYG{n}{s}\PYG{p}{.}\PYG{n}{contatore}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{V}\PYG{p}{(}\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{s}\PYG{p}{.}\PYG{n}{queue}\PYG{+w}{ }\PYG{o}{!}\PYG{o}{=}\PYG{+w}{ }\PYG{n+nb}{NULL}\PYG{p}{)}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}estrazione del primo processo dalla coda a s.queue e impostazione a stato di ready\PYGZgt{}}
+\PYG{+w}{    }\PYG{k}{else}
+\PYG{+w}{        }\PYG{n}{s}\PYG{p}{.}\PYG{n}{contatore}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

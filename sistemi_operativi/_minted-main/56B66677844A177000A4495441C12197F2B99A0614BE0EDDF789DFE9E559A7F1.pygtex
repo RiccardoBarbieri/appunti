@@ -1,0 +1,39 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{class} \PYG{n+nc}{Gestore}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{mutex}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{priv}\PYG{o}{[}\PYG{n}{num\PYGZus{}proc}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{esc}{$\dots$}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{sospesi}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{boolean}\PYG{+w}{ }\PYG{n}{PS}\PYG{o}{[}\PYG{n}{num\PYGZus{}proc}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{k+kc}{false}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{,}\PYG{+w}{ }\PYG{esc}{$\dots$}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{disponibili}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{num\PYGZus{}ris}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{boolean}\PYG{+w}{ }\PYG{n}{libera}\PYG{o}{[}\PYG{n}{num\PYGZus{}ris}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{k+kc}{true}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{,}\PYG{+w}{ }\PYG{esc}{$\dots$}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{\PYGZcb{}}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nf}{richiesta}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{proc}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{disponibili}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{sospesi}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{PS}\PYG{o}{[}\PYG{n}{proc}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{P}\PYG{p}{(}\PYG{n}{priv}\PYG{o}{[}\PYG{n}{proc}\PYG{o}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{PS}\PYG{o}{[}\PYG{n}{proc}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{sospesi}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{+w}{ }\PYG{n}{libera}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{libera}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{disponibili}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{return}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{rilascio}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{libera}\PYG{o}{[}\PYG{n}{r}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{disponibili}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{sospesi}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{//\PYGZlt{}seleziona il processo Pj a massima priorità tra i sospesi\PYGZgt{}}
+\PYG{+w}{            }\PYG{n}{V}\PYG{p}{(}\PYG{n}{priv}\PYG{o}{[}\PYG{n}{j}\PYG{o}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

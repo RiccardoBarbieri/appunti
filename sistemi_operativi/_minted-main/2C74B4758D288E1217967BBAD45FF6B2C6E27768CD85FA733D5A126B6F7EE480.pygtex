@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{cambio\PYGZus{}contesto}\PYG{p}{(}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{salvataggio\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{k}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{p}{.}\PYG{n}{servizio}\PYG{p}{.}\PYG{n}{priorità}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{inserimento}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{coda\PYGZus{}processi\PYGZus{}pronti}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{assegnazione\PYGZus{}CPU}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{ripristino\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

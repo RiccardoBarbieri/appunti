@@ -1,0 +1,24 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{V}\PYG{p}{(}\PYG{n}{semaforo}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{// j, k processi \PYGZhy{}\PYGZhy{} p, q indici priorità}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{p}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{q}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{p}{.}\PYG{n}{coda}\PYG{p}{.}\PYG{n}{primo}\PYG{+w}{ }\PYG{o}{!}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{\PYGZhy{}1}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{// la coda non è vuota}
+\PYG{+w}{        }\PYG{n}{k}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{prelievo}\PYG{p}{(}\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{p}{.}\PYG{n}{coda}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{p}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{j}\PYG{p}{]}\PYG{p}{.}\PYG{n}{servizio}\PYG{p}{.}\PYG{n}{priorità}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// priorità proc running}
+\PYG{+w}{        }\PYG{n}{q}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{descrittori}\PYG{p}{[}\PYG{n}{k}\PYG{p}{]}\PYG{p}{.}\PYG{n}{servizio}\PYG{p}{.}\PYG{n}{priorità}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// priorità proc risvegliato}
+
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{p}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{q}\PYG{p}{)}\PYG{+w}{ }\PYG{c+c1}{// processo running ha priorità}
+\PYG{+w}{            }\PYG{n}{inserimento}\PYG{p}{(}\PYG{n}{k}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{coda\PYGZus{}processi\PYGZus{}pronti}\PYG{p}{[}\PYG{n}{q}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{salvataggio\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{inserimento}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{coda\PYGZus{}processi\PYGZus{}pronti}\PYG{p}{[}\PYG{n}{p}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{ripristino\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{else}
+\PYG{+w}{        }\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{p}{.}\PYG{n}{contatore}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// se non ci sono processi in coda}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

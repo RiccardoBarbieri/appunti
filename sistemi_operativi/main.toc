@@ -110,19 +110,34 @@
 \contentsline {subsection}{\numberline {4.3.7}Semafori privati - specifiche strategie di allocazione}{40}{subsection.4.3.7}%
 \contentsline {subsubsection}{Esempio 1}{42}{subsubsection*.89}%
 \contentsline {subsubsection}{Esempio 2}{43}{subsubsection*.90}%
-\contentsline {chapter}{\numberline {5}Il nucleo di un sistema multiprogrammato (modello a memoria comune)}{45}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Nucleo di un sistema a processi}{45}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Stati di un processo}{45}{subsection.5.0.2}%
-\contentsline {subsection}{\numberline {5.0.3}Funzioni del nucleo}{46}{subsection.5.0.3}%
-\contentsline {subsection}{\numberline {5.0.4}Caratteristiche del nucleo}{46}{subsection.5.0.4}%
-\contentsline {section}{\numberline {5.1}Realizzazione del nucleo}{47}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Strutture dati del nucleo}{47}{subsection.5.1.1}%
-\contentsline {subsubsection}{Descrittore del processo}{47}{subsubsection*.91}%
-\contentsline {subsubsection}{Coda dei processi pronti}{48}{subsubsection*.92}%
-\contentsline {subsubsection}{Coda dei descrittori liberi}{48}{subsubsection*.93}%
-\contentsline {subsubsection}{Processo in esecuzione}{48}{subsubsection*.94}%
-\contentsline {subsection}{\numberline {5.1.2}Funzioni del nucleo}{49}{subsection.5.1.2}%
-\contentsline {subsubsection}{Struttura del nucleo}{49}{subsubsection*.95}%
-\contentsline {subsubsection}{Esecuzione del kernel}{49}{subsubsection*.96}%
-\contentsline {subsubsection}{Funzioni del livello inferiore}{50}{subsubsection*.97}%
-\contentsline {subsubsection}{Gestione del temporizzatore}{50}{subsubsection*.98}%
+\contentsline {section}{\numberline {4.4}Realizzazione dei semafori}{44}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Architettura monoprocessore}{45}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Il nucleo di un sistema multiprogrammato (modello a memoria comune)}{47}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Nucleo di un sistema a processi}{47}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Stati di un processo}{47}{subsection.5.0.2}%
+\contentsline {subsection}{\numberline {5.0.3}Funzioni del nucleo}{48}{subsection.5.0.3}%
+\contentsline {subsection}{\numberline {5.0.4}Caratteristiche del nucleo}{48}{subsection.5.0.4}%
+\contentsline {section}{\numberline {5.1}Realizzazione del nucleo (monoprocessore)}{49}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Strutture dati del nucleo}{49}{subsection.5.1.1}%
+\contentsline {subsubsection}{Descrittore del processo}{49}{subsubsection*.92}%
+\contentsline {subsubsection}{Coda dei processi pronti}{50}{subsubsection*.93}%
+\contentsline {subsubsection}{Coda dei descrittori liberi}{50}{subsubsection*.94}%
+\contentsline {subsubsection}{Processo in esecuzione}{50}{subsubsection*.95}%
+\contentsline {subsection}{\numberline {5.1.2}Funzioni del nucleo}{51}{subsection.5.1.2}%
+\contentsline {subsubsection}{Struttura del nucleo}{51}{subsubsection*.96}%
+\contentsline {subsubsection}{Esecuzione del kernel}{51}{subsubsection*.97}%
+\contentsline {subsubsection}{Funzioni del livello inferiore}{52}{subsubsection*.98}%
+\contentsline {subsubsection}{Gestione del temporizzatore}{52}{subsubsection*.99}%
+\contentsline {section}{\numberline {5.2}Realizzazione del semaforo (monoprocessore)}{53}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Semafori}{53}{subsection.5.2.1}%
+\contentsline {subsubsection}{Operazione P}{53}{subsubsection*.100}%
+\contentsline {subsubsection}{Operazione V}{54}{subsubsection*.102}%
+\contentsline {section}{\numberline {5.3}Realizzazione del nucleo (multiprocessore)}{55}{section.5.3}%
+\contentsline {subsubsection}{Architettura}{55}{subsubsection*.104}%
+\contentsline {subsubsection}{Modelli principali}{55}{subsubsection*.106}%
+\contentsline {section}{\numberline {5.4}Modello SMP - Symmetric Multi Processing}{56}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Sincronizzazione nell'accesso al nucleo}{56}{subsection.5.4.1}%
+\contentsline {subsubsection}{Soluzione singolo lock}{56}{subsubsection*.107}%
+\contentsline {subsubsection}{Soluzione molteplici lock}{56}{subsubsection*.108}%
+\contentsline {subsection}{\numberline {5.4.2}Scheduling dei processi}{56}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Modello a nuclei distinti}{57}{section.5.5}%

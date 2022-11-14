@@ -1,0 +1,6 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{contatore}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{coda}\PYG{+w}{ }\PYG{n}{queue}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n}{semaforo}\PYG{p}{;}
+\end{Verbatim}

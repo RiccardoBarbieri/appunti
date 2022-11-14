@@ -68,7 +68,7 @@ Necessità di avere un nucleo semplice e di dimensione limitata.
 Il nucleo deve contenere, possibilmente, soltanto meccanismi, consentendo così a livello di processo di utilizzare tali meccanismi ad hoc.
 \end{mdframed}
 
-\section{Realizzazione del nucleo}
+\section{Realizzazione del nucleo (monoprocessore)}
 
 \subsection{Strutture dati del nucleo}
 
@@ -223,6 +223,148 @@ void assegnazione_CPU() { //scheduling: hp algoritmo con priorità
 
 \subsubsection{Gestione del temporizzatore}
 Per consentire la modalità di servizio a divisione del tempo è necessario che il nucleo gestisca un \textbf{dispositivo temporizzatore} tramite una apposita procedura che ad intervalli di tempo fissati, provveda a sospendere il processo in esecuzione ed assegnare l'unità di elaborazione ad un altro processo.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+void cambio_contesto() {
+    int j, k;
+    salvataggio_stato();
+    j = processo_in_esecuzione;
+    k = descrittori[j].servizio.priorità;
+    inserimento(j, coda_processi_pronti[k]);
+    assegnazione_CPU();
+    ripristino_stato();
+}
+\end{minted}
+
+\section{Realizzazione del semaforo (monoprocessore)}
+
+\subsection{Semafori}
+
+Nel nucleo di un sistema monoprocessore il semaforo può essere implementato tramite:
+\begin{itemize}
+    \item una \textit{variabile intera} che rappresenta il suo valore (\texttt{>= 0})
+    \item una \textit{coda di decrittori} dei processi in attesa sul semaforo
+\end{itemize}
+
+Se non ci sono processi in coda, il puntatore contiene costante \texttt{NIIL}.
+
+La coda viene gestita con politica FIFO, un descrittore viene inserito nella coda come risultato dei una \texttt{P} bloccante e viene prelevato per effetto di una \texttt{V}.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+typedef struct {
+    int contatore;
+    descrittore_coda coda;
+} descr_semaforo;
+\end{minted}
+
+\subsubsection{Operazione P}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/31.png}
+\end{figure}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+// insieme di tutti i semafori
+descr_semaforo semafori[num_max_sem];
+// ogni semaforo è rappresentato dall'indice che lo individua nel vettore
+
+typedef int semaforo;
+
+void P(semaforo s) {
+    int j, k;
+    if (semafori[s].contatore == 0) {
+        salvataggio_stato();
+        j = processo_in_esecuzione;
+        inserimento(j, semafori[s].coda);
+        assegnazione_CPU(); // scheduling
+        ripristino_stato();
+    }
+    else 
+        contatore--;
+}
+\end{minted}
+
+\subsubsection{Operazione V}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/32.png}
+\end{figure}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+void V(semaforo s) {
+    // j, k processi -- p, q indici priorità
+    int j, k, p, q;
+    
+    if (semafori[s].coda.primo != -1) { // la coda non è vuota
+        k = prelievo(semafori[s].coda);
+        j = processo_in_esecuzione;
+        p = descrittori[j].servizio.priorità; // priorità proc running
+        q = descrittori[k].servizio.priorità; // priorità proc risvegliato
+
+        if (p > q) // processo running ha priorità
+            inserimento(k, coda_processi_pronti[q]);
+        else {
+            salvataggio_stato();
+            inserimento(j, coda_processi_pronti[p]);
+            processo_in_esecuzione = k;
+            ripristino_stato();
+        }
+    }
+    else
+        semafori[s].contatore++; // se non ci sono processi in coda
+}           
+\end{minted}
+
+\section{Realizzazione del nucleo (multiprocessore)}
+
+\subsubsection{Architettura}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/33.png}
+\end{figure}
+
+\subsubsection{Modelli principali}
+Un OS che esegue su una architettura multiprocessore deve gestire \textbf{molteplici CPU}, le quali possono tutte accedere a una \textbf{memoria condivisa}.
+
+Esistono due modelli:
+\begin{itemize}
+    \item modello \textbf{SMP}: unica copia del nucleo, condivisa tra tutte le CPU
+    \item modello \textbf{nuclei distinti}: più istanze concorrente del nucleo
+\end{itemize}
+
+\section{Modello SMP - Symmetric Multi Processing}
+Nel modello SMP, esiste una \textit{unica copia del nucleo} del sistema operativo, allocata nella memoria comune e si occupa della gestione di tutte le risorse disponibili, comprese le CPU.
+
+Caratteristiche:
+\begin{itemize}
+    \item ogni processo può essere allocato su \textit{una qualunque} delle CPU
+    \item la system call richieste dai processi possono essere contemporanee, è necessario che gli accessi al nucleo avvengano in modo \textbf{sincronizzato}, in quanto in generale è richiesto l'accesso a strutture dati interne
+\end{itemize}
+
+\subsection{Sincronizzazione nell'accesso al nucleo}
+
+\subsubsection{Soluzione singolo lock}
+Viene associato un lock \texttt{L} al nucleo, per garantire la mutua esclusione dell'esecuzione di funzioni del nucleo: si sincronizza l'accesso alle strutture dati eseguendo \texttt{lock} e \texttt{unlock} sull'unico lock \texttt{L}.
+
+Il problema fondamentale di questa soluzione è la vasta \textit{limitazione del grado di parallelismo}, escludendo operazioni che accedono a strutture dati distinte.
+
+\subsubsection{Soluzione molteplici lock}
+Un grado maggiore di parallelismo si può ottenere individuando \textit{classi} di sezioni critiche, ognuna associata a una struttura sufficientemente indipendente dalle altre, a ogni struttura dati viene associato un \textbf{lock distinto}.
+
+\subsection{Scheduling dei processi}
+Il modello SMP consente la schedulazione di ogni processo su uno qualunque dei processori, con la possibilità di attuare politiche \textbf{load balancing} sul carico dei diversi processori.
+
+Esistono casi in cui conviene assegnare un processo a un \textit{determinato processore}:
+\begin{itemize}
+    \item schedulare il processo a un processore che contiene il codice nella sua memoria privata (accesso più veloce)
+    \item sistemi NUMA accedono alla memoria più "vicina" più velocemente, quindi conviene schedulare il processo a un processore più vicino alla memoria contenente lo spazio di indirizzamento
+    \item in caso di presenza di memoria cache (es. TLB memoria virtuale) può essere utile schedulare su un processore precedentemente usato per un particolare processo
+\end{itemize}
+
+\section{Modello a nuclei distinti}
+
+
+
 
 
 

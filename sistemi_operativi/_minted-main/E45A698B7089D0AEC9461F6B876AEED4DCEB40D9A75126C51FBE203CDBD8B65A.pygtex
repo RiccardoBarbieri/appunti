@@ -1,27 +1,27 @@
 \begin{Verbatim}[commandchars=\\\{\}]
 \PYG{k+kd}{class} \PYG{n+nf}{Gestore}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{struttura}\PYG{+w}{ }\PYG{n}{dati}\PYG{+w}{ }\PYG{n}{gestore}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//\PYGZlt{}struttura dati gestore\PYGZgt{};}
 \PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{mutex}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
 \PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{priv}\PYG{o}{[}\PYG{n}{n}\PYG{o}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{|}\PYG{n}{\PYGZdl{}}\PYG{err}{\PYGZbs{}}\PYG{n}{dots\PYGZdl{}}\PYG{o}{|}\PYG{p}{,}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{\PYGZcb{};}\PYG{+w}{ }\PYG{c+c1}{//semafori privati}
 
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{acqusizione}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
-\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{condizione}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{sincronizzazione}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n}{registrare}\PYG{+w}{ }\PYG{n}{sospensione}\PYG{+w}{ }\PYG{n}{processo}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{!}\PYG{+w}{ }\PYG{c+c1}{//\PYGZlt{}condizione di sincronizzazione) \PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{//\PYGZlt{}registrare sospensione processo\PYGZgt{};}
 \PYG{+w}{            }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
 \PYG{+w}{            }\PYG{n}{P}\PYG{p}{(}\PYG{n}{priv}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{);}
-\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n}{registrare}\PYG{+w}{ }\PYG{n}{processo}\PYG{+w}{ }\PYG{n}{come}\PYG{+w}{ }\PYG{n}{non}\PYG{+w}{ }\PYG{n}{sospeso}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{            }\PYG{c+c1}{//\PYGZlt{}registrare processo come non sospeso\PYGZgt{};}
 \PYG{+w}{        }\PYG{p}{\PYGZcb{}}
-\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n}{allocazione}\PYG{+w}{ }\PYG{n}{risorsa}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}allocazione risorsa\PYGZgt{};}
 \PYG{+w}{        }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
 \PYG{+w}{    }\PYG{p}{\PYGZcb{}}
 
 \PYG{+w}{    }\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{rilascio}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
 \PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{p}{;}
 \PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
-\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n}{rilascio}\PYG{+w}{ }\PYG{n}{risorsa}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
-\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{min}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{+w}{ }\PYG{n}{processo}\PYG{+w}{ }\PYG{n}{soddisfa}\PYG{+w}{ }\PYG{n}{sync}\PYG{+w}{ }\PYG{n}{condition}\PYG{o}{\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
-\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n}{scelta}\PYG{+w}{ }\PYG{n}{tra}\PYG{+w}{ }\PYG{n}{sospesi}\PYG{+w}{ }\PYG{n}{del}\PYG{+w}{ }\PYG{n}{Pi}\PYG{+w}{ }\PYG{n}{da}\PYG{+w}{ }\PYG{n}{riattivare}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}rilascio risorsa\PYGZgt{};}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{c+cm}{/*\PYGZlt{}min 1 processo soddisfa sync condition\PYGZgt{}*/}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{c+c1}{//\PYGZlt{}scelta tra sospesi del Pi da riattivare\PYGZgt{};}
 \PYG{+w}{            }\PYG{n}{V}\PYG{p}{(}\PYG{n}{priv}\PYG{o}{[}\PYG{n}{i}\PYG{o}{]}\PYG{p}{);}
 \PYG{+w}{        }\PYG{p}{\PYGZcb{}}
 \PYG{+w}{        }\PYG{k}{else}

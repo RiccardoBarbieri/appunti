@@ -1,0 +1,15 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{mutex}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{m\PYGZus{}i}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{;}
+
+\PYG{k+kd}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{op\PYGZus{}i}\PYG{p}{()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{P}\PYG{p}{(}\PYG{n}{m\PYGZus{}i}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{cont\PYGZus{}i}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{cont\PYGZus{}i}\PYG{o}{==}\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{V}\PYG{p}{(}\PYG{n}{m\PYGZus{}i}\PYG{p}{);}
+\PYG{+w}{    }\PYG{c+c1}{//\PYGZlt{}corpo operazione\PYGZgt{}}
+\PYG{+w}{    }\PYG{n}{P}\PYG{p}{(}\PYG{n}{m\PYGZus{}i}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{cont\PYGZus{}i}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{cont\PYGZus{}i}\PYG{o}{==}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{);}
+\PYG{+w}{    }\PYG{n}{V}\PYG{p}{(}\PYG{n}{m\PYGZus{}i}\PYG{p}{);}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

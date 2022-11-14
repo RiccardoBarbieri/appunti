@@ -1,0 +1,20 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// insieme di tutti i semafori}
+\PYG{n}{descr\PYGZus{}semaforo}\PYG{+w}{ }\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{num\PYGZus{}max\PYGZus{}sem}\PYG{p}{]}\PYG{p}{;}
+\PYG{c+c1}{// ogni semaforo è rappresentato dall\PYGZsq{}indice che lo individua nel vettore}
+
+\PYG{k}{typedef}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{semaforo}\PYG{p}{;}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{P}\PYG{p}{(}\PYG{n}{semaforo}\PYG{+w}{ }\PYG{n}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{k}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{p}{.}\PYG{n}{contatore}\PYG{+w}{ }\PYG{o}{=}\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{salvataggio\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{j}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{processo\PYGZus{}in\PYGZus{}esecuzione}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{inserimento}\PYG{p}{(}\PYG{n}{j}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{semafori}\PYG{p}{[}\PYG{n}{s}\PYG{p}{]}\PYG{p}{.}\PYG{n}{coda}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{assegnazione\PYGZus{}CPU}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{// scheduling}
+\PYG{+w}{        }\PYG{n}{ripristino\PYGZus{}stato}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{else}
+\PYG{+w}{        }\PYG{n}{contatore}\PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZhy{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
