@@ -362,15 +362,153 @@ Esistono casi in cui conviene assegnare un processo a un \textit{determinato pro
 \end{itemize}
 
 \section{Modello a nuclei distinti}
+In questo modello, la struttura interna del sistema operativo è articolata su più nuclei, ognuno dedicato alla gestione di una CPU diversa.
+
+Si assume che i processi presenti nel sistema siano divisibili in sottoinsiemi, \textbf{nodi virtuali}, \textit{lascamente} connessi, ovvero con un poche interazioni.
+
+Ogni nodo virtuale è assegnato a un \textbf{nodo fisico} gestito da un nucleo distinto, nella \textit{memoria privata} del nodo fisico vengono istanziate le strutture dati del nucleo relative al nodo virtuale assegnato.
+
+Con questa tecnica, tutte le interazioni \textit{locali} al nodo virtuale, possono avvenire in modo \textbf{indipendente} e \textbf{concorrente} a quelle di altri nodi virtuali.
+
+Solo le interazioni tra processi appartenenti a nodi virtuali diversi utilizzano la \textit{memoria comune}.
+
+\subsection{Nuclei distinti vs. SMP}
+Principali differenze:
+\begin{itemize}
+    \item \textbf{maggiore parallelismo} delle CPU: ND meno accoppiate e più scalabile di SMP
+    \item \textbf{gestione NON ottimale} delle risorse computazionali: ND obbliga a schedulare un procesos sullo stesso nodo, SMP permette un load balancing migliore
+\end{itemize}
+
+\section{Realizzazione semafori}
+
+\subsection{Modello SMP}
+Le CPU condividono lo stesso nucleo, quindi per sincronizzare gli accessi al nucleo le strutture dati sono protette tramite lock.
+
+In particolare:
+\begin{itemize}
+    \item singoli \textbf{semafori}
+    \item la \textbf{coda dei processi pronti}
+\end{itemize}
+vengono protetti da \textbf{lock distinti}
+
+In questo modo, due operazioni \texttt{P} su semafori diversi possono operare in modo \textbf{contemporaneo} se non risultano sospensive, altrimenti vengono \textbf{sequenzializzati} solo gli accessi alla coda dei processi pronti.
+
+\subsubsection{Esempio}
+Scheduling pre-emptive basato su priorità.
+
+L'esecuzione della \texttt{V} può portare al cambio di contesto tra il processo risvegliato \text{P}$_r$ e uno tra i processi in esecuzione \text{P}$_i$, se la priorità di \text{P}$_r$ è più alta di \text{P}$_i$ il nucleo deve provvedere a revocare l'unità di elaborazione al processo \text{P}$_i$ e assegnarla a \text{P}$_r$ riattivato dalla \texttt{V}.
+
+É necessario che il nucleo mantenga l'informazione del processo in esecuzione e del nodo fisico su cui opera.
+
+Occorre inoltre un meccanismo di \textbf{segnalazione} tra le unità di elaborazione.
+
+\subsubsection{SMP - segnalazione inter-processore}
+Siano:
+\begin{itemize}
+    \item \texttt{sem}, sul quale è inizialmente sospeso un processo \text{P}$_j$
+    \item \text{P}$_i$ processo che esegue \texttt{V(sem)} dal nodo \text{U}$_i$
+    \item \text{P}$_j$ processo riattivato per effetto di \texttt{V(sem)}
+    \item \text{P}$_k$ processo a più bassa priorità sul nodo \text{U}$_k$
+\end{itemize}
+accade:
+\begin{enumerate}
+    \item \text{P}$_i$ chiama la \texttt{V(sem)}: il nucleo, attualmente eseguito da \text{U}$_i$ con la \texttt{V(sem)}, invia una interruzione a \text{U}$_k$
+    \item \text{U}$_k$ gestice l'interruzione: inserisce \text{P}$_k$ nella coda dei processi pronti e mette in esecuzione \text{P}$_j$
+\end{enumerate}
+
+\subsection{Modello nuclei distinti}
+In questo modello solo le interazioni tra processi su nodi virtuali diversi utilizzano la memoria comune.
+
+Si distinguono:
+\begin{itemize}
+    \item semafori \textbf{privati}: utilizzati dai processi appartenenti a un nodo \texttt{U}, realizzati come nel caso monoprocessore
+    \item semafori \textbf{condivisi}: utilizzati da processi appartenenti a nodi virtuali diversi
+\end{itemize}
+
+La memoria comune dovrà contenere tutte le informazioni relative ai semafori condivisi.
+
+\subsection{Realizzazione semafori condivisi}
+Ogni semaforo condiviso è rappresentato, in memoria comune, da un intero non negativo e sarà protetto da un lock, anch'esso in memoria comune.
+
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+\textbf{Rappresentante del processo}\\
+Insieme minimo di informazione sufficienti per identificare sia il \textit{nodo fisico} su cui il processo opera, sia il \textit{descrittore} contenuto nella memoria privata del processore.
+\end{mdframed}
+
+Per ogni semaforo condivis \texttt{S}, vengono mantenute \textit{diverse code}:
+\begin{itemize}
+    \item per nodo \text{U}$_i$: una coda locale a \text{U}$_i$ contenente i descrittore dei processi locali sospesi su \texttt{S}, la coda risiede nella memoria privata del nodo e viene gestita esclusivamente dal nucleo associato
+    \item \textbf{globale}: tutti i processi sospesi su \texttt{S}, accessibile da ogni nucleo
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/34.png}
+\end{figure}
+
+\begin{figure}[H]
+    \caption{Semaforo condiviso con singolo processo in attesa}
+    \centering
+    \includegraphics[width=0.55\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/35.png}
+\end{figure}
+
+\subsubsection{Esecuzione di una \texttt{P} sospensiva su semaforo \texttt{S} condiviso}
+
+Il nucleo del nodo \text{U}$_i$ sul quale opera il processo \text{P}$_k$ che ha chiamato \texttt{P(S)} provvede a:
+\begin{itemize}
+    \item inserire il rappresentante di \text{P}$_k$ nella coda globale dei rappresentanti associata ad \texttt{S}
+    \item inserire il descrittore di \text{P}$_i$ nella coda locale a \text{U}$_i$ associata a \texttt{S}
+\end{itemize}
+
+\subsubsection{Esecuzione di una \texttt{V} su un semaforo \texttt{S}}
+Assumendo che la \texttt{V(S)} sia chiamata dal processo \text{P}$_h$ appartenente al nodo \text{U}$_j$:
+\begin{itemize}
+    \item viene eliminato dalla coda dei rappresentanti il primo elemento, processo \text{P}$_k$ nodo \text{U}$_i$
+    \item \text{U}$_j$ comunica \textit{tempestivamente} a \text{U}$_i$ l'identità del processo \text{P}$_k$
+    \item \text{U}$_i$ provvede a risvegliare \text{P}$_k$, estraendolo dalla coda locale
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/36.png}
+\end{figure}
+
+\section{Comunicazione tra nuclei}
+La comunicazione tra due nuclei \text{U}$_j$ e \text{U}$_i$ deve essere \textbf{tempestiva}, occorre interrompere qualsiasi attività su \text{U}$_i$ per notificargli della presenza di un processo locale da riattivare: \textbf{segnale di interruzione} da \text{U}$_j$ a \text{U}$_i$.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/37.png}
+\end{figure}
+
+\section{Implementazione semafori - nuclei distinti}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{c}
+void P(semaforo sem)  {
+    if (/*<sem appartiene a memoria privata>*/)
+        //<come in monoprocessore>
+    else {
+        lock(x);
+        //<esecuzione P con eventuale sospensione del rappresentante del processo nella coda di sem>
+        unlock(x);
+    }
+}
+
+void V(semaforo sem) {
+    if (/*<sem appartiene a memoria privata>*/)
+        //<come in monoprocessore>
+    else {
+        lock(x);
+        if (/*<coda non vuota>*/)
+        else {
+        
+        }
+    }
 
 
 
 
-
-
-
-
-
+}
+\end{minted}
 
 
 

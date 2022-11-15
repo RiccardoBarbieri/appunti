@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  14 NOV 2022 14:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.11.11)  15 NOV 2022 11:51
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -723,13 +723,15 @@ italian.ldf    on input line 35.
 (./main.toc [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}])
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2])
 \tf@toc=\write6
 \openout6 = `main.toc'.
 
- (./chapters/1_virtualizzazione/virtualizzazione.tex [2]
+ (./chapters/1_virtualizzazione/virtualizzazione.tex [3] [4
+
+]
 Capitolo 1.
-</home/riccardoob/appunti/sistemi_operativi/images/0.png, id=340, 813.0375pt x 673.51625pt>
+</home/riccardoob/appunti/sistemi_operativi/images/0.png, id=378, 813.0375pt x 673.51625pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/0.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/0.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/0.png  used on input line 7.
@@ -737,15 +739,13 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/0.png
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3
-
- </home/riccardoob/appunti/sistemi_operativi/images/0.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/1.png, id=346, 882.29625pt x 268.00125pt>
+ [5 </home/riccardoob/appunti/sistemi_operativi/images/0.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/1.png, id=384, 882.29625pt x 268.00125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/1.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/1.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/1.png  used on input line 24.
 (pdftex.def)             Requested size: 362.77524pt x 110.19609pt.
-</home/riccardoob/appunti/sistemi_operativi/images/2.png, id=347, 463.7325pt x 394.47375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/2.png, id=385, 463.7325pt x 394.47375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/2.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/2.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/2.png  used on input line 42.
@@ -753,8 +753,8 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/2.png
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4 </home/riccardoob/appunti/sistemi_operativi/images/1.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/3.png, id=354, 697.60625pt x 457.71pt>
+ [6 </home/riccardoob/appunti/sistemi_operativi/images/1.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/3.png, id=392, 697.60625pt x 457.71pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/3.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/3.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/3.png  used on input line 50.
@@ -764,19 +764,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-[5 </home/riccardoob/appunti/sistemi_operativi/images/2.png> </home/riccardoob/appunti/sistemi_operativi/images/3.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/4.png, id=363, 810.02625pt x 473.77pt>
+[7 </home/riccardoob/appunti/sistemi_operativi/images/2.png> </home/riccardoob/appunti/sistemi_operativi/images/3.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/4.png, id=402, 810.02625pt x 473.77pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/4.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/4.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/4.png  used on input line 65.
 (pdftex.def)             Requested size: 362.77524pt x 212.18245pt.
-</home/riccardoob/appunti/sistemi_operativi/images/5.png, id=364, 1162.3425pt x 847.165pt>
+</home/riccardoob/appunti/sistemi_operativi/images/5.png, id=403, 1162.3425pt x 847.165pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/5.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/5.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/5.png  used on input line 90.
 (pdftex.def)             Requested size: 298.75262pt x 217.737pt.
- [6 </home/riccardoob/appunti/sistemi_operativi/images/4.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/6.png, id=371, 594.22pt x 369.38pt>
+ [8 </home/riccardoob/appunti/sistemi_operativi/images/4.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/6.png, id=410, 594.22pt x 369.38pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/6.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/6.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/6.png  used on input line 101.
@@ -784,54 +784,54 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/6.png
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [7 </home/riccardoob/appunti/sistemi_operativi/images/5.png> </home/riccardoob/appunti/sistemi_operativi/images/6.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/7.png, id=379, 1318.9275pt x 608.2725pt>
+ [9 </home/riccardoob/appunti/sistemi_operativi/images/5.png> </home/riccardoob/appunti/sistemi_operativi/images/6.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/7.png, id=417, 1318.9275pt x 608.2725pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/7.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/7.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/7.png  used on input line 117.
 (pdftex.def)             Requested size: 341.43436pt x 157.46028pt.
-) (./chapters/2_protezione/protezione.tex [8 </home/riccardoob/appunti/sistemi_operativi/images/7.png>]
+) (./chapters/2_protezione/protezione.tex [10 </home/riccardoob/appunti/sistemi_operativi/images/7.png>]
 Capitolo 2.
-[9
+[11
 
-] [10]
-</home/riccardoob/appunti/sistemi_operativi/images/8.png, id=397, 1207.51125pt x 600.2425pt>
+] [12]
+</home/riccardoob/appunti/sistemi_operativi/images/8.png, id=435, 1207.51125pt x 600.2425pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/8.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/8.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/8.png  used on input line 91.
 (pdftex.def)             Requested size: 341.43436pt x 169.72452pt.
- [11] [12 </home/riccardoob/appunti/sistemi_operativi/images/8.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/9.png, id=418, 599.23875pt x 229.85875pt>
+ [13] [14 </home/riccardoob/appunti/sistemi_operativi/images/8.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/9.png, id=457, 599.23875pt x 229.85875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/9.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/9.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/9.png  used on input line 150.
 (pdftex.def)             Requested size: 256.0774pt x 98.22704pt.
- [13] [14 </home/riccardoob/appunti/sistemi_operativi/images/9.png>] [15] [16]
-</home/riccardoob/appunti/sistemi_operativi/images/14.png, id=447, 554.07pt x 343.2825pt>
+ [15] [16 </home/riccardoob/appunti/sistemi_operativi/images/9.png>] [17] [18]
+</home/riccardoob/appunti/sistemi_operativi/images/14.png, id=486, 554.07pt x 343.2825pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/14.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/14.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/14.png  used on input line 278.
 (pdftex.def)             Requested size: 341.43436pt x 211.53914pt.
- [17 </home/riccardoob/appunti/sistemi_operativi/images/14.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/15.png, id=454, 652.4375pt x 298.11375pt>
+ [19 </home/riccardoob/appunti/sistemi_operativi/images/14.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/15.png, id=494, 652.4375pt x 298.11375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/15.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/15.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/15.png  used on input line 302.
 (pdftex.def)             Requested size: 341.43436pt x 156.01624pt.
- [18 </home/riccardoob/appunti/sistemi_operativi/images/15.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/16.png, id=462, 685.56125pt x 391.4625pt>
+ [20 </home/riccardoob/appunti/sistemi_operativi/images/15.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/16.png, id=501, 685.56125pt x 391.4625pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/16.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/16.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/16.png  used on input line 331.
 (pdftex.def)             Requested size: 341.43436pt x 194.96619pt.
- [19 </home/riccardoob/appunti/sistemi_operativi/images/16.png>]) (./chapters/3_intro_programmazione_concorrente/intro_programmazione_concorrente.tex [20]
+ [21 </home/riccardoob/appunti/sistemi_operativi/images/16.png>]) (./chapters/3_intro_programmazione_concorrente/intro_programmazione_concorrente.tex [22]
 Capitolo 3.
-</home/riccardoob/appunti/sistemi_operativi/images/10.png, id=479, 285.065pt x 286.06876pt>
+</home/riccardoob/appunti/sistemi_operativi/images/10.png, id=517, 285.065pt x 286.06876pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/10.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/10.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/10.png  used on input line 13.
 (pdftex.def)             Requested size: 192.0548pt x 192.73013pt.
-</home/riccardoob/appunti/sistemi_operativi/images/11.png, id=480, 624.3325pt x 288.07625pt>
+</home/riccardoob/appunti/sistemi_operativi/images/11.png, id=518, 624.3325pt x 288.07625pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/11.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/11.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/11.png  used on input line 20.
@@ -839,26 +839,26 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/11.pn
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21
+ [23
 
  </home/riccardoob/appunti/sistemi_operativi/images/10.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/12.png, id=486, 637.38126pt x 298.11375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/12.png, id=524, 637.38126pt x 298.11375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/12.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/12.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/12.png  used on input line 42.
 (pdftex.def)             Requested size: 256.0774pt x 119.77104pt.
- [22 </home/riccardoob/appunti/sistemi_operativi/images/11.png> </home/riccardoob/appunti/sistemi_operativi/images/12.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/13.png, id=493, 556.0775pt x 402.50375pt>
+ [24 </home/riccardoob/appunti/sistemi_operativi/images/11.png> </home/riccardoob/appunti/sistemi_operativi/images/12.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/13.png, id=531, 556.0775pt x 402.50375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/13.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/13.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/13.png  used on input line 72.
 (pdftex.def)             Requested size: 298.75262pt x 216.24942pt.
- [23 </home/riccardoob/appunti/sistemi_operativi/images/13.png>] [24]
+ [25 </home/riccardoob/appunti/sistemi_operativi/images/13.png>] [26]
 Overfull \hbox (49.33566pt too wide) in paragraph at lines 115--117
 []\OT1/cmr/m/n/12 Un pro-ces-so pu^^Ro es-se-re rap-pre-sen-ta-to tra-mi-te un gra-do orien-ta-to, det-to $[]$
  []
 
-</home/riccardoob/appunti/sistemi_operativi/images/17.png, id=508, 615.29875pt x 157.58875pt>
+</home/riccardoob/appunti/sistemi_operativi/images/17.png, id=547, 615.29875pt x 157.58875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/17.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/17.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/17.png  used on input line 136.
@@ -868,34 +868,34 @@ Overfull \hbox (14.27121pt too wide) in paragraph at lines 141--142
 []$[]$ 
  []
 
-[25 </home/riccardoob/appunti/sistemi_operativi/images/17.png>]) (./chapters/4_modello_memoria_comune/modello_memoria_comune.tex [26]
+[27 </home/riccardoob/appunti/sistemi_operativi/images/17.png>]) (./chapters/4_modello_memoria_comune/modello_memoria_comune.tex [28]
 Capitolo 4.
-</home/riccardoob/appunti/sistemi_operativi/images/18.png, id=527, 247.92625pt x 216.81pt>
+</home/riccardoob/appunti/sistemi_operativi/images/18.png, id=565, 247.92625pt x 216.81pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/18.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/18.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/18.png  used on input line 15.
 (pdftex.def)             Requested size: 213.39566pt x 186.61507pt.
-[27
+[29
 
  </home/riccardoob/appunti/sistemi_operativi/images/18.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/19.png, id=534, 479.7925pt x 268.00125pt>
+</home/riccardoob/appunti/sistemi_operativi/images/19.png, id=572, 479.7925pt x 268.00125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/19.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/19.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/19.png  used on input line 50.
 (pdftex.def)             Requested size: 277.41176pt x 154.95827pt.
- [28 </home/riccardoob/appunti/sistemi_operativi/images/19.png>]
+ [30 </home/riccardoob/appunti/sistemi_operativi/images/19.png>]
 \openout3 = `main.pyg'.
 
  (./_minted-main/default.pygstyle) (./_minted-main/974CE8D4BABA37C61D6EDF3763E1D47762FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/20.png, id=540, 588.1975pt x 449.68pt>
+</home/riccardoob/appunti/sistemi_operativi/images/20.png, id=579, 588.1975pt x 449.68pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/20.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/20.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/20.png  used on input line 94.
 (pdftex.def)             Requested size: 213.39566pt x 163.14034pt.
- [29]
+ [31]
 \openout3 = `main.pyg'.
 
- (./_minted-main/0BABEC017513AD6424FB26D486DDA8FB62FD7D625D48406DBBB4A37322801FAF.pygtex) [30 </home/riccardoob/appunti/sistemi_operativi/images/20.png>]
+ (./_minted-main/0BABEC017513AD6424FB26D486DDA8FB62FD7D625D48406DBBB4A37322801FAF.pygtex) [32 </home/riccardoob/appunti/sistemi_operativi/images/20.png>]
 \openout3 = `main.pyg'.
 
  (./_minted-main/B34D63E58CC687234BF570055FD7F1A662FD7D625D48406DBBB4A37322801FAF.pygtex
@@ -903,17 +903,17 @@ LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 )
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 31
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 33
  []
 
-[31]
+[33]
 \openout3 = `main.pyg'.
 
  (./_minted-main/2527E9F2D4EC6E5F7B4B13D251F0F2AFDCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 \openout3 = `main.pyg'.
 
- [32] (./_minted-main/879B2436A60EA397CE6517271FC325DEDCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/21.png, id=572, 574.145pt x 275.0275pt>
+ [34] (./_minted-main/879B2436A60EA397CE6517271FC325DEDCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
+</home/riccardoob/appunti/sistemi_operativi/images/21.png, id=610, 574.145pt x 275.0275pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/21.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/21.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/21.png  used on input line 230.
@@ -921,25 +921,25 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/21.pn
 Package mdframed Info: mdframed works in twoside mode on input line 236.
 
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 33
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 35
  []
 
-[33 </home/riccardoob/appunti/sistemi_operativi/images/21.png>]
+[35 </home/riccardoob/appunti/sistemi_operativi/images/21.png>]
 Package mdframed Info: Not enough space on this page on input line 239.
-</home/riccardoob/appunti/sistemi_operativi/images/22.png, id=580, 896.34875pt x 192.72pt>
+</home/riccardoob/appunti/sistemi_operativi/images/22.png, id=618, 896.34875pt x 192.72pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/22.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/22.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/22.png  used on input line 245.
 (pdftex.def)             Requested size: 256.0774pt x 55.05809pt.
-</home/riccardoob/appunti/sistemi_operativi/images/23.png, id=581, 662.475pt x 343.2825pt>
+</home/riccardoob/appunti/sistemi_operativi/images/23.png, id=619, 662.475pt x 343.2825pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/23.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/23.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/23.png  used on input line 255.
 (pdftex.def)             Requested size: 256.0774pt x 132.69058pt.
 \openout3 = `main.pyg'.
 
- (./_minted-main/BA6768BF16FC8A8D0A78B509970C6524DCEB40D9A75126C51FBE203CDBD8B65A.pygtex) [34 </home/riccardoob/appunti/sistemi_operativi/images/22.png> </home/riccardoob/appunti/sistemi_operativi/images/23.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/24.png, id=589, 732.7375pt x 173.64874pt>
+ (./_minted-main/BA6768BF16FC8A8D0A78B509970C6524DCEB40D9A75126C51FBE203CDBD8B65A.pygtex) [36 </home/riccardoob/appunti/sistemi_operativi/images/22.png> </home/riccardoob/appunti/sistemi_operativi/images/23.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/24.png, id=627, 732.7375pt x 173.64874pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/24.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/24.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/24.png  used on input line 280.
@@ -955,11 +955,11 @@ Package mdframed Info: mdframed works in twoside mode on input line 321.
 
  (./_minted-main/2F6CF27CEE50CFD515953A73705A6D0A2A9720D6D16074E754EC237403610E6A.pygtex)
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 35
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 37
  []
 
-[35 </home/riccardoob/appunti/sistemi_operativi/images/24.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/25.png, id=595, 636.3775pt x 313.17pt>
+[37 </home/riccardoob/appunti/sistemi_operativi/images/24.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/25.png, id=634, 636.3775pt x 313.17pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/25.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/25.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/25.png  used on input line 342.
@@ -969,7 +969,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/25.pn
  (./_minted-main/FA73EB2AAF54F9544E5605CE9FAA7E31DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 \openout3 = `main.pyg'.
 
- (./_minted-main/D749F58F272F596C5A91F48DAAEBD1C262FD7D625D48406DBBB4A37322801FAF.pygtex) [36 </home/riccardoob/appunti/sistemi_operativi/images/25.png>]
+ (./_minted-main/D749F58F272F596C5A91F48DAAEBD1C262FD7D625D48406DBBB4A37322801FAF.pygtex) [38 </home/riccardoob/appunti/sistemi_operativi/images/25.png>]
 \openout3 = `main.pyg'.
 
  (./_minted-main/A4581A53A3FAD7F92CBC8643F3883040DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
@@ -980,16 +980,16 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/25.pn
 
  (./_minted-main/F540CF9920AD7E1DF8E1C385DA95A701DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 37
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 39
  []
 
-[37]
+[39]
 \openout3 = `main.pyg'.
 
  (./_minted-main/4A83E9BDC804C3605CD62E91E1915079DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 \openout3 = `main.pyg'.
 
- (./_minted-main/4907A48A1B25FD770A6D66E2D4BDEA5CDCEB40D9A75126C51FBE203CDBD8B65A.pygtex) [38]
+ (./_minted-main/4907A48A1B25FD770A6D66E2D4BDEA5CDCEB40D9A75126C51FBE203CDBD8B65A.pygtex) [40]
 \openout3 = `main.pyg'.
 
  (./_minted-main/CAEBE93E8E90D6E6DE7106AE9EC5E06CDCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
@@ -1003,34 +1003,34 @@ Underfull \vbox (badness 3323) has occurred while \output is active []
 
 
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
-\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 39
- []
-
-[39]
-Package mdframed Info: mdframed works in twoside mode on input line 550.
-\openout3 = `main.pyg'.
-
- (./_minted-main/AE51470DBDA8ED700BD035E4824913A2F2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [40]
-\openout3 = `main.pyg'.
-
- (./_minted-main/E45A698B7089D0AEC9461F6B876AEED4DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
-Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 41
  []
 
 [41]
+Package mdframed Info: mdframed works in twoside mode on input line 550.
 \openout3 = `main.pyg'.
 
- (./_minted-main/9C191FC597AA1831D19DBD5E25B6CC3AF2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [42]
+ (./_minted-main/AE51470DBDA8ED700BD035E4824913A2F2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [42]
 \openout3 = `main.pyg'.
 
- (./_minted-main/56B66677844A177000A4495441C12197F2B99A0614BE0EDDF789DFE9E559A7F1.pygtex)
+ (./_minted-main/E45A698B7089D0AEC9461F6B876AEED4DCEB40D9A75126C51FBE203CDBD8B65A.pygtex)
 Overfull \hbox (27.77919pt too wide) has occurred while \output is active
 \OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 43
  []
 
 [43]
-</home/riccardoob/appunti/sistemi_operativi/images/30.png, id=639, 666.49pt x 242.9075pt>
+\openout3 = `main.pyg'.
+
+ (./_minted-main/9C191FC597AA1831D19DBD5E25B6CC3AF2B99A0614BE0EDDF789DFE9E559A7F1.pygtex) [44]
+\openout3 = `main.pyg'.
+
+ (./_minted-main/56B66677844A177000A4495441C12197F2B99A0614BE0EDDF789DFE9E559A7F1.pygtex)
+Overfull \hbox (27.77919pt too wide) has occurred while \output is active
+\OT1/cmr/m/sl/12 4.3.  STRUMENTI LINGUISTICI PER LA PROGRAMMAZIONE DI INTERAZIONI \OT1/cmr/m/n/12 45
+ []
+
+[45]
+</home/riccardoob/appunti/sistemi_operativi/images/30.png, id=677, 666.49pt x 242.9075pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/30.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/30.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/30.png  used on input line 762.
@@ -1038,13 +1038,13 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/30.pn
 
 Underfull \vbox (badness 1389) has occurred while \output is active []
 
- [44]
+ [46]
 \openout3 = `main.pyg'.
 
  (./_minted-main/2401E9E25F1FCEB96FE8E3FD70B8D1D7C6E27768CD85FA733D5A126B6F7EE480.pygtex)
 \openout3 = `main.pyg'.
 
- (./_minted-main/4F96B794D999CBC1152AAAA1F291C0F4C6E27768CD85FA733D5A126B6F7EE480.pygtex)) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex [45 </home/riccardoob/appunti/sistemi_operativi/images/30.png>] [46
+ (./_minted-main/4F96B794D999CBC1152AAAA1F291C0F4C6E27768CD85FA733D5A126B6F7EE480.pygtex)) (./chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex [47 </home/riccardoob/appunti/sistemi_operativi/images/30.png>] [48
 
 ]
 Capitolo 5.
@@ -1058,12 +1058,12 @@ Package hyperref Warning: Difference (2) between bookmark levels is greater
 (hyperref)                than one, level fixed on input line 3.
 
 Package mdframed Info: mdframed works in twoside mode on input line 8.
-</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=653, 494.84875pt x 393.47pt>
+</home/riccardoob/appunti/sistemi_operativi/images/26.png, id=691, 494.84875pt x 393.47pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/26.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/26.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/26.png  used on input line 22.
 (pdftex.def)             Requested size: 208.39566pt x 165.70055pt.
-</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=654, 452.69125pt x 187.70125pt>
+</home/riccardoob/appunti/sistemi_operativi/images/27.png, id=692, 452.69125pt x 187.70125pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/27.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/27.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.png  used on input line 27.
@@ -1071,7 +1071,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/27.pn
 
 Overfull \vbox (44.43141pt too high) has occurred while \output is active []
 
- [47 </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
+ [49 </home/riccardoob/appunti/sistemi_operativi/images/26.png> </home/riccardoob/appunti/sistemi_operativi/images/27.png>]
 Package mdframed Info: mdframed works in twoside mode on input line 31.
 Package mdframed Info: Not enough space on this page on input line 34.
 Package mdframed Info: mdframed works in twoside mode on input line 36.
@@ -1092,10 +1092,10 @@ Package mdframed Info: You first box width is to small
 (mdframed)              on input line 69.
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 48 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 50 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[48]
+[50]
 
 Package mdframed Warning: You got a bad break
 (mdframed)                because the last split box is empty
@@ -1103,11 +1103,11 @@ Package mdframed Warning: You got a bad break
 
 \openout3 = `main.pyg'.
 
-(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [49]
+(./_minted-main/CA01C66B86CD0033EC73132C7DD5E5C462FD7D625D48406DBBB4A37322801FAF.pygtex) [51]
 \openout3 = `main.pyg'.
 
  (./_minted-main/72103B5B6248DBB57FA41CBD1844442662FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=669, 507.8975pt x 310.15875pt>
+</home/riccardoob/appunti/sistemi_operativi/images/28.png, id=708, 507.8975pt x 310.15875pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/28.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/28.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.png  used on input line 124.
@@ -1115,7 +1115,7 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/28.pn
 \openout3 = `main.pyg'.
 
  (./_minted-main/8DF44286D49AB464F41AC37FB597435862FD7D625D48406DBBB4A37322801FAF.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=670, 507.8975pt x 306.14375pt>
+</home/riccardoob/appunti/sistemi_operativi/images/29.png, id=709, 507.8975pt x 306.14375pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/29.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/29.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.png  used on input line 139.
@@ -1130,10 +1130,10 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/29.pn
 
 
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 50 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 52 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[50 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [51]
+[52 </home/riccardoob/appunti/sistemi_operativi/images/28.png> </home/riccardoob/appunti/sistemi_operativi/images/29.png>] (./_minted-main/8AFB3288B736D0C834DF71D45CC18F1162FD7D625D48406DBBB4A37322801FAF.pygtex) [53]
 \openout3 = `main.pyg'.
 
  (./_minted-main/F425013F6569F8FE3DED974570421D2662FD7D625D48406DBBB4A37322801FAF.pygtex)
@@ -1141,22 +1141,22 @@ Overfull \hbox (168.34608pt too wide) has occurred while \output is active
 
  (./_minted-main/2C74B4758D288E1217967BBAD45FF6B2C6E27768CD85FA733D5A126B6F7EE480.pygtex)
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 52 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 54 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[52]
+[54]
 \openout3 = `main.pyg'.
 
  (./_minted-main/57118D0EA36D9774E614ED96CCACB397C6E27768CD85FA733D5A126B6F7EE480.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/31.png, id=691, 330.30066pt x 241.97067pt>
+</home/riccardoob/appunti/sistemi_operativi/images/31.png, id=729, 330.30066pt x 241.97067pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/31.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/31.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/31.png  used on input line 263.
 (pdftex.def)             Requested size: 298.75262pt x 218.86816pt.
 \openout3 = `main.pyg'.
 
- [53 </home/riccardoob/appunti/sistemi_operativi/images/31.png>] (./_minted-main/1BBAE3511E98BA6BE5E57BF49897E7A7C6E27768CD85FA733D5A126B6F7EE480.pygtex)
-</home/riccardoob/appunti/sistemi_operativi/images/32.png, id=700, 353.85533pt x 252.67734pt>
+ [55 </home/riccardoob/appunti/sistemi_operativi/images/31.png>] (./_minted-main/1BBAE3511E98BA6BE5E57BF49897E7A7C6E27768CD85FA733D5A126B6F7EE480.pygtex)
+</home/riccardoob/appunti/sistemi_operativi/images/32.png, id=739, 353.85533pt x 252.67734pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/32.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/32.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/32.png  used on input line 290.
@@ -1165,11 +1165,11 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/32.pn
 
  (./_minted-main/83FF2F9251B14B21C21F4C50B3BC92B7C6E27768CD85FA733D5A126B6F7EE480.pygtex)
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 54 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 56 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[54 </home/riccardoob/appunti/sistemi_operativi/images/32.png>]
-</home/riccardoob/appunti/sistemi_operativi/images/33.png, id=708, 581.17125pt x 323.2075pt>
+[56 </home/riccardoob/appunti/sistemi_operativi/images/32.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/33.png, id=747, 581.17125pt x 323.2075pt>
 File: /home/riccardoob/appunti/sistemi_operativi/images/33.png Graphic file (type png)
 <use /home/riccardoob/appunti/sistemi_operativi/images/33.png>
 Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/33.png  used on input line 323.
@@ -1177,30 +1177,65 @@ Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/33.pn
 
 Underfull \vbox (badness 1694) has occurred while \output is active []
 
- [55 </home/riccardoob/appunti/sistemi_operativi/images/33.png>]
+ [57 </home/riccardoob/appunti/sistemi_operativi/images/33.png>]
 Overfull \hbox (168.34608pt too wide) has occurred while \output is active
-\OT1/cmr/m/n/12 56 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+\OT1/cmr/m/n/12 58 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
  []
 
-[56]) [57] (./main.aux)
+[58] [59]
+Overfull \hbox (168.34608pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 60 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+ []
+
+[60]
+Package mdframed Info: mdframed works in twoside mode on input line 433.
+</home/riccardoob/appunti/sistemi_operativi/images/34.png, id=773, 376.40625pt x 219.82124pt>
+File: /home/riccardoob/appunti/sistemi_operativi/images/34.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_operativi/images/34.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/34.png  used on input line 446.
+(pdftex.def)             Requested size: 256.0774pt x 149.5603pt.
+</home/riccardoob/appunti/sistemi_operativi/images/35.png, id=774, 466.74374pt x 380.42125pt>
+File: /home/riccardoob/appunti/sistemi_operativi/images/35.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_operativi/images/35.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/35.png  used on input line 452.
+(pdftex.def)             Requested size: 234.73653pt x 191.32466pt.
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 455.
+ [61 </home/riccardoob/appunti/sistemi_operativi/images/34.png> </home/riccardoob/appunti/sistemi_operativi/images/35.png>]
+</home/riccardoob/appunti/sistemi_operativi/images/36.png, id=782, 508.90125pt x 407.5225pt>
+File: /home/riccardoob/appunti/sistemi_operativi/images/36.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_operativi/images/36.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/36.png  used on input line 473.
+(pdftex.def)             Requested size: 256.0774pt x 205.0728pt.
+</home/riccardoob/appunti/sistemi_operativi/images/37.png, id=783, 545.03625pt x 203.76125pt>
+File: /home/riccardoob/appunti/sistemi_operativi/images/37.png Graphic file (type png)
+<use /home/riccardoob/appunti/sistemi_operativi/images/37.png>
+Package pdftex.def Info: /home/riccardoob/appunti/sistemi_operativi/images/37.png  used on input line 481.
+(pdftex.def)             Requested size: 256.0774pt x 95.7336pt.
+
+Overfull \hbox (168.34608pt too wide) has occurred while \output is active
+\OT1/cmr/m/n/12 62 \OT1/cmr/m/sl/12 CAPITOLO 5.  IL NUCLEO DI UN SISTEMA MULTIPROGRAMMATO (MODELLO A MEMORIA COMUNE)
+ []
+
+[62 </home/riccardoob/appunti/sistemi_operativi/images/36.png>]) [63 </home/riccardoob/appunti/sistemi_operativi/images/37.png>] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 20C264F0BC145305B304DCBAFB5B0F67;12529.
+(rerunfilecheck)             Checksum: B756DB4B3F358AB628E498A0B97B8BD5;13595.
 runsystem(rm main.pyg)...executed.
 
  ) 
 Here is how much of TeX's memory you used:
- 19221 strings out of 478287
- 351276 string characters out of 5849288
- 700923 words of memory out of 5000000
- 36768 multiletter control sequences out of 15000+600000
+ 19281 strings out of 478287
+ 353232 string characters out of 5849288
+ 700948 words of memory out of 5000000
+ 36802 multiletter control sequences out of 15000+600000
  477124 words of font info for 57 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  73i,8n,77p,495b,617s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on main.pdf (57 pages, 1647440 bytes).
+Output written on main.pdf (63 pages, 1707014 bytes).
 PDF statistics:
- 842 PDF objects out of 1000 (max. 8388607)
- 711 compressed objects within 8 object streams
- 230 named destinations out of 1000 (max. 500000)
- 683 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 914 PDF objects out of 1000 (max. 8388607)
+ 773 compressed objects within 8 object streams
+ 252 named destinations out of 1000 (max. 500000)
+ 751 words of extra memory for PDF output out of 10000 (max. 10000000)
 
