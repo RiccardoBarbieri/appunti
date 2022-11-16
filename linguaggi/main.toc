@@ -123,5 +123,4 @@
 \contentsline {subsection}{\numberline {7.1.2}TermParser}{57}{subsection.7.1.2}%
 \contentsline {subsubsection}{Metodo 1}{58}{subsubsection*.73}%
 \contentsline {subsubsection}{Metodo 2}{58}{subsubsection*.74}%
-\contentsline {chapter}{\numberline {8}Strumenti per la generazione automatica di riconoscitori LL}{59}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Domain-Specific Languages}{59}{section.8.1}%
+\contentsline {chapter}{\numberline {8}Riconoscitori LR}{59}{chapter.8}%
