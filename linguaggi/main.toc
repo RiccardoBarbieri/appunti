@@ -124,3 +124,11 @@
 \contentsline {subsubsection}{Metodo 1}{58}{subsubsection*.73}%
 \contentsline {subsubsection}{Metodo 2}{58}{subsubsection*.74}%
 \contentsline {chapter}{\numberline {8}Riconoscitori LR}{59}{chapter.8}%
+\contentsline {subsubsection}{Parsing LR vs Parsing LL}{59}{subsubsection*.75}%
+\contentsline {subsubsection}{Tecniche LR}{60}{subsubsection*.77}%
+\contentsline {section}{\numberline {8.1}Architettura}{60}{section.8.1}%
+\contentsline {subsubsection}{Informazione di contesto}{60}{subsubsection*.78}%
+\contentsline {section}{\numberline {8.2}Caso L(0)}{61}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Analisi LR(0)}{61}{subsection.8.2.1}%
+\contentsline {subsubsection}{Esempio 1}{61}{subsubsection*.79}%
+\contentsline {subsubsection}{Esempio 2}{62}{subsubsection*.81}%
