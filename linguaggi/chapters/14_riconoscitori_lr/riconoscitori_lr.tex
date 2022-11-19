@@ -70,7 +70,7 @@ Passi:
     \item identificare \textbf{collisioni} in contesti di produzioni diverse
     \begin{itemize}
         \item \textbf{collisione}: stringa appartenente a un contesto è un \textbf{prefisso proprio} di una stringa in un altro contesto
-        \item \textbf{prefisso proprio}: una stringa è prefisso di un'altra e ciò che segue è un terminale (non metasimbolo)
+        \item \textbf{prefisso proprio}: una stringa è prefisso di un'altra se ciò che segue è un terminale (non metasimbolo)
     \end{itemize}
     \item se non ci sono collisioni, si possono usare i contesti LR(0) per guidare l'analisi
 \end{itemize}
@@ -138,6 +138,145 @@ La frase aaba è analizzata come segue:
 \end{figure}
 
 L'emulatore richiede che la grammatica sia estesa con la regola top-level \texttt{Z} $\rightarrow$ \texttt{S}.
+
+\subsubsection{Caso critico}
+Perché il calcolo dei contesti può dare una informazione fuorviante se lo scopo è riuscato nella parte destra di qualche produzione?
+
+Si consideri l'esempio:
+
+\setlist{nosep}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item \texttt{S} $\rightarrow$ \texttt{S a}
+        \item \texttt{S} $\rightarrow$ \texttt{a}
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item[] contesto LR(0): \texttt{\{Sa\}}
+        \item[] contesto LR(0): \texttt{\{a\}}
+    \end{itemize}
+\end{multicols}
+\setlist{}
+
+Apparentemente i contesti sono diversi, tuttavia, dato che \texttt{S} può comparire in forme di frase intermedie, la "riduzione a \texttt{S}" non sempre denota il termine di una frase.
+
+Aggiungere la regola top-level \texttt{Z} $\rightarrow$ \texttt{S} risolve l'ambiguità.
+
+Supponendo di dover riconoscere la frase \texttt{aaa}:
+\begin{itemize}
+    \item senza la top-level, nella prima mossa si riduce \texttt{a} in \texttt{S}, ma poi non è chiaro se terminare o meno:
+    \begin{itemize}
+        \item se non ci sono altre \texttt{a}, si è già ridotto a \texttt{S}
+        \item se la stringa continua con altre \texttt{a}, si applicano altre riduzione da S\texttt{Sa} ad \texttt{S}
+        \item occorre tuttavia guardare avanti di un simbolo $\rightarrow$ no LR(0)
+    \end{itemize}
+    \item riformulando con lo scopo \texttt{Z}
+    \setlist{nosep}
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item \texttt{Z} $\rightarrow$ \texttt{S}
+            \item \texttt{S} $\rightarrow$ \texttt{S a}
+            \item \texttt{S} $\rightarrow$ \texttt{a}
+        \end{itemize}
+        \columnbreak
+        \begin{itemize}
+            \item[] contesto LR(0): \texttt{\{S\}}
+            \item[] contesto LR(0): \texttt{\{Sa\}}
+            \item[] contesto LR(0): \texttt{\{a\}}
+        \end{itemize}
+    \end{multicols}
+    \setlist{}
+    \begin{itemize}
+        \item si nota che i primi due contesti collidono
+    \end{itemize}
+\end{itemize}
+
+\subsection{Contesti LR(0)}
+Il calcolo dei contesti LR(0) si basa sul fatto che essi sono definiti da una \textit{opportuna grammatica}.
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+La grammatica che definisce i contesti LR(0) è sempre \textbf{regolare} (a sinistra).
+\end{mdframed}
+
+Ciò denota che il \textit{riconoscimento del contesto corrente}, svolto dall'oracolo, si può ottenere con un \textit{automa a stati finiti}. 
+
+\subsubsection{Definizione}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Il contesto LR(0) di una produzione \texttt{A} $\rightarrow$ $\alpha$\\
+$\text{LR(0) ctx(\text{A}} \rightarrow \alpha) = \{\gamma | \gamma = \beta\alpha, \text{Z}\Rightarrow \beta\text{Aw} \Rightarrow \beta \alpha \text{w}, \text{w} \in \text{VT*}\}$
+\end{mdframed}
+
+Tradotto:
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Il contesto LR(0) della produzione \texttt{A} $\rightarrow$ $\alpha$ è l'insieme di tutti i \textbf{prefissi} ($\beta\alpha$) di una forma di frase che usi la produzione \texttt{A} $\rightarrow$ $\alpha$ all'ultimo passo ($\beta\alpha\text{w} \Rightarrow \beta\alpha\text{w}$) di una derivazione canonica destra.
+\end{mdframed}
+Conseguenza:
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Tutte le stringhe del contesto LR(0) della produzione \texttt{A} $\rightarrow$ $\alpha$ hanno la forma $\alpha\beta$ e \textit{differiscono solo per il prefisso} $\beta$.
+\end{mdframed}
+
+\subsubsection{Calcolo}
+Dato che le stringhe del contesto LR(0) differiscono solo per il prefisso $\beta$, che dipende da \texttt{A}, si può esprimere il contesto come concatenazione tra insieme dei $\beta$ e il suffisso $\alpha$.
+
+L'insieme dei $\beta$ si chiama \textbf{contesto sinistro} di \texttt{A}.
+
+Formalmente:
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Il contesto sinistro di un non terminale \texttt{A}:
+\begin{equation*}
+    \text{leftctx(A)} = \{\beta | \text{Z} \Rightarrow \beta\text{Aw}, \text{w} \in \text{VT*}\}
+\end{equation*}
+da cui il contesto LR(0) della produzione \texttt{A} $\rightarrow$ $\alpha$
+\begin{equation*}
+    \text{LR(0) ctx(A}\rightarrow\alpha) = \text{leftctx(A)} \cdot \{\alpha\}
+\end{equation*}
+\end{mdframed}
+
+\subsubsection{Calcolo dei contesti sinistri}
+Determinare leftctx(\texttt{A}), comporta trovare tutti i modi in cui può apparire il metasimbolo \texttt{A} in una forma di frase.
+
+Poiché lo scopo \texttt{Z} per definizione non compare mai nella parte destra di alcuna produzione, leftxctx(\texttt{Z}) = $\{ \varepsilon \}$.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

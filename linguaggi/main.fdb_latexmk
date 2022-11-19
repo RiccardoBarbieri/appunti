@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1668682847 "main.tex" "main.pdf" "main" 1668682849
-  "/dev/null" 1668675715 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1668867861 "main.tex" "main.pdf" "main" 1668867863
+  "/dev/null" 1668861436 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1664562023 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -155,7 +155,7 @@
   "_minted-main/F5A7AC22D38CF796EEBBFA765E7731A442893757DB0DCCF52BDA57D022D3466B.pygtex" 1667905057 203 427725c6f7e048d2ad3b90e8015d1091 ""
   "_minted-main/default.pygstyle" 1667903728 6365 683ea4fd81022f120108d52c508c17f9 ""
   "chapters/13_mpp_parser_prolog/mpp_parser_prolog.tex" 1668346712 6349 92b295a47ef2107a69d428aa9f46875c ""
-  "chapters/14_riconoscitori_lr/riconoscitori_lr.tex" 1668682846 5937 c2f2428e57a346737fb2d010536f6692 ""
+  "chapters/14_riconoscitori_lr/riconoscitori_lr.tex" 1668867860 10182 a7c2db8504c5cb9f3af65adfaeca9109 ""
   "chapters/1_ling_macchine_teoria_comp/ling_macchine_teoria_comp.tex" 1668346712 14542 8d3b7f00acf4ec0ce056f57eeabf3b03 ""
   "chapters/2_linguaggi_grammatiche/linguaggi_grammatiche.tex" 1668346712 40 9523f97f52cacb74d54ea419ca6502d7 ""
   "chapters/4_automi_riconoscitori/automi_riconoscitori.tex" 1668346712 11002 edbc86e139b2752480fc08315aea2900 ""
@@ -211,10 +211,10 @@
   "images/7.png" 1665594184 452850 c5a5b15ea5d734eb05e42c890e5b0494 ""
   "images/8.png" 1665646653 216665 4eed3c16a155b78ea15df854da2a4673 ""
   "images/9.png" 1665646755 218025 15703a7d8596b48d061e55b0595ec292 ""
-  "main.aux" 1668682849 21459 381a8a98d5365da4bd91b1ddcf1a4ed5 "pdflatex"
-  "main.out" 1668682849 15102 a2266ae51ed8d11031d9df8d5fc5236f "pdflatex"
+  "main.aux" 1668867863 22351 d60e43260ef2677b3cb300b4e1eb461d "pdflatex"
+  "main.out" 1668867863 15243 5e6cbc5e41214327ae7a1fae819087f5 "pdflatex"
   "main.tex" 1668616043 1426 85f777ed6eead803cafff2bba23c2db4 ""
-  "main.toc" 1668682849 11199 3e9525e3998f8c0b676534d32e61fd8d "pdflatex"
+  "main.toc" 1668867863 11482 2cea8797b16694fc7503ee212670a6d5 "pdflatex"
   (generated)
   "main.aux"
   "main.log"

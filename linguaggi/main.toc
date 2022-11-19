@@ -132,3 +132,7 @@
 \contentsline {subsection}{\numberline {8.2.1}Analisi LR(0)}{61}{subsection.8.2.1}%
 \contentsline {subsubsection}{Esempio 1}{61}{subsubsection*.79}%
 \contentsline {subsubsection}{Esempio 2}{62}{subsubsection*.81}%
+\contentsline {subsubsection}{Caso critico}{62}{subsubsection*.83}%
+\contentsline {subsection}{\numberline {8.2.2}Contesti LR(0)}{63}{subsection.8.2.2}%
+\contentsline {subsubsection}{Definizione}{63}{subsubsection*.84}%
+\contentsline {subsubsection}{Calcolo}{64}{subsubsection*.85}%
