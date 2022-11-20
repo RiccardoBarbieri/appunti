@@ -136,3 +136,9 @@
 \contentsline {subsection}{\numberline {8.2.2}Contesti LR(0)}{63}{subsection.8.2.2}%
 \contentsline {subsubsection}{Definizione}{63}{subsubsection*.84}%
 \contentsline {subsubsection}{Calcolo}{64}{subsubsection*.85}%
+\contentsline {subsubsection}{Calcolo dei contesti sinistri}{64}{subsubsection*.86}%
+\contentsline {subsubsection}{Esempio}{64}{subsubsection*.87}%
+\contentsline {subsection}{\numberline {8.2.3}L'automa a stati ausiliario}{66}{subsection.8.2.3}%
+\contentsline {subsubsection}{Algoritmo parsing LR(0)}{67}{subsubsection*.89}%
+\contentsline {subsubsection}{Miglioramenti}{67}{subsubsection*.90}%
+\contentsline {subsection}{\numberline {8.2.4}Condizione LR(0)}{68}{subsection.8.2.4}%

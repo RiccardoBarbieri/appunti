@@ -236,10 +236,224 @@ Determinare leftctx(\texttt{A}), comporta trovare tutti i modi in cui può appar
 
 Poiché lo scopo \texttt{Z} per definizione non compare mai nella parte destra di alcuna produzione, leftxctx(\texttt{Z}) = $\{ \varepsilon \}$.
 
+Data una produzione \texttt{B} $\rightarrow$ $\gamma \texttt{A} \delta$, i prefissi che possono esserci davanti ad \texttt{A} sono quelli che potevano esserci davanti a \texttt{B} seguiti dalla stringa $\gamma$.
 
+Un primo contributo a leftctx(\texttt{A}) è
+\begin{equation*}
+    \text{leftctx(\texttt{A})} \supseteq \text{leftctx(\texttt{B})} \cdot \{\gamma\}
+\end{equation*}
 
+Si analizzano poi tutte le altre produzioni nelle quali compare \texttt{A} nella parte destra.
 
+\subsubsection{Esempio}
 
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{Z} $\rightarrow$ \texttt{S}
+    \item \texttt{S} $\rightarrow$ \texttt{a S A B | B A}
+    \item \texttt{A} $\rightarrow$ \texttt{a A | B}
+    \item \texttt{B} $\rightarrow$ \texttt{b}
+\end{itemize}
+\setlist{}
+
+Considerando i due postulati:
+\begin{align*}
+    &\text{leftctx(\texttt{Z})} = \{ \varepsilon \}\\
+    &\texttt{B} \rightarrow \gamma \texttt{A} \delta \Rightarrow \text{leftctx(\texttt{A})} \supseteq \text{leftctx(\texttt{B})} \cdot \{\gamma\}
+\end{align*}
+
+Postulato 1 e 2 per produzione \texttt{Z} $\rightarrow$ \texttt{S}
+\setlist{nosep}
+\begin{itemize}
+    \item leftctx(\texttt{Z}) = \{$\varepsilon$\}
+    \item leftctx(\texttt{S}) $\supseteq$ leftctx(\texttt{Z}) $\cdot \{\varepsilon\}$ = leftctx(\texttt{Z})
+\end{itemize}
+\setlist{}
+
+Postulato 2 per la produzione \texttt{S} $\rightarrow$ \texttt{a S A B | B A}
+\setlist{nosep}
+\begin{multicols}{2} 
+    \begin{itemize}
+        \item leftctx(\texttt{S}) $\supseteq$ leftctx(\texttt{S}) $\cdot \{\texttt{a}\}$
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{S}) $\cdot \{\texttt{aS}\}$
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{S}) $\cdot \{\texttt{aSA}\}$
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{S}) $\cdot \{\varepsilon\}$
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{S}) $\cdot \{\texttt{B}\}$
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item[] (\texttt{S} $\rightarrow$ \texttt{a S} $\delta$)
+        \item[] (\texttt{S} $\rightarrow$ \texttt{a S A} $\delta$)
+        \item[] (\texttt{S} $\rightarrow$ \texttt{a S A B})
+        \item[] (\texttt{S} $\rightarrow$ \texttt{B} $\delta$)
+        \item[] (\texttt{S} $\rightarrow$ \texttt{B A})
+    \end{itemize}
+\end{multicols}
+\setlist{}
+
+Postulato 2 per la produzione \texttt{A} $\rightarrow$ \texttt{a A | B}
+\setlist{nosep}
+\begin{multicols}{2} 
+    \begin{itemize}
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{A}) $\cdot \{\texttt{a}\}$
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{A}) $\cdot \{\varepsilon\}$
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item[] (\texttt{A} $\rightarrow$ \texttt{a A})
+        \item[] (\texttt{A} $\rightarrow$ \texttt{B})
+    \end{itemize}
+\end{multicols}
+\setlist{}
+
+Componendo i pezzi
+\setlist{nosep}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item leftctx(\texttt{Z}) = \{$\varepsilon$\}
+        \item[]
+        \item leftctx(\texttt{S}) $\supseteq$ leftctx(\texttt{Z})
+        \item leftctx(\texttt{S}) $\supseteq$ leftctx(\texttt{S}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{S}) $\cdot$ \{\texttt{aS}\}
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{S}) $\cdot$ \{\texttt{B}\}
+        \item leftctx(\texttt{A}) $\supseteq$ leftctx(\texttt{A}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{S}) $\cdot$ \{\texttt{aSA}\}
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{S})
+        \item leftctx(\texttt{B}) $\supseteq$ leftctx(\texttt{A})
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item[] leftctx(\texttt{Z}) = \{$\varepsilon$\}
+        \item[]
+        \item[] leftctx(\texttt{S}) = leftctx(\texttt{Z}) $\cup$
+        \item[] \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item[] leftctx(\texttt{A}) = leftctx(\texttt{S}) $\cdot$ \{\texttt{aS}\} $\cup$
+        \item[] \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cdot$ \{\texttt{B}\} $\cup$
+        \item[] \makebox[2.16cm]{}    leftctx(\texttt{A}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item[] leftctx(\texttt{B}) = leftctx(\texttt{S}) $\cdot$ \{\texttt{aSA}\} $\cup$
+        \item[] \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cup$
+        \item[] \makebox[2.16cm]{}    leftctx(\texttt{A})
+    \end{itemize}
+\end{multicols}
+\setlist{}
+\newpage
+\setlist{nosep}
+\begin{multicols}{2}
+    \begin{itemize}
+        \item leftctx(\texttt{Z}) = \{$\varepsilon$\}
+        \item[]
+        \item leftctx(\texttt{S}) = leftctx(\texttt{Z}) $\cup$
+        \item \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item leftctx(\texttt{A}) = leftctx(\texttt{S}) $\cdot$ \{\texttt{aS}\} $\cup$
+        \item \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cdot$ \{\texttt{B}\} $\cup$
+        \item \makebox[2.16cm]{}    leftctx(\texttt{A}) $\cdot$ \{\texttt{a}\}
+        \item[]
+        \item leftctx(\texttt{B}) = leftctx(\texttt{S}) $\cdot$ \{\texttt{aSA}\} $\cup$
+        \item \makebox[2.16cm]{}    leftctx(\texttt{S}) $\cup$
+        \item \makebox[2.16cm]{}    leftctx(\texttt{A})
+    \end{itemize}
+    \columnbreak
+    \begin{itemize}
+        \item[] $\langle$\texttt{LctxZ}$\rangle \rightarrow \{\varepsilon\}$
+        \item[]
+        \item[] $\langle$\texttt{LctxZ}$\rangle \rightarrow \langle$LctxZ$\rangle$ $|$
+        \item[] \makebox[1.97cm]{}    $\langle$\texttt{LctxS}$\rangle$ \texttt{a}
+        \item[]
+        \item[] $\langle$\texttt{LctxS}$\rangle \rightarrow \langle$LctxS$\rangle$ \texttt{aS} $|$
+        \item[] \makebox[1.97cm]{}    $\langle$\texttt{LctxS}$\rangle$ \texttt{B} $|$
+        \item[] \makebox[1.97cm]{}    $\langle$\texttt{LctxA}$\rangle$ \texttt{a}
+        \item[]
+        \item[] $\langle$\texttt{LctxB}$\rangle \rightarrow \langle$LctxS$\rangle$ \texttt{aSA} $|$
+        \item[] \makebox[1.97cm]{}    $\langle$\texttt{LctxS}$\rangle$ $|$
+        \item[] \makebox[1.97cm]{}    $\langle$\texttt{LctxA}$\rangle$
+    \end{itemize}
+\end{multicols}
+\setlist{}
+
+Risolvendo le equazioni si possono trovare le espressioni regolari dei vari contesti:
+\setlist{nosep}
+\begin{itemize}
+    \item leftctx(\texttt{Z}) = \{$\varepsilon$\}
+    \item leftctx(\texttt{S}) = \{\texttt{a*}\}
+    \item leftctx(\texttt{A}) = \{\texttt{(a* a S + a* B) a*}\}
+    \item leftctx(\texttt{B}) = \{\texttt{a* a S A + a* + (a* a S + a* B) a*}\}
+\end{itemize}
+\setlist{}
+
+Semplificando le espressioni regolari
+\setlist{nosep}
+\begin{itemize}
+    \item leftctx(\texttt{Z}) = \{$\varepsilon$\}
+    \item leftctx(\texttt{S}) = \{\texttt{a*}\}
+    \item leftctx(\texttt{A}) = \{\texttt{a*(a S + B) a*}\}
+    \item leftctx(\texttt{B}) = \{\texttt{a* (a S A + $\varepsilon$) + a* (a S + B) a*}\}
+\end{itemize}
+\setlist{}
+e concatenando i contesti sinistri con i rispettivi suffissi
+\setlist{nosep}
+\begin{itemize}
+    \item LR(0)ctx(\texttt{Z} $\rightarrow$ \texttt{S}) = \{$\varepsilon$\} \texttt{S} = \{\texttt{S}\}
+    \item LR(0)ctx(\texttt{S} $\rightarrow$ \texttt{aSAB}) = \{\texttt{a*aSAB}\}
+    \item LR(0)ctx(\texttt{S} $\rightarrow$ \texttt{BA}) = \{\texttt{a*BA}\}
+    \item LR(0)ctx(\texttt{A} $\rightarrow$ \texttt{aA}) = \{\texttt{a*(aS+B)a*aA}\}
+    \item LR(0)ctx(\texttt{A} $\rightarrow$ \texttt{B}) = \{\texttt{a*(aS+B)a*B}\}
+    \item LR(0)ctx(\texttt{B} $\rightarrow$ \texttt{b}) = \{\texttt{a*(aSA+$\varepsilon$)b+a*(aS+B)a*b}\}
+\end{itemize}
+\setlist{}
+si ottengono diversi linguaggi, è necessario costruire un RSF che riconosca l'unione di questi linguaggi: è necessario che risulti \textbf{deterministico}.
+
+\subsection{L'automa a stati ausiliario}
+Questo RSF è la \textbf{macchina caratteristica} della grammatica iniziale: ogni stato finale è etichettato con una produzione, usata dal parser per effettuare una REDUCE nel contesto.
+
+Si parte ogni volta dallo stato iniziale e si percorre l'ASF per deciedere la mossa.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/linguaggi/images/50.png}
+\end{figure}
+
+\subsubsection{Algoritmo parsing LR(0)}
+L'analisi LR(0) di una frase si svolge sottoponendo all'automa carrateristico la forma di frase corrente.
+
+\begin{itemize}
+    \item \textbf{SHIFT}: quando l'automa caratteristico raggiunge uno stato \textit{non finale}, indica che le informazioni disponibili non sono sufficienti
+    \item \textbf{REDUCE}: quando l'automa caratteristico raggiunge uno stato \textit{finale}, si applica quindi la produzione raggiunta
+\end{itemize}
+
+La forma di frase corrente è mantenuta su uno stack:
+\begin{itemize}
+    \item \textbf{SHIFT} pone in \textit{cima} allo stack il nuovo simbolo terminale letto
+    \item \textbf{REDUCE} \textit{toglie} dallo stack tanti elementi quanti sono quelli nella \textit{parte destra} della produzione da applicare e si pone in \textit{cima} allo stack il simbolo non terminale corrispondente alla \textit{parte sinistra} di tale riduzione.
+\end{itemize}
+
+ESEMPIO A SLIDE 40-43
+
+\subsubsection{Miglioramenti}
+Ogni volta che si effettua una REDUCE si riparte dallo stato iniziale, ma dato che la forma di frase cambia solo in fondo anche la prima parte del percorso non cambia.
+
+Si può quindi ottimizzare il processo memorizzando il percorso fatto, ripartendo dall'ultimo stato utile; a questo scopo si utilizza uno \textit{stack ausiliario degli stati}, dove si impilano gli stati attraversati e se ne rimuovono tanti quanti i simboli coinvolti in un passo di riduzione.
+
+ESEMPIO SLIDE 45-51
+
+\subsection{Condizione LR(0)}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Condizione sufficiente perché una grammatica sia LR(0) è che, date due produzioni \texttt{A} $\rightarrow \alpha$ e \texttt{B} $\rightarrow \omega$
+\begin{itemize}
+    \item se $\theta \in$ LR(0)(ctx\texttt{A}$ \rightarrow \alpha$) dove $\theta \in (\texttt{VT} \cup \texttt{VN})*$
+    \item e $\theta $w$ \in$ LR(0)ctx(\texttt{B}$ \rightarrow \omega$) dove w $\in$ \texttt{VT}*
+\end{itemize}
+risulti
+\begin{equation*}
+    \text{w} = \varepsilon, \text{A} = \text{B}, \alpha = \omega
+\end{equation*}
+
+Ogni stato di riduzione dell'automa ausiliario sia etichettato da una \textit{produzione unica} e \textit{non abbia archi di uscita} etichettati da terminali.
+\end{mdframed}
 
 
 
