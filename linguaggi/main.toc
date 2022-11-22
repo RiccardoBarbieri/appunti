@@ -128,7 +128,7 @@
 \contentsline {subsubsection}{Tecniche LR}{60}{subsubsection*.77}%
 \contentsline {section}{\numberline {8.1}Architettura}{60}{section.8.1}%
 \contentsline {subsubsection}{Informazione di contesto}{60}{subsubsection*.78}%
-\contentsline {section}{\numberline {8.2}Caso L(0)}{61}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Caso LR(0)}{61}{section.8.2}%
 \contentsline {subsection}{\numberline {8.2.1}Analisi LR(0)}{61}{subsection.8.2.1}%
 \contentsline {subsubsection}{Esempio 1}{61}{subsubsection*.79}%
 \contentsline {subsubsection}{Esempio 2}{62}{subsubsection*.81}%
@@ -142,3 +142,6 @@
 \contentsline {subsubsection}{Algoritmo parsing LR(0)}{67}{subsubsection*.89}%
 \contentsline {subsubsection}{Miglioramenti}{67}{subsubsection*.90}%
 \contentsline {subsection}{\numberline {8.2.4}Condizione LR(0)}{68}{subsection.8.2.4}%
+\contentsline {subsection}{\numberline {8.2.5}Automa caratteristico - approccio alternativo}{68}{subsection.8.2.5}%
+\contentsline {subsubsection}{Procedimento operativo}{68}{subsubsection*.91}%
+\contentsline {paragraph}{Convenzioni}{68}{paragraph*.92}%

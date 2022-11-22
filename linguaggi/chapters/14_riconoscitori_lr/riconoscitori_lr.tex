@@ -57,7 +57,7 @@ L'oracolo sfrutta opportune \textit{informazioni di contesto} per decidere se ef
 
 Questo componenente è un \textit{riconoscitore di contesti}, e solo se riconosce un appropriato \textit{contesto di riduzione}, ordina l'azione REDUCE appropriata per costruire senza ambiguità un certo pezzo di albero.
 
-\section{Caso L(0)}
+\section{Caso LR(0)}
 
 Nell'analisi LR conviene studiare per prima LR(0), un sottoinsieme di LR nel quale è possibile scegliere la mossa da fare \textit{senza dover guardare il prossimo simbolo di input}.
 
@@ -455,14 +455,78 @@ risulti
 Ogni stato di riduzione dell'automa ausiliario sia etichettato da una \textit{produzione unica} e \textit{non abbia archi di uscita} etichettati da terminali.
 \end{mdframed}
 
+\subsection{Automa caratteristico - approccio alternativo}
+Il metodo descritto è difficile da automatizzare e complesso, esiste tuttavia un metodo operativo facilmente meccanizzabile.
 
+\subsubsection{Procedimento operativo}
+Si parte dalla regola top-level \texttt{Z} $\rightarrow$ \texttt{S\$} e si analizzano le situazioni che si presentano:
+\begin{itemize}
+    \item creare un rettangolo \textbf{LR item} per ogni "situazione"
+    \item quando una regola ne usa un'altra, la includiamo nel corrispondente LR item
+    \item si introduce l'astrazione di \textbf{cursore "."} che indica la posizione all'interno della regola dell'analisi
+\end{itemize}
 
+Si studiano le evoluzioni possibili di ogni LR item, costruendo l'automa dal basso, caso per caso.
 
+\paragraph{Convenzioni}
+\begin{itemize}
+    \item ogni frase lecita è terminata da \texttt{\$}
+    \item il \textit{cursore} \texttt{.} denota il \textit{confine} tra la parte già analizzata e quella ancora da analizzare: \texttt{A} $\rightarrow$ \texttt{a.B}, il prossimo input è \texttt{B}, dove
+    \begin{itemize}
+        \item \textit{input} è la forma di frase eventualmente già sottoposta a passi di riduzione (simboli terminali e non terminale della grammatica di partenza)
+        \item l'automa si appoggia allo stack di input: i simboli a sinistra del cursore sono già stati estratti, l'\textit{input è il simbolo al top dello stack}
+    \end{itemize}
+\end{itemize}
+Facendo riferimento alla grammatica
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{Z} $\rightarrow$ \texttt{S}
+    \item \texttt{S} $\rightarrow$ \texttt{a S A B | B A}
+    \item \texttt{A} $\rightarrow$ \texttt{a A | B}
+    \item \texttt{B} $\rightarrow$ \texttt{b}
+\end{itemize}
+\setlist{}
+Tutti gli input sono ancora da leggere e ogni frase lecita deriva dallo scopo Z:
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{Z} $\rightarrow$ \texttt{.S\$}
+\end{itemize}
+\setlist{}
 
+Per descrivere appieno questo stato, occorre specificare anche tutte le produzioni di \texttt{S}
 
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{Z} $\rightarrow$ \texttt{.S\$}
+    \item \texttt{S} $\rightarrow$ \texttt{.aSAB | .BA}
+    \item \texttt{B} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
 
+Si include anche \texttt{B} poiché una delle produzioni di \texttt{S} può iniziare \texttt{B}.
 
+Una volta individuato un stato, in questo caso stato \texttt{\underline{1}}, si procede a analizzare tutte le possibili evoluzioni spostando il cursore a \textit{destra in tutti i modi possibili}:
 
+\begin{itemize}
+    \item con input \texttt{S}, situazione \texttt{Z} $\rightarrow$ \texttt{S.\$}
+    \item con input \texttt{a}, situazione \texttt{S} $\rightarrow$ \texttt{a.SAB}
+    \item con input \texttt{B}, situazione \texttt{S} $\rightarrow$ \texttt{B.A}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}
+\end{itemize}
+Si denotano due stati finali
+\begin{itemize}
+    \item situazione \texttt{Z} $\rightarrow$ \texttt{S.\$}, stato finale di accettazione \texttt{\underline{F}}
+    \item situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato finale di riduzione \texttt{\underline{R1}}
+\end{itemize}
+
+Nella situazione \texttt{S} $\rightarrow$ \texttt{a.SAB} (stato \texttt{\underline{2}}), l'input può iniziare per \texttt{S}, quindi vanno considerate tutte le produzioni relative a \texttt{S}, tra queste una può iniziare per \texttt{B} quindi si aggiunge anche \texttt{B} $\rightarrow$ \texttt{b}, si ottiene lo stato \texttt{\underline{2}}
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{S} $\rightarrow$ \texttt{a.SAB}
+    \item \texttt{S} $\rightarrow$ \texttt{.aSAB | .BA}
+    \item \texttt{B} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
 
 
 
