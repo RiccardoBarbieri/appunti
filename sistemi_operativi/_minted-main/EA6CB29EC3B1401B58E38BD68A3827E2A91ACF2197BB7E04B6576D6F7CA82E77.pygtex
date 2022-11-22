@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{port}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{tipo}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{identificatore}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\end{Verbatim}

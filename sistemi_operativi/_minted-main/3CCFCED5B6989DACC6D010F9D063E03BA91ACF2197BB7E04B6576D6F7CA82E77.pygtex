@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{send}\PYG{p}{(}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{valore}\PYG{p}{\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{porta}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\end{Verbatim}

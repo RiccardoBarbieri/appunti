@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{tipo\PYGZus{}out}\PYG{+w}{ }\PYG{n+nx}{fun}\PYG{p}{(}\PYG{n+nx}{tipo\PYGZus{}in}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{tipo\PYGZus{}in}\PYG{+w}{ }\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}var}\PYG{+w}{ }\PYG{k+kd}{var}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}in}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{inizializzazione}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{y}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{fun}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{send}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{y}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{risposta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

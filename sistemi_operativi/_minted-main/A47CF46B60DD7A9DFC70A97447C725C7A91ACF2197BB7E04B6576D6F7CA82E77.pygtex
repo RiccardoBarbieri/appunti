@@ -1,0 +1,29 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{tipo\PYGZus{}out1}\PYG{+w}{ }\PYG{n+nx}{fun1}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{tipo\PYGZus{}in1}\PYG{+w}{ }\PYG{n+nx}{x1}\PYG{p}{)}\PYG{p}{;}
+\PYG{n+nx}{tipo\PYGZus{}out2}\PYG{+w}{ }\PYG{n+nx}{fun2}\PYG{+w}{ }\PYG{n+nx}{tipo\PYGZus{}in2}\PYG{+w}{ }\PYG{n+nx}{x2}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{in\PYGZus{}mess}\PYG{+w}{ }\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}var}\PYG{+w}{ }\PYG{k+kd}{var}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{in\PYGZus{}mes}\PYG{+w}{ }\PYG{n+nx}{richiesta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out1}\PYG{+w}{ }\PYG{n+nx}{y1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out2}\PYG{+w}{ }\PYG{n+nx}{y2}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n+nx}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{richiesta}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{switch}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{richiesta}\PYG{p}{.}\PYG{n+nx}{servizio}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{k}{case}\PYG{+w}{ }\PYG{n+nx}{fun1}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{y1}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{fun1}\PYG{p}{(}\PYG{n+nx}{richiesta}\PYG{p}{.}\PYG{n+nx}{parametri}\PYG{p}{.}\PYG{n+nx}{x1}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{send}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{y1}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{risposta1}\PYG{p}{;}
+\PYG{+w}{                }\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{case}\PYG{+w}{ }\PYG{n+nx}{fun2}\PYG{p}{:}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{y2}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{fun2}\PYG{p}{(}\PYG{n+nx}{richiesta}\PYG{p}{.}\PYG{n+nx}{parametri}\PYG{p}{.}\PYG{n+nx}{x2}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{send}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{y2}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{risposta2}\PYG{p}{;}
+\PYG{+w}{                }\PYG{k}{break}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

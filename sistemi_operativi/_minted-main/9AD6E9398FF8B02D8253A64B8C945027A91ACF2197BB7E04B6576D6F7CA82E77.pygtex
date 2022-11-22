@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{cliente}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{tipo\PYGZus{}out}\PYG{+w}{ }\PYG{n+nx}{risposta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}in}\PYG{+w}{ }\PYG{n+nx}{a}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out}\PYG{+w}{ }\PYG{n+nx}{b}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{...}
+\PYG{+w}{    }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{p}{.}\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{b}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{risposta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

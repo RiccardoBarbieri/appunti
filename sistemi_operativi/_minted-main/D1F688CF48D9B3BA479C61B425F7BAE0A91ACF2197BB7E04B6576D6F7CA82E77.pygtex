@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{(}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{espressione}\PYG{+w}{ }\PYG{n+nx}{booleana}\PYG{p}{\PYGZgt{}}\PYG{p}{;}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{receive}\PYG{p}{\PYGZgt{}}\PYG{p}{)}
+\end{Verbatim}

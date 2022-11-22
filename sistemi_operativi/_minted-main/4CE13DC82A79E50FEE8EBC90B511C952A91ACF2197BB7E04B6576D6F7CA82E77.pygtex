@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{do}
+\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{guardia\PYGZus{}1}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{istruzione\PYGZus{}1}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{guardia\PYGZus{}2}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{istruzione\PYGZus{}2}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{...}
+\PYG{+w}{    }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{guardia\PYGZus{}n}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{istruzione\PYGZus{}n}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

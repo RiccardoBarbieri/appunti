@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{typedef}\PYG{+w}{ }\PYG{k+kd}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{enum}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{fun1}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{fun2}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{servizio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{union}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{tipo\PYGZus{}in1}\PYG{+w}{ }\PYG{n+nx}{x1}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//parametri fun1}
+\PYG{+w}{        }\PYG{n+nx}{tipo\PYGZus{}in2}\PYG{+w}{ }\PYG{n+nx}{x2}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//parametri fun2}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{parametri}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{in\PYGZus{}mess}\PYG{p}{;}
+\end{Verbatim}

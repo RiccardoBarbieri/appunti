@@ -1,0 +1,22 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{cliente}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{tipo\PYGZus{}out1}\PYG{+w}{ }\PYG{n+nx}{risposta1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{tipo\PYGZus{}out2}\PYG{+w}{ }\PYG{n+nx}{risposta2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}in1}\PYG{+w}{ }\PYG{n+nx}{a1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}in2}\PYG{+w}{ }\PYG{n+nx}{a2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{in\PYGZus{}mes}\PYG{+w}{ }\PYG{n+nx}{M}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out1}\PYG{+w}{ }\PYG{n+nx}{b1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{tipo\PYGZus{}out2}\PYG{+w}{ }\PYG{n+nx}{b2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{inizializzazione}\PYG{+w}{ }\PYG{n+nx}{M}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{in}\PYG{+w}{ }\PYG{n+nx}{base}\PYG{+w}{ }\PYG{n+nx}{al}\PYG{+w}{ }\PYG{n+nx}{servizio}\PYG{+w}{ }\PYG{n+nx}{scelto}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{servizio1}\PYG{p}{\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{then}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{M}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{p}{.}\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{b1}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{risposta1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{M}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{p}{.}\PYG{n+nx}{input}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{b2}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{risposta2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{o}{...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

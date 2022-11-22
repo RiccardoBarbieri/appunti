@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{P}\PYG{p}{(}\PYG{n}{semaforo}\PYG{+w}{ }\PYG{n}{sem}\PYG{p}{)}\PYG{+w}{  }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{c+cm}{/*\PYGZlt{}sem appartiene a memoria privata\PYGZgt{}*/}\PYG{p}{)}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}come in monoprocessore\PYGZgt{}}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{lock}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}esecuzione P con eventuale sospensione del rappresentante del processo nella coda di sem\PYGZgt{}}
+\PYG{+w}{        }\PYG{n}{unlock}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{V}\PYG{p}{(}\PYG{n}{semaforo}\PYG{+w}{ }\PYG{n}{sem}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{c+cm}{/*\PYGZlt{}sem appartiene a memoria privata\PYGZgt{}*/}\PYG{p}{)}
+\PYG{+w}{        }\PYG{c+c1}{//\PYGZlt{}come in monoprocessore\PYGZgt{}}
+\PYG{+w}{    }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{lock}\PYG{p}{(}\PYG{n}{x}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{c+cm}{/*\PYGZlt{}coda non vuota\PYGZgt{}*/}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+
+
+
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

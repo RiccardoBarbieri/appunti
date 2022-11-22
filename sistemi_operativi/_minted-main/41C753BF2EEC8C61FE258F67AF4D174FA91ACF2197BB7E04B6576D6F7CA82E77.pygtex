@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{P}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{variabile}\PYG{p}{\PYGZgt{}}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{porta}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\end{Verbatim}

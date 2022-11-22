@@ -1,0 +1,21 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{processo}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{canale1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{real}\PYG{+w}{ }\PYG{n+nx}{canale2}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{Tipo\PYGZus{}di\PYGZus{}R}\PYG{+w}{ }\PYG{n+nx}{R}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{x}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{real}\PYG{+w}{ }\PYG{n+nx}{y}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{cond1}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{canale1}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{R}\PYG{p}{.}\PYG{n+nx}{S1}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{eventuale}\PYG{+w}{ }\PYG{n+nx}{restituzione}\PYG{+w}{ }\PYG{n+nx}{al}\PYG{+w}{ }\PYG{n+nx}{cliente}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{cond2}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{canale2}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n+nx}{R}\PYG{p}{.}\PYG{n+nx}{S2}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{eventuale}\PYG{+w}{ }\PYG{n+nx}{restituzione}\PYG{+w}{ }\PYG{n+nx}{al}\PYG{+w}{ }\PYG{n+nx}{cliente}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

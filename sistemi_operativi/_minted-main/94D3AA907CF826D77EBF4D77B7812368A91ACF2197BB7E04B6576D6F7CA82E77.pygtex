@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{p}{\PYGZlt{}}\PYG{n+nx}{nome}\PYG{+w}{ }\PYG{n+nx}{processo}\PYG{p}{\PYGZgt{}}\PYG{p}{.}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{identificatore}\PYG{+w}{ }\PYG{n+nx}{canale}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}
