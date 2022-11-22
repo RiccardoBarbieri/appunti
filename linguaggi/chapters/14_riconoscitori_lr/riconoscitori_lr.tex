@@ -508,10 +508,10 @@ Si include anche \texttt{B} poiché una delle produzioni di \texttt{S} può iniz
 Una volta individuato un stato, in questo caso stato \texttt{\underline{1}}, si procede a analizzare tutte le possibili evoluzioni spostando il cursore a \textit{destra in tutti i modi possibili}:
 
 \begin{itemize}
-    \item con input \texttt{S}, situazione \texttt{Z} $\rightarrow$ \texttt{S.\$}
-    \item con input \texttt{a}, situazione \texttt{S} $\rightarrow$ \texttt{a.SAB}
-    \item con input \texttt{B}, situazione \texttt{S} $\rightarrow$ \texttt{B.A}
-    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}
+    \item con input \texttt{S}, situazione \texttt{Z} $\rightarrow$ \texttt{S.\$}, stato \texttt{\underline{F}}
+    \item con input \texttt{a}, situazione \texttt{S} $\rightarrow$ \texttt{a.SAB}, stato \texttt{\underline{2}}
+    \item con input \texttt{B}, situazione \texttt{S} $\rightarrow$ \texttt{B.A}, stato \texttt{\underline{4}}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato \texttt{\underline{R1}}
 \end{itemize}
 Si denotano due stati finali
 \begin{itemize}
@@ -519,7 +519,7 @@ Si denotano due stati finali
     \item situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato finale di riduzione \texttt{\underline{R1}}
 \end{itemize}
 
-Nella situazione \texttt{S} $\rightarrow$ \texttt{a.SAB} (stato \texttt{\underline{2}}), l'input può iniziare per \texttt{S}, quindi vanno considerate tutte le produzioni relative a \texttt{S}, tra queste una può iniziare per \texttt{B} quindi si aggiunge anche \texttt{B} $\rightarrow$ \texttt{b}, si ottiene lo stato \texttt{\underline{2}}
+Nella situazione \texttt{S} $\rightarrow$ \texttt{a.SAB} (stato \texttt{\underline{2}}), l'input può iniziare per \texttt{S}, quindi vanno considerate tutte le produzioni relative a \texttt{S}, tra queste una può iniziare per \texttt{B} quindi si aggiunge anche \texttt{B} $\rightarrow$ \texttt{b}, si ottiene lo stato \texttt{\underline{2}}.
 \setlist{nosep}
 \begin{itemize}
     \item \texttt{S} $\rightarrow$ \texttt{a.SAB}
@@ -528,11 +528,116 @@ Nella situazione \texttt{S} $\rightarrow$ \texttt{a.SAB} (stato \texttt{\underli
 \end{itemize}
 \setlist{}
 
+Analogamente nella situazione \texttt{S} $\rightarrow$ \texttt{B.A} (stato \texttt{\underline{4}}), l'input può iniziare per \texttt{A} vanno considerate anche le produzioni relative ad \texttt{A}, così come quelle relative a \texttt{B}, dato che tra quelle di \texttt{A} ne esiste una che può iniziare per \texttt{B}, si ottiene lo stato \texttt{\underline{4}}.
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{S} $\rightarrow$ \texttt{B.A}
+    \item \texttt{A} $\rightarrow$ \texttt{.aA | .B}
+    \item \texttt{S} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
+Dallo stato 2
+\begin{itemize}
+    \item con input \texttt{S}, situazione \texttt{S} $\rightarrow$ \texttt{aS.AB}, stato \texttt{\underline{3}}
+    \item con input \texttt{a}, situazione \texttt{S} $\rightarrow$ \texttt{a.SAB}, stato \texttt{\underline{2}}
+    \item con input \texttt{B}, situazione \texttt{S} $\rightarrow$ \texttt{B.A}, stato \texttt{\underline{4}}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato \texttt{\underline{R1}}
+\end{itemize}
+Dallo stato 4
+\begin{itemize}
+    \item con input \texttt{A}, situazione \texttt{S} $\rightarrow$ \texttt{BA.}, stato \texttt{\underline{R3}}
+    \item con input \texttt{a}, situazione \texttt{A} $\rightarrow$ \texttt{a.A}, stato \texttt{\underline{6}}
+    \item con input \texttt{B}, situazione \texttt{A} $\rightarrow$ \texttt{B.}, stato \texttt{\underline{R2}}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato \texttt{\underline{R1}}
+\end{itemize}
 
+Nella situazione \texttt{S} $\rightarrow$ \texttt{aS.AB} (stato \texttt{\underline{3}}), l'input può iniziare per \texttt{A}, si aggiungono le produzoni di \texttt{A} e quelle di \texttt{B} per ottenere lo stato \texttt{\underline{3}}.
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{S} $\rightarrow$ \texttt{aS.AB}
+    \item \texttt{A} $\rightarrow$ \texttt{.aA | .B}
+    \item \texttt{B} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
 
+Nella situazione \texttt{A} $\rightarrow$ \texttt{a.A} (stato \texttt{\underline{6}}), l'inputo può iniziare solo per \texttt{A}, quindi vanno aggiunte le produzioni di \texttt{A} e \texttt{B} per ottenere lo stato \texttt{\underline{6}}.
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{A} $\rightarrow$ \texttt{a.A}
+    \item \texttt{A} $\rightarrow$ \texttt{.aA | .B}
+    \item \texttt{B} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
+Dallo stato 3
+\begin{itemize}
+    \item con input \texttt{A}, situazione \texttt{S} $\rightarrow$ \texttt{aSA.B}, stato \texttt{\underline{5}}
+    \item con input \texttt{a}, situazione \texttt{A} $\rightarrow$ \texttt{a.A}, stato \texttt{\underline{6}}
+    \item con input \texttt{B}, situazione \texttt{A} $\rightarrow$ \texttt{B.}, stato \texttt{\underline{R2}}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato \texttt{\underline{R1}}
+\end{itemize}
+Dallo stato 6
+\begin{itemize}
+    \item con input \texttt{A}, situazione \texttt{A} $\rightarrow$ \texttt{aA.}, stato \texttt{\underline{R4}}
+    \item con input \texttt{a}, situazione \texttt{A} $\rightarrow$ \texttt{a.A}, stato \texttt{\underline{6}}
+    \item con input \texttt{B}, situazione \texttt{A} $\rightarrow$ \texttt{B.}, stato \texttt{\underline{R2}}
+    \item con input \texttt{b}, situazione \texttt{B} $\rightarrow$ \texttt{b.}, stato \texttt{\underline{R1}}
+\end{itemize}
 
+Nella situazione \texttt{S} $\rightarrow$ \texttt{aSA.B}, l'input può iniziare solo con \texttt{B}, quindi va aggiunta solo la produzione \texttt{B} $\rightarrow$ \texttt{b.} per ottenere lo stato \texttt{\underline{5}}.
+\setlist{nosep}
+\begin{itemize}
+    \item \texttt{S} $\rightarrow$ \texttt{aSA.B}
+    \item \texttt{B} $\rightarrow$ \texttt{.b}
+\end{itemize}
+\setlist{}
 
+Dallo stato \texttt{\underline{5}} si ottengono solo situazioni già appartenenti agli stati finali \texttt{\underline{R1}} e \texttt{\underline{R5}}.
 
+Il risultato finale è lo stesso.
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.45\textwidth]{/home/riccardoob/appunti/linguaggi/images/51.png}
+\end{figure}
+
+\subsection{Costruzione parser LR(0)}
+Le mosse da compiere sono quattro:
+\begin{itemize}
+    \item ogni arco corrisponde a uno SHIFT
+    \begin{itemize}
+        \item SHIFT è l'arco corrispondente a un \textit{terminale}, perché corrisponde a una vera \textit{lettura da input}
+        \item se l'arco corrisponde a un metasimbolo, l'azione è chiamata \textbf{GOTO} e corrisponde a una lettura \textit{interna dello stack}
+    \end{itemize}
+    \item ogni stato finale corrisponde a una REDUCE
+    \begin{itemize}
+        \item nel caso finale chiamata \textbf{ACCEPT}, si completa l'albero con lo scopo finale \texttt{Z} $\rightarrow$ \texttt{S.\$}
+    \end{itemize}
+\end{itemize}
+
+Si procede alla costruzione della tabella di parsing LR, dove ogni cella contiene l'indicazione dell'azione da compiere tra le quattro possibili (SHIFT, GOTO, REDUCE, ACCEPT) e indicazioni accessorie necessarie.
+
+Si utilizza la notazione
+\begin{itemize}
+    \item \texttt{s / 5}, SHIFT e GOTO stato 5
+    \item \texttt{g / 5}, GOTO stato 5 e consuma metasimbolo
+    \item \texttt{r / 4}, REDUCE con produzione numero 4
+    \item \texttt{a}, ACCEPT
+\end{itemize}
+
+Algoritmo compilazione tabella di parsing:
+\begin{itemize}
+    \item per ogni arco \texttt{S1} $\rightarrow$ \texttt{S2} con input il simbolo terminale \texttt{a}, si inserisce in tabella alla posizione \texttt{(S1, a)} l'azione \underline{SHIFT to \texttt{S2}}
+    \item per ogni arco \texttt{S1} $\rightarrow$ \texttt{S2} con input da stack il metasimbolo \texttt{X}, si inserisce in tabella alla posizione \texttt{(S1, X)} l'azione \underline{GOTO \texttt{S2}}
+    \item per ogni stato \texttt{Si} associato alla regola R-esima \texttt{A} $\rightarrow \alpha$, si inserisce nella tabella l'azione \underline{REDUCE \texttt{R}} in \textit{tutta la riga} corrispondente allo stato \texttt{Si}
+    \item per ogni stato \texttt{Si} contenente la produzione \texttt{Z} $\rightarrow$ \texttt{S.\$}, si inserisce nella tabella alla posizione \texttt{(S, \$)} l'azione \underline{ACCEPT}
+\end{itemize}
+
+Applicato al caso precedente
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/linguaggi/images/52.png}
+\end{figure}
+
+\section{Verso l'analisi LR(1)}
 
 
 
