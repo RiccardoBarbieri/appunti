@@ -638,18 +638,72 @@ Applicato al caso precedente
 \end{figure}
 
 \section{Verso l'analisi LR(1)}
+Di fatto, LR(0) non è utile nella pratica. L'analisi LR(k) opera analogamente a LR(0), guardando avanti di \texttt{k} simboli (\textbf{lookahead symbols}).
 
+Tutte le riduzioni sono ritardate di k simboli; la definizione di contesto, e il processo operativo per trovarlo, vengono estesi considerando i k simboli successivi.
 
+\subsubsection{Contesto LR(k)}
 
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Formalmente, il contesto LR(k) di una produzione \texttt{A} $\rightarrow \alpha$ è così definito:
+\begin{equation*}
+\text{LR(k)ctx(A} \rightarrow \alpha ) = \{\gamma | \gamma = \beta\alpha \textit{u}, \text{Z} \Rightarrow \beta \text{A}\textit{u}\text{w} \Rightarrow  \beta\alpha \textit{u}\text{w}, \text{w} \in \text{VT*}, \textit{u} \in \text{VT}^k\}
+\end{equation*}
+\end{mdframed}
 
+Tutte le stringe del contesto LR(k) della produzione \texttt{A} $\rightarrow \alpha$ hanno la forma $\beta\alpha$u e differiscono per il prefisso $\beta$ e per la stringa u.
 
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+La stringa \textit{u} appartiene all'insieme FOLLOW$_k$(A) delle stringhe di lunghezza k che possono seguire il simbolo non terminale A
+\begin{equation*}
+    \text{FOLLOW}_k\text{(A)} = \{ \textit{u} \in \text{VT}^k | \text{S} \Rightarrow \gamma \text{A}\textit{u}\beta \} \text{ con }\gamma, \beta \in \text{V}^*
+\end{equation*}
+FOLLOW$_k$(A) non è altro che l'insieme FOLLOW(A) dei Following Symbols già introdotto nella definizione di Director Symbols dell'analisi LL
+\end{mdframed}
 
+\subsubsection{Contesti sinistri LR(k)}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Contesto sinistro di un non terminale A:
+\end{mdframed}
+finisci definizione 83 fino 85
 
+\subsection{Approssimazione del parsing LR(1)}
+Questi metodi creano automi con molti stati e sono costosi dal punto di vista computazionale, esistono quindi alternative semplificate del parsing LR(1):
+\begin{itemize}
+    \item SLR, Simple LR
+    \item LALR(1), Look-Ahead LR
+\end{itemize}
 
+L'idea principale è quella di accorpare gli stati simili, queste due metodologie definiscono come fare.
 
+\subsection{Contesti SLR(k)}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Il contesto SLR(k) di una produzione \texttt{A} $\rightarrow \alpha$ è così definito:
+\begin{equation*}
+\text{SLR(k)ctx(A} \rightarrow \alpha ) = \text{LR(0)ctx(A} \rightarrow \alpha ) \cdot \text{FOLLOW}_k\text{(A)}
+\end{equation*}
+\end{mdframed}
 
+Il contesto SLR(k) può quindi essere calcolato facilmente a partire dal contesto LR(0), il cui calcolo sappiamo già essere fattibile.
 
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+É possibile dimostrare che 
+\begin{equation*}
+    \text{SLR(k)ctx(A} \rightarrow \alpha ) \supseteq \text{LR(k)ctx(A} \rightarrow \alpha)
+\end{equation*}
+ovvero il contesto SLR è un po' più grande, e quindi più esposto a potenziali conflitti, del contesto LR completo.
+\end{mdframed}
 
+esempio calcolo slide 110-128
+
+\subsection{Parser LALR(1)}
+Un approccio alternativo a SLR consiste nel collassare in un solo stato quegli stati che, nel paraser LR(1) completo, sono identici \textit{a meno dei lookahead set}.
+
+Il vantaggio è il fatto che è una trasformazione sempre possibile e spesso molto conveniente (meno stati), tuttavia possono apparire conflitti reduce / reduce, tipicamente gestibili.
+
+Può essere implementanto calcolando prima LR(0), aggiungendo poi i lookahead set, calcolati separatamente.
+
+Esempio 130-150
 
 
 
