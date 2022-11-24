@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{var} \PYG{n+nx}{f1} \PYG{o}{=} \PYG{n+nx}{ff}\PYG{p}{(} \PYG{n+nb}{Math}\PYG{p}{.}\PYG{n+nx}{sin}\PYG{p}{,} \PYG{l+m+mf}{.8} \PYG{p}{)}
+\PYG{k+kd}{var} \PYG{n+nx}{f2} \PYG{o}{=} \PYG{n+nx}{ff}\PYG{p}{(} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{q}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{q} \PYG{o}{*} \PYG{n+nx}{q} \PYG{p}{\PYGZcb{}}\PYG{p}{,} \PYG{l+m+mf}{.8} \PYG{p}{)}
+\end{Verbatim}

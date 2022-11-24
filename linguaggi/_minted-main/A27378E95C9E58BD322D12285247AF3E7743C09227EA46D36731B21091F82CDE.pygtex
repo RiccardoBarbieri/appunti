@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// keyword function definisce oggetti\PYGZhy{}funzioni (anonimi)}
+\PYG{k+kd}{var} \PYG{n+nx}{f} \PYG{o}{=} \PYG{k+kd}{function} \PYG{p}{(}\PYG{n+nx}{z}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{z} \PYG{o}{*} \PYG{n+nx}{z}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// funzione può riceverne un\PYGZsq{}altra come argomento}
+\PYG{k+kd}{var} \PYG{n+nx}{ff} \PYG{o}{=} \PYG{k+kd}{function} \PYG{p}{(}\PYG{n+nx}{f}\PYG{p}{,} \PYG{n+nx}{x}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{f}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// si può passare una funzione come argomento a un\PYGZsq{}altra}
+\PYG{k+kd}{var} \PYG{n+nx}{res} \PYG{o}{=} \PYG{n+nx}{loop}\PYG{p}{(} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n+nx}{i}\PYG{o}{++} \PYG{p}{\PYGZcb{}}\PYG{p}{,} \PYG{l+m+mf}{10} \PYG{p}{)}\PYG{p}{;}
+\PYG{c+c1}{// si può restituire un risultato funzione}
+\PYG{k+kd}{function} \PYG{n+nx}{fr}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{r} \PYG{o}{+} \PYG{l+m+mf}{10} \PYG{p}{\PYGZcb{}} \PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// si può creare una funzione da stringhe}
+\PYG{n+nx}{square} \PYG{o}{=} \PYG{o+ow}{new} \PYG{n+nb}{Function}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}x\PYGZdq{}}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}return x * x\PYGZdq{}}\PYG{p}{)}
+\end{Verbatim}

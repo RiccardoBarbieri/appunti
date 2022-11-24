@@ -157,3 +157,20 @@
 \contentsline {subsection}{\numberline {9.0.2}Processi computazionali ricorsivi}{75}{subsection.9.0.2}%
 \contentsline {subsection}{\numberline {9.0.3}Processi computazionali iterativi espressi da costrutti ricorsivi}{76}{subsection.9.0.3}%
 \contentsline {subsubsection}{Tail Recursion Optimization}{77}{subsubsection*.99}%
+\contentsline {chapter}{\numberline {10}Basi di programmazione funzionale}{79}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Uniformità}{79}{section.10.1}%
+\contentsline {subsection}{\numberline {10.1.1}Everything is an object}{79}{subsection.10.1.1}%
+\contentsline {subsection}{\numberline {10.1.2}Don't be static}{80}{subsection.10.1.2}%
+\contentsline {section}{\numberline {10.2}Oggetti immodificabili}{80}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Distinzioni \texttt {var} vs \texttt {val}}{80}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Null safety}{80}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Collezioni immodificabili}{80}{subsection.10.2.3}%
+\contentsline {subsubsection}{Expressions everywhere}{81}{subsubsection*.100}%
+\contentsline {section}{\numberline {10.3}Funzioni come first-class entities}{81}{section.10.3}%
+\contentsline {section}{\numberline {10.4}Variabili libere e chiusure}{82}{section.10.4}%
+\contentsline {subsection}{\numberline {10.4.1}Funzioni e chiusure}{82}{subsection.10.4.1}%
+\contentsline {subsubsection}{Tempo di vita delle variabili}{82}{subsubsection*.101}%
+\contentsline {subsubsection}{Esempio}{83}{subsubsection*.102}%
+\contentsline {subsubsection}{Utilità delle chiusure}{83}{subsubsection*.103}%
+\contentsline {subsection}{\numberline {10.4.2}Criteri di chiusura}{83}{subsection.10.4.2}%
+\contentsline {subsubsection}{Esempio}{83}{subsubsection*.104}%

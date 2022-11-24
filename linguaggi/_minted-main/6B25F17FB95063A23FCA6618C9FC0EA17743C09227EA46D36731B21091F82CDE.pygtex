@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function} \PYG{n+nx}{ff}\PYG{p}{(}\PYG{n+nx}{f}\PYG{p}{,} \PYG{n+nx}{x}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{r}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{f}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)} \PYG{o}{+} \PYG{n+nx}{r}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

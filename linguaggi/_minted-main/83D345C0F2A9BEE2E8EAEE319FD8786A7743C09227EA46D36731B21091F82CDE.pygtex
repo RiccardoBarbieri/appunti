@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{var} \PYG{n+nx}{f} \PYG{o}{=} \PYG{n+nx}{z} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{z} \PYG{o}{*} \PYG{n+nx}{z}
+
+\PYG{k+kd}{var} \PYG{n+nx}{ff} \PYG{o}{=} \PYG{p}{(}\PYG{n+nx}{f}\PYG{p}{,} \PYG{n+nx}{x}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{f}\PYG{p}{(}\PYG{n+nx}{x}\PYG{p}{)}
+
+\PYG{k+kd}{var} \PYG{n+nx}{res} \PYG{o}{=} \PYG{n+nx}{loop}\PYG{p}{(} \PYG{p}{(}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{,} \PYG{l+m+mf}{10}\PYG{p}{)}
+
+\PYG{n+nx}{fr} \PYG{o}{=} \PYG{p}{(}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{r} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{r} \PYG{o}{+} \PYG{l+m+mf}{10}
+\end{Verbatim}

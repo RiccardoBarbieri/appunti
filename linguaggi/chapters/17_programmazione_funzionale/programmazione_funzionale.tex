@@ -1,0 +1,216 @@
+\chapter{Basi di programmazione funzionale}
+
+Idee chiave del paradigma funzionale:
+\begin{itemize}
+    \item distinzioni variabili / valori (\textbf{var} e \textbf{val})
+    \item costrutti come espressioni: \textit{everything is an expression}
+    \item collezione e oggetti immodificabili: \textit{compute by synthesis}
+    \item funzioni sono \textbf{first-class entitites}
+    \begin{itemize}
+        \item chiusure, lambda expressions
+        \item \textbf{lazy} evaluation vs \textbf{eager} evaluation
+    \end{itemize}
+    \item abolizione tipi primitivi: \textit{everything is an object}
+    \item abolizione parti statiche in favore di singleton \textit{companion}
+\end{itemize}
+
+\section{Uniformità}
+
+\subsection{Everything is an object}
+I linguaggi a oggetti tradizionali, pur chiamandosi a oggetti, si basano su tipo primitivi che non sono oggetti.
+
+Questa caratteristica causa disuniformità che necessita di trattamento:
+\begin{itemize}
+    \item tipi primitivi passati per \textbf{valore} vs oggetti passati per \textbf{riferimento}
+    \item collezioni di tipi primitivi: non ammesse o classi wrapper
+\end{itemize}
+
+I linguaggi blended ripuliscono lo spazio concettuale eliminando i tipi primitivi, si distingue però tra \textbf{classi valore} (entità immodificabili) e \textbf{classi riferimento} (classi classiche).
+
+\subsection{Don't be static}
+I linguaggi a oggetti tradizionali, pur chiamandosi oggetti, si basano sulle \textit{classi}, che non sono oggetti.
+
+I linguaggi blended cancellano le \textit{parti statiche}: il loro ruolo è svolto da un singleton, il \textbf{comapanion object}:
+\begin{itemize}
+    \item in Scala, il co ha lo stesso nome della classe
+    \item in Kotlin, può anche avere nome diverso (ma nello stesso file)
+\end{itemize}
+
+\section{Oggetti immodificabili}
+
+\subsection{Distinzioni \texttt{var} vs \texttt{val}}
+Nel paradigma imperativo, basato sulla modifica dei valori, si generano programmi difficili da leggere e manutenere dato che i simboli cambiano continuamente significato.
+
+Il paradigma funzionale si basa sul concetto opposto: i simboli \textit{mantengono il loro significato}.
+
+I moderni linguaggi blended uniscono i due mondi:
+\begin{itemize}
+    \item \texttt{var} denota variabili
+    \item \texttt{val} denota valori
+\end{itemize}
+
+Proprietà introdotte da \texttt{val} hanno solo getter e in certi contesti il suo utilizzo è semplificato o obbligatorio.
+
+\subsection{Null safety}
+L'introduzione del null mina alla base la correttezza dei programmi.
+
+Moderni linguaggi introducono forme di \textit{Null safety}:
+\begin{itemize}
+    \item vietando che un riferimento sia \texttt{null}
+    \item può essere etichettato esplicitamente come tale
+\end{itemize}
+
+\subsection{Collezioni immodificabili}
+Completa
+
+\subsubsection{Expressions everywhere}
+I linguaggi imperativi distinguono tra \textit{istruzioni} e \textit{espressioni}
+\begin{itemize}
+    \item \texttt{for, while, if, throw} sono istruzioni: non denotano un valore ma denotano azioni
+    \item 
+\end{itemize}
+
+La presenza di istruzioni induce a esprimere computazioni mettendole in sequenza che implica variabili di appoggio.
+
+Nei linguaggi blended, tutte le istruzioni sono sostituite da espressioni, tutto produce valori.
+
+\section{Funzioni come first-class entities}
+Ogni linguaggi di programmazione offre la possibilità di creare funzioni, nei linguaggi blended le funzioni sono anche \textit{first-class entities}.
+
+Nei linguaggi blended, le funzioni hanno queste caratteristiche:
+\begin{itemize}
+    \item possono essere \textit{assegnate a variabili} (tipo funzione)
+    \item possono essere \textit{passate come argomento} a un'altra funzione
+    \item possono essere \textit{restituite da un'altra funzione}
+    \item possono essere \textit{definite e usate al volo} come valori di ogni altro tipo
+\end{itemize}
+
+Con questi concetti, è possibile definire \textit{funzioni di ordine superiore}, che sono funzioni che manipolano/generano altre funzioni, e si può estendere il concetto a funzione di secondo, terzo ... ordine.
+
+Assegnare e restiture funzioni implica la necessità di avere \textbf{tipi funzione} che \textit{incapsulano il comportamento} delle funzioni.
+
+Esempi in javascript:
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{javascript}
+// keyword function definisce oggetti-funzioni (anonimi)
+var f = function (z) { return z * z; }
+// funzione può riceverne un'altra come argomento
+var ff = function (f, x) { return f(x); }
+// si può passare una funzione come argomento a un'altra
+var res = loop( function() { i++ }, 10 );
+// si può restituire un risultato funzione
+function fr() { return function(r) { return r + 10 } }
+// si può creare una funzione da stringhe
+square = new Function("x", "return x * x")
+\end{minted}
+
+In javascript esiste anche una sintassi per definire funzioni senza la keyword \textit{function}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{javascript}
+var f = z => z * z
+
+var ff = (f, x) => f(x)
+
+var res = loop( () => i++, 10)
+
+fr = () => r => r + 10
+\end{minted}
+
+\section{Variabili libere e chiusure}
+Se un linguaggi ammette la definizione di \textit{funzioni con variabili libere} (non definite localmente), tali funzioni dipendono dal contesto circostante.
+
+Sono necessari criteri per dare significato alle variabili libere:
+\begin{itemize}
+    \item \textbf{chiusura lessicale}
+    \item \textbf{chiusura dinamica}
+\end{itemize}
+
+\subsection{Funzioni e chiusure}
+Se un linguaggi supporta funzioni come first-class entities, la presenza di variabili libere determina la nascita della nozione di \textbf{chiusura}:
+\begin{itemize}
+    \item un \textit{oggetto funzione} ottenuto \underline{chiudendo} rispetto a un certo contesto una definizione di funzione che aveva variabili libere
+    \item il prodotto finale dell'atto di chiudere le variabili libere rispetto a un certo contesto d'uso
+\end{itemize}
+
+\subsubsection{Tempo di vita delle variabili}
+In presenza di chiusure, il tempo di vita delle variabili di una funzione \textit{non coincide più necessariamente con quello della funzione che le contiene}.
+
+Il modello computazionale deve tenere conto delle variabili libere, non più allocate semplicemente sullo stack.
+
+Una variabile locale a una funzione \textit{esterna} può essere indispensabile al funzionamento della funzione più \textit{interna}, il tempo di vita delle variabili locali che fanno parte di una chiusura è pari a quello della chiusura, anche se la funzione che la definisce \textit{termina prima}.
+
+Queste variabili vengono allocate sull'\textit{heap}.
+
+\subsubsection{Esempio}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{javascript}
+function ff(f, x) {
+    return function(r) { return f(x) + r; }
+}
+\end{minted}
+
+Per poter operare, tale nuova funzione necessita di \texttt{f}, \texttt{x} (e \texttt{r})
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{javascript}
+var f1 = ff( Math.sin, .8 )
+var f2 = ff( function(q) { return q * q }, .8 )
+\end{minted}
+
+\subsubsection{Utilità delle chiusure}
+\begin{itemize}
+    \item rappresentare e gestire uno stato privato e nascosto
+    \begin{itemize}
+        \item le variabili della funzione esterna, mantenute vive dalla chiusura, restano comunque invisibili fuori da essa
+    \end{itemize}
+    \item creare una comunicazione nascosta
+    \begin{itemize}
+        \item definendo più funzioni nella stessa chiusura, esse condividono uno stato nascosto, usabile per comunicare privatamente
+    \end{itemize}
+    \item definire nuove strutture di controllo
+    \begin{itemize}
+        \item la funzione esterna esprime il controllo, mentre quella ricevuta come argomento esprime il corpo da seguire
+    \end{itemize}
+    \item riprogettare/semplificare API e framework di largo uso
+    \begin{itemize}
+        \item metodi parametrici che ricevono comportamento come argomento
+    \end{itemize}
+\end{itemize}
+
+\subsection{Criteri di chiusura}
+
+Occorre stabilire un criterio su \textit{come e dove cercare} una definizione per le variabili libere da chiudere.
+
+In presenza di funzioni innestate, si apre una questione:
+\begin{itemize}
+    \item il testo del programma contiene una catena di \textit{ambienti di definizione innestati}, \textbf{catena lessicale}
+    \item l'attivazione delle funzioni crea a runtime una catena di \textit{ambienti attivi}, \textbf{catena dinamica} che riflette l'ordine delle chiamate
+\end{itemize}
+
+\subsubsection{Esempio}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{javascript}
+var x = 20;
+
+function provaEnv(z) { return z + x }
+
+function testEnv() {
+    var x = -1;
+    return provaEnv(18);
+}
+\end{minted}
+Quale \texttt{x} viene considerata? 
+
+Se si considera la catena lessicale si utilizza la \texttt{x = 20}, la definizione più vicina in senso \textit{lessicale}.
+
+Se si considera la catena dinamica si utilizza la \texttt{x = -1}, la definizione più vicina nel senso \textit{dimanico}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
