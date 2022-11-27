@@ -414,7 +414,7 @@ process cliente {
 \end{minted}
 
 
-GUARDA ESEMPI 50-82
+GUARDA ESEMPI 50-67
 
 \section{Primitive di comunicazione sincrone}
 Con primitive sincrone si ottiene un minore grado di concorrenza rispetto alle asincrone, tuttavia non è necessaria la presenza di buffer nei canali di comunicazione.
@@ -523,7 +523,7 @@ process produttore_i {
     //...
 \end{minted}
 
-\subsection{Mailbo concorrente}
+\subsection{Mailbox concorrente}
 Un buffer di dimensione N può essere implementato da un insieme di processi concorrenti collegati secondo uno schema a cascata (\textit{pipeline)}.
 
 Ogni process ha un struttura ciclica e, sfruttando la semantica sincrona della send, può trattenere un singolo messaggio inserito, ma non ancora estratto.
@@ -564,53 +564,78 @@ process server {
     //...
     client[M-1] = "P_M-1";
     }
+
+    do {
+        [] p = receive(s) from richiesta; ->
+            if (libera) {
+                libera = false;
+                send (s) to p.risorsa;
+            }
+            else {
+                sospesi ++;
+                int j = 0;
+                while (client[j] != p) j++;
+                bloccato[j] = true;
+            }
+        [] p = receive (s) from rilascio; ->
+            if (sospesi == 0)
+                libera = true;
+            else {
+                int i = 0;
+                while (!bloccato[i]) i++;
+                sospesi--;
+                bloccato[i] = false;
+                send (s) to client[i].risorsa;
+            }
+    }
 \end{minted}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+process cliente {
+    port int risorsa;
+    signal s;
+    //...
+    send(s) to server.richiesta;
+    p = receive (s) from risorsa;
+    <uso della risorsa r-esima>;
+    send(s) to server.rilascio;
+    //...
+}
+\end{minted}
 
 \section{Realizzazione meccanismi di comunicazione}
+
+\subsection{Realizzazione delle primitive asincrone}
+Le \textit{primitive di comunicazione} e del \textit{costrutto port} sono realizzati utilizzando gli strumenti di comunicazione offerti dal nucleo del sistema operativo.
+
+Le \textbf{primite asincrone} sono più "primitive", in quanto le primitive sincrone sono realizzate utilizzando combinazioni appropriate di primitive asincrone.
+
+\subsection{Architetture mono e multielaboratore}
+Ipotesi (semplificate):
+\begin{itemize}
+    \item tutti i messaggi scambiati tra i processi sono di un \textit{unico tipo T} predefinito a livello di nucleo
+    \item tutti i canali sono \textbf{da molti a uno (port)} e quindi associati al processo ricevente
+    \item essendo le primitive asincrone, ogni porta deve contenere un \textbf{buffer} (coda di messaggi) di \textit{lunghezza indefinita}
+\end{itemize}
+
+\noindent
+CODICE 85-91
+
+FINISCI 92-106
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

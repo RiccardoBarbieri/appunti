@@ -1,0 +1,12 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{cliente}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{risorsa}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{s}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{+w}{    }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{p}{.}\PYG{n+nx}{richiesta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{risorsa}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{uso}\PYG{+w}{ }\PYG{n+nx}{della}\PYG{+w}{ }\PYG{n+nx}{risorsa}\PYG{+w}{ }\PYG{n+nx}{r}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{esima}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{p}{.}\PYG{n+nx}{rilascio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

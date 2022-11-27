@@ -1,0 +1,43 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{server}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{richiesta}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{rilascio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{boolean}\PYG{+w}{ }\PYG{n+nx}{libera}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{P}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{s}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{sospesi}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{boolean}\PYG{+w}{ }\PYG{n+nx}{bloccato}\PYG{p}{[}\PYG{n+nx}{M}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{client}\PYG{p}{[}\PYG{n+nx}{M}\PYG{p}{]}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{//inizializzazione}
+\PYG{+w}{    }\PYG{n+nx}{libera}\PYG{+w}{ }\PYG{err}{?}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{M}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{o}{++}\PYG{p}{)}
+\PYG{+w}{        }\PYG{n+nx}{bloccato}\PYG{p}{[}\PYG{n+nx}{j}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{client}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}P\PYGZus{}0\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{+w}{    }\PYG{n+nx}{client}\PYG{p}{[}\PYG{n+nx}{M}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+s}{\PYGZdq{}P\PYGZus{}M\PYGZhy{}1\PYGZdq{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n+nx}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{richiesta}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{libera}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{libera}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{send}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{risorsa}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{n+nx}{sospesi}\PYG{+w}{ }\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{                }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{client}\PYG{p}{[}\PYG{n+nx}{j}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{j}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{bloccato}\PYG{p}{[}\PYG{n+nx}{j}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{rilascio}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\PYG{+w}{            }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{sospesi}\PYG{+w}{ }\PYG{o}{==}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{                }\PYG{n+nx}{libera}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k+kc}{true}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{else}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{!}\PYG{n+nx}{bloccato}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{sospesi}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{bloccato}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{k+kc}{false}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{send}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{client}\PYG{p}{[}\PYG{n+nx}{i}\PYG{p}{]}\PYG{p}{.}\PYG{n+nx}{risorsa}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
