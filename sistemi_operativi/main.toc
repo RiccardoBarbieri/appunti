@@ -186,3 +186,18 @@
 \contentsline {section}{\numberline {6.7}Realizzazione meccanismi di comunicazione}{80}{section.6.7}%
 \contentsline {subsection}{\numberline {6.7.1}Realizzazione delle primitive asincrone}{80}{subsection.6.7.1}%
 \contentsline {subsection}{\numberline {6.7.2}Architetture mono e multielaboratore}{80}{subsection.6.7.2}%
+\contentsline {chapter}{\numberline {7}Comunicazione con sincronizzazione estesa}{81}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Semantica}{81}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Implementazione}{81}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Chiamata di procedura remota}{81}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Rendez vous}{82}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}RPC vs rendez-vous}{82}{subsection.7.2.3}%
+\contentsline {subsubsection}{RPC}{82}{subsubsection*.139}%
+\contentsline {subsubsection}{Rendez-vous esteso}{83}{subsubsection*.140}%
+\contentsline {subsection}{\numberline {7.2.4}Chiamata di procedura remota}{83}{subsection.7.2.4}%
+\contentsline {subsubsection}{Esempio - servizio di sveglia}{83}{subsubsection*.141}%
+\contentsline {subsection}{\numberline {7.2.5}Rendez vous esteso}{85}{subsection.7.2.5}%
+\contentsline {subsubsection}{Accept}{85}{subsubsection*.143}%
+\contentsline {subsubsection}{Esempio - produttore e consumatore, buffer capacità N}{86}{subsubsection*.144}%
+\contentsline {subsubsection}{Selezione delle richieste in base ai parametri di ingresso}{86}{subsubsection*.145}%
+\contentsline {subsubsection}{Esempio - sveglia}{87}{subsubsection*.146}%

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{call}\PYG{+w}{ }\PYG{n}{allarme}\PYG{p}{.}\PYG{n}{richiesta\PYGZus{}sveglia}\PYG{p}{(}\PYG{l+m+mi}{60}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//crea thread dedicato nel server}
+\end{Verbatim}

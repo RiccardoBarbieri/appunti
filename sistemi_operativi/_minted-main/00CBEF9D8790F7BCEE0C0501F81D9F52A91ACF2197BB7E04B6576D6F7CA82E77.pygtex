@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k}{select}
+\PYG{+w}{    }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{stato1}\PYG{p}{\PYGZgt{}}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{accept}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{servizio1}\PYG{p}{\PYGZgt{}}\PYG{p}{(}\PYG{n+nx}{in}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{par}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{ingresso}\PYG{p}{\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{out}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{par}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{uscita}\PYG{p}{\PYGZgt{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{S11}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{...}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{S1n}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{...}
+\PYG{+w}{    }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{stato2}\PYG{p}{\PYGZgt{}}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{accept}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{servizio2}\PYG{p}{\PYGZgt{}}\PYG{p}{(}\PYG{n+nx}{in}\PYG{+w}{ }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{par}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{ingresso}\PYG{p}{\PYGZgt{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{out}\PYG{p}{\PYGZlt{}}\PYG{n+nx}{par}\PYG{o}{\PYGZhy{}}\PYG{n+nx}{uscita}\PYG{p}{\PYGZgt{}}\PYG{p}{)}
+\PYG{+w}{        }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{S21}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{...}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{S2n}\PYG{p}{\PYGZcb{}}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{...}
+\PYG{+w}{    }\PYG{o}{...}
+\PYG{n+nx}{end}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,8 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{typedef}\PYG{+w}{ }\PYG{k+kd}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{risveglio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{intervallo}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{dati\PYGZus{}di\PYGZus{}risveglio}\PYG{p}{;}
+
+\PYG{n+nx}{dati\PYGZus{}di\PYGZus{}risveglio}\PYG{+w}{ }\PYG{n+nx}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{[}\PYG{n+nx}{N}\PYG{p}{]}\PYG{p}{;}
+\end{Verbatim}

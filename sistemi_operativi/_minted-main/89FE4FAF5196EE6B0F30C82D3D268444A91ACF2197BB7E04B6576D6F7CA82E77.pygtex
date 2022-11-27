@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{client\PYGZus{}i}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{+w}{    }\PYG{n+nx}{allarme}\PYG{p}{.}\PYG{n+nx}{richiesta\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{(}\PYG{n+nx}{T}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{+w}{    }\PYG{n+nx}{allarme}\PYG{p}{.}\PYG{n+nx}{svegliami}\PYG{p}{[}\PYG{n+nx}{T}\PYG{p}{]}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

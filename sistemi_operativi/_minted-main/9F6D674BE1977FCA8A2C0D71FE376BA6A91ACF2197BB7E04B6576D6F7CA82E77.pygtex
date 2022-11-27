@@ -1,0 +1,17 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{produttore\PYGZus{}i}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{messaggio}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{;}\PYG{p}{;}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{produci}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{call}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{p}{.}\PYG{n+nx}{inserisci}\PYG{p}{(}\PYG{n+nx}{dati}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{consumatore\PYGZus{}j}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{messaggio}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{;}\PYG{p}{;}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{call}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{p}{.}\PYG{n+nx}{preleva}\PYG{p}{(}\PYG{n+nx}{dati}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{consuma}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

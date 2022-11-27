@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{//server}
+\PYG{n}{module}\PYG{+w}{ }\PYG{n}{nome\PYGZus{}del\PYGZus{}modulo}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{dichiarazione}\PYG{+w}{ }\PYG{n}{delle}\PYG{+w}{ }\PYG{n}{variabili}\PYG{+w}{ }\PYG{n}{locali}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{inizializzazione}\PYG{+w}{ }\PYG{n}{delle}\PYG{+w}{ }\PYG{n}{variabili}\PYG{+w}{ }\PYG{n}{locali}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{op1}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{parametri}\PYG{+w}{ }\PYG{n}{formali}\PYG{o}{\PYGZgt{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{corpo}\PYG{+w}{ }\PYG{n}{della}\PYG{+w}{ }\PYG{n}{procedura}\PYG{+w}{ }\PYG{n}{op1}\PYG{o}{\PYGZgt{}}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{.}\PYG{p}{.}\PYG{p}{.}
+\PYG{+w}{    }\PYG{n}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{opn}\PYG{+w}{ }\PYG{p}{(}\PYG{o}{\PYGZlt{}}\PYG{n}{parametri}\PYG{+w}{ }\PYG{n}{formali}\PYG{o}{\PYGZgt{}}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{corpo}\PYG{+w}{ }\PYG{n}{della}\PYG{+w}{ }\PYG{n}{procedura}\PYG{+w}{ }\PYG{n}{opn}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{dichiarazione}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{procedure}\PYG{+w}{ }\PYG{n}{locali}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{o}{\PYGZlt{}}\PYG{n}{dichiarazione}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{processi}\PYG{+w}{ }\PYG{n}{locali}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

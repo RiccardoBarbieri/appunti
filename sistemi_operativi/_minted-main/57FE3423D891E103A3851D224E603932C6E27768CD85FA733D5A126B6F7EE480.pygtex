@@ -1,0 +1,33 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n}{module}\PYG{+w}{ }\PYG{n}{allarme}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{time}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{mutex}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{semaphore}\PYG{+w}{ }\PYG{n}{priv}\PYG{p}{[}\PYG{n}{N}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//sem privati sospensione processi}
+\PYG{+w}{    }\PYG{n}{coda\PYGZus{}richieste}\PYG{+w}{ }\PYG{n}{coda}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//struttura richieste di sveglia}
+
+\PYG{+w}{    }\PYG{n}{public}\PYG{+w}{ }\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n}{richiesta\PYGZus{}sveglia}\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{timeout}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{id}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{sveglia}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{time}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{n}{timeout}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n}{inserimento}\PYG{+w}{ }\PYG{n}{sveglia}\PYG{+w}{ }\PYG{n}{e}\PYG{+w}{ }\PYG{n}{id}\PYG{+w}{ }\PYG{n}{nella}\PYG{+w}{ }\PYG{n}{coda}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{risveglio}
+\PYG{+w}{        }\PYG{n}{matenendo}\PYG{+w}{ }\PYG{n}{ordinata}\PYG{+w}{ }\PYG{n}{con}\PYG{+w}{ }\PYG{n}{id}\PYG{+w}{ }\PYG{n}{non}\PYG{+w}{ }\PYG{n}{decrescenti}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{        }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n}{P}\PYG{p}{(}\PYG{n}{priv}\PYG{p}{[}\PYG{n}{id}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//attesa sveglia}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n}{process}\PYG{+w}{ }\PYG{n}{clock}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{//demone}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{;}
+\PYG{+w}{        }\PYG{o}{\PYGZlt{}}\PYG{n}{avvia}\PYG{+w}{ }\PYG{n}{il}\PYG{+w}{ }\PYG{n}{clock}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n+nb}{true}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{o}{\PYGZlt{}}\PYG{n}{attende}\PYG{+w}{ }\PYG{n}{interruzione}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{quindi}\PYG{+w}{ }\PYG{n}{riavvia}\PYG{+w}{ }\PYG{n}{il}\PYG{+w}{ }\PYG{n}{clock}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{time}\PYG{o}{+}\PYG{o}{+}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{P}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{n}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{n}{min}\PYG{+w}{ }\PYG{n}{valore}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{sveglia}\PYG{+w}{ }\PYG{n}{in}\PYG{+w}{ }\PYG{n}{coda}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{            }\PYG{k}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{time}\PYG{+w}{ }\PYG{o}{\PYGZgt{}}\PYG{o}{=}\PYG{+w}{ }\PYG{n}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{                }\PYG{o}{\PYGZlt{}}\PYG{n}{rimozione}\PYG{+w}{ }\PYG{n}{di}\PYG{+w}{ }\PYG{n}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{+w}{ }\PYG{n}{e}\PYG{+w}{ }\PYG{n}{id}\PYG{+w}{ }\PYG{n}{da}\PYG{+w}{ }\PYG{n}{coda}\PYG{o}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n}{V}\PYG{p}{(}\PYG{n}{priv}\PYG{p}{[}\PYG{n}{id}\PYG{p}{]}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{            }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{            }\PYG{n}{V}\PYG{p}{(}\PYG{n}{mutex}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,0 +1,18 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{allarme}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{entry}\PYG{+w}{ }\PYG{n+nx}{tick}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{entry}\PYG{+w}{ }\PYG{n+nx}{richiesta\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{(}\PYG{n+nx}{in}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{intervallo}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{entry}\PYG{+w}{ }\PYG{n+nx}{svegliami}\PYG{p}{[}\PYG{n+nx}{first}\PYG{p}{.}\PYG{p}{.}\PYG{n+nx}{last}\PYG{p}{]}\PYG{p}{;}\PYG{+w}{ }\PYG{c+c1}{//vettore operazioni}
+
+\PYG{+w}{    }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{tempo}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{typedef}\PYG{+w}{ }\PYG{k+kd}{struct}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{risveglio}\PYG{p}{;}
+\PYG{+w}{        }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{intervallo}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}\PYG{+w}{ }\PYG{n+nx}{dati\PYGZus{}di\PYGZus{}risveglio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{dati\PYGZus{}di\PYGZus{}risveglio}\PYG{+w}{ }\PYG{n+nx}{tempo\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{[}\PYG{n+nx}{N}\PYG{p}{]}\PYG{p}{;}
+
+\PYG{+w}{    }\PYG{n+nx}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nx}{accept}\PYG{+w}{ }\PYG{n+nx}{tick}\PYG{p}{;}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{n+nx}{tempo}\PYG{o}{++}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{n+nx}{accept}\PYG{+w}{ }\PYG{n+nx}{richiesta\PYGZus{}di\PYGZus{}sveglia}\PYG{p}{(}\PYG{n+nx}{in}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n+nx}{intervallo}\PYG{p}{)}
+\PYG{+w}{            }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}
+\end{Verbatim}
