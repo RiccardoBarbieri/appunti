@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{m\PYGZus{}i}\PYG{+w}{ }\PYG{p}{\PYGZob{}}\PYG{+w}{ }\PYG{c+c1}{//(0 \PYGZlt{}= i \PYGZlt{}= N\PYGZhy{}2)}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{buffer}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{while}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kc}{true}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{buffer}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{        }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{buffer}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{m\PYGZus{}i}\PYG{o}{+}\PYG{l+m+mf}{1.}\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

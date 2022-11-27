@@ -1,0 +1,186 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{\numberline {1}xen}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Caratteristiche}{4}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Gestione memoria e paginazione}{4}{section.1.2}%
+\contentsline {subsubsection}{Gestione della memoria}{4}{subsubsection*.4}%
+\contentsline {subsubsection}{Creazione di un processo}{5}{subsubsection*.7}%
+\contentsline {subsubsection}{Balloon process}{6}{subsubsection*.9}%
+\contentsline {section}{\numberline {1.3}Virtualizzazione della CPU}{6}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Gestione interruzioni e eccezioni}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Live migration in xen}{8}{section.1.5}%
+\contentsline {chapter}{\numberline {2}Protezione}{9}{chapter.2}%
+\contentsline {subsubsection}{Sicurezza}{9}{subsubsection*.13}%
+\contentsline {subsubsection}{Protezione}{9}{subsubsection*.14}%
+\contentsline {section}{\numberline {2.1}Protezione}{9}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Modelli}{9}{subsection.2.1.1}%
+\contentsline {subsubsection}{Dominio di protezione}{10}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {2.1.2}Politiche}{10}{subsection.2.1.2}%
+\contentsline {subsubsection}{Principio del privilegio minimo}{10}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {2.1.3}Meccanismi}{10}{subsection.2.1.3}%
+\contentsline {subsubsection}{Principi di realizzazione}{11}{subsubsection*.17}%
+\contentsline {subsection}{\numberline {2.1.4}Dominio di protezione}{11}{subsection.2.1.4}%
+\contentsline {subsubsection}{Domini disgiunti o con diritti di accesso comune}{11}{subsubsection*.18}%
+\contentsline {subsubsection}{Associazione tra processo e dominio}{11}{subsubsection*.19}%
+\contentsline {paragraph}{Modalità statica}{11}{paragraph*.20}%
+\contentsline {paragraph}{Modalità dinamica}{11}{paragraph*.21}%
+\contentsline {subsubsection}{Matrice degli accessi}{11}{subsubsection*.22}%
+\contentsline {subsection}{\numberline {2.1.5}Modello di Graham-Denning}{13}{subsection.2.1.5}%
+\contentsline {subsubsection}{Propagazione dei diritti di accesso}{13}{subsubsection*.24}%
+\contentsline {subsubsection}{Diritto owner}{13}{subsubsection*.25}%
+\contentsline {subsubsection}{Diritto control}{13}{subsubsection*.26}%
+\contentsline {subsubsection}{Switch}{14}{subsubsection*.28}%
+\contentsline {subsection}{\numberline {2.1.6}Realizzazione della matrice degli accessi}{14}{subsection.2.1.6}%
+\contentsline {subsubsection}{Access control list}{14}{subsubsection*.29}%
+\contentsline {paragraph}{Utenti e gruppi}{14}{paragraph*.30}%
+\contentsline {subsubsection}{Capability list}{15}{subsubsection*.31}%
+\contentsline {subsubsection}{Revoca dai diritti di accesso}{15}{subsubsection*.32}%
+\contentsline {subsubsection}{Cancellazione/aggiunta di un utente}{15}{subsubsection*.33}%
+\contentsline {section}{\numberline {2.2}Sicurezza}{16}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Sicurezza multilivello}{16}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Modelli di sicurezza multilivello}{16}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Modello Bell-La Padula}{17}{subsection.2.2.3}%
+\contentsline {subsubsection}{Regole di sicurezza}{17}{subsubsection*.34}%
+\contentsline {subsubsection}{Esempio - difesa cavalli di troia}{18}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {2.2.4}Modello Biba}{18}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}Architettura dei sistemi ad elevata sicurezza}{19}{subsection.2.2.5}%
+\contentsline {paragraph}{Sistemi operativi sicuri o fidati}{19}{paragraph*.38}%
+\contentsline {paragraph}{Reference monitor}{19}{paragraph*.39}%
+\contentsline {paragraph}{Trusted computing base}{19}{paragraph*.40}%
+\contentsline {subsection}{\numberline {2.2.6}Sistemi fidati}{19}{subsection.2.2.6}%
+\contentsline {paragraph}{Mediazione completa}{19}{paragraph*.42}%
+\contentsline {paragraph}{Isolamento}{20}{paragraph*.43}%
+\contentsline {paragraph}{Verificabilità}{20}{paragraph*.44}%
+\contentsline {chapter}{\numberline {3}Programmazione concorrente}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Tipi di architettura}{21}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Sistemi multiprocessore}{22}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Distributed memory}{22}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Classificazione di Flynn}{23}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Applicazioni}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Processi non sequenziali e tipi di interazione}{24}{section.3.3}%
+\contentsline {paragraph}{Algoritmo}{24}{paragraph*.49}%
+\contentsline {paragraph}{Programma}{24}{paragraph*.50}%
+\contentsline {paragraph}{Processo}{24}{paragraph*.51}%
+\contentsline {paragraph}{Elaboratore}{24}{paragraph*.52}%
+\contentsline {paragraph}{Evento}{24}{paragraph*.53}%
+\contentsline {subsection}{\numberline {3.3.1}Processo sequenziale}{25}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Processo non sequenziale}{25}{subsection.3.3.2}%
+\contentsline {paragraph}{Elaboratore non sequenziale}{25}{paragraph*.54}%
+\contentsline {paragraph}{Linguaggio non sequenziale}{25}{paragraph*.56}%
+\contentsline {section}{\numberline {3.4}Proprietà dei programmi}{25}{section.3.4}%
+\contentsline {paragraph}{Traccia dell'esecuzione}{25}{paragraph*.57}%
+\contentsline {paragraph}{Stato}{26}{paragraph*.58}%
+\contentsline {paragraph}{Programmi sequenziali}{26}{paragraph*.59}%
+\contentsline {paragraph}{Pogrammi concorrenti}{26}{paragraph*.60}%
+\contentsline {subsection}{\numberline {3.4.1}Proprietà dei programmi}{26}{subsection.3.4.1}%
+\contentsline {subsubsection}{Safety}{26}{subsubsection*.61}%
+\contentsline {subsubsection}{Liveness}{26}{subsubsection*.62}%
+\contentsline {chapter}{\numberline {4}Modello a memoria comune}{27}{chapter.4}%
+\contentsline {paragraph}{Risorsa}{27}{paragraph*.64}%
+\contentsline {section}{\numberline {4.1}Gestore di una risorsa}{28}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Compiti del gestore di una risorsa}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Accesso a risorse}{29}{subsection.4.1.2}%
+\contentsline {subsubsection}{Allocata staticamente}{29}{subsubsection*.66}%
+\contentsline {subsubsection}{Allocata dinamicamente}{29}{subsubsection*.67}%
+\contentsline {subsubsection}{Allocata condivisa}{29}{subsubsection*.68}%
+\contentsline {subsubsection}{Allocata dedicata}{29}{subsubsection*.69}%
+\contentsline {subsection}{\numberline {4.1.3}Specifica della sincronizzazione}{29}{subsection.4.1.3}%
+\contentsline {paragraph}{Regione critica condizionale [Hoare, Brinch-hansen]}{29}{paragraph*.70}%
+\contentsline {subsection}{\numberline {4.1.4}Casi particolari}{30}{subsection.4.1.4}%
+\contentsline {section}{\numberline {4.2}Il problema della mutua esclusione}{30}{section.4.2}%
+\contentsline {paragraph}{Sezione critica}{30}{paragraph*.72}%
+\contentsline {section}{\numberline {4.3}Strumenti linguistici per la programmazione di interazioni}{31}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Semaforo}{31}{subsection.4.3.1}%
+\contentsline {subsubsection}{Relazione di invarianza}{31}{subsubsection*.73}%
+\contentsline {subsubsection}{Utilizzo}{31}{subsubsection*.74}%
+\contentsline {subsubsection}{Semaforo mutua esclusione}{32}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {4.3.2}Mutua esclusione tra gruppi e processi}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Semafori evento - scambio di messaggi temporali}{33}{subsection.4.3.3}%
+\contentsline {subsubsection}{Esempio}{33}{subsubsection*.76}%
+\contentsline {subsubsection}{Problema del rendez-vous}{33}{subsubsection*.78}%
+\contentsline {subsubsection}{Barriera di sincronizzazione}{34}{subsubsection*.80}%
+\contentsline {subsection}{\numberline {4.3.4}Semafori binari composti - scambio di dati}{35}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Semafori condizione}{35}{subsection.4.3.5}%
+\contentsline {subsubsection}{Schema attesa circolare}{36}{subsubsection*.84}%
+\contentsline {subsubsection}{Schema passaggio testimone}{36}{subsubsection*.85}%
+\contentsline {subsubsection}{Gestione di un pool di risorse equivalenti}{37}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {4.3.6}Semaforo risorsa}{38}{subsection.4.3.6}%
+\contentsline {subsubsection}{Gestione di un pool di risorse equivalenti}{38}{subsubsection*.87}%
+\contentsline {subsubsection}{Problema dei produttori/consumatori}{39}{subsubsection*.88}%
+\contentsline {subsection}{\numberline {4.3.7}Semafori privati - specifiche strategie di allocazione}{40}{subsection.4.3.7}%
+\contentsline {subsubsection}{Esempio 1}{42}{subsubsection*.89}%
+\contentsline {subsubsection}{Esempio 2}{43}{subsubsection*.90}%
+\contentsline {section}{\numberline {4.4}Realizzazione dei semafori}{44}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Architettura monoprocessore}{45}{subsection.4.4.1}%
+\contentsline {chapter}{\numberline {5}Il nucleo di un sistema multiprogrammato (modello a memoria comune)}{47}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}Nucleo di un sistema a processi}{47}{subsection.5.0.1}%
+\contentsline {subsection}{\numberline {5.0.2}Stati di un processo}{47}{subsection.5.0.2}%
+\contentsline {subsection}{\numberline {5.0.3}Funzioni del nucleo}{48}{subsection.5.0.3}%
+\contentsline {subsection}{\numberline {5.0.4}Caratteristiche del nucleo}{48}{subsection.5.0.4}%
+\contentsline {section}{\numberline {5.1}Realizzazione del nucleo (monoprocessore)}{49}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Strutture dati del nucleo}{49}{subsection.5.1.1}%
+\contentsline {subsubsection}{Descrittore del processo}{49}{subsubsection*.92}%
+\contentsline {subsubsection}{Coda dei processi pronti}{50}{subsubsection*.93}%
+\contentsline {subsubsection}{Coda dei descrittori liberi}{50}{subsubsection*.94}%
+\contentsline {subsubsection}{Processo in esecuzione}{50}{subsubsection*.95}%
+\contentsline {subsection}{\numberline {5.1.2}Funzioni del nucleo}{51}{subsection.5.1.2}%
+\contentsline {subsubsection}{Struttura del nucleo}{51}{subsubsection*.96}%
+\contentsline {subsubsection}{Esecuzione del kernel}{51}{subsubsection*.97}%
+\contentsline {subsubsection}{Funzioni del livello inferiore}{52}{subsubsection*.98}%
+\contentsline {subsubsection}{Gestione del temporizzatore}{52}{subsubsection*.99}%
+\contentsline {section}{\numberline {5.2}Realizzazione del semaforo (monoprocessore)}{53}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Semafori}{53}{subsection.5.2.1}%
+\contentsline {subsubsection}{Operazione P}{53}{subsubsection*.100}%
+\contentsline {subsubsection}{Operazione V}{54}{subsubsection*.102}%
+\contentsline {section}{\numberline {5.3}Realizzazione del nucleo (multiprocessore)}{55}{section.5.3}%
+\contentsline {subsubsection}{Architettura}{55}{subsubsection*.104}%
+\contentsline {subsubsection}{Modelli principali}{55}{subsubsection*.106}%
+\contentsline {section}{\numberline {5.4}Modello SMP - Symmetric Multi Processing}{56}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Sincronizzazione nell'accesso al nucleo}{56}{subsection.5.4.1}%
+\contentsline {subsubsection}{Soluzione singolo lock}{56}{subsubsection*.107}%
+\contentsline {subsubsection}{Soluzione molteplici lock}{56}{subsubsection*.108}%
+\contentsline {subsection}{\numberline {5.4.2}Scheduling dei processi}{56}{subsection.5.4.2}%
+\contentsline {section}{\numberline {5.5}Modello a nuclei distinti}{57}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Nuclei distinti vs. SMP}{57}{subsection.5.5.1}%
+\contentsline {section}{\numberline {5.6}Realizzazione semafori}{57}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Modello SMP}{57}{subsection.5.6.1}%
+\contentsline {subsubsection}{Esempio}{58}{subsubsection*.109}%
+\contentsline {subsubsection}{SMP - segnalazione inter-processore}{58}{subsubsection*.110}%
+\contentsline {subsection}{\numberline {5.6.2}Modello nuclei distinti}{58}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Realizzazione semafori condivisi}{59}{subsection.5.6.3}%
+\contentsline {subsubsection}{Esecuzione di una \texttt {P} sospensiva su semaforo \texttt {S} condiviso}{60}{subsubsection*.113}%
+\contentsline {subsubsection}{Esecuzione di una \texttt {V} su un semaforo \texttt {S}}{60}{subsubsection*.114}%
+\contentsline {section}{\numberline {5.7}Comunicazione tra nuclei}{60}{section.5.7}%
+\contentsline {section}{\numberline {5.8}Implementazione semafori - nuclei distinti}{61}{section.5.8}%
+\contentsline {chapter}{\numberline {6}Modello a scambio di messaggi}{63}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Caratteristiche del modello}{63}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Canali di comunicazione}{63}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Caratteristiche}{64}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Tipi di canale}{64}{section.6.3}%
+\contentsline {subsubsection}{Link}{64}{subsubsection*.118}%
+\contentsline {subsubsection}{Port}{65}{subsubsection*.120}%
+\contentsline {subsection}{\numberline {6.3.1}Comunicazione asincrona}{65}{subsection.6.3.1}%
+\contentsline {subsubsection}{Proprietà}{65}{subsubsection*.122}%
+\contentsline {subsection}{\numberline {6.3.2}Comunicazione sincrona - randez-vous semplice}{65}{subsection.6.3.2}%
+\contentsline {subsubsection}{Realizzazione canale sincrono tramite comunicazioni asincrone}{66}{subsubsection*.123}%
+\contentsline {subsection}{\numberline {6.3.3}Comunicazione con sincronizzazione estesa - randez-vous esteso}{66}{subsection.6.3.3}%
+\contentsline {section}{\numberline {6.4}Costrutti linguistici e primitive per esprimere la comunicazione}{67}{section.6.4}%
+\contentsline {subsubsection}{Definizione del canale}{67}{subsubsection*.126}%
+\contentsline {subsection}{\numberline {6.4.1}Primitive di comunicazione}{67}{subsection.6.4.1}%
+\contentsline {subsubsection}{Send}{67}{subsubsection*.127}%
+\contentsline {subsubsection}{Receive}{67}{subsubsection*.128}%
+\contentsline {subsection}{\numberline {6.4.2}Receive bloccante e modello C/S}{67}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Comando con guardia}{68}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Comando con guardia alternativo}{69}{subsection.6.4.4}%
+\contentsline {subsection}{\numberline {6.4.5}Comando con guardia ripetitivo}{69}{subsection.6.4.5}%
+\contentsline {subsubsection}{Esempio processo servitore}{69}{subsubsection*.129}%
+\contentsline {section}{\numberline {6.5}Primitive di comunicazione asincrone}{70}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Problemi di sincronizzazione}{70}{subsection.6.5.1}%
+\contentsline {subsubsection}{Esempio - risorsa condivisa con una sola operazione}{70}{subsubsection*.130}%
+\contentsline {subsubsection}{Esempio - risorsa condivisa con più operazioni}{71}{subsubsection*.131}%
+\contentsline {section}{\numberline {6.6}Primitive di comunicazione sincrone}{73}{section.6.6}%
+\contentsline {subsubsection}{Scambio dato - singolo produttore, singolo consumatore}{73}{subsubsection*.132}%
+\contentsline {subsection}{\numberline {6.6.1}Mailbox di dimensioni finite (protocolli simmetrici)}{74}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Mailbox di dimensioni finite}{75}{subsection.6.6.2}%
+\contentsline {subsection}{\numberline {6.6.3}Mailbo concorrente}{76}{subsection.6.6.3}%
+\contentsline {section}{\numberline {6.7}Realizzazione meccanismi di comunicazione}{77}{section.6.7}%

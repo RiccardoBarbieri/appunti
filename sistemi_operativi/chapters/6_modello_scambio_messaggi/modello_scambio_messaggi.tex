@@ -414,7 +414,204 @@ process cliente {
 \end{minted}
 
 
-GUARDA ESEMPI 50-106
+GUARDA ESEMPI 50-82
+
+\section{Primitive di comunicazione sincrone}
+Con primitive sincrone si ottiene un minore grado di concorrenza rispetto alle asincrone, tuttavia non è necessaria la presenza di buffer nei canali di comunicazione.
+
+\subsubsection{Scambio dato - singolo produttore, singolo consumatore}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/43.png}
+\end{figure}
+
+\subsection{Mailbox di dimensioni finite (protocolli simmetrici)}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/44.png}
+\end{figure}
+
+É necessaria una struttura interna al processo mailbox, una \textbf{coda di messaggi}.
+
+Non verrà dettagliata la realizzazione del tipo astratto \texttt{coda\_messaggi}, si suppone di poter operare su questa struttura dati con le seguenti operazioni.
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+void inserimento(T mes);
+
+T estrazione();
+
+boolean piena;
+
+boolean vuota();
+\end{minted}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+process mailbox {
+    port T dati;
+    port signal pronto_prod, pronto_cons;
+    T messaggio;
+    process P;
+    signal s;
+    coda_messaggi coda;
+    <inizializzazione>;
+
+    do {
+        [] (!coda.piena()); p = receive(s) from pronto_prod;
+            ->  p = receive(messaggio) from dati;
+                coda.inserimento(messaggio);
+        [] (!coda.vuota()); p = receive(s) from pronto_cons;
+            ->  messaggio = coda.estrazione;
+                send(messaggio) to p.dati;
+    }
+
+    process produttore_i {
+        T messaggio;
+        signal s;
+        //...
+        <produci messaggio>;
+        send(s) ot mailbox.pronto_prod;
+        send(messaggio) to malbox.dati;
+        //...
+    }
+
+    process consumatore_i {
+        port T dati;
+        T messaggio;
+        process p;
+        signal s;
+        //...
+        send(s) to mailbox.pronto_cons;
+        p = receive(messaggio) from dati;
+        <consuma messaggio>;
+        //...
+    }
+\end{minted}
+
+\subsection{Mailbox di dimensioni finite}
+É possibile ottimizzare il protocollo (lato produttore)
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/45.png}
+\end{figure}
+
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+process mailbox {
+    port T dati;
+    port signal pronto_cons;
+    T messaggio;
+    process p;
+    signal s;
+    coda_messaggi coda;
+    <inizializzazione>;
+    do {
+        [] (!coda.piena()); p = receive(messaggio) from dati;
+            ->  coda.inserimento(messaggio);
+        [] (!coda.vuota()); p = receive(s) from pronto_cons;
+            ->  messaggio = coda.estrazione;
+                send(messaggio) to p.dati;
+    }
+}
+
+process produttore_i {
+    T messaggio;
+    process p;
+    signal s;
+    //...
+    <produci il messaggio>;
+    send(messaggio) to mailbox.dati;
+    //...
+\end{minted}
+
+\subsection{Mailbo concorrente}
+Un buffer di dimensione N può essere implementato da un insieme di processi concorrenti collegati secondo uno schema a cascata (\textit{pipeline)}.
+
+Ogni process ha un struttura ciclica e, sfruttando la semantica sincrona della send, può trattenere un singolo messaggio inserito, ma non ancora estratto.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{/home/riccardoob/appunti/sistemi_operativi/images/46.png}
+\end{figure}
+
+Struttura del processo i-esimo nella pipeline:
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+process m_i { //(0 <= i <= N-2)
+    port T dati;
+    T buffer;
+    process p;
+    while (true) {
+        p = receive(buffer) from dati;
+        send(buffer) to m_i+1.dati;
+    }
+\end{minted}
+
+Specifica di strategie di priorità (pool con una risorsa)
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{go}
+process server {
+    port signal richiesta;
+    port int rilascio;
+    boolean libera;
+    process P;
+    signal s;
+    int sospesi = 0; boolean bloccato[M];
+    process client[M];
+
+    { //inizializzazione
+    libera ? true;
+    for (int j = 0; j<M; j++)
+        bloccato[j] = false;
+    client[0] = "P_0"; 
+    //...
+    client[M-1] = "P_M-1";
+    }
+\end{minted}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Realizzazione meccanismi di comunicazione}
+
 
 
 

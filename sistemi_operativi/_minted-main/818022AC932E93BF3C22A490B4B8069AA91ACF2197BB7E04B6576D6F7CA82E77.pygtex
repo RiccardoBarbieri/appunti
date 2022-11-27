@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{mailbox}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{port}\PYG{+w}{ }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{pronto\PYGZus{}cons}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{messaggio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{s}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{coda\PYGZus{}messaggi}\PYG{+w}{ }\PYG{n+nx}{coda}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{inizializzazione}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{do}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{!}\PYG{n+nx}{coda}\PYG{p}{.}\PYG{n+nx}{piena}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{messaggio}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{            }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{  }\PYG{n+nx}{coda}\PYG{p}{.}\PYG{n+nx}{inserimento}\PYG{p}{(}\PYG{n+nx}{messaggio}\PYG{p}{)}\PYG{p}{;}
+\PYG{+w}{        }\PYG{p}{[}\PYG{p}{]}\PYG{+w}{ }\PYG{p}{(}\PYG{p}{!}\PYG{n+nx}{coda}\PYG{p}{.}\PYG{n+nx}{vuota}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{receive}\PYG{p}{(}\PYG{n+nx}{s}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{from}\PYG{+w}{ }\PYG{n+nx}{pronto\PYGZus{}cons}\PYG{p}{;}
+\PYG{+w}{            }\PYG{o}{\PYGZhy{}}\PYG{p}{\PYGZgt{}}\PYG{+w}{  }\PYG{n+nx}{messaggio}\PYG{+w}{ }\PYG{p}{=}\PYG{+w}{ }\PYG{n+nx}{coda}\PYG{p}{.}\PYG{n+nx}{estrazione}\PYG{p}{;}
+\PYG{+w}{                }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{messaggio}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{.}\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{produttore\PYGZus{}i}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{messaggio}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{process}\PYG{+w}{ }\PYG{n+nx}{p}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{signal}\PYG{+w}{ }\PYG{n+nx}{s}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\PYG{+w}{    }\PYG{p}{\PYGZlt{}}\PYG{n+nx}{produci}\PYG{+w}{ }\PYG{n+nx}{il}\PYG{+w}{ }\PYG{n+nx}{messaggio}\PYG{p}{\PYGZgt{}}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n+nx}{send}\PYG{p}{(}\PYG{n+nx}{messaggio}\PYG{p}{)}\PYG{+w}{ }\PYG{n+nx}{to}\PYG{+w}{ }\PYG{n+nx}{mailbox}\PYG{p}{.}\PYG{n+nx}{dati}\PYG{p}{;}
+\PYG{+w}{    }\PYG{c+c1}{//...}
+\end{Verbatim}

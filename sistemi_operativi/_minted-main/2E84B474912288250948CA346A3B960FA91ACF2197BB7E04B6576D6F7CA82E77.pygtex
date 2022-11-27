@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{void}\PYG{+w}{ }\PYG{n+nx}{inserimento}\PYG{p}{(}\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{mes}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n+nx}{T}\PYG{+w}{ }\PYG{n+nx}{estrazione}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+
+\PYG{n+nx}{boolean}\PYG{+w}{ }\PYG{n+nx}{piena}\PYG{p}{;}
+
+\PYG{n+nx}{boolean}\PYG{+w}{ }\PYG{n+nx}{vuota}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;}
+\end{Verbatim}
