@@ -1,0 +1,185 @@
+\chapter{Multi-Paradigm Programming con JavaScript}
+
+\section{Funzioni}
+
+Le \textbf{funzioni} sono introdotte dalla keyword \texttt{function}:
+\begin{itemize}
+    \item il nome è \textit{opzionale}, possibili funzioni anonime
+    \item sintassi alternativa: \textit{lambda expression}
+    \item \textit{function expression} vs \textit{function declaration}
+    \item non si usa la keyword \texttt{void}
+\end{itemize}
+
+Parametri privi di dichiarazione di tipo
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+// funzione
+function sum(a, b) { return a + b }
+// procedura no return
+function printSum(a, b) {
+    document.write(a + b)
+}
+// funzione anonima
+var sum = (a, b) => a + b
+\end{minted}
+
+A differenza di molti altri linguaggi, i parametri \textit{attuali} possono non corrispondere in numero ai parametri \textit{formali}:
+\begin{itemize}
+    \item se sono più, extra ignorati
+    \item se sono meno, mancanti \texttt{undefined}
+\end{itemize}
+
+\subsection{Funzioni come first class entities}
+In javascript, una funzione è una entità-oggetto, manipolabile come ogni altro tipo:
+\begin{itemize}
+    \item assegnabile a variabili
+    \begin{itemize}
+        \item[] \texttt{var f = function(x) \{ return x / 10 \}}
+        \item[] \texttt{var f = x => x / 10}
+    \end{itemize}
+    \item definita e usata al "volo" con un \textit{function literal}
+    \begin{itemize}
+        \item[] \texttt{var z = function(y) \{ return y + 1 \}(8)}
+        \item[] \texttt{var z = (y = > y + 1)(8)}
+    \end{itemize}
+    \item passata come argomento
+    \begin{itemize}
+        \item[] \texttt{var p = ff(f)}
+    \end{itemize}
+    \item restituita da funzione factory
+    \begin{itemize}
+        \item[] \texttt{var f = fgen(...)}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Function expression vs function declaration}
+La \textbf{function expression} assegna una funzione a una variabile
+\begin{itemize}
+    \item il nome della funzione non è essenziale
+    \item lo scope del nome, se presente, è il \textit{corpo della funzione} (utile in chiamate ricorsive)
+\end{itemize}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+var f = function g(x) { return x / 10 }
+g(32) //errore, nome g non definito
+\end{minted}
+
+La \textbf{function declaration} introduce una funzione senza assegnarla a una variabile
+\begin{itemize}
+    \item il nome è essenziale
+    \item lo scope è l'\textit{ambiente di definizione} della funzione
+\end{itemize}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function g(x) { return  x / 10 }
+g(32) //nome g definito
+\end{minted}
+
+\subsection{Funzioni innestate e chiusure}
+Si possono definire funzioni dentro altre, nasce quindi la discussione delle \textbf{chiusure}, javascript segue la chiusura \textit{lessicale}.
+
+Una chiusura nasce quando una funzione innestata fa riferimento a \textit{variabili della funzione esterna}.
+
+\subsection{Currying}
+Un caso interessante di chiusura è la possibilità di simulare una funzione a N argomenti con N funzioni a 1 argomento.
+
+Si può esprimere una funzione come questa
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function sum(a, b) { return a + b }
+var result = sum(3, 4)
+\end{minted}
+in una forma diversa, basata su una funzione "esterna" con argomento \texttt{a}, che restituisce una funzione "interna" con argomento \texttt{b}.
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function sum(a) { return function(b) { return a + b } }
+var result = sum(3)(4)
+\end{minted}
+
+Questa possibilità si chiama \textbf{currying}.
+
+É possibile utilizzare anche la definizione tramite lambda con la seguente sintassi
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+sum = a => b => a + b
+var result = sum(3)(4)
+\end{minted}
+Il currying è concettualmente interessante perché indica che l'unico "ingrediente" fondamentale per esprimere qualunque funzione sono le \textit{funzioni a un argomento}.
+
+\subsection{Utilizzi chiusure}
+
+\subsubsection{Rappresentare uno stato privato e nascosto}
+Si può ottenere una \textit{proprietà privata} tramite una chiusura, mappando lo stato su un argomento della funzione "generatrice"
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function incBy2From(x) {
+    return function() { return x += 2 }
+}
+\end{minted}
+
+Da ogni invocazione di \texttt{incBy2From}, nasce un nuova funzione, che ha uno "stato" interno privato e utilizza come punto di partenza il parametro passato al generatore.
+
+Altro esempio, generatore di contatori
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function genContatore(){
+    var contati=0;
+    function tick() { return contati++; }
+    function num() { return contati;}
+    //metodo per restituire più funzioni di accesso
+    return { num, tick };
+}
+\end{minted}
+
+\subsubsection{Realizzare un canale di comunicazione privato}
+Si può ottenere un canale di comunicazione privato, mettendo in una chiusura sia lo \textbf{stato} che i due \textbf{metodi accessor}.
+
+Si utilizza un array di due funzioni per restituirli
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function myChannel() {
+    var msg = "bla bla"
+    return [ function(x) { msg = x; },    //set
+            function() { return msg; } ]  //get
+}
+
+var channel = myChannel()
+var msg1 = channel[1]() //recupera "bla bla"
+channel[0]("bruuh")      //setta il nuovo msg
+var msg2 = channel[1]() //recupera "bruuh"
+\end{minted}
+
+Versione con restituzione di object literal con due accessor
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function canale() {
+    var msg = "";
+    function set(m) { msg = m }
+    function get() { return msg }
+    return { set, get }
+}
+
+var ch = canale()
+
+document.writeln(ch.set("hello")); // undefined
+document.writeln(ch.set("world")); // undefined
+document.writeln(ch.get());        // world
+\end{minted}
+
+\subsubsection{Realizzer nuove strutture di controllo}
+Una funzione di secondo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

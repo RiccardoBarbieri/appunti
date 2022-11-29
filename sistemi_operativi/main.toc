@@ -201,3 +201,15 @@
 \contentsline {subsubsection}{Esempio - produttore e consumatore, buffer capacità N}{86}{subsubsection*.144}%
 \contentsline {subsubsection}{Selezione delle richieste in base ai parametri di ingresso}{86}{subsubsection*.145}%
 \contentsline {subsubsection}{Esempio - sveglia}{87}{subsubsection*.146}%
+\contentsline {chapter}{\numberline {8}Algoritmi di sincronizzazione distribuiti}{89}{chapter.8}%
+\contentsline {subsection}{\numberline {8.0.1}Prestazioni}{89}{subsection.8.0.1}%
+\contentsline {subsection}{\numberline {8.0.2}Tolleranza ai guasti}{90}{subsection.8.0.2}%
+\contentsline {subsection}{\numberline {8.0.3}Algoritmi di sincronizzazione}{90}{subsection.8.0.3}%
+\contentsline {section}{\numberline {8.1}Algoritmi per la gestione del tempo}{91}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Tempo nei sistemi distribuiti}{91}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Orologi logici}{91}{subsection.8.1.2}%
+\contentsline {subsubsection}{Relazione di precedenza tra eventi, Happened Before ->}{91}{subsubsection*.148}%
+\contentsline {subsubsection}{Algoritmo di Lamport}{92}{subsubsection*.149}%
+\contentsline {subsubsection}{Esempio}{92}{subsubsection*.150}%
+\contentsline {subsubsection}{Lamport: aggiornamenti degli orologi}{92}{subsubsection*.152}%
+\contentsline {section}{\numberline {8.2}Mutua esclusione in sistemi distribuiti}{93}{section.8.2}%

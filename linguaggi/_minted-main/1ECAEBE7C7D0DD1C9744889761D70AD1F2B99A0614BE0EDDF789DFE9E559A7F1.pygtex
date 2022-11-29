@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{printTwo}\PYG{p}{(}\PYG{k+kt}{boolean} \PYG{n}{cond}\PYG{p}{,} \PYG{n}{IntSupplier} \PYG{n}{a}\PYG{p}{,} \PYG{n}{IntSupplier} \PYG{n}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{if} \PYG{p}{(}\PYG{n}{cond}\PYG{p}{)} \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{result = }\PYG{l+s}{\PYGZdq{}} \PYG{o}{+} \PYG{n}{a}\PYG{p}{.}\PYG{n+na}{getAsInt}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+    \PYG{k}{else} \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{result = }\PYG{l+s}{\PYGZdq{}} \PYG{o}{+} \PYG{n}{b}\PYG{p}{.}\PYG{n+na}{getAsInt}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[}\PYG{o}{]} \PYG{n}{args}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kt}{int} \PYG{n}{x} \PYG{o}{=} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{y} \PYG{o}{=} \PYG{l+m+mi}{4}\PYG{p}{;}
+    \PYG{n}{printTwo}\PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZgt{}} \PYG{n}{y}\PYG{p}{,} \PYG{p}{(}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{p}{(}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}} \PYG{l+m+mi}{3}\PYG{o}{/}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

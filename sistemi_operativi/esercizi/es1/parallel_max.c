@@ -58,17 +58,17 @@ int main()
     }
 
     printf("Max value: %d", max_value);
-    int check_correct = (1 == 1), check_found = (1 == 0);
+    int check_correct = 1, check_found = 0;
     for (int i = 0; i < N; i++)
     {
         if (V[i] == max_value && !check_found)
         {
             printf(" at index %d\n", i);
-            check_found = (1 == 1);
+            check_found = 1;
         }
         if (V[i] > max_value)
         {
-            check_correct = (1 == 2);
+            check_correct = 0;
         }
     }
     if (check_correct)

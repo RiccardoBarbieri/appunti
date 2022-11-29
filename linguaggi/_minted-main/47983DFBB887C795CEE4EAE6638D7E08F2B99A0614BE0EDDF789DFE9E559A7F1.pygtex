@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{class} \PYG{n+nc}{Esempio} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{printOne}\PYG{p}{(}\PYG{k+kt}{boolean} \PYG{n}{cond}\PYG{p}{,} \PYG{k+kt}{double} \PYG{n}{a}\PYG{p}{,} \PYG{k+kt}{double} \PYG{n}{b}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n}{cond}\PYG{p}{)} \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{result = }\PYG{l+s}{\PYGZdq{}} \PYG{o}{+} \PYG{n}{a}\PYG{p}{)}\PYG{p}{;}
+        \PYG{k}{else} \PYG{n}{System}\PYG{p}{.}\PYG{n+na}{out}\PYG{p}{.}\PYG{n+na}{println}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}}\PYG{l+s}{result = }\PYG{l+s}{\PYGZdq{}} \PYG{o}{+} \PYG{n}{b}\PYG{p}{)}\PYG{p}{;}
+    \PYG{p}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{main}\PYG{p}{(}\PYG{n}{String}\PYG{o}{[}\PYG{o}{]} \PYG{n}{args}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{x}\PYG{o}{=}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{n}{y}\PYG{o}{=}\PYG{l+m+mi}{4}\PYG{p}{;}
+        \PYG{n}{printOne}\PYG{p}{(}\PYG{n}{x}\PYG{o}{\PYGZgt{}}\PYG{n}{y}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{o}{/}\PYG{l+m+mi}{0}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{//ArithmeticException: div by zero}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

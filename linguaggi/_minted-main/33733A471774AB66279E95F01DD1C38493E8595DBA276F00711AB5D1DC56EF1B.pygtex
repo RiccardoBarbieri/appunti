@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{c+c1}{// funzione}
+\PYG{k+kd}{function} \PYG{n+nx}{sum}\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,} \PYG{n+nx}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{a} \PYG{o}{+} \PYG{n+nx}{b} \PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// procedura no return}
+\PYG{k+kd}{function} \PYG{n+nx}{printSum}\PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,} \PYG{n+nx}{b}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{write}\PYG{p}{(}\PYG{n+nx}{a} \PYG{o}{+} \PYG{n+nx}{b}\PYG{p}{)}
+\PYG{p}{\PYGZcb{}}
+\PYG{c+c1}{// funzione anonima}
+\PYG{k+kd}{var} \PYG{n+nx}{sum} \PYG{o}{=} \PYG{p}{(}\PYG{n+nx}{a}\PYG{p}{,} \PYG{n+nx}{b}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{n+nx}{a} \PYG{o}{+} \PYG{n+nx}{b}
+\end{Verbatim}

@@ -173,4 +173,20 @@
 \contentsline {subsubsection}{Esempio}{83}{subsubsection*.102}%
 \contentsline {subsubsection}{Utilità delle chiusure}{83}{subsubsection*.103}%
 \contentsline {subsection}{\numberline {10.4.2}Criteri di chiusura}{83}{subsection.10.4.2}%
-\contentsline {subsubsection}{Esempio}{83}{subsubsection*.104}%
+\contentsline {subsubsection}{Esempio}{84}{subsubsection*.104}%
+\contentsline {section}{\numberline {10.5}Modelli computazionali per la valutazione di funzioni}{84}{section.10.5}%
+\contentsline {subsection}{\numberline {10.5.1}Modello applicativo - fallimenti evitabili}{85}{subsection.10.5.1}%
+\contentsline {subsection}{\numberline {10.5.2}Modello Call-By-Name}{85}{subsection.10.5.2}%
+\contentsline {subsubsection}{Svantaggi di call-by-name}{86}{subsubsection*.105}%
+\contentsline {subsubsection}{Simulare il modello call-by-name}{86}{subsubsection*.106}%
+\contentsline {subsubsection}{Ricostruzione in Java e C\#}{86}{subsubsection*.107}%
+\contentsline {subsubsection}{Ricostruzione in Kotlin e Scala}{87}{subsubsection*.108}%
+\contentsline {chapter}{\numberline {11}Multi-Paradigm Programming con JavaScript}{89}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Funzioni}{89}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Funzioni come first class entities}{89}{subsection.11.1.1}%
+\contentsline {subsection}{\numberline {11.1.2}Function expression vs function declaration}{90}{subsection.11.1.2}%
+\contentsline {subsection}{\numberline {11.1.3}Funzioni innestate e chiusure}{90}{subsection.11.1.3}%
+\contentsline {subsection}{\numberline {11.1.4}Currying}{91}{subsection.11.1.4}%
+\contentsline {subsection}{\numberline {11.1.5}Utilizzi chiusure}{91}{subsection.11.1.5}%
+\contentsline {subsubsection}{Rappresentare uno stato privato e nascosto}{91}{subsubsection*.109}%
+\contentsline {subsubsection}{Realizzare un canale di comunicazione privato}{92}{subsubsection*.110}%

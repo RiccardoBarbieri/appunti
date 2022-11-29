@@ -199,18 +199,142 @@ Se si considera la catena lessicale si utilizza la \texttt{x = 20}, la definizio
 
 Se si considera la catena dinamica si utilizza la \texttt{x = -1}, la definizione più vicina nel senso \textit{dimanico}.
 
+Stabilire il significato di \texttt{x} in \texttt{provaEnv} seguendo la \textit{sequenza delle chiamate} o la \textit{struttura del programma} non è la stessa cosa.
+
+Se si segue la catena lessicale, il modello computazionale adotta la \textbf{chiusura lessicale}:
+\begin{itemize}
+    \item CONTRO: vincola a priori un simbolo a un certo legame
+    \item PRO: permette di leggere e capire un programma senza ricostruire la sequenza delle chiamate
+\end{itemize}
+
+Se si segue la catena dinamica, il modello computazionale adotta la \textbf{chiusura dinamica}:
+\begin{itemize}
+    \item PRO: massima dinamicità, simboli legati alla specifica situazione
+    \item CONTRO: difficoltà a tracciare il reale valore di una variabile
+\end{itemize}
+
+\section{Modelli computazionali per la valutazione di funzioni}
+Ogni linguaggio che introduca funzioni deve prevedere un modello computazionale per la loro \textbf{valutazione}.
+
+Tale modello deve specificare:
+\begin{itemize}
+    \item quando si valutano i \textbf{parametri}
+    \item cosa si \textbf{passa} alla funzione
+    \item come si \textbf{attiva} la funzione
+\end{itemize}
+
+Il modello più usato è il \textbf{modello applicativo}
+\begin{itemize}
+    \item si valutano \textit{subito} i parametri
+    \item si passa il \textit{valore} (tranne certi tipi)
+    \item tipicamente \textit{chiamandola} e \textit{cedendo il controllo} (modello sincrono)
+\end{itemize}
+
+Questo modello è molto usato perché efficiente e semplice da comprendere, tuttavia esistono alcune inefficienze che si possono creare:
+\begin{itemize}
+    \item valutare sempre i parametri può essere ridondante se un parametro non serve realmente nella funzione
+    \item se la valutazione dei parametri da errore questo causa un fallimento di tutta la funzione
+\end{itemize}
+
+\subsection{Modello applicativo - fallimenti evitabili}
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
+class Esempio {
+    static void printOne(boolean cond, double a, double b){
+        if (cond) System.out.println("result = " + a);
+        else System.out.println("result = " + b);
+    }
+    
+    public static void main(String[] args) {
+        int x=5, y=4;
+        printOne(x>y, 3+1, 3/0); //ArithmeticException: div by zero
+    }
+}
+\end{minted}
+In questo esempio la valutazione dei parametri attuali causa eccezione, ma la chiamata non sarebbe fallita se i parametri non fossero valutati a priori.
+
+In linguaggi che adottano un modello diverso questo problema non si sarebbe verificato.
+
+\subsection{Modello Call-By-Name}
+Il \textbf{modello normale}, adotta un \textit{meccanismo di valutazione} noto come \textbf{Call-By-Name} in cui:
+\begin{itemize}
+    \item i parametri vengono valutati solo \textbf{al momento dell'uso}, quindi solo se servono
+    \item a tal fine vengono passati non dei valori ma degli \textbf{oggetti computazionali}
+    \item un parametro ricevuto \textit{può non essere mai calcolato}
+\end{itemize}
+
+\subsubsection{Svantaggi di call-by-name}
+Nonostante i vantaggi concettuali, è meno efficiente in casi normali e più comuni rispetto al modello applicativo:
+\begin{itemize}
+    \item i parametri possono esser calcolati più volte
+    \item richiede più risorse a runtime
+    \item richiede una vm capace di \textit{lazy runtime}
+\end{itemize}
+
+\subsubsection{Simulare il modello call-by-name}
+Il modello call by name può essere facilmente \textit{simulato} nei linguaggi con funzioni come first class entities.
+
+Questo si può ottenere passando alla funzione \textit{oggetti computazionali} che, quando eseguiti, producono i valori desiderati: si passano alle funzioni delle funzioni che ritornano il valore quando invocate, sostituendo tutti gli usi di un parametro con chiamate a funzione.
+
+Esempo javascript in stile call-by-name
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+var f = function(flaf, x) {
+    return (flag() < 0) ? 5 : x();
+}
+var b = f(function(){return 3}, function(){abort()});
+document.write("result = " + b);
+\end{minted}
+
+\subsubsection{Ricostruzione in Java e C\#}
+In Java <=7 non è possibile, in quanto le funzioni non sono entità di prima classe.
+
+Da Java 8, le lambda expression catturano funzioni, ma le funzioni non costituiscono un tipo autonomo.
+
+In  C\#, le lambda expression catturano funzioni e i delegati esprimono i veri \textit{tipi funzione}.
+
+In Java 7 la call-by-name può essere implementata definendo una interfaccia che definisce un metodo \texttt{invoke} per ottenere il valore.
+
+In Java 8, con le lambda, si può emulare in modo migliore questo comportamento, ma comunque non in modo pulito come in linguaggi funzionali:
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{java}
+static void printTwo(boolean cond, IntSupplier a, IntSupplier b) {
+    if (cond) System.out.println("result = " + a.getAsInt());
+    else System.out.println("result = " + b.getAsInt());
+}
+
+public static void main(String[] args) {
+    int x = 5, y = 4;
+    printTwo(x > y, () -> 3+1, () -> 3/0);
+}
+\end{minted}
+Il miglioramento avviene soltanto lato chiamante, si hanno nomi di tipi particolari, ovvero le interfacce funzionali, come \texttt{IntSupplier}.
 
 
+In C\# i delegati completano l'opera
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{csharp}
+class Esempio {
+    delegate double MyFunction(); //vero tipo funzione
+    static void printTwo(bool cond, MyFunction a, MyFunction b) {
+        if (cond) System.Console.WriteLine("result = " + a());
+        else System.Console.WriteLine("result = " + b());
+    }
+    public static void Main(string[] args) {
+        int x = 5, y = 4, a = 0; //var a = 0 per valutazione ottimizzata C\#
+        printTwo(x > y, () => 3+1, () => 3/a);
+\end{minted}
 
+\subsubsection{Ricostruzione in Kotlin e Scala}
+In Kotlin e Scala si può ricostruire la call-by-name come in C\#, ma in Scala non è necessario, in quanto il linguaggio supporta nativamente le call by name.
 
-
-
-
-
-
-
-
-
-
-
-
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{scala}
+object CallByName {
+    def printTwo(cond: Boolean, a: => Int, b: => Int): Unit = {
+        if (cond) println("result = " + a);
+        else println("result = " + b);
+    }
+    
+    def main(args: Array[String]) {
+        val x=5;
+        val y=4;
+        printTwo(x>y, 3+1, 3/0);
+    }
+}
+\end{minted}

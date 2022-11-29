@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function} \PYG{n+nx}{genContatore}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{var} \PYG{n+nx}{contati}\PYG{o}{=}\PYG{l+m+mf}{0}\PYG{p}{;}
+    \PYG{k+kd}{function} \PYG{n+nx}{tick}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{contati}\PYG{o}{++}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+    \PYG{k+kd}{function} \PYG{n+nx}{num}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{contati}\PYG{p}{;}\PYG{p}{\PYGZcb{}}
+    \PYG{c+c1}{//metodo per restituire più funzioni di accesso}
+    \PYG{k}{return} \PYG{p}{\PYGZob{}} \PYG{n+nx}{num}\PYG{p}{,} \PYG{n+nx}{tick} \PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1669562979 "main.tex" "main.pdf" "main" 1669562982
-  "/dev/null" 1669551325 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1669719891 "main.tex" "main.pdf" "main" 1669719894
+  "/dev/null" 1669712980 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/etc/texmf/web2c/texmf.cnf" 1664562023 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1200.tfm" 1136768653 1536 74b7293ec3713bb7fdca8dd1bd1f469c ""
@@ -214,6 +214,7 @@
   "chapters/5_nucleo_sistema_multiprogrammato/nucleo_sistema_multiprogrammato.tex" 1668520678 24109 3f2cf9a10058fb85ffacb5c57db9909e ""
   "chapters/6_modello_scambio_messaggi/modello_scambio_messaggi.tex" 1669553548 22770 ce3b3c8393be0639f872eb6bf2be6b09 ""
   "chapters/7_sincronizzazione_estesa/sincronizzazione_estesa.tex" 1669562978 11447 f044a5ad481a072d6319059cabdc6a26 ""
+  "chapters/8_algoritmi_ditribuiti/algoritmi_ditribuiti.tex" 1669719887 6814 f5cef70216e3850ca603821a9a8b3346 ""
   "images/0.png" 1665394242 1633912 c16aff1a0727c06a6d156bd7f6ca93a6 ""
   "images/1.png" 1665394736 705549 640a60d35a1790609d5fa244a55de458 ""
   "images/10.png" 1665665971 243571 ce36c5e65e31b191efe4bb29fdb2e497 ""
@@ -262,14 +263,17 @@
   "images/5.png" 1665396467 2937719 4cef35bc09d871d2eed5ed82c706be91 ""
   "images/50.png" 1669557412 1412437 6ff2dd7b8ba9d8408443da1edaca2c7e ""
   "images/51.png" 1669557441 1482590 85a75cf3dac164256b7903d990e13273 ""
+  "images/52.png" 1669714326 967966 3dce4aeba84e561e38fc83ae59310d6b ""
+  "images/53.png" 1669719756 978718 e19df3d71c0fb313ce6da9b2251bc2fc ""
+  "images/54.png" 1669719871 809898 7f4520b0b7ae827e37fe0aea95781aef ""
   "images/6.png" 1665396784 655062 0f52158f8aff93fe22b1027901d4bce4 ""
   "images/7.png" 1665397345 2393388 6ef8641dd0b2fe56aa73bb64c4704ba6 ""
   "images/8.png" 1665423780 2162339 d6be7d56ec1883f0bf8199aaf1240f79 ""
   "images/9.png" 1665659749 411111 1319a1152df3e3ea5ef21bf1e07a8005 ""
-  "main.aux" 1669562982 36314 42b75853a1516b987380f4f01e70b677 "pdflatex"
-  "main.out" 1669562982 20555 037a065bdfa5ea032dbbdcfbde2c3e6c "pdflatex"
-  "main.tex" 1669553662 1516 52450ec5dc52a0812092b5857f719179 ""
-  "main.toc" 1669562982 17241 6b94d5776172c163cafa247c06eda560 "pdflatex"
+  "main.aux" 1669719894 37979 a1b6e201914863ba1d5dc08b3fd32d43 "pdflatex"
+  "main.out" 1669719894 22185 d06d841dd3a16fe37829068001d4d13c "pdflatex"
+  "main.tex" 1669713146 1581 79a4c44a35dac6b1622ea6f75c3e5a57 ""
+  "main.toc" 1669719894 18338 d67c69702516fcb4ac6a607e7448012f "pdflatex"
   (generated)
   "main.aux"
   "main.log"
