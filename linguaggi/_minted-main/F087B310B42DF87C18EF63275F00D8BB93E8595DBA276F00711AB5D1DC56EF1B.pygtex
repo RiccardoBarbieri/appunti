@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function} \PYG{n+nx}{fillFunctionsArray}\PYG{p}{(}\PYG{n+nx}{myarray}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{function} \PYG{n+nx}{aux}\PYG{p}{(}\PYG{p}{(}\PYG{n+nx}{j}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{j}\PYG{p}{;} \PYG{p}{\PYGZcb{}} \PYG{p}{\PYGZcb{}}
+    \PYG{k}{for} \PYG{p}{(}\PYG{k+kd}{var} \PYG{n+nx}{i} \PYG{o}{=} \PYG{l+m+mf}{4}\PYG{p}{;} \PYG{n+nx}{i} \PYG{o}{\PYGZlt{}} \PYG{l+m+mf}{7}\PYG{p}{;} \PYG{n+nx}{i}\PYG{o}{++}\PYG{p}{)}
+        \PYG{n+nx}{myarray}\PYG{p}{[}\PYG{n+nx}{i}\PYG{o}{\PYGZhy{}}\PYG{l+m+mf}{4}\PYG{p}{]} \PYG{o}{=} \PYG{n+nx}{aux}\PYG{p}{(}\PYG{n+nx}{i}\PYG{p}{)}\PYG{p}{;}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}

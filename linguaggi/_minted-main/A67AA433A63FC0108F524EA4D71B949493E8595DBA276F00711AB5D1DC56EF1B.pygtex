@@ -1,0 +1,10 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function} \PYG{n+nx}{loop}\PYG{p}{(}\PYG{n+nx}{n}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{return} \PYG{k+kd}{function} \PYG{n+nx}{iter}\PYG{p}{(}\PYG{n+nx}{action}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{if} \PYG{p}{(}\PYG{n+nx}{n} \PYG{o}{\PYGZgt{}} \PYG{l+m+mf}{0}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n+nx}{action}\PYG{p}{(}\PYG{p}{)}\PYG{p}{;} \PYG{n+nx}{n}\PYG{o}{\PYGZhy{}\PYGZhy{}}\PYG{p}{;} \PYG{n+nx}{iter}\PYG{p}{(}\PYG{n+nx}{action}\PYG{p}{)}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+    \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{loop}\PYG{p}{(}\PYG{l+m+mf}{5}\PYG{p}{)}\PYG{p}{(} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{writeln}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}ciao\PYGZdq{}}\PYG{p}{)} \PYG{p}{\PYGZcb{}}\PYG{p}{)}
+\PYG{n+nx}{loop}\PYG{p}{(}\PYG{l+m+mf}{5}\PYG{p}{)}\PYG{p}{(} \PYG{p}{(}\PYG{p}{)} \PYG{p}{=\PYGZgt{}} \PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{writeln}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}ciao\PYGZdq{}}\PYG{p}{)} \PYG{p}{)}
+\end{Verbatim}

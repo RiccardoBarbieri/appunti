@@ -1,0 +1,14 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{k+kd}{function} \PYG{n+nx}{canale}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k+kd}{var} \PYG{n+nx}{msg} \PYG{o}{=} \PYG{l+s+s2}{\PYGZdq{}\PYGZdq{}}\PYG{p}{;}
+    \PYG{k+kd}{function} \PYG{n+nx}{set}\PYG{p}{(}\PYG{n+nx}{m}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{n+nx}{msg} \PYG{o}{=} \PYG{n+nx}{m} \PYG{p}{\PYGZcb{}}
+    \PYG{k+kd}{function} \PYG{n+nx}{get}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{n+nx}{msg} \PYG{p}{\PYGZcb{}}
+    \PYG{k}{return} \PYG{p}{\PYGZob{}} \PYG{n+nx}{set}\PYG{p}{,} \PYG{n+nx}{get} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{k+kd}{var} \PYG{n+nx}{ch} \PYG{o}{=} \PYG{n+nx}{canale}\PYG{p}{(}\PYG{p}{)}
+
+\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{writeln}\PYG{p}{(}\PYG{n+nx}{ch}\PYG{p}{.}\PYG{n+nx}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}hello\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// undefined}
+\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{writeln}\PYG{p}{(}\PYG{n+nx}{ch}\PYG{p}{.}\PYG{n+nx}{set}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}world\PYGZdq{}}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;} \PYG{c+c1}{// undefined}
+\PYG{n+nb}{document}\PYG{p}{.}\PYG{n+nx}{writeln}\PYG{p}{(}\PYG{n+nx}{ch}\PYG{p}{.}\PYG{n+nx}{get}\PYG{p}{(}\PYG{p}{)}\PYG{p}{)}\PYG{p}{;}        \PYG{c+c1}{// world}
+\end{Verbatim}

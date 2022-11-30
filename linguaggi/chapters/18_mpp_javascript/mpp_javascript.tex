@@ -1,6 +1,6 @@
 \chapter{Multi-Paradigm Programming con JavaScript}
 
-\section{Funzioni}
+\section{Il lato funzionale}
 
 Le \textbf{funzioni} sono introdotte dalla keyword \texttt{function}:
 \begin{itemize}
@@ -156,8 +156,67 @@ document.writeln(ch.set("world")); // undefined
 document.writeln(ch.get());        // world
 \end{minted}
 
-\subsubsection{Realizzer nuove strutture di controllo}
-Una funzione di secondo
+\subsubsection{Realizzare nuove strutture di controllo}
+Una funzione di secondo ordine incapsula il controllo e gli argomenti delle funzioni rappresentano le azioni da svolgere.
+
+Nuova struttura ciclica loop
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function loop(statement, n) {
+    var k = 0;
+    return function iter() {
+        if (k < ) { k++; statement(); iter(); }
+    }
+}
+
+var i = 1
+loop(function() { i++ }, 10)();
+\end{minted}
+
+Variante currying
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function loop(n) {
+    return function iter(action) {
+        if (n > 0) { action(); n--; iter(action); }
+    }
+}
+
+loop(5)( function() { document.writeln("ciao") })
+loop(5)( () => document.writeln("ciao") )
+\end{minted}
+
+\subsection{Chiusure e binding delle variabili}
+A una chiusura corrisponde una sola istanza delle sue variabili, concetto da considerare quando si creano ciclicamente più funzioni.
+
+Ad esempio, creando un'array di funzioni che restituiscono numeri diversi in questo modo
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function fillFunctionsArray(myarray) {
+    for (var i = 4; i < 7; i++)
+        myarray[i-4] = function() { return i; };
+}
+\end{minted}
+si ottiene un array di funzioni che ritornano tutte il valore finale di \texttt{i}, ovvero 7.
+
+Per ovviare questo problema, è necessario creare una variabile ausiliaria per ogni funzione che si vuole generare, quindi si utilizza una funzione ausiliaria \texttt{aux()} che crea una nuova chiusura, mantenendo il valore della variabile.
+\begin{minted}[bgcolor=lightgray,framesep=2mm,baselinestretch=1.2,fontsize=\footnotesize,escapeinside=||,mathescape=true]{js}
+function fillFunctionsArray(myarray) {
+    function aux((j) { return function() { return j; } }
+    for (var i = 4; i < 7; i++)
+        myarray[i-4] = aux(i);
+}
+\end{minted}
+
+\section{Il lato a oggetti}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
