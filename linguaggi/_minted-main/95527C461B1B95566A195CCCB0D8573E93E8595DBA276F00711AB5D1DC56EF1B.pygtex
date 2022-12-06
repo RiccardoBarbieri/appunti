@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{Studente}\PYG{p}{.}\PYG{n+nx}{prototype} \PYG{o}{=} \PYG{n+nx}{protoStudente}\PYG{p}{;}
+
+\PYG{n+nx}{Studente}\PYG{p}{.}\PYG{n+nx}{prototype}\PYG{p}{.}\PYG{k+kr}{constructor} \PYG{o}{=} \PYG{n+nx}{Studente}\PYG{p}{;}
+\end{Verbatim}

@@ -1,0 +1,3 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{o+ow}{delete} \PYG{n+nx}{p1}\PYG{p}{.}\PYG{n+nx}{x}
+\end{Verbatim}

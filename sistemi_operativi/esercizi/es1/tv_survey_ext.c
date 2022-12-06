@@ -2,6 +2,7 @@
 #include <pthread.h>
 #include <stdlib.h>
 #include <limits.h>
+#include <semaphore.h>
 
 #define N 4 // persone
 #define K 2  // film-domande
@@ -16,7 +17,14 @@ typedef struct tv_survey
     pthread_mutex_t m;
 } tv_survey;
 
-void init_sondaggio(tv_survey *s)
+typedef struct barrier
+{
+    int completati;
+    sem_t mutex;
+    sem_t barriera;
+} barrier;
+
+void init(tv_survey *s, barrier *barriera)
 {
     // inizializa il sondaggio
     s->risposte = 0;
@@ -28,9 +36,15 @@ void init_sondaggio(tv_survey *s)
         s->voti[i] = 0;
     }
     pthread_mutex_init(&s->m, NULL);
+
+    // initialize barriera
+    barriera->completati = 0;
+    sem_init(&barriera->mutex, 0, 1);
+    sem_init(&barriera->barriera, 0, 0);
 }
 
 tv_survey sondaggio;
+barrier barriera;
 
 void vota(tv_survey *s, int spettatore)
 {

@@ -1,0 +1,5 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{p3} \PYG{o}{=} \PYG{p}{\PYGZob{}} \PYG{n+nx}{x}\PYG{o}{:} \PYG{l+m+mf}{10}\PYG{p}{,} \PYG{n+nx}{y}\PYG{o}{:} \PYG{l+m+mf}{7}\PYG{p}{,} \PYG{n+nx}{getX}\PYG{o}{:} \PYG{n+nx}{funtion}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{;} \PYG{p}{\PYGZcb{}} \PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{p4} \PYG{o}{=} \PYG{p}{\PYGZob{}} \PYG{l+s+s2}{\PYGZdq{}for\PYGZhy{}me\PYGZdq{}}\PYG{o}{:} \PYG{l+m+mf}{10}\PYG{p}{,} \PYG{l+s+s2}{\PYGZdq{}for you\PYGZdq{}}\PYG{o}{:} \PYG{l+s+s2}{\PYGZdq{}bleah\PYGZdq{}} \PYG{p}{\PYGZcb{}}\PYG{p}{;}
+\end{Verbatim}

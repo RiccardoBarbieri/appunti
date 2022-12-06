@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{Point} \PYG{o}{=} \PYG{n+nx}{funciton}\PYG{p}{(}\PYG{n+nx}{i}\PYG{p}{,} \PYG{n+nx}{j}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+    \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{x} \PYG{o}{=} \PYG{n+nx}{i}\PYG{p}{;} \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{y} \PYG{o}{=} \PYG{n+nx}{j}\PYG{p}{;}
+    \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{getX} \PYG{o}{=} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{x}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+    \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{getY} \PYG{o}{=} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)}\PYG{p}{\PYGZob{}} \PYG{k}{return} \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{y}\PYG{p}{;} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+
+\PYG{n+nx}{p1} \PYG{o}{=} \PYG{o+ow}{new} \PYG{n+nx}{Point}\PYG{p}{(}\PYG{l+m+mf}{3}\PYG{p}{,} \PYG{l+m+mf}{4}\PYG{p}{)}\PYG{p}{;}
+\end{Verbatim}

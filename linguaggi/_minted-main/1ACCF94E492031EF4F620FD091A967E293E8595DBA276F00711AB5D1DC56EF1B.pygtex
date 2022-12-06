@@ -1,0 +1,9 @@
+\begin{Verbatim}[commandchars=\\\{\},codes={\catcode`\$=3\catcode`\^=7\catcode`\_=8\relax}]
+\PYG{n+nx}{Studente} \PYG{o}{=} \PYG{k+kd}{function}\PYG{p}{(}\PYG{n+nx}{nome}\PYG{p}{,} \PYG{n+nx}{annoNascita}\PYG{p}{,} \PYG{n+nx}{matricola}\PYG{p}{)}\PYG{p}{\PYGZob{}}
+    \PYG{n+nx}{Persona}\PYG{p}{.}\PYG{n+nx}{call}\PYG{p}{(}\PYG{k}{this}\PYG{p}{,} \PYG{n+nx}{nome}\PYG{p}{,} \PYG{n+nx}{annoNascita}\PYG{p}{)}\PYG{p}{;}
+    \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{matricola} \PYG{o}{=} \PYG{n+nx}{matricola}\PYG{p}{;}
+    \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{toString} \PYG{o}{=} \PYG{k+kd}{function}\PYG{p}{(}\PYG{p}{)} \PYG{p}{\PYGZob{}}
+        \PYG{k}{return} \PYG{n+nx}{Studente}\PYG{p}{.}\PYG{n+nx}{prototype}\PYG{p}{.}\PYG{n+nx}{toString}\PYG{p}{.}\PYG{n+nx}{call}\PYG{p}{(}\PYG{k}{this}\PYG{p}{)} \PYG{o}{+}
+        \PYG{l+s+s2}{\PYGZdq{} e la sua matricola è \PYGZdq{}} \PYG{o}{+} \PYG{k}{this}\PYG{p}{.}\PYG{n+nx}{matricola} \PYG{p}{\PYGZcb{}}
+\PYG{p}{\PYGZcb{}}
+\end{Verbatim}
