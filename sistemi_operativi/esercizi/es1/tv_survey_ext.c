@@ -14,6 +14,7 @@ typedef struct tv_survey
     char film[K][50];
     int voti[K];
     int risposte;
+    int indice_vincitore;
     pthread_mutex_t m;
 } tv_survey;
 
@@ -65,12 +66,41 @@ void vota(tv_survey *s, int spettatore)
     pthread_mutex_unlock(&s->m);   
 }
 
+void visione(int th, tv_survey *s) {
+    pthread_mutex_lock(&s->m);
+    printf("Spettatore %d sta scaricando %s...\n", th, s->film[s->indice_vincitore]);
+    pthread_mutex_unlock(&s->m); 
+}
+
+void wait_barriera(barrier *b, tv_survey *s) {
+    sem_wait(&b->mutex);
+    b->completati++;
+    if (b->completati == N) {
+        // calcola il vincitore
+        int max = INT_MIN;
+        for (int i = 0; i < K; i++)
+        {
+            if (s->voti[i] > max) {
+                max = s->voti[i];
+                s->indice_vincitore = i;
+            }
+        }
+        printf("Il vincitore è %s con voto %f\n", s->film[s->indice_vincitore], (float) max / N);
+        sem_post(&b->barriera);
+    }
+    sem_post(&b->mutex); 
+    sem_wait(&b->barriera);
+    sem_post(&b->barriera);
+}
+
 void *spettatore(void *t)
 {
     int tid;
     long result = 0;
     tid = (int)t;
     vota(&sondaggio, tid);
+    wait_barriera(&barriera, &sondaggio);
+    visione(tid, &sondaggio);
     pthread_exit((void *)result);
 }
 
@@ -78,7 +108,7 @@ int main() {
     pthread_t threads[N];
     int rc;
     int t;
-    init_sondaggio(&sondaggio);
+    init(&sondaggio, &barriera);
 
     for (t = 0; t < N; t++) {
         rc = pthread_create(&threads[t], NULL, spettatore, (void *)t);
@@ -100,4 +130,3 @@ int main() {
     return 0;
 
 }
-//delete
