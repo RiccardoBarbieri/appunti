@@ -1,0 +1,157 @@
+\chapter{Lambda calcolo}
+
+\subsubsection{Definizione}
+
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+\begin{align*}
+&L ::= \lambda x.L | x | LL\\
+&(\lambda x.L_b)L_a \rightarrow L_b[L_a/x]
+\end{align*}
+$L$ può esprime una qualsiasi \textbf{struttura dati} e qualsiasi \textbf{algoritmo}.
+
+\noindent
+$\rightarrow$ rappresenta una \textbf{trasformazione atomica}, basata sull'idea della sostituzione di testo che risulta nel termine $L_b$ con, al suo interno, $x$ sostituite da $L_a$.
+\end{mdframed}
+
+\subsubsection{Sintassi}
+\begin{equation*}
+L,M,N ::= \lambda x.L | x | LL
+\end{equation*}
+
+Un lambda termine può essere:
+\begin{itemize}
+    \item $x$, una \textit{variabile} ($\lambda$ e $.$ sono simboli terminali)
+    \item $\lambda x.L$, una \textit{funzione}, dove $L$ è il corpo (altro lambda-termine)
+    \item $LM$, \textit{applicazione di una funzione}
+\end{itemize}
+
+\subsubsection{Ambiguità grammaticale}
+La grammatica di una lambda è \textit{ambigua}, come si interpreta $\lambda x.xy$?
+\begin{itemize}
+    \item come $(\lambda x.x)y$ (applicare $y$ a funzione $\lambda x.x$)
+    \item o come $\lambda x.(xy)$
+\end{itemize}
+
+Per disambiguare si utilizzano parentesi o associatività a sinistra, $\lambda x.\lambda y.xyx$ si legge come $\lambda x.(\lambda y.(xy)x)$
+
+\subsubsection{Semantica}
+La semantica è definita tramite \textit{regole di trasformazione}:
+\begin{equation*}
+(\lambda x.L)M \rightarrow  L[M/x]
+\end{equation*}
+
+Si identifica un pattern del tipo $(\lambda x.L)M$ e lo si trasforma nel lambda-termine $L[M/x]$, sostituendo, nella funzione $L$, ogni occorrenza $x$ con $M$.
+
+\subsubsection{Esempio}
+$(\lambda x.xx)(\lambda y.(\lambda z.yz))$ si riduce a $(\lambda y.(\lambda z.yz))(\lambda y.(\lambda z.yz))$, in quanto la lambda $(\lambda x.xx)$ duplica il suo parametro formale $x$, che in questo caso assume il valore di $(\lambda y.(\lambda z.yz))$.
+
+\subsubsection{Forme normalizzate}
+Un lambda termine è in \textbf{forma normale} se non si possono applicare altre riduzioni.
+
+Si dice che un lambda termine è:
+\begin{itemize}
+    \item \textbit{fortemente} normalizzabile, se qualunque sequenza di riduzioni porta a una forma normale
+    \item \textit{debolmente} normalizzabile, se esiste \textit{almeno una} sequenza di riduzioni che porta a una forma normale
+    \item \textit{non} normalizzabile, se non si arriva mai a una forma normale
+\end{itemize}
+
+\section{Teorema di Church-Rosser - Terminazione delle computazioni}
+\begin{mdframed}[topline=false,bottomline=false,rightline=false]
+Ogni lambda ha al più \textbf{una} forma normale, questa può essere interpretata come risultato.
+
+Il lambda calcolo è deterministico.
+\end{mdframed}
+
+\section{Strategie di riduzione}
+L'idea di ridurre il più possibile, introduce il concetto di \textit{strategia di riduzione}, scegliendo la strategia errata, le sostituzioni potrebbero non terminale.
+
+\subsection{Principi}
+Adottare una o l'altra strategia, si possono ottenere sostituzioni \textit{infinite} o \textit{finite}.
+
+Due principi alternativi:
+\begin{itemize}
+    \item \textbf{eager evaluation}: privilegia la valutazione dell'argomento, valuta l'argomento il prima possibile
+    \item \textbf{lazy evaluation}: privilegia l'applicazione dell'argomento alla funzione, valuta l'argomento il più tardi possibile
+\end{itemize}
+
+Da questi principi sono state sviluppate varie strategia, usate nei vari linguaggi.
+
+\subsection{Panoramica}
+\begin{itemize}
+    \item strategie \textit{eager} (strict):
+    \begin{itemize}
+        \item applicative order (rightmost innermost)
+        \begin{itemize}
+            \item prima riduce poi applica gli argomenti
+            \item può non trovare la forma normale
+        \end{itemize}
+        \item call by value
+        \item call by reference
+        \item call by copy-restore
+    \end{itemize}
+    \item strategie \textit{lazy} (non-strict)
+    \begin{itemize}
+        \item normal order (leftmost outermost)
+        \begin{itemize}
+            \item prima riduce la lambda più a sinistra
+            \item normale perché se esiste una forma normale, la trova
+        \end{itemize}
+        \item call by name
+        \item call by need
+        \item call by macro
+    \end{itemize}
+\end{itemize}
+
+
+\subsection{Strategie eager}
+
+\subsubsection{Applicative order}
+Prima valuta gli argomenti, poi li applica alle funzioni. Tenta di ridurre il più possibile i termini dentro la funzione prima di applicare gli argomenti.
+\textbf{Non normalizzante}.
+
+\subsubsection{Call by value}
+Non riduce i termini prima di applicare gli argomenti. É una famiglia di strategia che differiscono per l'ordine di valutazione degli argomenti (left to right, right to left, undefined).
+Se il valore è un puntatore, si ha lo stesso effetto di call-by-reference.
+
+\subsubsection{Call by reference}
+La funzione riceve un \textit{riferimento implicito} all'argomento del chiamante, anziché una copia dello stesso.
+
+\subsubsection{Call by copy-restore}
+Caso speciale della call-by-reference adatto al multi-threading: ogni funzione riceve una copia privata dell'argomento e lo ricopia indietro alla fine, evita interferenze ma solo l'ultimo valore sopravvive.
+
+\subsection{Strategie lazy}
+
+\subsubsection{Normal order}
+Applica gli argomenti alle funzioni prima di ridurli, riducendo per prima la lambda più a sinistra e considerando come corpo ciò che compare a destra.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -212,3 +212,21 @@
 \contentsline {subsection}{\numberline {11.2.8}Simil classi}{98}{subsection.11.2.8}%
 \contentsline {section}{\numberline {11.3}Dove i due lati si incontrano}{99}{section.11.3}%
 \contentsline {subsection}{\numberline {11.3.1}Costruire oggetti funzione}{99}{subsection.11.3.1}%
+\contentsline {chapter}{\numberline {12}Lambda calcolo}{101}{chapter.12}%
+\contentsline {subsubsection}{Definizione}{101}{subsubsection*.124}%
+\contentsline {subsubsection}{Sintassi}{101}{subsubsection*.125}%
+\contentsline {subsubsection}{Ambiguità grammaticale}{101}{subsubsection*.126}%
+\contentsline {subsubsection}{Semantica}{102}{subsubsection*.127}%
+\contentsline {subsubsection}{Esempio}{102}{subsubsection*.128}%
+\contentsline {subsubsection}{Forme normalizzate}{102}{subsubsection*.129}%
+\contentsline {section}{\numberline {12.1}Teorema di Church-Rosser - Terminazione delle computazioni}{102}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Strategie di riduzione}{102}{section.12.2}%
+\contentsline {subsection}{\numberline {12.2.1}Principi}{103}{subsection.12.2.1}%
+\contentsline {subsection}{\numberline {12.2.2}Panoramica}{103}{subsection.12.2.2}%
+\contentsline {subsection}{\numberline {12.2.3}Strategie eager}{103}{subsection.12.2.3}%
+\contentsline {subsubsection}{Applicative order}{103}{subsubsection*.130}%
+\contentsline {subsubsection}{Call by value}{104}{subsubsection*.131}%
+\contentsline {subsubsection}{Call by reference}{104}{subsubsection*.132}%
+\contentsline {subsubsection}{Call by copy-restore}{104}{subsubsection*.133}%
+\contentsline {subsection}{\numberline {12.2.4}Strategie lazy}{104}{subsection.12.2.4}%
+\contentsline {subsubsection}{Normal order}{104}{subsubsection*.134}%

@@ -1825,6 +1825,10 @@ INPUT ./_minted-main/470BF70E57F370A64D1E9E191C403B9F93E8595DBA276F00711AB5D1DC5
 INPUT _minted-main/470BF70E57F370A64D1E9E191C403B9F93E8595DBA276F00711AB5D1DC56EF1B.pygtex
 INPUT ./_minted-main/470BF70E57F370A64D1E9E191C403B9F93E8595DBA276F00711AB5D1DC56EF1B.pygtex
 INPUT _minted-main/470BF70E57F370A64D1E9E191C403B9F93E8595DBA276F00711AB5D1DC56EF1B.pygtex
+INPUT ./chapters/20_lambda_calcolo/lambda_calcolo.tex
+INPUT chapters/20_lambda_calcolo/lambda_calcolo.tex
+INPUT ./chapters/20_lambda_calcolo/lambda_calcolo.tex
+INPUT chapters/20_lambda_calcolo/lambda_calcolo.tex
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
