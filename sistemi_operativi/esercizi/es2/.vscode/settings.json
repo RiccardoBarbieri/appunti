@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.py": "python",
+        "semaphore.h": "c"
+    }
+}
