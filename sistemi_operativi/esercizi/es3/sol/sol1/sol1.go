@@ -77,7 +77,7 @@ func server() {
 	}
 
 	for {
-		time.Sleep(time.Second * 1)
+		time.Sleep(time.Millisecond * 100)
 		select {
 		case b = <-rilascio:
 			if b == EB { //restituzione bici elettrica
@@ -161,7 +161,8 @@ func server() {
 	}
 }
 
-func main() {
+func Sol1() {
+	fmt.Println("Starting sol1")
 	var cli int
 	var r req
 	fmt.Printf("\n quanti clienti (max %d)? ", MAXPROC)

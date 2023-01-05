@@ -1,4 +1,4 @@
-package main
+package es1
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"time"
 )
 
-const MAXPROC = 5
+const MAXPROC = 100
 const NEB = 2
 const NBT = 3
 
@@ -64,7 +64,6 @@ func server() {
 	var b int
 
 	for {
-		time.Sleep(time.Millisecond * 500)
 		select {
 		case b = <-rilascio:
 			switch b {
@@ -74,10 +73,12 @@ func server() {
 					fmt.Printf("	[server] Restituita bici elettrica da cliente %d\n", r.id)
 				} else {
 					for i := 0; i < MAXPROC; i++ {
-						risorsa[i] <- b
-						nSospE--
-						sospE[i] = false
-						break
+						if sospE[i] {
+							risorsa[i] <- b
+							nSospE--
+							sospE[i] = false
+							break
+						}
 					}
 				}
 			case BT:
@@ -86,10 +87,12 @@ func server() {
 					fmt.Printf("	[server] Restituita bici tradizionale da cliente %d\n", r.id)
 				} else {
 					for i := 0; i < MAXPROC; i++ {
-						risorsa[i] <- b
-						nSospT--
-						sospT[i] = false
-						break
+						if sospT[i] {
+							risorsa[i] <- b
+							nSospT--
+							sospT[i] = false
+							break
+						}
 					}
 				}
 			}
@@ -131,7 +134,7 @@ func server() {
 					sospE[r.id] = true
 				}
 			}
-		case <-termina: // quando tutti i processi clienti hanno finito
+		case <-termina:
 			fmt.Println("Fine!")
 			done <- 1
 			return
@@ -140,21 +143,23 @@ func server() {
 	}
 }
 
-func main() {
+func Es1() {
 	var r req
+	var clienti int = 10
+	rand.Seed(time.Now().Unix())
 
 	for i := 0; i < MAXPROC; i++ {
 		risorsa[i] = make(chan int)
 	}
 
-	for i := 0; i < MAXPROC; i++ {
+	for i := 0; i < clienti; i++ {
 		r.id = i
-		r.tipo = rand.Intn(2)
+		r.tipo = rand.Intn(3)
 		go client(r)
 	}
 	go server()
 
-	for i := 0; i < MAXPROC; i++ {
+	for i := 0; i < clienti; i++ {
 		<-done
 	}
 	termina <- 1

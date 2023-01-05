@@ -116,7 +116,7 @@ func server() {
 	}
 }
 
-func main() {
+func Sol2() {
 	var cli int
 	var r req
 
