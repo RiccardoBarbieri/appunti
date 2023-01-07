@@ -7,11 +7,27 @@ import (
 	"time"
 )
 
+var colors = [8]string{
+	"\033[0m",
+	"\033[31m",
+	"\033[32m",
+	"\033[33m",
+	"\033[34m",
+	"\033[35m",
+	"\033[36m",
+	"\033[37m",
+}
+
 func when[T any](cond bool, ch chan T) chan T {
 	if !cond {
 		return nil
 	}
 	return ch
+}
+
+func printColor(text string, color int) {
+	text = "%s" + text + "%s"
+	fmt.Printf(text, colors[(color%6)+1], color, colors[0])
 }
 
 const MAXPROC = 100
@@ -32,35 +48,34 @@ type req struct {
 var richiestaT = make(chan req, DIMBUF)
 var richiestaE = make(chan req, DIMBUF)
 var richiestaFLEX = make(chan req, DIMBUF)
-var rilascio = make(chan int, DIMBUF)
+var rilascio = make(chan req, DIMBUF)
 var risorsa [MAXPROC](chan int)
-var done = make(chan int /*, DIMBUF*/)
-var termina = make(chan int /*, DIMBUF*/)
+var done = make(chan int)
+var termina = make(chan int)
 
 func client(r req) {
-	var b int
 	switch r.tipo {
 	case BT:
-		fmt.Printf("	[client %d] Richiesta bici tradizionale\n", r.id)
+		printColor("[client %d] Richiesta bici tradizionale\n", r.id)
 		richiestaT <- r
 	case EB:
-		fmt.Printf("	[client %d] Richiesta bici elettrica\n", r.id)
+		printColor("[client %d] Richiesta bici elettrica\n", r.id)
 		richiestaE <- r
 	case FLEX:
-		fmt.Printf("	[client %d] Richiesta flex\n", r.id)
+		printColor("[client %d] Richiesta flex\n", r.id)
 		richiestaFLEX <- r
 	}
-	b = <-risorsa[r.id]
+	r.tipo = <-risorsa[r.id]
 
-	if b == BT {
-		fmt.Printf("[client %d] Ricevuta bici tradizionale\n", r.id)
+	if r.tipo == BT {
+		printColor("[client %d] Ricevuta bici tradizionale\n", r.id)
 	} else {
-		fmt.Printf("[client %d] Ricevuta bici elettrica\n", r.id)
+		printColor("[client %d] Ricevuta bici elettrica\n", r.id)
 	}
 
 	time.Sleep(time.Second * 2)
 
-	rilascio <- b
+	rilascio <- r
 	done <- r.id
 }
 
@@ -79,37 +94,37 @@ func server() {
 
 	for {
 		select {
-		case b = <-rilascio:
-			switch b {
+		case r = <-rilascio:
+			switch r.tipo {
 			case EB:
 				dispE++
-				fmt.Printf("	[server] Restituita bici elettrica da cliente %d\n", r.id)
+				printColor("	[server] Restituita bici elettrica da cliente %d\n", r.id)
 			case BT:
 				dispT++
-				fmt.Printf("	[server] Restituita bici tradizionale da cliente %d\n", r.id)
+				printColor("[server] Restituita bici tradizionale da cliente %d\n", r.id)
 			}
 		case r = <-when(dispT > 0, richiestaT):
 			dispT--
 			b = BT
-			fmt.Printf("	[server] Noleggio bici tradizionale a cliente %d\n", r.id)
+			printColor("	[server] Noleggio bici tradizionale a cliente %d\n", r.id)
 			risorsa[r.id] <- b
 		case r = <-when(dispE > 0, richiestaE):
 			dispE--
 			b = EB
-			fmt.Printf("	[server] Noleggio bici elettrica a cliente %d\n", r.id)
+			printColor("	[server] Noleggio bici elettrica a cliente %d\n", r.id)
 			risorsa[r.id] <- b
 		case r = <-when(dispE > 0, richiestaFLEX):
 			dispE--
 			b = EB
-			fmt.Printf("	[server] Noleggio bici elettrica a cliente %d\n", r.id)
+			printColor("	[server] Noleggio bici elettrica FLEX a cliente %d\n", r.id)
 			risorsa[r.id] <- b
 		case r = <-when(dispE == 0 && dispT > 0, richiestaFLEX):
 			dispT--
 			b = BT
-			fmt.Printf("	[server] Noleggio bici tradizionale a cliente %d\n", r.id)
+			printColor("	[server] Noleggio bici tradizionale FLEX a cliente %d\n", r.id)
 			risorsa[r.id] <- b
 		case r = <-when(dispE == 0 && dispT == 0, richiestaFLEX):
-			fmt.Printf("[server] Attesa FLEX cliente %d\n", r.id)
+			printColor("[server] Attesa FLEX cliente %d\n", r.id)
 			richiestaE <- r //metto req r (associata a client r.id) in attesa per una EB
 		case <-termina:
 			fmt.Println("Fine!")
@@ -121,8 +136,9 @@ func server() {
 }
 
 func Es2() {
+
 	var r req
-	var clienti int = 10
+	var clienti int = 7
 
 	rand.Seed(time.Now().Unix())
 
